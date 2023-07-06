@@ -4,19 +4,16 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="ChuanhuChatGPT使用教程, 挖掘机">
-    <meta name="description" content="
+    <meta name="keywords" content="机器学习-4, 挖掘机">
+    <meta name="description" content="集成模型Bagging多个弱模型取均值
+Boosting多个弱模型累加，且后一模型是在前一模型的基础上生成的，是一种迭代思路。
+stacking几种方法的主要区别
+随机森林训练样本的随机化
+有放回的
 
-使用请访问实验室自搭GPT平台
-访问网址不需要挂VPN
-申请账号请联系微信：HT4925151
-原始代码出处请访问GITHUB项目川虎ChatGPT
-
-
-登录申请账号请联系微信：HT4925151
-提问直接提问
-直接提问
-不需要挂VPN">
+特征选择的随机化
+简单随机采样
+信息熵">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -28,7 +25,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>ChuanhuChatGPT使用教程 | 挖掘机</title>
+    <title>机器学习-4 | 挖掘机</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -513,12 +510,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">ChuanhuChatGPT使用教程</h1>
+                    <h1 class="description center-align post-title">机器学习-4</h1>
                 </div>
             </div>
         </div>
@@ -542,8 +539,28 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/ChatGPT/">
-                                <span class="chip bg-color">ChatGPT</span>
+                            <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">机器学习</span>
+                            </a>
+                        
+                            <a href="/tags/%E9%9B%86%E6%88%90%E6%A8%A1%E5%9E%8B/">
+                                <span class="chip bg-color">集成模型</span>
+                            </a>
+                        
+                            <a href="/tags/%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97/">
+                                <span class="chip bg-color">随机森林</span>
+                            </a>
+                        
+                            <a href="/tags/Bagging/">
+                                <span class="chip bg-color">Bagging</span>
+                            </a>
+                        
+                            <a href="/tags/Boosting/">
+                                <span class="chip bg-color">Boosting</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%B1%82%E6%AC%A1%E8%81%9A%E7%B1%BB/">
+                                <span class="chip bg-color">层次聚类</span>
                             </a>
                         
                     </div>
@@ -554,8 +571,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/office/" class="post-category">
-                                office
+                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                机器学习
                             </a>
                         
                     </div>
@@ -567,7 +584,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-07-06
+                    2023-06-04
                 </div>
                 
 
@@ -591,41 +608,52 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <hr>
+                <h1 id="集成模型"><a href="#集成模型" class="headerlink" title="集成模型"></a>集成模型</h1><h2 id="Bagging"><a href="#Bagging" class="headerlink" title="Bagging"></a>Bagging</h2><p>多个弱模型取均值</p>
+<h2 id="Boosting"><a href="#Boosting" class="headerlink" title="Boosting"></a>Boosting</h2><p>多个弱模型累加，且后一模型是在前一模型的基础上生成的，是一种迭代思路。</p>
+<h2 id="stacking"><a href="#stacking" class="headerlink" title="stacking"></a>stacking</h2><h2 id="几种方法的主要区别"><a href="#几种方法的主要区别" class="headerlink" title="几种方法的主要区别"></a>几种方法的主要区别</h2><p><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-4-1.png" alt="机器学习-4-1"></p>
+<h1 id="随机森林"><a href="#随机森林" class="headerlink" title="随机森林"></a>随机森林</h1><h2 id="训练样本的随机化"><a href="#训练样本的随机化" class="headerlink" title="训练样本的随机化"></a>训练样本的随机化</h2><ul>
+<li>有放回的</li>
+</ul>
+<h2 id="特征选择的随机化"><a href="#特征选择的随机化" class="headerlink" title="特征选择的随机化"></a>特征选择的随机化</h2><ul>
+<li>简单随机采样</li>
+<li>信息熵法<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-4-2.png" alt="机器学习-4-2"></li>
+<li>Bagging包括随机森林，随机森林隶属于Bagging</li>
+<li>鲁棒性如何解释？对极端数据（噪声，扰动）的处理能力，能一定程度上可以应对数据异常数据。</li>
+<li>为什么要集成学习？一个单一模型很容易过拟合</li>
+</ul>
+<h1 id="GBDT（Boosting）"><a href="#GBDT（Boosting）" class="headerlink" title="GBDT（Boosting）"></a>GBDT（Boosting）</h1><ul>
+<li>bagging用来解决过拟合，有可能会欠拟合。boosting解决欠拟合，有可能会过拟合。</li>
+<li>将前一阶段的残差作为下一阶段的因变量</li>
+<li>累加求最终预测值</li>
+</ul>
+<h1 id="XGBoost（Boosting）"><a href="#XGBoost（Boosting）" class="headerlink" title="XGBoost（Boosting）"></a>XGBoost（Boosting）</h1><ul>
+<li>目标函数可以用泰勒展开</li>
+<li>与原本boosting的区别，XGboost加入了正则化，传统boosting只用了一阶导，XGboost作了泰勒展开，有二阶导<br>Boost中目标函数不一定是多项式，直接求导比较难。<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-4-3.png" alt="机器学习-4-3"></li>
+<li>XGboost<br>  以泰勒展开将非多项式目标函数转化为多项式。<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-4-4.png" alt="机器学习-4-4"></li>
+</ul>
+<h1 id="叠加式训练"><a href="#叠加式训练" class="headerlink" title="叠加式训练"></a>叠加式训练</h1><ul>
+<li>递推的内容</li>
+</ul>
+<p><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-4-5.png" alt="机器学习-4-5"></p>
 <ul>
-<li>使用请访问<a target="_blank" rel="noopener" href="https://huggingface.co/spaces/aucnm/ChuanhuChatGPT">实验室自搭GPT平台</a></li>
-<li>访问网址不需要挂VPN</li>
-<li>申请账号请联系微信：HT4925151</li>
-<li>原始代码出处请访问GITHUB项目<a target="_blank" rel="noopener" href="https://github.com/GaiZhenbiao/ChuanhuChatGPT">川虎ChatGPT</a></li>
+<li>二元交叉商<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-4-6.png" alt="机器学习-4-6"></li>
+<li>目标函数的解释<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-4-7.png" alt="机器学习-4-7"></li>
 </ul>
-<hr>
-<h1 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h1><p><strong>申请账号请联系微信：HT4925151</strong><br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/ChuanhuChatGPT%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-1.png" alt="ChuanhuChatGPT使用教程-1"></p>
-<h1 id="提问"><a href="#提问" class="headerlink" title="提问"></a>提问</h1><h2 id="直接提问"><a href="#直接提问" class="headerlink" title="直接提问"></a>直接提问</h2><ul>
-<li>直接提问</li>
-<li>不需要挂VPN</li>
-<li>不需要填APIKEY</li>
-<li>模型就使用<code>gpt-3.5-turbo</code></li>
-<li>暂时不支持GPT-4与在线搜索</li>
+<h1 id="垃圾邮件分类（典型分类问题）"><a href="#垃圾邮件分类（典型分类问题）" class="headerlink" title="垃圾邮件分类（典型分类问题）"></a>垃圾邮件分类（典型分类问题）</h1><h2 id="贝叶斯"><a href="#贝叶斯" class="headerlink" title="贝叶斯"></a>贝叶斯</h2><p><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-4-8.png" alt="机器学习-4-8"><br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-4-9.png" alt="机器学习-4-9"></p>
+<h2 id="似然（词频统计）"><a href="#似然（词频统计）" class="headerlink" title="似然（词频统计）"></a>似然（词频统计）</h2><p><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-4-10.png" alt="机器学习-4-10"></p>
+<h2 id="先验概率"><a href="#先验概率" class="headerlink" title="先验概率"></a>先验概率</h2><p><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-4-11.png" alt="机器学习-4-11"></p>
+<h1 id="目的（做出判断）"><a href="#目的（做出判断）" class="headerlink" title="目的（做出判断）"></a>目的（做出判断）</h1><p>通过条件概率来进行比较<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-4-12.png" alt="机器学习-4-12"><br>分母为固定常数，便于比较<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-4-13.png" alt="机器学习-4-13"></p>
+<ul>
+<li>避免概率为0的情况——加1平滑<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-4-14.png" alt="机器学习-4-14"></li>
 </ul>
-<h2 id="预设模板"><a href="#预设模板" class="headerlink" title="预设模板"></a>预设模板</h2><ul>
-<li>可以直接对话以让GPT扮演相应角色</li>
-<li>可以使用平台自带的模版<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/ChuanhuChatGPT%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-2.png" alt="ChuanhuChatGPT使用教程-2"></li>
+<h2 id="最大问题："><a href="#最大问题：" class="headerlink" title="最大问题："></a>最大问题：</h2><ul>
+<li>不能保证特征间的独立性，未考虑到特征间的相关性，只是根据样本出现的次数，进行基于概率的训练。只是强调某个x是某个y的条件。</li>
+<li>只能用原始特征，不能加工或提取新特征。</li>
+<li>为什么要+1平滑，防止出现概率为0的情况。</li>
 </ul>
-<h1 id="对话记录的保存与读取"><a href="#对话记录的保存与读取" class="headerlink" title="对话记录的保存与读取"></a>对话记录的保存与读取</h1><hr>
-<p><strong>因为服务器会不定时更新与维护，每次重启都会清除缓存，建议将重要内容保存到本地，以防丢失</strong></p>
-<hr>
-<h2 id="保存对话记录"><a href="#保存对话记录" class="headerlink" title="保存对话记录"></a>保存对话记录</h2><ol>
-<li>进入<code>保存、加载</code>标签</li>
-<li>设置保存文件名</li>
-<li>点击<code>保存对话</code>，此时在下方<code>File</code>栏中会出现缓存文件</li>
-<li>点击<code>File</code>栏中的<code>Download</code>按钮，以将缓存中的对话记录<strong>保存到本地磁盘</strong><br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/ChuanhuChatGPT%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-3.png" alt="ChuanhuChatGPT使用教程-3"><br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/ChuanhuChatGPT%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-4.png" alt="ChuanhuChatGPT使用教程-4"></li>
-</ol>
-<h2 id="读取对话记录"><a href="#读取对话记录" class="headerlink" title="读取对话记录"></a>读取对话记录</h2><ol>
-<li>在<code>保存/加载</code>标签中的<code>File</code>栏目，点击<code>拖放文件至此处</code>区域<br> <img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/ChuanhuChatGPT%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-5.png" alt="ChuanhuChatGPT使用教程-5"><br><strong>如区域中已有缓存记录，可点击栏目右上角的’x’以清空缓存区域，再点击上传区域</strong><br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/ChuanhuChatGPT%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-6.png" alt="ChuanhuChatGPT使用教程-6"></li>
-<li>在弹出窗口中，选择本地对话记录，点击打开以上传记录。此时页面会自动加载对话记录<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/ChuanhuChatGPT%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-7.png" alt="ChuanhuChatGPT使用教程-7"><br><strong>如使用对话调校chatGPT角色，可以使用<code>保存对话</code>功能，以保存调校模板</strong></li>
-</ol>
-<hr>
-<p><strong>高级标签栏中的内容不推荐更改</strong></p>
+<h2 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h2><p>贝叶斯不容易过拟合——异常值、缺失值概率极低，基本可以视为被舍弃了，所以受异常值影响比较低。</p>
+<h1 id="层次聚类"><a href="#层次聚类" class="headerlink" title="层次聚类"></a>层次聚类</h1><h2 id="树形图"><a href="#树形图" class="headerlink" title="树形图"></a>树形图</h2><p><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-4-15.png" alt="机器学习-4-15"></p>
+<h2 id="凝聚聚类（自下而上）"><a href="#凝聚聚类（自下而上）" class="headerlink" title="凝聚聚类（自下而上）"></a>凝聚聚类（自下而上）</h2><h2 id="分裂聚类（自上而下）"><a href="#分裂聚类（自上而下）" class="headerlink" title="分裂聚类（自上而下）"></a>分裂聚类（自上而下）</h2><h2 id="MST（最小生成树）"><a href="#MST（最小生成树）" class="headerlink" title="MST（最小生成树）"></a>MST（最小生成树）</h2><p><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-4-16.png" alt="机器学习-4-16"><br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-4-17.png" alt="机器学习-4-17"></p>
 
                 
             </div>
@@ -652,7 +680,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2023/07/06/ChuanhuChatGPT%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">http://example.com/2023/07/06/ChuanhuChatGPT%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</a>
+                    <a href="http://example.com/2023/06/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-4%20-%20ol/">http://example.com/2023/06/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-4%20-%20ol/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -690,8 +718,28 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/ChatGPT/">
-                                    <span class="chip bg-color">ChatGPT</span>
+                                <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">机器学习</span>
+                                </a>
+                            
+                                <a href="/tags/%E9%9B%86%E6%88%90%E6%A8%A1%E5%9E%8B/">
+                                    <span class="chip bg-color">集成模型</span>
+                                </a>
+                            
+                                <a href="/tags/%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97/">
+                                    <span class="chip bg-color">随机森林</span>
+                                </a>
+                            
+                                <a href="/tags/Bagging/">
+                                    <span class="chip bg-color">Bagging</span>
+                                </a>
+                            
+                                <a href="/tags/Boosting/">
+                                    <span class="chip bg-color">Boosting</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%B1%82%E6%AC%A1%E8%81%9A%E7%B1%BB/">
+                                    <span class="chip bg-color">层次聚类</span>
                                 </a>
                             
                         </div>
@@ -737,18 +785,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/07/06/ChuanhuChatGPT%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">
+                <a href="/2023/07/06/md%E8%AF%AD%E6%B3%95/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="ChuanhuChatGPT使用教程">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="markdown 格式语法">
                         
-                        <span class="card-title">ChuanhuChatGPT使用教程</span>
+                        <span class="card-title">markdown 格式语法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -758,9 +805,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-06
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-07-06
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -773,12 +820,19 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/ChatGPT/">
-                        <span class="chip bg-color">ChatGPT</span>
+                    <a href="/tags/markdown/">
+                        <span class="chip bg-color">markdown</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%AF%AD%E6%B3%95/">
+                        <span class="chip bg-color">语法</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%A0%BC%E5%BC%8F/">
+                        <span class="chip bg-color">格式</span>
                     </a>
                     
                 </div>
@@ -792,13 +846,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/07/06/office%20%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/">
+                <a href="/2023/05/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-3%20-%20ol/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="office 365 部署教程">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="机器学习-3">
                         
-                        <span class="card-title">office 365 部署教程</span>
+                        <span class="card-title">机器学习-3</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -809,14 +863,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-06
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-28
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/office/" class="post-category">
-                                    office
+                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    机器学习
                                 </a>
                             
                             
@@ -826,16 +880,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/office/">
-                        <span class="chip bg-color">office</span>
+                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">机器学习</span>
                     </a>
                     
-                    <a href="/tags/office-365/">
-                        <span class="chip bg-color">office 365</span>
+                    <a href="/tags/%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9/">
+                        <span class="chip bg-color">特征选择</span>
                     </a>
                     
-                    <a href="/tags/office-tool/">
-                        <span class="chip bg-color">office tool</span>
+                    <a href="/tags/%E5%86%B3%E7%AD%96%E6%A0%91/">
+                        <span class="chip bg-color">决策树</span>
                     </a>
                     
                 </div>
