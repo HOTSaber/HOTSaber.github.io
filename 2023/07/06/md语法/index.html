@@ -4,13 +4,21 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="机器学习-2, 挖掘机">
-    <meta name="description" content="回顾为什么标红位置可以合并最后求得的其实是一个数， 有A^T&amp;#x3D;A
-为什么无解（逆不存在处理方式）
-逆可能不存在
-
-逆不存在问题如何解决加一个人为构造项，解决行列式等于0（逆不存在）的问题
-符号和数据的概念连加和连乘（略）其他常用符">
+    <meta name="keywords" content="markdown 格式语法, 挖掘机">
+    <meta name="description" content="标题# H1  
+## H2  
+### H3  
+#### H4  
+##### H5  
+###### H6
+分行符----
+序号无序标题- XXXX
+- XXXX
+- XXXX
+有序标题1. XXX
+2. XXX
+3. XXX
+代码块">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -22,7 +30,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>机器学习-2 | 挖掘机</title>
+    <title>markdown 格式语法 | 挖掘机</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -507,12 +515,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">机器学习-2</h1>
+                    <h1 class="description center-align post-title">markdown 格式语法</h1>
                 </div>
             </div>
         </div>
@@ -536,52 +544,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                                <span class="chip bg-color">机器学习</span>
+                            <a href="/tags/markdown/">
+                                <span class="chip bg-color">markdown</span>
                             </a>
                         
-                            <a href="/tags/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/">
-                                <span class="chip bg-color">线性回归</span>
+                            <a href="/tags/%E8%AF%AD%E6%B3%95/">
+                                <span class="chip bg-color">语法</span>
                             </a>
                         
-                            <a href="/tags/%E7%BD%97%E8%BE%91%E5%9B%9E%E5%BD%92/">
-                                <span class="chip bg-color">罗辑回归</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%AD%A3%E5%88%99%E5%8C%96/">
-                                <span class="chip bg-color">正则化</span>
-                            </a>
-                        
-                            <a href="/tags/%E8%8C%83%E6%95%B0/">
-                                <span class="chip bg-color">范数</span>
-                            </a>
-                        
-                            <a href="/tags/%E5%BC%A0%E9%87%8F/">
-                                <span class="chip bg-color">张量</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/">
-                                <span class="chip bg-color">梯度下降</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1/">
-                                <span class="chip bg-color">最大似然估计</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%9C%80%E5%A4%A7%E5%90%8E%E9%AA%8C%E6%A6%82%E7%8E%87/">
-                                <span class="chip bg-color">最大后验概率</span>
-                            </a>
-                        
-                            <a href="/tags/MLE/">
-                                <span class="chip bg-color">MLE</span>
-                            </a>
-                        
-                            <a href="/tags/MAP/">
-                                <span class="chip bg-color">MAP</span>
-                            </a>
-                        
-                            <a href="/tags/%E4%BA%A4%E5%8F%89%E9%AA%8C%E8%AF%81/">
-                                <span class="chip bg-color">交叉验证</span>
+                            <a href="/tags/%E6%A0%BC%E5%BC%8F/">
+                                <span class="chip bg-color">格式</span>
                             </a>
                         
                     </div>
@@ -592,8 +564,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                机器学习
+                            <a href="/categories/office/" class="post-category">
+                                office
                             </a>
                         
                     </div>
@@ -605,7 +577,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-05-21
+                    2023-07-06
                 </div>
                 
 
@@ -629,80 +601,56 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h1><h2 id="为什么标红位置可以合并"><a href="#为什么标红位置可以合并" class="headerlink" title="为什么标红位置可以合并"></a>为什么标红位置可以合并</h2><p><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2-1.png"><br>最后求得的其实是一个数， 有A^T&#x3D;A</p>
-<h2 id="为什么无解（逆不存在处理方式）"><a href="#为什么无解（逆不存在处理方式）" class="headerlink" title="为什么无解（逆不存在处理方式）"></a>为什么无解（逆不存在处理方式）</h2><ul>
-<li>逆可能不存在<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2-30.png"></li>
-</ul>
-<h3 id="逆不存在问题如何解决"><a href="#逆不存在问题如何解决" class="headerlink" title="逆不存在问题如何解决"></a>逆不存在问题如何解决</h3><p><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2-2.png"><br>加一个人为构造项，解决行列式等于0（逆不存在）的问题</p>
-<h1 id="符号和数据的概念"><a href="#符号和数据的概念" class="headerlink" title="符号和数据的概念"></a>符号和数据的概念</h1><h2 id="连加和连乘（略）"><a href="#连加和连乘（略）" class="headerlink" title="连加和连乘（略）"></a>连加和连乘（略）</h2><h2 id="其他常用符号"><a href="#其他常用符号" class="headerlink" title="其他常用符号"></a>其他常用符号</h2><p><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2-3.png"></p>
-<ul>
-<li>范数【1（曼哈顿距离）、2、无穷（取最大值）】<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2-12.png"></li>
-</ul>
-<h2 id="向量、矩阵、张量"><a href="#向量、矩阵、张量" class="headerlink" title="向量、矩阵、张量"></a>向量、矩阵、张量</h2><p><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2-4.png"></p>
-<ul>
-<li>第一维是表示有几层</li>
-<li>彩色图像的张量，R，G，B（3个通道）分别为一个2维矩阵，叠加在一起形成一个3维张量</li>
-<li>np.zeros和torch.tensor（数组与张量）的区别——库不一样（代码层面不同，数学意义相同）<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2-6.png"></li>
-</ul>
-<h2 id="精确率与召回率"><a href="#精确率与召回率" class="headerlink" title="精确率与召回率"></a>精确率与召回率</h2><p><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2-7.png"></p>
-<p><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2-8.png"></p>
-<ul>
-<li>错杀比例和漏网比例<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2-9.png"></li>
-<li>F1综合了两个指标<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2-10.png"></li>
-<li>准确率与召回率的负相关关系<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2-11.png"></li>
-<li>补充，ROC曲线，AUC面积</li>
-</ul>
-<h1 id="证明逻辑回归是线性分类器（线性分类器和非线性分类器）"><a href="#证明逻辑回归是线性分类器（线性分类器和非线性分类器）" class="headerlink" title="证明逻辑回归是线性分类器（线性分类器和非线性分类器）"></a>证明逻辑回归是线性分类器（线性分类器和非线性分类器）</h1><h2 id="基础内容（什么是逻辑回归）"><a href="#基础内容（什么是逻辑回归）" class="headerlink" title="基础内容（什么是逻辑回归）"></a>基础内容（什么是逻辑回归）</h2><p><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2-13.png"></p>
-<h2 id="为什么逻辑回归是线性分类器"><a href="#为什么逻辑回归是线性分类器" class="headerlink" title="为什么逻辑回归是线性分类器"></a>为什么逻辑回归是线性分类器</h2><ul>
-<li>对于分界线上的点有以下内容（决策边界是线性表达的）<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2-14.png"></li>
-<li>什么叫线性分类器——决策边界是线性表达的，是直线、平面或超平面</li>
-<li>当一个问题可以用线性分类器也可以用非线性分类器时，&#x3D;&#x3D;效果也差不多&#x3D;&#x3D;，线性分类器计算效率很高，所以在大规模应用时可以优先选择线性分类器<ul>
-<li>线性分类器——拟合效果差、计算效率高</li>
-<li>逻辑回归为什么是线性分类器</li>
-</ul>
-</li>
-</ul>
-<h2 id="判定语句区别（内存存储问题）"><a href="#判定语句区别（内存存储问题）" class="headerlink" title="判定语句区别（内存存储问题）"></a>判定语句区别（内存存储问题）</h2><pre><code> &quot;= =&quot;用于检查两个表达式的值是否相等，它会比较两个表达式的值，如果值相等，则返回True，否则返回False。
- 而is运算符则用于比较两个对象是否完全相同(即比较它们在内存中的地址)，如果两个表达式引用的是同一个对象，则返回True， 否则返回布尔值和空字False。因此，在Python中，对于简单的数据类型比如整数、符串等常用类型，通常使用&quot;is”来进行比较更加高效。
- 所以，在if语句中，使用&quot;= =&quot;比较值是否相等的话，相当于比较两个变量所代表的值是否相等。而使用”is”比较的是两个变量所引用的对象是否相同
-</code></pre>
-<p><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2-15.png"></p>
-<ul>
-<li>最终权重趋于无穷<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2-16.png"></li>
-</ul>
-<h1 id="梯度下降"><a href="#梯度下降" class="headerlink" title="梯度下降"></a>梯度下降</h1><ul>
-<li>为什么是负梯度下降——向最小方向移动<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2-17.png"></li>
-</ul>
-<h2 id="随机梯度下降法"><a href="#随机梯度下降法" class="headerlink" title="随机梯度下降法"></a>随机梯度下降法</h2><p><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2-18.png"></p>
-<ul>
-<li>o(1),改变样本（随机梯度下降）</li>
-<li>o(n),要遍历所有样本（原始梯度下降）</li>
-<li>正则，防止过拟合（只影响权重，对偏执没有影响）<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2-19.png"></li>
-</ul>
-<h2 id="小批量梯度下降法（分批次计算）"><a href="#小批量梯度下降法（分批次计算）" class="headerlink" title="小批量梯度下降法（分批次计算）"></a>小批量梯度下降法（分批次计算）</h2><p><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2-20.png"></p>
-<ul>
-<li>小批量也要引入随机概念，每次计算后要把总体打乱一次（shuffle），形成小批量+随机的计算模式</li>
-</ul>
-<h1 id="最大似然估计与最大后验估计"><a href="#最大似然估计与最大后验估计" class="headerlink" title="最大似然估计与最大后验估计"></a>最大似然估计与最大后验估计</h1><h2 id="什么是最大似然估计（MLE）"><a href="#什么是最大似然估计（MLE）" class="headerlink" title="什么是最大似然估计（MLE）"></a>什么是最大似然估计（MLE）</h2><ul>
-<li>由已知观测条件与观测样本推断在什么整体分布类型以及总体参数下，这些样本出现的概率最大<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2-21.png"></li>
-<li>什么是参数——决定模型特性的数值</li>
-</ul>
-<h2 id="最大后验估计（MAP）"><a href="#最大后验估计（MAP）" class="headerlink" title="最大后验估计（MAP）"></a>最大后验估计（MAP）</h2><ul>
-<li>引入先验概率<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2-22.png"><br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2-23.png"><br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2-24.png"></li>
-<li>区别：引入先验概率</li>
-<li>联系：最大似然估计是基础</li>
-</ul>
-<h2 id="先验概率"><a href="#先验概率" class="headerlink" title="先验概率"></a>先验概率</h2><p><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2-25.png"></p>
-<ul>
-<li>统计学上是如何判断斯分布与拉普拉斯分布的？</li>
-<li>服从高斯分布使用L2正则化<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2-26.png"><br>服从拉普拉斯分布使用L1正则化<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2-27.png"></li>
-</ul>
-<h1 id="K折交叉验证"><a href="#K折交叉验证" class="headerlink" title="K折交叉验证"></a>K折交叉验证</h1><ul>
-<li>多次划分训练与验证集</li>
-<li>为了确定超参数 lamda<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2-28.png"></li>
-</ul>
-<h1 id="留一法交叉验证（数据少）"><a href="#留一法交叉验证（数据少）" class="headerlink" title="留一法交叉验证（数据少）"></a>留一法交叉验证（数据少）</h1><p><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2-29.png"></p>
-<h1 id="补充内容"><a href="#补充内容" class="headerlink" title="补充内容"></a>补充内容</h1><p><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2-31.png"><br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2-32.png"><br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2-33.png"></p>
+                <h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><pre class="line-numbers language-none"><code class="language-none"># H1  
+## H2  
+### H3  
+#### H4  
+##### H5  
+###### H6<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="分行符"><a href="#分行符" class="headerlink" title="分行符"></a>分行符</h1><pre class="line-numbers language-none"><code class="language-none">----<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h1 id="序号"><a href="#序号" class="headerlink" title="序号"></a>序号</h1><h2 id="无序标题"><a href="#无序标题" class="headerlink" title="无序标题"></a>无序标题</h2><pre class="line-numbers language-none"><code class="language-none">- XXXX
+- XXXX
+- XXXX<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="有序标题"><a href="#有序标题" class="headerlink" title="有序标题"></a>有序标题</h2><pre class="line-numbers language-none"><code class="language-none">1. XXX
+2. XXX
+3. XXX<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h1 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h1><h2 id="行内代码"><a href="#行内代码" class="headerlink" title="行内代码"></a>行内代码</h2><pre class="line-numbers language-none"><code class="language-none">&#96;XXX&#96;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="行间代码"><a href="#行间代码" class="headerlink" title="行间代码"></a>行间代码</h2><pre class="line-numbers language-none"><code class="language-none">&lt;code&gt;&#96;&#96;&#96;&lt;code&gt;
+XXX
+&lt;code&gt;&#96;&#96;&#96;&lt;code&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><h2 id="网络链接"><a href="#网络链接" class="headerlink" title="网络链接"></a>网络链接</h2><pre class="line-numbers language-none"><code class="language-none">[名称](网址)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="图片链接"><a href="#图片链接" class="headerlink" title="图片链接"></a>图片链接</h2><pre class="line-numbers language-none"><code class="language-none">![图名](地址)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;例子一
+|123|234|345|
+|:-|:-:|-:|
+|abc|bcd|cde|
+|abc|bcd|cde|
+|abc|bcd|cde|
+&#x2F;&#x2F;例子二
+|123|234|345|
+|:---|:---:|---:|
+|abc|bcd|cde|
+|abc|bcd|cde|
+|abc|bcd|cde|
+&#x2F;&#x2F;例子三
+123|234|345
+:-|:-:|-:
+abc|bcd|cde
+abc|bcd|cde
+abc|bcd|cde
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="文本强调"><a href="#文本强调" class="headerlink" title="文本强调"></a>文本强调</h1><pre class="line-numbers language-none"><code class="language-none">*斜体*
+**加粗**
+***粗斜体***
+~~~删除线~~~<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="转义"><a href="#转义" class="headerlink" title="转义"></a>转义</h1><pre class="line-numbers language-none"><code class="language-none">\\
+\&#96;
+\*
+\+
+\_<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
 
                 
             </div>
@@ -729,7 +677,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2023/05/21/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2/">http://example.com/2023/05/21/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-2/</a>
+                    <a href="http://example.com/2023/07/06/md%E8%AF%AD%E6%B3%95/">http://example.com/2023/07/06/md%E8%AF%AD%E6%B3%95/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -767,52 +715,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                                    <span class="chip bg-color">机器学习</span>
+                                <a href="/tags/markdown/">
+                                    <span class="chip bg-color">markdown</span>
                                 </a>
                             
-                                <a href="/tags/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/">
-                                    <span class="chip bg-color">线性回归</span>
+                                <a href="/tags/%E8%AF%AD%E6%B3%95/">
+                                    <span class="chip bg-color">语法</span>
                                 </a>
                             
-                                <a href="/tags/%E7%BD%97%E8%BE%91%E5%9B%9E%E5%BD%92/">
-                                    <span class="chip bg-color">罗辑回归</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%AD%A3%E5%88%99%E5%8C%96/">
-                                    <span class="chip bg-color">正则化</span>
-                                </a>
-                            
-                                <a href="/tags/%E8%8C%83%E6%95%B0/">
-                                    <span class="chip bg-color">范数</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%BC%A0%E9%87%8F/">
-                                    <span class="chip bg-color">张量</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D/">
-                                    <span class="chip bg-color">梯度下降</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1/">
-                                    <span class="chip bg-color">最大似然估计</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%9C%80%E5%A4%A7%E5%90%8E%E9%AA%8C%E6%A6%82%E7%8E%87/">
-                                    <span class="chip bg-color">最大后验概率</span>
-                                </a>
-                            
-                                <a href="/tags/MLE/">
-                                    <span class="chip bg-color">MLE</span>
-                                </a>
-                            
-                                <a href="/tags/MAP/">
-                                    <span class="chip bg-color">MAP</span>
-                                </a>
-                            
-                                <a href="/tags/%E4%BA%A4%E5%8F%89%E9%AA%8C%E8%AF%81/">
-                                    <span class="chip bg-color">交叉验证</span>
+                                <a href="/tags/%E6%A0%BC%E5%BC%8F/">
+                                    <span class="chip bg-color">格式</span>
                                 </a>
                             
                         </div>
@@ -862,13 +774,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/05/21/matery%E8%BF%9B%E9%98%B6%E8%AE%BE%E7%BD%AE/">
+                <a href="/2023/07/06/ChuanhuChatGPT%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="matery进阶设置">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="ChuanhuChatGPT使用教程">
                         
-                        <span class="card-title">matery进阶设置</span>
+                        <span class="card-title">ChuanhuChatGPT使用教程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -879,14 +791,14 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-05-21
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-07-06
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/" class="post-category">
-                                    博客搭建记录
+                            <a href="/categories/office/" class="post-category">
+                                    office
                                 </a>
                             
                             
@@ -896,12 +808,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
-                    </a>
-                    
-                    <a href="/tags/matery/">
-                        <span class="chip bg-color">matery</span>
+                    <a href="/tags/ChatGPT/">
+                        <span class="chip bg-color">ChatGPT</span>
                     </a>
                     
                 </div>
@@ -915,13 +823,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/05/20/%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/">
+                <a href="/2023/07/06/office%20%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="搭建图床">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="office 365 部署教程">
                         
-                        <span class="card-title">搭建图床</span>
+                        <span class="card-title">office 365 部署教程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -932,14 +840,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-06
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/" class="post-category">
-                                    博客搭建记录
+                            <a href="/categories/office/" class="post-category">
+                                    office
                                 </a>
                             
                             
@@ -949,24 +857,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/markdown/">
-                        <span class="chip bg-color">markdown</span>
+                    <a href="/tags/office/">
+                        <span class="chip bg-color">office</span>
                     </a>
                     
-                    <a href="/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/">
-                        <span class="chip bg-color">腾讯云</span>
+                    <a href="/tags/office-365/">
+                        <span class="chip bg-color">office 365</span>
                     </a>
                     
-                    <a href="/tags/PicGo/">
-                        <span class="chip bg-color">PicGo</span>
-                    </a>
-                    
-                    <a href="/tags/Obsidian/">
-                        <span class="chip bg-color">Obsidian</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%9B%BE%E5%BA%8A/">
-                        <span class="chip bg-color">图床</span>
+                    <a href="/tags/office-tool/">
+                        <span class="chip bg-color">office tool</span>
                     </a>
                     
                 </div>
