@@ -1,0 +1,79 @@
+[{
+    "avatar": "https://mojie.me/favicon.ico",
+    "name": "魔戒",
+    "introduction": "高性价比科学上网",
+    "url": "https://www.mojie.me",
+    "title": "访问网站"
+},{
+    "avatar": "https://huggingface.co/front/assets/huggingface_logo-noborder.svg",
+    "name": "ChatGPT",
+    "introduction": "实验室自用ChatGPT",
+    "url": "https://huggingface.co/spaces/aucnm/ChuanhuChatGPT",
+    "title": "访问网站"
+},{
+    "avatar": "https://pypi.org/static/images/favicon.35549fe8.ico",
+    "name": "PyPI",
+    "introduction": "Python官方第三方库",
+    "url": "https://pypi.org/",
+    "title": "访问网站"
+},{
+    "avatar": "https://img.alicdn.com/tfs/TB1_ZXuNcfpK1RjSZFOXXa6nFXa-32-32.ico",
+    "name": "阿里云",
+    "introduction": "国内云服务提供商",
+    "url": "https://www.aliyun.com/",
+    "title": "访问网站"
+},{
+    "avatar": "https://cloud.tencent.com/favicon.ico",
+    "name": "腾讯云",
+    "introduction": "国内云服务提供商",
+    "url": "https://cloud.tencent.com/",
+    "title": "访问网站"
+},{
+    "avatar": "https://ddys.pro/favicon.ico",
+    "name": "低端影视",
+    "introduction": "在线影视",
+    "url": "https://ddys.pro/",
+    "title": "访问网站"
+},{
+    "avatar": "https://www.glados.rocks/favicon.ico",
+    "name": "GLaDOS",
+    "introduction": "学生免费的科学上网",
+    "url": "https://www.glados.rocks/",
+    "title": "访问网站"
+},{
+    "avatar": "https://www.logosc.cn/img/home/logosc-new.svg",
+    "name": "标小智",
+    "introduction": "LOGO设计神器",
+    "url": "https://www.logosc.cn/",
+    "title": "访问网站"
+},{
+    "avatar": "https://fontawesome.com/favicon.ico",
+    "name": "FontAwesome",
+    "introduction": "LOGO网站",
+    "url": "https://fontawesome.com/icons",
+    "title": "访问网站"
+},{
+    "avatar": "https://statics.fontke.com/fontke/images/in-logo.png",
+    "name": "颜色查询",
+    "introduction": "颜色查询与搭配",
+    "url": "https://www.fontke.com/tool/rgb/4cbf30/",
+    "title": "访问网站"
+},{
+    "avatar": "https://pc.qq.com/favicon.ico",
+    "name": "腾讯软件中心",
+    "introduction": "可信的软件来源",
+    "url": "https://pc.qq.com/",
+    "title": "访问网站"
+},{
+    "avatar": "https://lestore.lenovo.com/favicon.ico",
+    "name": "联想应用商店",
+    "introduction": "可信的软件来源",
+    "url": "https://lestore.lenovo.com/",
+    "title": "访问网站"
+},{
+    "avatar": "https://bbs.3dmgame.com/favicon.ico",
+    "name": "3DM论坛",
+    "introduction": "单机破解与汉化论坛",
+    "url": "https://bbs.3dmgame.com/forum.php",
+    "title": "访问网站"
+}]

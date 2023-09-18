@@ -1,0 +1,211 @@
+{
+  "main": {
+    "id": "4b24cf9e58f36da0",
+    "type": "split",
+    "children": [
+      {
+        "id": "4600a9a7fec33e70",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ecddc592aa09c36b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "机器学习-1.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b791f21d90c211ed",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "office共享文档与在线协作.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1cc83f826da90f49",
+    "type": "split",
+    "children": [
+      {
+        "id": "1fe51755db7045ec",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2c4dbdef15fa54b9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "80832654ed2fc32a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "48d8d7b66ffaa9e4",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "96657e4ced1269eb",
+    "type": "split",
+    "children": [
+      {
+        "id": "456340be9d584ba4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "43a2fc00f640f3bf",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "office共享文档与在线协作.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "31689bcfa24af77e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "office共享文档与在线协作.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "7febf63a5dd7ad12",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "c135f0de0010338f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "office共享文档与在线协作.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "b791f21d90c211ed",
+  "lastOpenFiles": [
+    "blogpic/office共享文档与在线协作-19.png",
+    "blogpic/office共享文档与在线协作-18.png",
+    "blogpic/office共享文档与在线协作-17.png",
+    "blogpic/office共享文档与在线协作-16.png",
+    "blogpic/office共享文档与在线协作-15.png",
+    "blogpic/office共享文档与在线协作-14.png",
+    "blogpic/office共享文档与在线协作-13.png",
+    "blogpic/office共享文档与在线协作-12.png",
+    "blogpic/office共享文档与在线协作-11.png",
+    "blogpic/office共享文档与在线协作-10.png",
+    "blogpic/office共享文档与在线协作-9.png",
+    "机器学习-1.md",
+    "office共享文档与在线协作.md",
+    "机器学习-6.md",
+    "obsidian 入门教程.md",
+    "().md",
+    "搭建图床.md",
+    "科学上网.md",
+    "my-first-blog.md",
+    "blogpic/obsidian 入门教程-2.~vsdx",
+    "blogpic/相对路径.vsdx",
+    "blogpic/~$$绝对路径.~vsdx",
+    "blogpic/绝对路径.vsdx",
+    "blogpic/obsidian 入门教程-1.~vsdx",
+    "blogpic/路径.vsdx",
+    "office 部署教程.md",
+    "新建文件夹/test.py",
+    "新建文件夹/新建 文本文档.txt",
+    "新建文件夹/obsidian 入门教程.md",
+    "新建文件夹",
+    "Prism plugin.md",
+    "md语法.md",
+    "ChuanhuChatGPT使用教程.md",
+    "404.md",
+    "第六次会议(1).md",
+    "论文阅读.md",
+    "机器学习-2.md",
+    "机器学习-3 - ol.md",
+    "机器学习-4 - ol.md",
+    "联邦学习顶会论文阅读.md",
+    "个性化修改.md",
+    "新建 文本文档.txt",
+    "configure-the-style.md",
+    "matery主题设置.md",
+    "matery进阶设置.md",
+    "邹璧林.md"
+  ]
+}

@@ -1,0 +1,103 @@
+---
+title: my first blog
+date: 2023-05-19 18:37:36
+categories: [博客搭建记录]
+tags: [ node.js, Git, GitHub, 环境配置, SSH, hexo,]
+---
+# 环境配置
+## node.js
+- 下载地址: [https://nodejs.org/en/](https://nodejs.org/en/)
+- 安装验证：在CMD中运行以下命令，返回相应版本号即为安装成功
+	- `node -v`
+	- `npm -v`
+- 配制全局安装的模块路径和缓存路径（可选[^01]）
+	1. 在nodejs根目录,创建`node_global`，`node_cache`文件夹
+	2. 以管理员打开CMD运行以下命令
+		- `npm config set prefix "E:\develop\nodejs\node_global"`
+		- `npm config set cache "E:\develop\nodejs\node_cache"`
+- 配制全局环境变量`NODE_HOME`至nodejs文件（可选）
+	- 配制`%NODE_HOME%\node_cache`与`%NODE_HOME%\node_global`变量
+- 使用`npm install express -g`测试（可选）
+
+## Git
+### 下载安装
+- 下载地址：[https://git-scm.com/downloads](https://git-scm.com/downloads)
+- 安装教程：[https://www.cnblogs.com/xueweisuoyong/p/11914045.html](https://www.cnblogs.com/xueweisuoyong/p/11914045.html)
+
+### 配置连接github
+- 需要github账号
+- 在github创建名为`用户名.github.io`的new repository
+- 在本地，新建文件夹如==MyBlog==，并在MyBlog中右键点选==gitbash here==,输入以下命令
+```
+git config --global user.name "yourname"
+git config --global user.email "youremail"
+```
+- 可以使用以下命令验证
+```
+git config user.name
+git config user.email
+```
+- 生成SSH Keys，一直回车即可
+```
+ssh-keygen -t rsa -C "youremail"
+```
+- 找到`.shh`文件夹(.ssh文件通常在系统用户文件中)，奖公钥（id_rsa.pub中的内容）填写进github账户中
+- 或使用以下命令查询SSH（可选）
+```
+cat ~/.ssh/id_rsa.pub
+```
+- 使用`ssh -T git@github.com`以验证是否成功
+
+## hexo
+1. 在MyBlog文件中右键点选==gitbash here==
+2. 在gitbash中运行以下命令
+	- `npm install -g hexo-cli`
+	- `hexo -v`（验证安装成功）
+	- `hexo init`
+	- `hexo g`(等同于`hexo generate`生成静态页面)
+	- `hexo s`(等同于`hexo server`生成本地hexo页面)
+3. 运行完成后，指定文件夹`Hexo`目录下有：
+	-   `node_modules:` 依赖包
+	-   `public：`存放生成的页面
+	-   `scaffolds：`生成文章的一些模板
+	-   `source：`用来存放你的文章
+	-   `themes：`主题**
+	-   `_config.yml:` 博客的配置文件**
+4. 按`ctrl+c`关闭本地服务器。
+
+# 将hexo，即MyBlock文件部署到github
+1. 如下修改MyBlock文件夹中`_config.yml`文件
+```
+deploy:
+  type: git
+  repository: https://github.com/用户名/用户名.github.io.git
+  branch: main
+```
+2. 安装deploy-git
+```
+npm install hexo-deployer-git --save
+```
+3. 然后依次运行以下命令
+	- `hexo clean`
+	- `hexo generate`
+	- `hexo deploy`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[^01]:自动安装成功，应当自动完成可选步骤

@@ -1,0 +1,18 @@
+{
+  "obsidian-image-auto-upload-plugin:Download all images": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "D"
+    }
+  ],
+  "obsidian-image-auto-upload-plugin:Upload all images": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "U"
+    }
+  ]
+}
