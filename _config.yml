@@ -103,5 +103,5 @@ theme: matery
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repository: https://github.com/HOTSaber/HOTSaber.github.io.git
+  repository: git@github.com:HOTSaber/HOTSaber.github.io.git
   branch: main
