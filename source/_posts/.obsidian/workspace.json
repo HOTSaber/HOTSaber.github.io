@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11.博客的多终端同步.md",
+                "file": "office通过样式管理格式.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2fc8d2c21b146786",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "zotero使用教程.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "11.博客的多终端同步.md",
+                "file": "zotero使用教程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "11.博客的多终端同步.md",
+                "file": "zotero使用教程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11.博客的多终端同步.md"
+                "file": "zotero使用教程.md"
               }
             }
           }
@@ -146,15 +159,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2c4dbdef15fa54b9",
+  "active": "2fc8d2c21b146786",
   "lastOpenFiles": [
+    "office通过样式管理格式.md",
+    "zotero使用教程.md",
+    "office部署教程.md",
+    "11.博客的多终端同步.md",
     "5.home-page-configuration.md",
     "4.搭建图床.md",
     "3.上传新博客内容.md",
     "2.博客主题设置.md",
     "1.博客部署配置.md",
-    "office通过样式管理格式.md",
-    "11.博客的多终端同步.md",
     "office共享与在线协作.md",
     "office 部署教程.md",
     "blogpic/11.博客的多终端同步-2.png",
