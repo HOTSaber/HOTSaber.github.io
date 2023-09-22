@@ -646,6 +646,16 @@ git push <span aria-hidden="true" class="line-numbers-rows"><span></span><span><
 <p>其他终端同样编辑时，要pull回仓库中的文件，确保自己在最新的文件上进行修改</p>
 <pre class="line-numbers language-none"><code class="language-none">## 多台终端写blog ，记得先和github端 同步 ##
 git pull<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>如出现修改冲突</p>
+<ol>
+<li>放弃本地修改<pre class="line-numbers language-none"><code class="language-none">git reset --hard
+git pull<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<li>使用<code>git stash</code>保存当前工作进度<pre class="line-numbers language-none"><code class="language-none">git stash
+git pull
+git stash pop<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<code>git stash pop</code>把刚才stash到本地栈中的代码pop到本地，但会删除本地stash中的内容<br>也可用<code>git apply</code>恢复，但stash列表中的内容是继续保留的</li>
+</ol>
+
                 
             </div>
             <hr/>
@@ -776,18 +786,17 @@ git pull<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/09/18/11.%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%A4%9A%E7%BB%88%E7%AB%AF%E5%90%8C%E6%AD%A5/">
+                <a href="/2023/09/22/zotero%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="博客的多终端同步">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="zotero使用教程">
                         
-                        <span class="card-title">博客的多终端同步</span>
+                        <span class="card-title">zotero使用教程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -797,47 +806,46 @@ git pull<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-18
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-09-22
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/" class="post-category">
-                                    博客搭建记录
+                            <a href="/categories/%E6%96%87%E6%A1%A3%E7%BC%96%E8%BE%91%E4%B8%8E%E7%AE%A1%E7%90%86/" class="post-category">
+                                    文档编辑与管理
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/node-js/">
-                        <span class="chip bg-color">node.js</span>
+                    <a href="/tags/%E6%A0%BC%E5%BC%8F/">
+                        <span class="chip bg-color">格式</span>
                     </a>
                     
-                    <a href="/tags/Git/">
-                        <span class="chip bg-color">Git</span>
+                    <a href="/tags/office/">
+                        <span class="chip bg-color">office</span>
                     </a>
                     
-                    <a href="/tags/SSH/">
-                        <span class="chip bg-color">SSH</span>
+                    <a href="/tags/zotero/">
+                        <span class="chip bg-color">zotero</span>
                     </a>
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/chrome-%E6%8F%92%E4%BB%B6/">
+                        <span class="chip bg-color">chrome 插件</span>
                     </a>
                     
-                    <a href="/tags/Github/">
-                        <span class="chip bg-color">Github</span>
+                    <a href="/tags/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86/">
+                        <span class="chip bg-color">文献管理</span>
                     </a>
                     
-                    <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
-                        <span class="chip bg-color">多终端</span>
+                    <a href="/tags/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/">
+                        <span class="chip bg-color">参考文献</span>
                     </a>
                     
                 </div>
@@ -851,13 +859,13 @@ git pull<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/09/18/office%E5%85%B1%E4%BA%AB%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C/">
+                <a href="/2023/09/18/office%E9%80%9A%E8%BF%87%E6%A0%B7%E5%BC%8F%E7%AE%A1%E7%90%86%E6%A0%BC%E5%BC%8F/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="office共享与在线协作">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="通过样式管理格式">
                         
-                        <span class="card-title">office共享与在线协作</span>
+                        <span class="card-title">通过样式管理格式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -885,24 +893,16 @@ git pull<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
                 
                 <div class="card-action article-tags">
                     
+                    <a href="/tags/%E6%A0%BC%E5%BC%8F/">
+                        <span class="chip bg-color">格式</span>
+                    </a>
+                    
                     <a href="/tags/office/">
                         <span class="chip bg-color">office</span>
                     </a>
                     
-                    <a href="/tags/office-365/">
-                        <span class="chip bg-color">office 365</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%85%B1%E4%BA%AB%E6%96%87%E6%A1%A3/">
-                        <span class="chip bg-color">共享文档</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C/">
-                        <span class="chip bg-color">在线协作</span>
-                    </a>
-                    
-                    <a href="/tags/one-drive/">
-                        <span class="chip bg-color">one drive</span>
+                    <a href="/tags/%E6%A0%B7%E5%BC%8F%E7%AE%A1%E7%90%86/">
+                        <span class="chip bg-color">样式管理</span>
                     </a>
                     
                 </div>
