@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "office 部署教程.md",
+                "file": "联邦学习顶会论文阅读.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "office 部署教程.md",
+                "file": "联邦学习顶会论文阅读.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "office 部署教程.md",
+                "file": "联邦学习顶会论文阅读.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "office 部署教程.md"
+                "file": "联邦学习顶会论文阅读.md"
               }
             }
           }
@@ -151,39 +151,42 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
     }
   },
   "active": "b791f21d90c211ed",
   "lastOpenFiles": [
+    "论文阅读.md",
+    "task in future.md",
+    "sakura.md",
+    "Prism plugin.md",
+    "office通过样式管理格式.md",
+    "office共享文档与在线协作.md",
+    "office 部署教程.md",
+    "obsidian 入门教程.md",
+    "10.ChuanhuChatGPT使用教程.md",
+    "5.home-page-configuration.md",
+    "9.md语法.md",
+    "7.matery主题设置.md",
+    "6.matery进阶设置.md",
+    "第六次会议(1).md",
+    "4.搭建图床.md",
+    "3.上传新博客内容.md",
+    "2.博客主题设置.md",
+    "1.博客部署配置.md",
+    "个性化修改.md",
     "11.博客的多终端同步.md",
     "blogpic/11.博客的多终端同步-2.png",
     "blogpic/office 部署教程-1.png",
     "404.md",
-    "搭建图床.md",
-    "第六次会议(1).md",
-    "个性化修改.md",
-    "task in future.md",
-    "sakura.md",
-    "Prism plugin.md",
-    "office共享文档与在线协作.md",
-    "office 部署教程.md",
-    "obsidian 入门教程.md",
-    "my-first-blog.md",
-    "md语法.md",
-    "matery进阶设置.md",
-    "home-page-configuration.md",
-    "deploy-new-blog.md",
-    "configure-the-style.md",
     "科学上网.md",
     "机器学习-6.md",
     "联邦学习顶会论文阅读.md",
-    "论文阅读.md",
     "blogpic/office共享文档与在线协作-19.png",
     "blogpic/office共享文档与在线协作-18.png",
     "blogpic/office共享文档与在线协作-17.png",
@@ -202,10 +205,7 @@
     "blogpic/路径.vsdx",
     "新建文件夹/test.py",
     "新建文件夹/新建 文本文档.txt",
-    "新建文件夹/obsidian 入门教程.md",
     "新建文件夹",
-    "ChuanhuChatGPT使用教程.md",
-    "机器学习-2.md",
     "新建 文本文档.txt"
   ]
 }
