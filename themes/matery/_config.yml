@@ -10,6 +10,9 @@ menu:
       - name: 机器学习
         url: /categories/机器学习
         icon: fas fa-tv
+      - name: 深度学习
+        url: /categories/深度学习
+        icon: fas fa-brain
       - name: 博客部署
         url: /categories/博客搭建记录
         icon: fas fa-file

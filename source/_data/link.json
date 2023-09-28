@@ -17,6 +17,24 @@
     "url": "https://pypi.org/",
     "title": "访问网站"
 },{
+    "avatar": "https://www.anaconda.com/wp-content/uploads/2022/12/cropped-site_logo-1-270x270.png",
+    "name": "Anaconda",
+    "introduction": "Anaconda官网下载",
+    "url": "https://www.anaconda.com/download",
+    "title": "访问网站"
+},{
+    "avatar": "https://dirms4qsy6412.cloudfront.net/nv/assets/favicon-81bff16cada05fcff11e5711f7e6212bdc2e0a32ee57cd640a8cf66c87a6cbe6.ico",
+    "name": "CUDA",
+    "introduction": "CUDA官网下载",
+    "url": "https://developer.nvidia.com/cuda-downloads",
+    "title": "访问网站"
+},{
+    "avatar": "https://pytorch.org/favicon.ico",
+    "name": "Pytorch",
+    "introduction": "Pytorch官网下载",
+    "url": "https://pytorch.org/get-started/locally/",
+    "title": "访问网站"
+},{
     "avatar": "https://img.alicdn.com/tfs/TB1_ZXuNcfpK1RjSZFOXXa6nFXa-32-32.ico",
     "name": "阿里云",
     "introduction": "国内云服务提供商",

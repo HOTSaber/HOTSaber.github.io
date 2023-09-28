@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "zotero使用教程.md",
+                "file": "深度学习-1 本地环境部署.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "zotero使用教程.md",
+                "file": "深度学习-1 本地环境部署.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "zotero使用教程.md",
+                "file": "深度学习-1 本地环境部署.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "zotero使用教程.md"
+                "file": "深度学习-1 本地环境部署.md"
               }
             }
           }
@@ -161,8 +161,10 @@
   },
   "active": "2fc8d2c21b146786",
   "lastOpenFiles": [
-    "office通过样式管理格式.md",
+    "深度学习 科学上网.md",
+    "深度学习-1 本地环境部署.md",
     "zotero使用教程.md",
+    "office通过样式管理格式.md",
     "office部署教程.md",
     "11.博客的多终端同步.md",
     "5.home-page-configuration.md",
