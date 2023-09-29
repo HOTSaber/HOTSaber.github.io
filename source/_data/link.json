@@ -5,16 +5,10 @@
     "url": "https://www.mojie.me",
     "title": "访问网站"
 },{
-    "avatar": "https://huggingface.co/front/assets/huggingface_logo-noborder.svg",
-    "name": "ChatGPT",
-    "introduction": "实验室自用ChatGPT",
-    "url": "https://huggingface.co/spaces/aucnm/ChuanhuChatGPT",
-    "title": "访问网站"
-},{
-    "avatar": "https://pypi.org/static/images/favicon.35549fe8.ico",
-    "name": "PyPI",
-    "introduction": "Python官方第三方库",
-    "url": "https://pypi.org/",
+    "avatar": "https://my.zerotier.com/favicon.ico",
+    "name": "zerotier",
+    "introduction": "虚拟局域网实现内网穿透",
+    "url": "https://my.zerotier.com/",
     "title": "访问网站"
 },{
     "avatar": "https://www.anaconda.com/wp-content/uploads/2022/12/cropped-site_logo-1-270x270.png",
@@ -33,6 +27,18 @@
     "name": "Pytorch",
     "introduction": "Pytorch官网下载",
     "url": "https://pytorch.org/get-started/locally/",
+    "title": "访问网站"
+},{
+    "avatar": "https://pypi.org/static/images/favicon.35549fe8.ico",
+    "name": "PyPI",
+    "introduction": "Python官方第三方库",
+    "url": "https://pypi.org/",
+    "title": "访问网站"
+},{
+    "avatar": "https://huggingface.co/front/assets/huggingface_logo-noborder.svg",
+    "name": "ChatGPT",
+    "introduction": "实验室自用ChatGPT",
+    "url": "https://huggingface.co/spaces/aucnm/ChuanhuChatGPT",
     "title": "访问网站"
 },{
     "avatar": "https://img.alicdn.com/tfs/TB1_ZXuNcfpK1RjSZFOXXa6nFXa-32-32.ico",

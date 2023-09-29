@@ -11,15 +11,27 @@
     "url": "https://pan.baidu.com/s/1cCi02XYfT8F-ydO56b7vMg",
     "title": "网盘下载"
 },{
-    "avatar": "https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/New%20LOGO-150.png",
-    "name": "PicGo",
-    "introduction": "生成图像公网链接",
-    "url": "https://pan.baidu.com/s/1URTQ_sh6JpSATrGzZ4tB1g",
-    "title": "网盘下载"
-},{
     "avatar": "https://otp.landian.vip/static/images/logo.ico",
     "name": "OfficeTool",
     "introduction": "Office部署工具",
     "url": "https://otp.landian.vip/zh-cn/download.html",
     "title": "官网下载"
+},{
+    "avatar": "https://my.zerotier.com/favicon.ico",
+    "name": "zerotier",
+    "introduction": "虚拟局域网实现内网穿透",
+    "url": "https://www.zerotier.com/download/",
+    "title": "官网下载"
+},{
+    "avatar": "https://www.xshell.com/wp-content/uploads/2018/12/favicon.ico",
+    "name": "xshell&xftp",
+    "introduction": "远程命令符&文件管理",
+    "url": "https://www.xshell.com/zh/free-for-home-school/",
+    "title": "官网下载"
+},{
+    "avatar": "https://raw.githubusercontent.com/Molunerfinn/test/master/picgo/New%20LOGO-150.png",
+    "name": "PicGo",
+    "introduction": "生成图像公网链接",
+    "url": "https://pan.baidu.com/s/1URTQ_sh6JpSATrGzZ4tB1g",
+    "title": "网盘下载"
 }]
