@@ -648,7 +648,7 @@ anaconda安装过程中可提供python安装，如果确定安装anaconda可以�
 <li>在CMD中使用命令<code>nvidia-smi</code>查看CUDA安装是否成功<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2-3.png" alt="深度学习-1 本地环境部署-3"></li>
 </ul>
 <h1 id="安装Pytorch"><a href="#安装Pytorch" class="headerlink" title="安装Pytorch"></a>安装Pytorch</h1><h2 id="构建虚拟环境"><a href="#构建虚拟环境" class="headerlink" title="构建虚拟环境"></a>构建虚拟环境</h2><ul>
-<li>如果有需要，使用<code>conda create --name 名字</code>新建一个虚拟环境</li>
+<li>如果有需要，使用<code>conda create --name 名字 python=3.8</code>新建一个虚拟环境<br><strong>当不标明python版本时<code>python=3.8</code>，对应env文件下不会出现python.exe</strong></li>
 <li>使用<code>conda activate 名字</code>进入虚拟环境安装</li>
 <li>如果不需要在<code>base</code>环境中安装即可</li>
 <li>可使用<code>conda list</code>或<code>pip list</code>查看目前环境所安装的包<br><strong>注意<code>pip</code>,<code>pip3</code>,<code>conda</code>安装命令的安装位置不一样，可在CMD中使用<code>where pip</code>找pip所在位置</strong><br><strong>目前测试使用<code>pip install</code>安装的包，在不同conda环境中是通用的</strong></li>
@@ -818,9 +818,80 @@ torch.cuda.is_available()<span aria-hidden="true" class="line-numbers-rows"><spa
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2023/09/28/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="深度学习：本地环境部署">
+                        
+                        <span class="card-title">深度学习：本地环境部署</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-28
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    深度学习
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">深度学习</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%8E%AF%E5%A2%83/">
+                        <span class="chip bg-color">环境</span>
+                    </a>
+                    
+                    <a href="/tags/Anaconda/">
+                        <span class="chip bg-color">Anaconda</span>
+                    </a>
+                    
+                    <a href="/tags/CUDA/">
+                        <span class="chip bg-color">CUDA</span>
+                    </a>
+                    
+                    <a href="/tags/Pytorch/">
+                        <span class="chip bg-color">Pytorch</span>
+                    </a>
+                    
+                    <a href="/tags/CMD%E5%91%BD%E4%BB%A4/">
+                        <span class="chip bg-color">CMD命令</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2023/09/28/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%20%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">
                     <div class="card-image">
@@ -838,9 +909,9 @@ torch.cuda.is_available()<span aria-hidden="true" class="line-numbers-rows"><spa
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-09-28
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-28
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -862,75 +933,6 @@ torch.cuda.is_available()<span aria-hidden="true" class="line-numbers-rows"><spa
                     
                     <a href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">
                         <span class="chip bg-color">科学上网</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2023/09/22/zotero%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="zotero使用教程">
-                        
-                        <span class="card-title">zotero使用教程</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-22
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%96%87%E6%A1%A3%E7%BC%96%E8%BE%91%E4%B8%8E%E7%AE%A1%E7%90%86/" class="post-category">
-                                    文档编辑与管理
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%A0%BC%E5%BC%8F/">
-                        <span class="chip bg-color">格式</span>
-                    </a>
-                    
-                    <a href="/tags/office/">
-                        <span class="chip bg-color">office</span>
-                    </a>
-                    
-                    <a href="/tags/zotero/">
-                        <span class="chip bg-color">zotero</span>
-                    </a>
-                    
-                    <a href="/tags/chrome-%E6%8F%92%E4%BB%B6/">
-                        <span class="chip bg-color">chrome 插件</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86/">
-                        <span class="chip bg-color">文献管理</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/">
-                        <span class="chip bg-color">参考文献</span>
                     </a>
                     
                 </div>
