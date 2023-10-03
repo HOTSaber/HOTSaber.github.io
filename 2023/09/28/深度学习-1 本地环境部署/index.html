@@ -675,7 +675,11 @@ cd &#x2F;        #反回根磁盘<span aria-hidden="true" class="line-numbers-ro
 <li>使用<code>import torch</code>导入torch包<br>依次使用使用以下命令测试<pre class="line-numbers language-none"><code class="language-none">a &#x3D; torch.ones((3,1)).cuda(0)
 b &#x3D; torch.ones((3,1)).cuda(0)
 a + b<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-得到运算结果：<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2-8.png" alt="深度学习-1 本地环境部署-8"><br>使用<code>exit()</code>或<code>quit()</code>退出python</li>
+得到运算结果：<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2-8.png" alt="深度学习-1 本地环境部署-8"><br>使用<code>exit()</code>或<code>quit()</code>退出python </li>
+<li>也可使用以下命令<pre class="line-numbers language-none"><code class="language-none">python
+import torch
+torch.cuda.is_available()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+返回ture即可</li>
 </ul>
 <h1 id="安装jupyter-note-book与-d2l"><a href="#安装jupyter-note-book与-d2l" class="headerlink" title="安装jupyter note book与 d2l"></a>安装jupyter note book与 d2l</h1><p>1. </p>
 <pre class="line-numbers language-none"><code class="language-none">pip install jupyter d2l<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
