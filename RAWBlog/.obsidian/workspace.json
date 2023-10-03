@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "机器学习-1.md",
+                "file": "深度学习-1 本地环境部署.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "机器学习-1.md",
+                "file": "深度学习-1 本地环境部署.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "机器学习-1.md",
+                "file": "深度学习-1 本地环境部署.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "机器学习-1.md"
+                "file": "深度学习-1 本地环境部署.md"
               }
             }
           }
@@ -148,6 +148,7 @@
   },
   "active": "ecddc592aa09c36b",
   "lastOpenFiles": [
+    "机器学习-1.md",
     "深度学习-1 本地环境部署.md",
     "深度学习 科学上网.md",
     "机器学习-4 - ol.md",
@@ -174,7 +175,6 @@
     "3.上传新博客内容.md",
     "论文阅读.md",
     "机器学习-6.md",
-    "机器学习-1.md",
     "机器学习-2.md",
     "机器学习-3 - ol.md",
     "office zotero使用教程.md",
