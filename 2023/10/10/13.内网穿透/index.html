@@ -1,0 +1,1491 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta name="keywords" content="内网穿透, 挖掘机">
+    <meta name="description" content="
+1.用于在公开网络环境访问特定局域网环境下的节点2.需要有一个具有公网IP的服务器作为中转节点，可参考阿里云、腾讯云，这里我们选用腾讯云服务器3.需要使用frp，详情可见Github项目4.可以使用xshell、xftp进行远程管理，软件">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>内网穿透 | 挖掘机</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">挖掘机</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>主页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-book" style="zoom: 0.6;"></i>
+      
+      <span>记录</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0">
+          
+          <i class="fas fa-tv" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>机器学习</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0">
+          
+          <i class="fas fa-brain" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>深度学习</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95">
+          
+          <i class="fas fa-file" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>博客部署</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E6%96%87%E6%A1%A3%E7%BC%96%E8%BE%91%E4%B8%8E%E7%AE%A1%E7%90%86">
+          
+          <i class="fas fa-file-word" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>文档编辑与管理</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tags">
+          
+          <i class="fas fa-tags" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>标签</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories">
+          
+          <i class="fas fa-bookmark" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>分类</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/archives">
+          
+          <i class="fas fa-archive" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>归档</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>工具</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/mac">
+          
+          <i class="fab fa-windows" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Windows软件</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/link">
+          
+          <i class="fas fa-link" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>常用链接</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/navigation">
+          
+          <i class="fas fa-location-arrow" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>导航</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>其他</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/friends">
+          
+          <i class="fas fa-address-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>友情链接</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/about">
+          
+          <i class="fas fa-user-circle" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>关于我</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">挖掘机</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			主页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-book"></i>
+			
+			记录
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-tv" style="position: absolute;left:50px" ></i>
+			      
+		          <span>机器学习</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-brain" style="position: absolute;left:50px" ></i>
+			      
+		          <span>深度学习</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-file" style="position: absolute;left:50px" ></i>
+			      
+		          <span>博客部署</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/%E6%96%87%E6%A1%A3%E7%BC%96%E8%BE%91%E4%B8%8E%E7%AE%A1%E7%90%86 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-file-word" style="position: absolute;left:50px" ></i>
+			      
+		          <span>文档编辑与管理</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/tags " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-tags" style="position: absolute;left:50px" ></i>
+			      
+		          <span>标签</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-bookmark" style="position: absolute;left:50px" ></i>
+			      
+		          <span>分类</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/archives " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-archive" style="position: absolute;left:50px" ></i>
+			      
+		          <span>归档</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			工具
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/mac " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-windows" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Windows软件</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/link " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-link" style="position: absolute;left:50px" ></i>
+			      
+		          <span>常用链接</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/navigation " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-location-arrow" style="position: absolute;left:50px" ></i>
+			      
+		          <span>导航</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-user-circle"></i>
+			
+			其他
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/friends " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-address-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>友情链接</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/about " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-user-circle" style="position: absolute;left:50px" ></i>
+			      
+		          <span>关于我</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/HOTSaber/HOTSaber.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/HOTSaber/HOTSaber.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">内网穿透</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/SSH/">
+                                <span class="chip bg-color">SSH</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
+                                <span class="chip bg-color">多终端</span>
+                            </a>
+                        
+                            <a href="/tags/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
+                                <span class="chip bg-color">远程访问</span>
+                            </a>
+                        
+                            <a href="/tags/linux/">
+                                <span class="chip bg-color">linux</span>
+                            </a>
+                        
+                            <a href="/tags/%E4%BA%91/">
+                                <span class="chip bg-color">云</span>
+                            </a>
+                        
+                            <a href="/tags/frp/">
+                                <span class="chip bg-color">frp</span>
+                            </a>
+                        
+                            <a href="/tags/xshell/">
+                                <span class="chip bg-color">xshell</span>
+                            </a>
+                        
+                            <a href="/tags/xftp/">
+                                <span class="chip bg-color">xftp</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                深度学习
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-10-10
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <hr>
+<p>1.用于在公开网络环境访问特定局域网环境下的节点<br>2.需要有一个具有公网IP的服务器作为中转节点，可参考<a target="_blank" rel="noopener" href="https://account.aliyun.com/">阿里云</a>、<a target="_blank" rel="noopener" href="https://cloud.tencent.com/">腾讯云</a>，这里我们选用腾讯云服务器<br>3.需要使用<code>frp</code>，详情可见<a target="_blank" rel="noopener" href="https://github.com/fatedier/frp">Github项目</a><br>4.可以使用<code>xshell</code>、<code>xftp</code>进行远程管理，软件下载见<a target="_blank" rel="noopener" href="https://www.xshell.com/zh/free-for-home-school/">官网</a><strong>下载免费的教育版即可</strong><br>5.原参考教程可见<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV13L411w7XU/?spm_id_from=333.999.top_right_bar_window_history.content.click&vd_source=73162f668fdc494f53422288195ecea3">中之的视频</a></p>
+<hr>
+<h1 id="配置frp文件"><a href="#配置frp文件" class="headerlink" title="配置frp文件"></a>配置frp文件</h1><ul>
+<li>分别下载frp客户端<code>frpc</code>与frp服务端<code>frps</code>, windows 64位下载 <code>windows_amd64</code>，linux下载<code>linux_amd64</code></li>
+<li><strong>客户端即局域网中需要穿透到外网的节点，服务端即为作为中转的云服务器</strong></li>
+</ul>
+<h2 id="本地配置"><a href="#本地配置" class="headerlink" title="本地配置"></a>本地配置</h2><p>可以先在本地上把配置⽂件编辑好，再上传到Windows PC和Linux</p>
+<ul>
+<li>配置服务端文件<code>frpc.ini</code>：<pre class="line-numbers language-none"><code class="language-none">[common]
+bind_port &#x3D; 7000
+vhost_http_port &#x3D; 8080<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+<li>其中<code>bind_port</code>是SSH用端口，<code>vhost_http_port</code>是用来映射Jupyter notebook的端口，完整的参数可以参考<code>frps_full.ini</code> ，这⾥不作展开；</li>
+<li>配置客户端文件<code>frpc.ini</code>:<pre class="line-numbers language-none"><code class="language-none">[common]
+server_addr &#x3D; [cloud_ip]
+server_port &#x3D; 7000
+
+[ssh]
+type &#x3D; tcp
+local_ip &#x3D; 127.0.0.1
+local_port &#x3D; 22
+remote_port &#x3D; 6000
+
+[web]
+type &#x3D; http
+local_port &#x3D; 8888
+custom_domains &#x3D; [cloud_ip]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>主要修改了<code>server_addr</code>为我们的云服务器IP, 并配置了两个映射规则，分别是SSH与web，用于SSH远程访问与映射jupyter notebook。</li>
+<li>将frp分别上传到服务器和客户端（可以把没⽤的⽂件删掉，服务端只保留<code>frps</code>相关的文件，客户端只保留<code>frpc</code>相关的文件）</li>
+</ul>
+<h1 id="中转服务端设置"><a href="#中转服务端设置" class="headerlink" title="中转服务端设置"></a>中转服务端设置</h1><ul>
+<li>在服务器防火墙开启配置文件中的端口<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/13.%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F-2.png" alt="13.内网穿透-2"><br>不确定协议类型可以两个都加上</li>
+</ul>
+<h1 id="启动frp进程"><a href="#启动frp进程" class="headerlink" title="启动frp进程"></a>启动frp进程</h1><p>先使用命令符加载进frp文件侠下</p>
+<ul>
+<li>服务端<pre class="line-numbers language-none"><code class="language-none">.&#x2F;frps -c .&#x2F;frps.ini<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<strong>出现权限问题可使用<code>chmod 777 ./frps</code>提升<code>frps</code>文件权限</strong></li>
+<li>客户端<pre class="line-numbers language-none"><code class="language-none">frpc -c frpc.ini<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+ linux 命令：<pre class="line-numbers language-none"><code class="language-none">ls #列出当前目录的所有文件和子目录名称
+CD #用于更改当前工作目录 cd ..为返回上一级
+pwd #用于显示当前所在的工作目录的全路径名称<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+windows 命令：<pre class="line-numbers language-none"><code class="language-none">dir #列出当前目录的所有文件和子目录名称
+CD #用于更改当前工作目录 cd ..为返回上一级<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<li>在其他电脑上使用ssh测试：<br>windows命令行：<pre class="line-numbers language-none"><code class="language-none">ssh username@cloud_ip -p portnumber<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+mac命令行：<pre class="line-numbers language-none"><code class="language-none">ssh -p portnumber username@cloud_ip<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+xshell：<pre class="line-numbers language-none"><code class="language-none">ssh username@cloud_ip portumber<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ul>
+<h1 id="自启动配置"><a href="#自启动配置" class="headerlink" title="自启动配置"></a>自启动配置</h1><h2 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h2><ul>
+<li>确保安装了<code>systemd</code><pre class="line-numbers language-none"><code class="language-none"># yum
+yum install systemd
+# apt
+apt install systemd<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>使用文本编辑器，如 <code>vim</code> 创建并编辑 <code>frps.service</code> 文件。此处的文件名称决定了服务的名称。<pre class="line-numbers language-none"><code class="language-none">vim &#x2F;lib&#x2F;systemd&#x2F;system&#x2F;frps.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>写入以下内容：<pre class="line-numbers language-none"><code class="language-none">[Unit]
+Description&#x3D;Frp Server Service
+After&#x3D;network.target
+
+[Service]
+Type&#x3D;simple
+User&#x3D;root  #此处用户名需要修改
+Restart&#x3D;on-failure
+RestartSec&#x3D;5s
+ExecStart&#x3D;&#x2F;root&#x2F;frp_0.51.3_linux_amd64&#x2F;frps -c &#x2F;root&#x2F;frp_0.51.3_linux_amd64&#x2F;frps.ini #此处文件路径需要修改
+LimitNOFILE&#x3D;1048576
+
+[Install]
+WantedBy&#x3D;multi-user.target<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<strong>路径要使用绝对路径，可以通过<code>pwd</code>来查看路径</strong></li>
+<li>使用以下命令，实现开机自启动：<pre class="line-numbers language-none"><code class="language-none">systemctl daemon-reload  
+systemctl enable frps  
+systemctl start frps  
+systemctl status frps<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+显示以下内容则表示自启成功：<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/13.%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F-3.png" alt="13.内网穿透-3"><br>命令功能参考如下：<pre class="line-numbers language-none"><code class="language-none">systemctl start frps #启动frps
+systemctl enable frps #打开自启动
+systemctl  disable frps #关闭自启动
+systemctl restart frps #重启进程
+systemctl stop frps #停止进程
+systemctl status frps #查看进程日志<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+<h2 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h2><ul>
+<li>在<code>frps</code>文件中新建批处理文件<code>autostart.bat</code>文件：<pre class="line-numbers language-none"><code class="language-none">@echo off
+chcp 65001
+title 内网穿透_不要关闭此窗口！！！
+echo ---------------------分割线-----------------
+echo 不要关闭此窗口！！！ 
+echo 不要关闭此窗口！！！
+echo 不要关闭此窗口！！！
+echo ---------------------分割线-----------------
+
+if not defined TAG (
+	set TAG&#x3D;1
+	start wt -p &quot;cmd&quot; %0 #要确保安装了windows terminal，如果没有安装，可以在Microsoft store中安装
+	exit
+)
+
+:home
+frpc -c frpc.ini
+goto home #为了崩溃或者异常后可以重启<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>创建<code>autostart.bat</code>的快捷⽅式</li>
+<li>打开 <code>C:\Users\username\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\</code>，将快捷⽅式粘贴到进去</li>
+<li>这个⽅法在每次PC开机时，就会弹出Windows Terminal的窗⼝，可能有点碍事，但你可以直接看到frpc的运⾏状态</li>
+<li>如果你暂时不需要启动frpc，直接Ctrl + C终⽌即可，然后需要运⾏的时候再去⼿动运⾏ autostart.bat 即<br>可</li>
+</ul>
+<h1 id="jupyter-notebook配置"><a href="#jupyter-notebook配置" class="headerlink" title="jupyter notebook配置"></a>jupyter notebook配置</h1><p>详情可见<a target="_blank" rel="noopener" href="https://bingqiangzhou.github.io/2020/06/18/DailyJungle-FrpAndJupyterNotebookRemoteConfig.html">frp实现内网穿透以及配置Jupyter Notebook远程连接</a>与<a target="_blank" rel="noopener" href="https://blog.csdn.net/WeDon_t/article/details/112982371">使用frp穿透远程访问Jupyter Notebook方法</a></p>
+<h2 id="生成nootbook配置文件"><a href="#生成nootbook配置文件" class="headerlink" title="生成nootbook配置文件"></a>生成nootbook配置文件</h2><p>执行以下命令，会在用户目录下生成的配置文件<code>~/.jupyter/jupyter_notebook_config.py</code>，之后在这个文件中再进行配置。</p>
+<pre class="line-numbers language-none"><code class="language-none">jupyter notebook --generate-config<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="详细配置设置"><a href="#详细配置设置" class="headerlink" title="详细配置设置"></a>详细配置设置</h2><ol>
+<li>进入<code>python</code>环境：<pre class="line-numbers language-none"><code class="language-none">from notebook.auth import passwd
+passwd()
+#设置自己的密码，例如123
+#然后两次输入确认生成加密字符串
+#一定保留好加密字符串<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>对<code>~/.jupyter/jupyter_notebook_config.py</code>进行配置允许访问：<pre class="line-numbers language-none"><code class="language-none">c.NotebookApp.allow_remote_access &#x3D; True  #允许远程访问
+c.NotebookApp.allow_root &#x3D; True          #允许root访问
+c.NotebookApp.ip&#x3D;&#39;*&#39;                     # 这一项为noteboook运行所占用的IP
+c.NotebookApp.password &#x3D; &#39;上面复制的加密字符串&#39;  
+c.NotebookApp.open_browser &#x3D; False       # 禁止自动打开浏览器  
+c.NotebookApp.port &#x3D;8888                 # 端口
+c.NotebookApp.notebook_dir &#x3D; &#39;设置Notebook启动进入的目录&#39; <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<strong>注意：如果用frp做内网穿透的话，这里的端口需要对应上面frp客户端web服务配置的端口号，tensorboard可视化等等其他web服务也是一样</strong></li>
+<li>配置完成，重启notebook即可<br>使用<code>nohup</code>命令后台运行jupyter notebook，并将输出的内容追加的内容输出到<code>jupyter.out</code>文件中，同时将错误信息也输出到文件中。<pre class="line-numbers language-none"><code class="language-none">nohup jupyter notebook &gt;&gt;jupyter.out 2&gt;&amp;1 &amp;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>使用<code>frp</code>配置中的云服务器IP+端口号即可以远程访问</li>
+</ol>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Austin</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://example.com/2023/10/10/13.%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">http://example.com/2023/10/10/13.%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Austin</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/SSH/">
+                                    <span class="chip bg-color">SSH</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
+                                    <span class="chip bg-color">多终端</span>
+                                </a>
+                            
+                                <a href="/tags/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
+                                    <span class="chip bg-color">远程访问</span>
+                                </a>
+                            
+                                <a href="/tags/linux/">
+                                    <span class="chip bg-color">linux</span>
+                                </a>
+                            
+                                <a href="/tags/%E4%BA%91/">
+                                    <span class="chip bg-color">云</span>
+                                </a>
+                            
+                                <a href="/tags/frp/">
+                                    <span class="chip bg-color">frp</span>
+                                </a>
+                            
+                                <a href="/tags/xshell/">
+                                    <span class="chip bg-color">xshell</span>
+                                </a>
+                            
+                                <a href="/tags/xftp/">
+                                    <span class="chip bg-color">xftp</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2023/10/10/13.%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="内网穿透">
+                        
+                        <span class="card-title">内网穿透</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-10
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    深度学习
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/SSH/">
+                        <span class="chip bg-color">SSH</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
+                        <span class="chip bg-color">多终端</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
+                        <span class="chip bg-color">远程访问</span>
+                    </a>
+                    
+                    <a href="/tags/linux/">
+                        <span class="chip bg-color">linux</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%BA%91/">
+                        <span class="chip bg-color">云</span>
+                    </a>
+                    
+                    <a href="/tags/frp/">
+                        <span class="chip bg-color">frp</span>
+                    </a>
+                    
+                    <a href="/tags/xshell/">
+                        <span class="chip bg-color">xshell</span>
+                    </a>
+                    
+                    <a href="/tags/xftp/">
+                        <span class="chip bg-color">xftp</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/10/10/12.%E4%BD%BF%E7%94%A8SSH%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="使用SSH远程访问">
+                        
+                        <span class="card-title">使用SSH远程访问</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-10
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    深度学习
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/SSH/">
+                        <span class="chip bg-color">SSH</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
+                        <span class="chip bg-color">多终端</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
+                        <span class="chip bg-color">远程访问</span>
+                    </a>
+                    
+                    <a href="/tags/xshell/">
+                        <span class="chip bg-color">xshell</span>
+                    </a>
+                    
+                    <a href="/tags/xftp/">
+                        <span class="chip bg-color">xftp</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('2'),
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2023</span>
+            
+            <a href="/about" target="_blank">Austin</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/HOTSaber" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:aucnm0202@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我:aucnm0202@163.com" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=4925151" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 4925151" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+    <a href="weixin://dl/business/?ticket=ta428dhj739hg3efe6e theme.socialLink.weichat " class="tooltipped" target="_blank" data-tooltip="微信联系我: HT4925151" data-position="top" data-delay="50">
+        <i class="fab fa-weixin"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+
+</body>
+
+</html>
