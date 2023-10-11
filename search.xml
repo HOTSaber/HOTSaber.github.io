@@ -26,15 +26,15 @@
             
             <tag> 远程访问 </tag>
             
+            <tag> xshell </tag>
+            
+            <tag> xftp </tag>
+            
             <tag> linux </tag>
             
             <tag> 云 </tag>
             
             <tag> frp </tag>
-            
-            <tag> xshell </tag>
-            
-            <tag> xftp </tag>
             
         </tags>
       
@@ -107,7 +107,7 @@
       <link href="/2023/09/28/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/"/>
       <url>/2023/09/28/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/</url>
       
-        <content type="html"><![CDATA[<hr><ol><li>云端环境配置请移步<a href="https://space.bilibili.com/1567748478/channel/seriesdetail?sid=358497">李沐课程</a></li><li>本地环境配置<a href="https://www.zhihu.com/zvideo/1363284223420436480">原视频</a></li></ol><hr><h1 id="安装python"><a href="#安装python" class="headerlink" title="安装python"></a>安装python</h1><ul><li>anaconda安装过程中可提供python安装，如果确定安装anaconda可以直接跳到下步</li><li>在<a href="https://www.python.org/downloads/">python官网</a>下载pythong安装包，安装过程基本使用默认选项</li><li>需要额外勾选<code>Add Python 3.x to PATH</code>等类似选项<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2-1.png" alt="深度学习-1 本地环境部署-1"></li></ul><h1 id="安装anaconda"><a href="#安装anaconda" class="headerlink" title="安装anaconda"></a>安装anaconda</h1><ul><li>在<a href="https://www.anaconda.com/download">anaconda官网</a>下载anaconda安装包，安装过程基本使用默认选项<br><strong>如果未安装python，可以在anaconda安装过程中安装对应版本的python</strong></li><li>在anaconda powrshell中使用<code>python --version</code>查看python版本，使用<code>conda -V</code>查看conda版本<br><strong>注意最好在安装时勾选添加conda的path进系统环境变量</strong></li></ul><h1 id="安装CUDA"><a href="#安装CUDA" class="headerlink" title="安装CUDA"></a>安装CUDA</h1><ul><li>在<a href="https://developer.nvidia.com/cuda-downloads">CUDA官网</a>下载相应CUDA安装包，对应版本选择大致如下，安装过程基本使用默认选项<img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2-2.png" alt="深度学习-1 本地环境部署-2"></li><li>在CMD中使用命令<code>nvidia-smi</code>查看CUDA安装是否成功<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2-3.png" alt="深度学习-1 本地环境部署-3"></li></ul><h1 id="安装Pytorch"><a href="#安装Pytorch" class="headerlink" title="安装Pytorch"></a>安装Pytorch</h1><h2 id="构建虚拟环境"><a href="#构建虚拟环境" class="headerlink" title="构建虚拟环境"></a>构建虚拟环境</h2><ul><li>如果有需要，使用<code>conda create --name 名字 python=3.8</code>新建一个虚拟环境<br><strong>当不标明python版本时<code>python=3.8</code>，对应env文件下不会出现python.exe</strong></li><li>使用<code>conda activate 名字</code>进入虚拟环境安装</li><li>如果不需要在<code>base</code>环境中安装即可</li><li>可使用<code>conda list</code>或<code>pip list</code>查看目前环境所安装的包<br><strong>注意<code>pip</code>,<code>pip3</code>,<code>conda</code>安装命令的安装位置不一样，可在CMD中使用<code>where pip</code>找pip所在位置</strong><br><strong>目前测试使用<code>pip install</code>安装的包，在不同conda环境中是通用的</strong></li></ul><h2 id="在线安装"><a href="#在线安装" class="headerlink" title="在线安装"></a>在线安装</h2><ul><li>在<a href="https://pytorch.org/get-started/locally/">Pytorch官网</a>，选择对应版本，得到安装命令<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2-4.png" alt="深度学习-1 本地环境部署-4"><br>在这一步中我们要安装<code>torch</code>、<code>torchvision</code>、<code>torchaudio</code>三个包，其中<code>torch</code>包有3G左右，如果下载慢，可以使用离线下载本地安装的方式</li></ul><h2 id="使用镜像加速"><a href="#使用镜像加速" class="headerlink" title="使用镜像加速"></a>使用镜像加速</h2><ul><li>pip 可以在命令最后加<code>-i 镜像地址</code>来进行加速下载，地址如下<pre class="line-numbers language-none"><code class="language-none">https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simple #清华镜像https:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;pypi&#x2F;simple&#x2F; #阿里https:&#x2F;&#x2F;mirrors.163.com&#x2F;pypi&#x2F;simple&#x2F; #网易<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li><li>同理，conda可以使用以下命令配置镜像源<pre class="line-numbers language-none"><code class="language-none">conda config --add channels https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;main&#x2F;conda config --add channels https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;r&#x2F;conda config --add channels https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;msys2&#x2F;conda config --set show_channel_urls yes<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li></ul><h2 id="本地安装"><a href="#本地安装" class="headerlink" title="本地安装"></a>本地安装</h2><h3 id="离线下载"><a href="#离线下载" class="headerlink" title="离线下载"></a>离线下载</h3><ol><li>仍然在anaconda powershell中使用官网命令下载所需包，但使用<code>ctrl + c</code>中断下载进程<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2-5.png" alt="深度学习-1 本地环境部署-5"></li><li>使用下载地址，在迅雷等下载软件中下载<br><strong>可以修改命令分别下载<code>torchvision</code>与<code>torchaudio</code>以得到下载地址，但这两个包很小，可以直接在线下载</strong><br>PS:也可去<a href="https://download.pytorch.org/whl/torch/">官网</a>下载相应版本安装包</li></ol><h3 id="本地安装-1"><a href="#本地安装-1" class="headerlink" title="本地安装"></a>本地安装</h3><ol><li>使用以下命令定位到本地安装文件目录<pre class="line-numbers language-none"><code class="language-none">盘符名:    #如D:,定位到特定磁盘dir        #显示当前文件下的所有文件cd 文件名   #打开文件cd ..       #反回上一级文件夹cd &#x2F;        #反回根磁盘<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>直到使用<code>dir</code>可以看到安装文件为止<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2-7.png" alt="深度学习-1 本地环境部署-7"><br><strong>conda 安装包放到anaconda目录下的<code>pkgs</code>文件中</strong></li><li>使用<code>pip install 文件名</code>或 <code>conda install --use-local 文件名</code>安装本地包，在安装过程中会下载一些其他依赖包<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2-6.png" alt="深度学习-1 本地环境部署-6"><br><strong>总共需要将<code>torch</code>、<code>torchvision</code>、<code>torchaudio</code>都安装好</strong></li></ol><h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><ul><li>在anaconda powershell中使用<code>conda activate 环境名</code>进入conda环境</li><li>键入<code>python</code>进入python模式</li><li>使用<code>import torch</code>导入torch包<br>依次使用使用以下命令测试<pre class="line-numbers language-none"><code class="language-none">a &#x3D; torch.ones((3,1)).cuda(0)b &#x3D; torch.ones((3,1)).cuda(0)a + b<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>得到运算结果：<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2-8.png" alt="深度学习-1 本地环境部署-8"><br>使用<code>exit()</code>或<code>quit()</code>退出python </li><li>也可使用以下命令<pre class="line-numbers language-none"><code class="language-none">pythonimport torchtorch.cuda.is_available()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>返回ture即可</li></ul><h1 id="安装jupyter-note-book与-d2l"><a href="#安装jupyter-note-book与-d2l" class="headerlink" title="安装jupyter note book与 d2l"></a>安装jupyter note book与 d2l</h1><p>1. </p><pre class="line-numbers language-none"><code class="language-none">pip install jupyter d2l<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ol start="2"><li>去<a href="https://zh-v2.d2l.ai/">官网</a>下载jupyter记事本压缩包，并解压<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2-9.png" alt="深度学习-1 本地环境部署-9"></li><li>进行jupyter note book，找到解压文件开始学习<pre class="line-numbers language-none"><code class="language-none">jupyter note book<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li></ol>]]></content>
+        <content type="html"><![CDATA[<hr><ol><li>云端环境配置请移步<a href="https://space.bilibili.com/1567748478/channel/seriesdetail?sid=358497">李沐课程</a></li><li>本地环境配置<a href="https://www.zhihu.com/zvideo/1363284223420436480">原视频</a></li></ol><hr><h1 id="安装python"><a href="#安装python" class="headerlink" title="安装python"></a>安装python</h1><ul><li>anaconda安装过程中可提供python安装，如果确定安装anaconda可以直接跳到下步</li><li>在<a href="https://www.python.org/downloads/">python官网</a>下载pythong安装包，安装过程基本使用默认选项</li><li>需要额外勾选<code>Add Python 3.x to PATH</code>等类似选项<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2-1.png" alt="深度学习-1 本地环境部署-1"></li></ul><h1 id="安装anaconda"><a href="#安装anaconda" class="headerlink" title="安装anaconda"></a>安装anaconda</h1><ul><li>在<a href="https://www.anaconda.com/download">anaconda官网</a>下载anaconda安装包，安装过程基本使用默认选项<br><strong>如果未安装python，可以在anaconda安装过程中安装对应版本的python</strong></li><li>在anaconda powrshell中使用<code>python --version</code>查看python版本，使用<code>conda -V</code>查看conda版本<br><strong>注意最好在安装时勾选添加conda的path进系统环境变量</strong></li></ul><h1 id="安装CUDA"><a href="#安装CUDA" class="headerlink" title="安装CUDA"></a>安装CUDA</h1><ul><li>在<a href="https://developer.nvidia.com/cuda-downloads">CUDA官网</a>下载相应CUDA安装包，对应版本选择大致如下，安装过程基本使用默认选项<img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2-2.png" alt="深度学习-1 本地环境部署-2"></li><li>在CMD中使用命令<code>nvidia-smi</code>查看CUDA安装是否成功<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2-3.png" alt="深度学习-1 本地环境部署-3"></li></ul><h1 id="安装Pytorch"><a href="#安装Pytorch" class="headerlink" title="安装Pytorch"></a>安装Pytorch</h1><h2 id="构建虚拟环境"><a href="#构建虚拟环境" class="headerlink" title="构建虚拟环境"></a>构建虚拟环境</h2><ul><li>如果有需要，使用<code>conda create --name 名字 python=3.8</code>新建一个虚拟环境<br><strong>当不标明python版本时<code>python=3.8</code>，对应env文件下不会出现python.exe</strong></li><li>使用<code>conda activate 名字</code>进入虚拟环境安装</li><li>如果不需要在<code>base</code>环境中安装即可</li><li>可使用<code>conda list</code>或<code>pip list</code>查看目前环境所安装的包<br><strong>注意<code>pip</code>,<code>pip3</code>,<code>conda</code>安装命令的安装位置不一样，可在CMD中使用<code>where pip</code>找pip所在位置</strong><br><strong>目前测试使用<code>pip install</code>安装的包，在不同conda环境中是通用的</strong></li></ul><h2 id="在线安装"><a href="#在线安装" class="headerlink" title="在线安装"></a>在线安装</h2><ul><li>在<a href="https://pytorch.org/get-started/locally/">Pytorch官网</a>，选择对应版本，得到安装命令<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2-4.png" alt="深度学习-1 本地环境部署-4"><br>在这一步中我们要安装<code>torch</code>、<code>torchvision</code>、<code>torchaudio</code>三个包，其中<code>torch</code>包有3G左右，如果下载慢，可以使用离线下载本地安装的方式</li><li><code>pip</code>包的安装目录可用以下命令查询:<pre class="line-numbers language-none"><code class="language-none">python -m site --user-site<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li><code>conda</code>安装包下载目录为<code>~/Anaconda3/pkgs</code>，安装在<code>~/Anaconda3/Lib/site-packages</code></li></ul><h2 id="使用镜像加速"><a href="#使用镜像加速" class="headerlink" title="使用镜像加速"></a>使用镜像加速</h2><ul><li>pip 可以在命令最后加<code>-i 镜像地址</code>来进行加速下载，地址如下<pre class="line-numbers language-none"><code class="language-none">https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simple #清华镜像https:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;pypi&#x2F;simple&#x2F; #阿里https:&#x2F;&#x2F;mirrors.163.com&#x2F;pypi&#x2F;simple&#x2F; #网易<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li><li>同理，conda可以使用以下命令配置镜像源<pre class="line-numbers language-none"><code class="language-none">conda config --add channels https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;main&#x2F;conda config --add channels https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;r&#x2F;conda config --add channels https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;msys2&#x2F;conda config --set show_channel_urls yes<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li></ul><h2 id="本地安装"><a href="#本地安装" class="headerlink" title="本地安装"></a>本地安装</h2><h3 id="离线下载"><a href="#离线下载" class="headerlink" title="离线下载"></a>离线下载</h3><ol><li>仍然在anaconda powershell中使用官网命令下载所需包，但使用<code>ctrl + c</code>中断下载进程<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2-5.png" alt="深度学习-1 本地环境部署-5"></li><li>使用下载地址，在迅雷等下载软件中下载<br><strong>可以修改命令分别下载<code>torchvision</code>与<code>torchaudio</code>以得到下载地址，但这两个包很小，可以直接在线下载</strong><br>PS:也可去<a href="https://download.pytorch.org/whl/torch/">官网</a>下载相应版本安装包</li></ol><h3 id="本地安装-1"><a href="#本地安装-1" class="headerlink" title="本地安装"></a>本地安装</h3><ol><li>使用以下命令定位到本地安装文件目录<pre class="line-numbers language-none"><code class="language-none">盘符名:    #如D:,定位到特定磁盘dir        #显示当前文件下的所有文件cd 文件名   #打开文件cd ..       #反回上一级文件夹cd &#x2F;        #反回根磁盘<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>直到使用<code>dir</code>可以看到安装文件为止<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2-7.png" alt="深度学习-1 本地环境部署-7"><br><strong>conda 安装包放到anaconda目录下的<code>pkgs</code>文件中</strong></li><li>使用<code>pip install 文件名</code>或 <code>conda install --use-local 文件名</code>安装本地包，在安装过程中会下载一些其他依赖包<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2-6.png" alt="深度学习-1 本地环境部署-6"><br><strong>总共需要将<code>torch</code>、<code>torchvision</code>、<code>torchaudio</code>都安装好</strong></li></ol><h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><ul><li>在anaconda powershell中使用<code>conda activate 环境名</code>进入conda环境</li><li>键入<code>python</code>进入python模式</li><li>使用<code>import torch</code>导入torch包<br>依次使用使用以下命令测试<pre class="line-numbers language-none"><code class="language-none">a &#x3D; torch.ones((3,1)).cuda(0)b &#x3D; torch.ones((3,1)).cuda(0)a + b<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>得到运算结果：<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2-8.png" alt="深度学习-1 本地环境部署-8"><br>使用<code>exit()</code>或<code>quit()</code>退出python </li><li>也可使用以下命令<pre class="line-numbers language-none"><code class="language-none">pythonimport torchtorch.cuda.is_available()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>返回ture即可</li></ul><h1 id="安装jupyter-note-book与-d2l"><a href="#安装jupyter-note-book与-d2l" class="headerlink" title="安装jupyter note book与 d2l"></a>安装jupyter note book与 d2l</h1><p>1. </p><pre class="line-numbers language-none"><code class="language-none">pip install jupyter d2l<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ol start="2"><li>去<a href="https://zh-v2.d2l.ai/">官网</a>下载jupyter记事本压缩包，并解压<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2-9.png" alt="深度学习-1 本地环境部署-9"></li><li>进行jupyter note book，找到解压文件开始学习<pre class="line-numbers language-none"><code class="language-none">jupyter note book<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li></ol><h1 id="将虚拟环境添加到jupyter-notebook"><a href="#将虚拟环境添加到jupyter-notebook" class="headerlink" title="将虚拟环境添加到jupyter notebook"></a>将虚拟环境添加到jupyter notebook</h1><ul><li>安装<code>ipykernel</code>:<pre class="line-numbers language-none"><code class="language-none">pip install ipykernel<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li>将环境添加到jupyter notebook<pre class="line-numbers language-none"><code class="language-none">python -m ipykernel install --user --name env_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li>重启jupyter notebook</li></ul>]]></content>
       
       
       <categories>
@@ -154,9 +154,9 @@
       
         <tags>
             
-            <tag> office </tag>
-            
             <tag> 格式 </tag>
+            
+            <tag> office </tag>
             
             <tag> zotero </tag>
             
@@ -189,15 +189,15 @@
       
         <tags>
             
-            <tag> Git </tag>
+            <tag> node.js </tag>
             
-            <tag> Github </tag>
+            <tag> Git </tag>
             
             <tag> SSH </tag>
             
             <tag> hexo </tag>
             
-            <tag> node.js </tag>
+            <tag> Github </tag>
             
             <tag> 多终端 </tag>
             
@@ -224,9 +224,9 @@
       
         <tags>
             
-            <tag> office </tag>
-            
             <tag> 格式 </tag>
+            
+            <tag> office </tag>
             
             <tag> 样式管理 </tag>
             
@@ -691,17 +691,17 @@
       
         <tags>
             
-            <tag> Git </tag>
-            
-            <tag> SSH </tag>
-            
-            <tag> hexo </tag>
-            
             <tag> node.js </tag>
+            
+            <tag> Git </tag>
             
             <tag> GitHub </tag>
             
             <tag> 环境配置 </tag>
+            
+            <tag> SSH </tag>
+            
+            <tag> hexo </tag>
             
         </tags>
       

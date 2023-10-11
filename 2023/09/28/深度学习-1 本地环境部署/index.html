@@ -655,6 +655,8 @@ anaconda安装过程中可提供python安装，如果确定安装anaconda可以�
 </ul>
 <h2 id="在线安装"><a href="#在线安装" class="headerlink" title="在线安装"></a>在线安装</h2><ul>
 <li>在<a target="_blank" rel="noopener" href="https://pytorch.org/get-started/locally/">Pytorch官网</a>，选择对应版本，得到安装命令<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2-4.png" alt="深度学习-1 本地环境部署-4"><br>在这一步中我们要安装<code>torch</code>、<code>torchvision</code>、<code>torchaudio</code>三个包，其中<code>torch</code>包有3G左右，如果下载慢，可以使用离线下载本地安装的方式</li>
+<li><code>pip</code>包的安装目录可用以下命令查询:<pre class="line-numbers language-none"><code class="language-none">python -m site --user-site<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><code>conda</code>安装包下载目录为<code>~/Anaconda3/pkgs</code>，安装在<code>~/Anaconda3/Lib/site-packages</code></li>
 </ul>
 <h2 id="使用镜像加速"><a href="#使用镜像加速" class="headerlink" title="使用镜像加速"></a>使用镜像加速</h2><ul>
 <li>pip 可以在命令最后加<code>-i 镜像地址</code>来进行加速下载，地址如下<pre class="line-numbers language-none"><code class="language-none">https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simple #清华镜像
@@ -696,6 +698,11 @@ torch.cuda.is_available()<span aria-hidden="true" class="line-numbers-rows"><spa
 <li>去<a target="_blank" rel="noopener" href="https://zh-v2.d2l.ai/">官网</a>下载jupyter记事本压缩包，并解压<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2-9.png" alt="深度学习-1 本地环境部署-9"></li>
 <li>进行jupyter note book，找到解压文件开始学习<pre class="line-numbers language-none"><code class="language-none">jupyter note book<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 </ol>
+<h1 id="将虚拟环境添加到jupyter-notebook"><a href="#将虚拟环境添加到jupyter-notebook" class="headerlink" title="将虚拟环境添加到jupyter notebook"></a>将虚拟环境添加到jupyter notebook</h1><ul>
+<li>安装<code>ipykernel</code>:<pre class="line-numbers language-none"><code class="language-none">pip install ipykernel<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>将环境添加到jupyter notebook<pre class="line-numbers language-none"><code class="language-none">python -m ipykernel install --user --name env_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>重启jupyter notebook</li>
+</ul>
 
                 
             </div>
@@ -918,12 +925,12 @@ torch.cuda.is_available()<span aria-hidden="true" class="line-numbers-rows"><spa
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/office/">
-                        <span class="chip bg-color">office</span>
-                    </a>
-                    
                     <a href="/tags/%E6%A0%BC%E5%BC%8F/">
                         <span class="chip bg-color">格式</span>
+                    </a>
+                    
+                    <a href="/tags/office/">
+                        <span class="chip bg-color">office</span>
                     </a>
                     
                     <a href="/tags/zotero/">
