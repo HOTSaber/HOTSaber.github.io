@@ -729,7 +729,8 @@ goto home #为了崩溃或者异常后可以重启<span aria-hidden="true" class
 <li>创建<code>autostart.bat</code>的快捷⽅式</li>
 <li>打开 <code>C:\Users\username\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\</code>，将快捷⽅式粘贴到进去</li>
 <li>这个⽅法在每次PC开机时，就会弹出Windows Terminal的窗⼝，可能有点碍事，但你可以直接看到frpc的运⾏状态</li>
-<li>如果你暂时不需要启动frpc，直接Ctrl + C终⽌即可，然后需要运⾏的时候再去⼿动运⾏ autostart.bat 即<br>可</li>
+<li>如果你暂时不需要启动frpc，直接Ctrl + C终⽌即可，然后需要运⾏的时候再去⼿动运⾏ autostart.bat 即可</li>
+<li>使用<code>shutdown /r /t 0</code>重启windows服务器</li>
 </ul>
 <h1 id="jupyter-notebook配置"><a href="#jupyter-notebook配置" class="headerlink" title="jupyter notebook配置"></a>jupyter notebook配置</h1><p>详情可见<a target="_blank" rel="noopener" href="https://bingqiangzhou.github.io/2020/06/18/DailyJungle-FrpAndJupyterNotebookRemoteConfig.html">frp实现内网穿透以及配置Jupyter Notebook远程连接</a>与<a target="_blank" rel="noopener" href="https://blog.csdn.net/WeDon_t/article/details/112982371">使用frp穿透远程访问Jupyter Notebook方法</a></p>
 <h2 id="生成nootbook配置文件"><a href="#生成nootbook配置文件" class="headerlink" title="生成nootbook配置文件"></a>生成nootbook配置文件</h2><p>执行以下命令，会在用户目录下生成的配置文件<code>~/.jupyter/jupyter_notebook_config.py</code>，之后在这个文件中再进行配置。</p>
