@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "深度学习-1 本地环境部署.md",
+                "file": "13.内网穿透.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "深度学习-1 本地环境部署.md",
+                "file": "13.内网穿透.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "深度学习-1 本地环境部署.md",
+                "file": "13.内网穿透.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "深度学习-1 本地环境部署.md"
+                "file": "13.内网穿透.md"
               }
             }
           }
@@ -148,10 +148,10 @@
   },
   "active": "2fc8d2c21b146786",
   "lastOpenFiles": [
-    "11.博客的多终端同步.md",
-    "13.内网穿透.md",
     "12.使用SSH远程访问.md",
     "深度学习-1 本地环境部署.md",
+    "11.博客的多终端同步.md",
+    "13.内网穿透.md",
     "office通过样式管理格式.md",
     "深度学习 科学上网.md",
     "zotero使用教程.md",
