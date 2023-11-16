@@ -4,16 +4,11 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="科学上网, 挖掘机">
-    <meta name="description" content="
+    <meta name="keywords" content="windows安装linux子系统, 挖掘机">
+    <meta name="description" content="windows安装linux
+详情可见官方文档：如何使用 WSL 在 Windows 上安装 Linux与设置 WSL 开发环境
 
-clash for windows 下载安装
-github中文
-github原英文
-
-购置流量见常用链接一般这类网站中有详细教程
-基本使用方法可以在购置处寻找教程，一键导入等相关使用教程访问chatgpt推荐使用全局模式，漂亮国节点
-多">
+如果使用 wsl --install -d Ubuntu 安装 Ubuntu WSL 分发版失败，您可以尝试">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -25,7 +20,7 @@ github原英文
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>科学上网 | 挖掘机</title>
+    <title>windows安装linux子系统 | 挖掘机</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -529,12 +524,12 @@ github原英文
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">科学上网</h1>
+                    <h1 class="description center-align post-title">windows安装linux子系统</h1>
                 </div>
             </div>
         </div>
@@ -558,12 +553,36 @@ github原英文
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/clash-for-windows/">
-                                <span class="chip bg-color">clash for windows</span>
+                            <a href="/tags/SSH/">
+                                <span class="chip bg-color">SSH</span>
                             </a>
                         
-                            <a href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">
-                                <span class="chip bg-color">科学上网</span>
+                            <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
+                                <span class="chip bg-color">多终端</span>
+                            </a>
+                        
+                            <a href="/tags/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
+                                <span class="chip bg-color">远程访问</span>
+                            </a>
+                        
+                            <a href="/tags/xshell/">
+                                <span class="chip bg-color">xshell</span>
+                            </a>
+                        
+                            <a href="/tags/xftp/">
+                                <span class="chip bg-color">xftp</span>
+                            </a>
+                        
+                            <a href="/tags/linux/">
+                                <span class="chip bg-color">linux</span>
+                            </a>
+                        
+                            <a href="/tags/%E4%BA%91/">
+                                <span class="chip bg-color">云</span>
+                            </a>
+                        
+                            <a href="/tags/frp/">
+                                <span class="chip bg-color">frp</span>
                             </a>
                         
                     </div>
@@ -587,7 +606,7 @@ github原英文
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-09-28
+                    2023-11-16
                 </div>
                 
 
@@ -611,16 +630,83 @@ github原英文
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <hr>
-<hr>
-<h1 id="clash-for-windows-下载安装"><a href="#clash-for-windows-下载安装" class="headerlink" title="clash for windows 下载安装"></a>clash for windows 下载安装</h1><ol>
-<li><a target="_blank" rel="noopener" href="https://github.com/Z-Siqi/Clash-for-Windows_Chinese-Attached">github中文</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/Fndroid/clash_for_windows_pkg">github原英文</a></li>
+                <h1 id="windows安装linux"><a href="#windows安装linux" class="headerlink" title="windows安装linux"></a>windows安装linux</h1><ul>
+<li>详情可见<strong>官方文档</strong>：<a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/wsl/install">如何使用 WSL 在 Windows 上安装 Linux</a>与<a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/wsl/setup/environment#set-up-your-linux-username-and-password">设置 WSL 开发环境</a></li>
+</ul>
+<p>如果使用 <code>wsl --install -d Ubuntu</code> 安装 Ubuntu WSL 分发版失败，您可以尝试以下方法来解决问题：</p>
+<ol>
+<li><p><strong>检查系统要求</strong>：确保您的系统满足运行WSL的要求。WSL要求运行的Windows版本为Windows 10或更高版本，并且需要启用虚拟化功能。您可以在BIOS或UEFI设置中启用虚拟化。</p>
+</li>
+<li><p><strong>更新Windows</strong>：确保您的Windows操作系统已经更新到最新版本。有时，安装WSL之前需要安装操作系统更新。</p>
+</li>
+<li><p><strong>启用WSL功能</strong>：在 PowerShell 终端或命令提示符（CMD）中以管理员身份运行以下命令来启用WSL功能：</p>
+<pre class="line-numbers language-none"><code class="language-none">powershellCopy code
+dism.exe &#x2F;online &#x2F;enable-feature &#x2F;featurename:Microsoft-Windows-Subsystem-Linux &#x2F;all &#x2F;norestart<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li><p><strong>启用虚拟机平台功能</strong>：运行以下命令以启用虚拟机平台功能：</p>
+<pre class="line-numbers language-none"><code class="language-none">powershellCopy code
+dism.exe &#x2F;online &#x2F;enable-feature &#x2F;featurename:VirtualMachinePlatform &#x2F;all &#x2F;norestart<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li><p><strong>安装WSL 2运行时</strong>：根据您的Windows版本，可能需要手动安装WSL 2运行时。您可以在<a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows/wsl/install">Microsoft的官方文档</a>中找到适用于您版本的安装指南。</p>
+</li>
+<li><p><strong>重启计算机</strong>：完成上述步骤后，重新启动您的计算机，以确保所有更改生效。</p>
+</li>
+<li><p><strong>尝试安装Ubuntu</strong>：最后，再次运行 <code>wsl --install -d Ubuntu</code> 来尝试安装Ubuntu WSL 分发版。</p>
+</li>
+<li><p>使用<code>wsl --status</code>, <code>wsl -l</code>查看linux版本</p>
+</li>
+<li><p>使用<code>wsl --shutdown</code>来虚拟关机</p>
+</li>
 </ol>
-<h1 id="购置流量"><a href="#购置流量" class="headerlink" title="购置流量"></a>购置流量</h1><p>见<a target="_blank" rel="noopener" href="https://hotsaber.github.io/link/">常用链接</a><br>一般这类网站中有详细教程</p>
-<h1 id="基本使用方法"><a href="#基本使用方法" class="headerlink" title="基本使用方法"></a>基本使用方法</h1><p>可以在购置处寻找教程，一键导入等相关使用教程<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%20%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91-1.png" alt="深度学习 科学上网-1"><br><strong>访问chatgpt推荐使用<code>全局模式</code>，<code>漂亮国</code>节点</strong><br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%20%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91-2.png" alt="深度学习 科学上网-2"></p>
-<h1 id="多终端配置"><a href="#多终端配置" class="headerlink" title="多终端配置"></a>多终端配置</h1><h2 id="使用配置链接"><a href="#使用配置链接" class="headerlink" title="使用配置链接"></a>使用配置链接</h2><p>使用配置URL（对相应配置右键设置中）<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%20%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91-3.png" alt="深度学习 科学上网-3"><br>使用URL直接下载即可<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%20%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91-5.png" alt="深度学习 科学上网-5"></p>
-<h2 id="使用配置文件"><a href="#使用配置文件" class="headerlink" title="使用配置文件"></a>使用配置文件</h2><p>寻找配置文件目录<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%20%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91-6.png" alt="深度学习 科学上网-6"><br>备份该目录下所有文件<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%20%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91-7.png" alt="深度学习 科学上网-7"><br>拷贝到新机配置文件目录<strong>重启科学上网软件</strong>即可</p>
+<p>安装完后报错：WslRegisterDistribution failed with error: 0x800701bc<br>Error: 0x800701bc WSL 2 ?????????????????? <a target="_blank" rel="noopener" href="https://aka.ms/wsl2kernel">https://aka.ms/wsl2kernel</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35812205/article/details/131363270">解决无法打开Microsoft store和WslRegisterDistribution failed with error: 0x800701bc问题_山顶夕景的博客-CSDN博客</a></p>
+<p>更新wsl后安装成功<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/windows%E5%AE%89%E8%A3%85linux-2.png" alt="windows安装linux-2"></p>
+<h1 id="在pycharm中使用linux终端"><a href="#在pycharm中使用linux终端" class="headerlink" title="在pycharm中使用linux终端"></a>在pycharm中使用linux终端</h1><p><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/windows%E5%AE%89%E8%A3%85linux-1.png" alt="windows安装linux-1"><br>点击扩展，选择Ubuntu</p>
+<p>cd到preprocess.sh所在的文件夹下，输入对应的命令即可</p>
+<h1 id="Xshell-连接wsl"><a href="#Xshell-连接wsl" class="headerlink" title="Xshell 连接wsl"></a>Xshell 连接wsl</h1><h2 id="服务器本地配置"><a href="#服务器本地配置" class="headerlink" title="服务器本地配置"></a>服务器本地配置</h2><p>点击左下角的windows按钮, 在最近添加中点击刚安装的系统图标, 会有个初始化的过程, 之后输入用户名和密码, 就完成了.<br>通过<code>sudo apt update &amp;&amp; sudo apt upgrade -y</code>更新系统<br>通过<code>sudo apt-get update &amp;&amp; sudo apt-get upgrade</code>更新软件源<br>安装ssh服务<code>sudo apt autoremove --purge openssh-server -y &amp;&amp; sudo apt install openssh-server -y</code><br>编辑文件<code>vim /etc/ssh/sshd_config</code>, Windows和子系统共用端口, 修改端口</p>
+<pre class="line-numbers language-none"><code class="language-none"># 端口 
+Port 2222 UsePrivilegeSeparation no 
+# 密码验证 
+PasswordAuthentication yes 
+# 允许登陆的用户 
+AllowUsers name
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><em><strong>重启服务<code>sudo service ssh --full-restart</code><br>生成key, <code>ssh-keygen -t rsa</code>一路回车.</strong></em></p>
+<h2 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h2><p>在xshell中使用Alt + N创建新的连接会话, 主机改为127.0.0.1, 端口改为自己设置的端口.<br>点击左侧的用户身份验证, 方法使用Password, 用户名和密码为Ubuntu用户名密码, 点击连接.</p>
+<h2 id="开机自启"><a href="#开机自启" class="headerlink" title="开机自启"></a>开机自启</h2><h2 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h2><p>Bash窗口不能关闭, 如果关闭了, 那么相当于系统关机.<br>可以使用windows自带的定时任务计划上添加开机启动Ubuntu ssh服务的任务。<br>搜索任务计划程序, 操作 –&gt; 创建基本任务<br>配置：<br>触发器: 当计算机启动时<br>操作: 启动程序<br>程序或脚本: C:\Windows\System32\bash.exe<br>参数为: -c \“sudo &#x2F;usr&#x2F;sbin&#x2F;sshd -D\”<br>选择<code>当单击“完成”是, 打开此任务属性的对话框</code>按钮，点击完成，打开属性页<br>在属性页选择”使用最高权限运行”，避免错误。</p>
+<h2 id="方案二"><a href="#方案二" class="headerlink" title="方案二"></a>方案二</h2><ul>
+<li>详情请见：<a target="_blank" rel="noopener" href="https://blog.csdn.net/q4616756/article/details/131842814">Win11将WSL做SSH服务器</a><br>为linux添加ssh自启动<pre class="line-numbers language-none"><code class="language-none">sudo apt install systemd #安装systemd
+sudo systemctl enable ssh #使用systemd实现ssh自启动<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+使用<code>sudo service ssh status</code>查看ssh运行状态</li>
+</ul>
+<h3 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h3><pre class="line-numbers language-none"><code class="language-none">sudo vi &#x2F;etc&#x2F;ssh&#x2F;sshd_config<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>将下面三项设置成：</p>
+<ul>
+<li>Port 222</li>
+<li>PermitRootLogin Yes</li>
+<li>PasswordAuthentication Yes<pre class="line-numbers language-none"><code class="language-none">sudo vim &#x2F;etc&#x2F;hosts.allow<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+添加一行：sshd:ALL<br><strong>然后重启ssh服务：</strong><pre class="line-numbers language-none"><code class="language-none">sudo service ssh --full-restart<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ul>
+<p>在<code>C:/users/Appdata/Roaming/Microsoft/Windows/开始菜单/程序/startup</code>中，新建vbs文件，内容如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">CreateObject(&quot;Wscript.Shell&quot;).run &quot;wsl -d Ubuntu -u root -e &#x2F;etc&#x2F;init.d&#x2F;ssh start&quot;,vbhide
+wscript.sleep 1000 * 10
+Set Shell&#x3D;CreateObject(&quot;Shell.Application&quot;)
+Shell.ShellExecute &quot;cmd.exe&quot;,&quot;&#x2F;c netsh interface portproxy add v4tov4 listenaddress&#x3D;0.0.0.0 listenport&#x3D;22 connectaddress&#x3D;wslhost connectport&#x3D;22&quot;,&quot;C:\Windows\System32\&quot;,&quot;runas&quot;,0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>这里只用第一行即可</strong><br>其中第一行负责启动wsl同时开启ssh服务，vbhide可以使得启动的wsl在后台进行，不显示终端。</p>
+<p>第二行需要进行一定的延时，其中10就是十秒，可以根据自己的机器情况进行修改，估计5秒就够了。延时是因为代码的运行很快，接下来就会运行cmd进行端口映射，但是当已经运行完netsh的时候wsl可能还没有启动，导致端口映射依然是上次关机时候的wsl的ip，所以需要延时几秒钟再执行。</p>
+<p>第三、四行就是执行nesth的命令，将connectaddress后的ip地址用域名wslhost替换，‘runas’参数以管理员身份运行cmd，后面的参数0表示隐藏窗口后台执行。</p>
+<p>但是，众所周知，每次以管理员身份执行cmd的时候，都会弹框让用户确定“是”，“否”。需要进一步隐藏。打开设置，在左上角搜索框搜索管理员，选择更改用户账户控制设置，然后拉到底</p>
+<h3 id="frp端口映射"><a href="#frp端口映射" class="headerlink" title="frp端口映射"></a>frp端口映射</h3><p>在<code>frpc.ini</code>中加入以下内容</p>
+<pre class="line-numbers language-none"><code class="language-none">[ssh2]
+type &#x3D; tcp
+local_ip &#x3D; 127.0.0.1
+local_port &#x3D; 222
+remote_port &#x3D; 2222<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>再在云端服务器添加相应端口安全规则即可</p>
+<h1 id="在wsl（子系统）中访问windows文件"><a href="#在wsl（子系统）中访问windows文件" class="headerlink" title="在wsl（子系统）中访问windows文件"></a>在wsl（子系统）中访问windows文件</h1><p><strong>只需要访问<code>mnt</code>文件即可</strong><br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/windows%E5%AE%89%E8%A3%85linux-3.png" alt="windows安装linux-3"><br>如图所示，在<code>mnt</code>文件中我们能看到windows系统C盘与D盘</p>
+<h1 id="配置免密访问"><a href="#配置免密访问" class="headerlink" title="配置免密访问"></a>配置免密访问</h1><p>使用<code>ssh-keygen</code>在linux端生成公私钥对<br>在<code>/root/.ssh</code>下，新建<code>authorized_keys</code>文件，将pubkey复制进<code>authorized_keys</code>文件中，以回车相隔<br>在windows系统中，重启服务器</p>
+<h1 id="windows如何使用FEMNIST数据集"><a href="#windows如何使用FEMNIST数据集" class="headerlink" title="windows如何使用FEMNIST数据集"></a>windows如何使用FEMNIST数据集</h1><p>项目代码：<a target="_blank" rel="noopener" href="https://github.com/SMILELab-FL/FedLab-benchmarks/blob/master/fedlab_benchmarks/leaf/README_zh_cn.md">FedLab-benchmarks&#x2F;fedlab_benchmarks&#x2F;leaf&#x2F;README_zh_cn.md at master ·SMILELab-FL&#x2F;FedLab-benchmarks (github.com)</a></p>
+<p>下载到本地后，你会发现需要linux系统来运行</p>
 
                 
             </div>
@@ -647,7 +733,7 @@ github原英文
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2023/09/28/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%20%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">http://example.com/2023/09/28/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%20%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</a>
+                    <a href="http://example.com/2023/11/16/14.windows%E5%AE%89%E8%A3%85linux/">http://example.com/2023/11/16/14.windows%E5%AE%89%E8%A3%85linux/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -685,12 +771,36 @@ github原英文
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/clash-for-windows/">
-                                    <span class="chip bg-color">clash for windows</span>
+                                <a href="/tags/SSH/">
+                                    <span class="chip bg-color">SSH</span>
                                 </a>
                             
-                                <a href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">
-                                    <span class="chip bg-color">科学上网</span>
+                                <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
+                                    <span class="chip bg-color">多终端</span>
+                                </a>
+                            
+                                <a href="/tags/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
+                                    <span class="chip bg-color">远程访问</span>
+                                </a>
+                            
+                                <a href="/tags/xshell/">
+                                    <span class="chip bg-color">xshell</span>
+                                </a>
+                            
+                                <a href="/tags/xftp/">
+                                    <span class="chip bg-color">xftp</span>
+                                </a>
+                            
+                                <a href="/tags/linux/">
+                                    <span class="chip bg-color">linux</span>
+                                </a>
+                            
+                                <a href="/tags/%E4%BA%91/">
+                                    <span class="chip bg-color">云</span>
+                                </a>
+                            
+                                <a href="/tags/frp/">
+                                    <span class="chip bg-color">frp</span>
                                 </a>
                             
                         </div>
@@ -736,17 +846,18 @@ github原英文
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/10/10/12.%E4%BD%BF%E7%94%A8SSH%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
+                <a href="/2023/11/16/14.windows%E5%AE%89%E8%A3%85linux/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="使用SSH远程访问">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="windows安装linux子系统">
                         
-                        <span class="card-title">使用SSH远程访问</span>
+                        <span class="card-title">windows安装linux子系统</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -756,9 +867,87 @@ github原英文
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-10-10
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-11-16
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    深度学习
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/SSH/">
+                        <span class="chip bg-color">SSH</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
+                        <span class="chip bg-color">多终端</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
+                        <span class="chip bg-color">远程访问</span>
+                    </a>
+                    
+                    <a href="/tags/xshell/">
+                        <span class="chip bg-color">xshell</span>
+                    </a>
+                    
+                    <a href="/tags/xftp/">
+                        <span class="chip bg-color">xftp</span>
+                    </a>
+                    
+                    <a href="/tags/linux/">
+                        <span class="chip bg-color">linux</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%BA%91/">
+                        <span class="chip bg-color">云</span>
+                    </a>
+                    
+                    <a href="/tags/frp/">
+                        <span class="chip bg-color">frp</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/10/10/13.%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="内网穿透">
+                        
+                        <span class="card-title">内网穿透</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -794,73 +983,16 @@ github原英文
                         <span class="chip bg-color">xftp</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2023/09/28/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="深度学习：本地环境部署">
-                        
-                        <span class="card-title">深度学习：本地环境部署</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-28
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    深度学习
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">深度学习</span>
+                    <a href="/tags/linux/">
+                        <span class="chip bg-color">linux</span>
                     </a>
                     
-                    <a href="/tags/%E7%8E%AF%E5%A2%83/">
-                        <span class="chip bg-color">环境</span>
+                    <a href="/tags/%E4%BA%91/">
+                        <span class="chip bg-color">云</span>
                     </a>
                     
-                    <a href="/tags/Anaconda/">
-                        <span class="chip bg-color">Anaconda</span>
-                    </a>
-                    
-                    <a href="/tags/CUDA/">
-                        <span class="chip bg-color">CUDA</span>
-                    </a>
-                    
-                    <a href="/tags/Pytorch/">
-                        <span class="chip bg-color">Pytorch</span>
-                    </a>
-                    
-                    <a href="/tags/CMD%E5%91%BD%E4%BB%A4/">
-                        <span class="chip bg-color">CMD命令</span>
+                    <a href="/tags/frp/">
+                        <span class="chip bg-color">frp</span>
                     </a>
                     
                 </div>
