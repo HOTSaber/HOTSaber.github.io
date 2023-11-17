@@ -557,12 +557,12 @@
                                 <span class="chip bg-color">SSH</span>
                             </a>
                         
-                            <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
-                                <span class="chip bg-color">多终端</span>
-                            </a>
-                        
                             <a href="/tags/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
                                 <span class="chip bg-color">远程访问</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
+                                <span class="chip bg-color">多终端</span>
                             </a>
                         
                             <a href="/tags/xshell/">
@@ -658,8 +658,7 @@ dism.exe &#x2F;online &#x2F;enable-feature &#x2F;featurename:VirtualMachinePlatf
 <li><p>使用<code>wsl --shutdown</code>来虚拟关机</p>
 </li>
 </ol>
-<p>安装完后报错：WslRegisterDistribution failed with error: 0x800701bc<br>Error: 0x800701bc WSL 2 ?????????????????? <a target="_blank" rel="noopener" href="https://aka.ms/wsl2kernel">https://aka.ms/wsl2kernel</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35812205/article/details/131363270">解决无法打开Microsoft store和WslRegisterDistribution failed with error: 0x800701bc问题_山顶夕景的博客-CSDN博客</a></p>
+<p>安装完后报错：WslRegisterDistribution failed with error: 0x800701bc<br>Error: 0x800701bc WSL 2 <a target="_blank" rel="noopener" href="https://aka.ms/wsl2kernel">https://aka.ms/wsl2kernel</a><br>请参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35812205/article/details/131363270">解决无法打开Microsoft store和WslRegisterDistribution failed with error: 0x800701bc问题_山顶夕景的博客-CSDN博客</a></p>
 <p>更新wsl后安装成功<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/windows%E5%AE%89%E8%A3%85linux-2.png" alt="windows安装linux-2"></p>
 <h1 id="在pycharm中使用linux终端"><a href="#在pycharm中使用linux终端" class="headerlink" title="在pycharm中使用linux终端"></a>在pycharm中使用linux终端</h1><p><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/windows%E5%AE%89%E8%A3%85linux-1.png" alt="windows安装linux-1"><br>点击扩展，选择Ubuntu</p>
 <p>cd到preprocess.sh所在的文件夹下，输入对应的命令即可</p>
@@ -707,6 +706,36 @@ remote_port &#x3D; 2222<span aria-hidden="true" class="line-numbers-rows"><span>
 <h1 id="配置免密访问"><a href="#配置免密访问" class="headerlink" title="配置免密访问"></a>配置免密访问</h1><p>使用<code>ssh-keygen</code>在linux端生成公私钥对<br>在<code>/root/.ssh</code>下，新建<code>authorized_keys</code>文件，将pubkey复制进<code>authorized_keys</code>文件中，以回车相隔<br>在windows系统中，重启服务器</p>
 <h1 id="windows如何使用FEMNIST数据集"><a href="#windows如何使用FEMNIST数据集" class="headerlink" title="windows如何使用FEMNIST数据集"></a>windows如何使用FEMNIST数据集</h1><p>项目代码：<a target="_blank" rel="noopener" href="https://github.com/SMILELab-FL/FedLab-benchmarks/blob/master/fedlab_benchmarks/leaf/README_zh_cn.md">FedLab-benchmarks&#x2F;fedlab_benchmarks&#x2F;leaf&#x2F;README_zh_cn.md at master ·SMILELab-FL&#x2F;FedLab-benchmarks (github.com)</a></p>
 <p>下载到本地后，你会发现需要linux系统来运行</p>
+<h1 id="linux环境配置"><a href="#linux环境配置" class="headerlink" title="linux环境配置"></a>linux环境配置</h1><h2 id="安装解压工具"><a href="#安装解压工具" class="headerlink" title="安装解压工具"></a>安装解压工具</h2><pre class="line-numbers language-none"><code class="language-none">sudo apt install zip<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="安装nvidia-tools"><a href="#安装nvidia-tools" class="headerlink" title="安装nvidia tools"></a>安装nvidia tools</h2><pre class="line-numbers language-none"><code class="language-none">apt install nvidia-cuda-toolkit<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>此项安装已包含cuda（疑似，待验证doge）</p>
+<h2 id="安装python"><a href="#安装python" class="headerlink" title="安装python"></a>安装python</h2><ul>
+<li>在跟<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV18p4y1h7Dr/?spm_id_from=333.999.0.0&vd_source=73162f668fdc494f53422288195ecea3">李沐课程</a>配置linux上的深度学习环境时，遇到python安装报错问题<pre class="line-numbers language-none"><code class="language-none">E: Package &#39;python3.8&#39; has no installation candidate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+或<pre class="line-numbers language-none"><code class="language-none">sudo apt install python-3.8 
+E: Unable to locate package python-3.8<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<li>这里发现之前的源没有找到对应的python，这里添加新的，详见<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_56895581/article/details/134131807">python3.8相关环境安装</a>：<pre class="line-numbers language-none"><code class="language-none">sudo apt-get install software-properties-common<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+或运行以下代码升级，详见<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_69742286/article/details/133749645">帖子</a><pre class="line-numbers language-none"><code class="language-none">sudo apt update
+sudo apt install software-properties-common 
+sudo add-apt-repository ppa:deadsnakes&#x2F;ppa <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+<li>再运行<code>sudo apt-get install python3.8</code>即可</li>
+</ul>
+<h2 id="安装conda"><a href="#安装conda" class="headerlink" title="安装conda"></a>安装conda</h2><p>使用以下命令，或是自行下载将安装包拷贝进linux服务器</p>
+<pre class="line-numbers language-none"><code class="language-none">wget https:&#x2F;&#x2F;repo.anaconda.com&#x2F;archive&#x2F;Anaconda3-2023.09-0-Linux-x86_64.sh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>url可访问<a target="_blank" rel="noopener" href="https://www.anaconda.com/download#downloads">anaconda官网</a>，找到安装包下载地址获得<br>使用<code>bash 文件名</code>安装，如<code>bash Anaconda3-2023.09-0-Linux-x86_64.sh</code></p>
+<h2 id="安装cuda"><a href="#安装cuda" class="headerlink" title="安装cuda"></a>安装cuda</h2><p>访问<a target="_blank" rel="noopener" href="https://developer.nvidia.com/cuda-downloads">cuda官网</a>，按服务器系统配置选择安装环境，按提示步骤安装即可<br>本教程使用以下安装代码：</p>
+<pre class="line-numbers language-none"><code class="language-none">wget https:&#x2F;&#x2F;developer.download.nvidia.com&#x2F;compute&#x2F;cuda&#x2F;12.3.1&#x2F;local_installers&#x2F;cuda_12.3.1_545.23.08_linux.run
+sudo sh cuda_12.3.1_545.23.08_linux.run<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>如提示driver未安装，可换用以下命令：</p>
+<pre class="line-numbers language-none"><code class="language-none">sudo sh cuda_12.3.1_545.23.08_linux.run --silent --driver<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>使用<code>nvcc -V</code>查看nvidia信息</p>
+<h2 id="配置conda虚拟环境"><a href="#配置conda虚拟环境" class="headerlink" title="配置conda虚拟环境"></a>配置conda虚拟环境</h2><ul>
+<li>在安装完成anaconda后，使用<code>bash</code>进入anaconda命令行</li>
+<li>使用<code>conda create --name 名字 python=3.8</code>新建一个虚拟环境</li>
+<li>使用<code>conda env list</code>查看虚拟环境列表</li>
+<li>使用<code>conda activate 名字</code>进入一个虚拟环境</li>
+<li>安装相应包，使用镜像加速<pre class="line-numbers language-none"><code class="language-none">pip install jupyter d2l torch torchvision -i https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simple<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>其他包就和在本地命令行安装一样，但<strong>安装包过大的话，建议采用离线安装。可以用移动硬盘到现教407线下拷贝</strong><br><strong>PS</strong>:离线安装请见<a target="_blank" rel="noopener" href="https://hotsaber.github.io/2023/09/28/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/">深度学习：本地环境部署</a>中的<code>安装Pytorch</code>-<code>本地安装</code></li>
+</ul>
 
                 
             </div>
@@ -775,12 +804,12 @@ remote_port &#x3D; 2222<span aria-hidden="true" class="line-numbers-rows"><span>
                                     <span class="chip bg-color">SSH</span>
                                 </a>
                             
-                                <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
-                                    <span class="chip bg-color">多终端</span>
-                                </a>
-                            
                                 <a href="/tags/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
                                     <span class="chip bg-color">远程访问</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
+                                    <span class="chip bg-color">多终端</span>
                                 </a>
                             
                                 <a href="/tags/xshell/">
@@ -890,12 +919,12 @@ remote_port &#x3D; 2222<span aria-hidden="true" class="line-numbers-rows"><span>
                         <span class="chip bg-color">SSH</span>
                     </a>
                     
-                    <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
-                        <span class="chip bg-color">多终端</span>
-                    </a>
-                    
                     <a href="/tags/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
                         <span class="chip bg-color">远程访问</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
+                        <span class="chip bg-color">多终端</span>
                     </a>
                     
                     <a href="/tags/xshell/">
@@ -967,12 +996,12 @@ remote_port &#x3D; 2222<span aria-hidden="true" class="line-numbers-rows"><span>
                         <span class="chip bg-color">SSH</span>
                     </a>
                     
-                    <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
-                        <span class="chip bg-color">多终端</span>
-                    </a>
-                    
                     <a href="/tags/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
                         <span class="chip bg-color">远程访问</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
+                        <span class="chip bg-color">多终端</span>
                     </a>
                     
                     <a href="/tags/xshell/">
