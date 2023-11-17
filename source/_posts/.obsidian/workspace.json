@@ -148,13 +148,14 @@
   },
   "active": "d2b33266e79c2756",
   "lastOpenFiles": [
-    "13.内网穿透.md",
-    "14.windows安装linux.md",
     "12.使用SSH远程访问.md",
+    "14.windows安装linux.md",
+    "深度学习-1 本地环境部署.md",
+    "13.内网穿透.md",
+    "11.博客的多终端同步.md",
+    "blogpic/14.windows安装linux-1.png",
     "未命名",
     "blogpic/12.使用SSH远程访问-1.png",
-    "深度学习-1 本地环境部署.md",
-    "11.博客的多终端同步.md",
     "office通过样式管理格式.md",
     "深度学习 科学上网.md",
     "zotero使用教程.md",
@@ -183,8 +184,6 @@
     "blogpic/Pasted image 20230918132005.png",
     "blogpic/Pasted image 20230703170706.png",
     "sakura.md",
-    "task in future.md",
-    "blogpic/搭建图床-1.png",
     "blogpic"
   ]
 }
