@@ -4,6 +4,41 @@
   
     
     <entry>
+      <title>使用screen在SSH断开后保持程序运行</title>
+      <link href="/2023/11/28/15.%20%E4%BD%BF%E7%94%A8screen%E5%9C%A8SSH%E6%96%AD%E5%BC%80%E5%90%8E%E4%BF%9D%E6%8C%81%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C/"/>
+      <url>/2023/11/28/15.%20%E4%BD%BF%E7%94%A8screen%E5%9C%A8SSH%E6%96%AD%E5%BC%80%E5%90%8E%E4%BF%9D%E6%8C%81%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C/</url>
+      
+        <content type="html"><![CDATA[<hr><ul><li>本方案基于linux，采用screen保证程序在ssh断开后还能运行，且再次打开screen还可以看到运行记录</li><li>使用<code>nohup</code>也可，但要记住PID号</li></ul><hr><h1 id="安装screen工具"><a href="#安装screen工具" class="headerlink" title="安装screen工具"></a>安装screen工具</h1><pre class="line-numbers language-none"><code class="language-none">sudo  apt-get  install screen<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h1 id="创建screen窗口"><a href="#创建screen窗口" class="headerlink" title="创建screen窗口"></a>创建screen窗口</h1><pre class="line-numbers language-none"><code class="language-none">screen -S [$Name]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>此时会进入新的窗口，照常敲命令即可<br>同时按<strong>Ctrl</strong>+<strong>a</strong>+<strong>d</strong>键，就可以退出SSH登录，但不会影响screen程序的运行</p><h1 id="列出screen窗口名单"><a href="#列出screen窗口名单" class="headerlink" title="列出screen窗口名单"></a>列出screen窗口名单</h1><pre class="line-numbers language-none"><code class="language-none">screen -ls<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h1 id="打开已有窗口"><a href="#打开已有窗口" class="headerlink" title="打开已有窗口"></a>打开已有窗口</h1><p>需要继续工作时，登录实例，然后执行如下命令，恢复会话即可</p><pre class="line-numbers language-none"><code class="language-none">screen -r -d [$name]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h1 id="关闭窗口"><a href="#关闭窗口" class="headerlink" title="关闭窗口"></a>关闭窗口</h1><pre class="line-numbers language-none"><code class="language-none"># 如果在窗口中 exit# 如果不在窗口中（即窗口无法连接了） screen -X -S id(窗口id) quit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 深度学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SSH </tag>
+            
+            <tag> 远程访问 </tag>
+            
+            <tag> xshell </tag>
+            
+            <tag> xftp </tag>
+            
+            <tag> linux </tag>
+            
+            <tag> screen </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>windows安装linux子系统</title>
       <link href="/2023/11/16/14.windows%E5%AE%89%E8%A3%85linux/"/>
       <url>/2023/11/16/14.windows%E5%AE%89%E8%A3%85linux/</url>
