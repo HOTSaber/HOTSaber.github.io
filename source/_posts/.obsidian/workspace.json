@@ -13,13 +13,38 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "15. 使用screen在SSH断开后保持程序运行.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9bbec9dfb6f29078",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "14.windows安装linux.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "a174ba2fb6603523",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "15. 使用screen在SSH断开后保持程序运行.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -85,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "14.windows安装linux.md",
+                "file": "15. 使用screen在SSH断开后保持程序运行.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "14.windows安装linux.md",
+                "file": "15. 使用screen在SSH断开后保持程序运行.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "14.windows安装linux.md"
+                "file": "15. 使用screen在SSH断开后保持程序运行.md"
               }
             }
           }
@@ -146,10 +171,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "d2b33266e79c2756",
+  "active": "a174ba2fb6603523",
   "lastOpenFiles": [
+    "16.升级cuda.md",
     "15. 使用screen在SSH断开后保持程序运行.md",
     "14.windows安装linux.md",
+    "17.多cuda版本并存.md",
     "12.使用SSH远程访问.md",
     "深度学习-1 本地环境部署.md",
     "13.内网穿透.md",
@@ -177,14 +204,12 @@
     "机器学习-4 - ol.md",
     "机器学习-3 - ol.md",
     "blogpic/11.博客的多终端同步-1.png",
-    "6.matery进阶设置.md",
     "blogpic/office共享与在线协作-1.png",
     "blogpic/office 部署教程-1.png",
     "blogpic/office 部署教程.png",
     "blogpic/Pasted image 20230918132116.png",
     "blogpic/Pasted image 20230918132005.png",
     "blogpic/Pasted image 20230703170706.png",
-    "sakura.md",
     "blogpic"
   ]
 }
