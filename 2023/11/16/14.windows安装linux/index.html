@@ -557,12 +557,12 @@
                                 <span class="chip bg-color">SSH</span>
                             </a>
                         
-                            <a href="/tags/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
-                                <span class="chip bg-color">远程访问</span>
-                            </a>
-                        
                             <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
                                 <span class="chip bg-color">多终端</span>
+                            </a>
+                        
+                            <a href="/tags/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
+                                <span class="chip bg-color">远程访问</span>
                             </a>
                         
                             <a href="/tags/xshell/">
@@ -727,7 +727,9 @@ sudo add-apt-repository ppa:deadsnakes&#x2F;ppa <span aria-hidden="true" class="
 sudo sh cuda_12.3.1_545.23.08_linux.run<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>如提示driver未安装，可换用以下命令：</p>
 <pre class="line-numbers language-none"><code class="language-none">sudo sh cuda_12.3.1_545.23.08_linux.run --silent --driver<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>使用<code>nvcc -V</code>查看nvidia信息</p>
+<p>使用<code>nvcc -V</code>查看nvidia信息<br>使用以下命令启用linux中的<code>nvidia-smi</code>命令</p>
+<pre class="line-numbers language-none"><code class="language-none">cp &#x2F;usr&#x2F;lib&#x2F;wsl&#x2F;lib&#x2F;nvidia-smi &#x2F;usr&#x2F;bin&#x2F;nvidia-smi
+chmod ogu+x &#x2F;usr&#x2F;bin&#x2F;nvidia-smi<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h2 id="配置conda虚拟环境"><a href="#配置conda虚拟环境" class="headerlink" title="配置conda虚拟环境"></a>配置conda虚拟环境</h2><ul>
 <li>在安装完成anaconda后，使用<code>bash</code>进入anaconda命令行</li>
 <li>使用<code>conda create --name 名字 python=3.8</code>新建一个虚拟环境</li>
@@ -804,12 +806,12 @@ sudo sh cuda_12.3.1_545.23.08_linux.run<span aria-hidden="true" class="line-numb
                                     <span class="chip bg-color">SSH</span>
                                 </a>
                             
-                                <a href="/tags/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
-                                    <span class="chip bg-color">远程访问</span>
-                                </a>
-                            
                                 <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
                                     <span class="chip bg-color">多终端</span>
+                                </a>
+                            
+                                <a href="/tags/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
+                                    <span class="chip bg-color">远程访问</span>
                                 </a>
                             
                                 <a href="/tags/xshell/">
@@ -986,12 +988,12 @@ sudo sh cuda_12.3.1_545.23.08_linux.run<span aria-hidden="true" class="line-numb
                         <span class="chip bg-color">SSH</span>
                     </a>
                     
-                    <a href="/tags/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
-                        <span class="chip bg-color">远程访问</span>
-                    </a>
-                    
                     <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
                         <span class="chip bg-color">多终端</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
+                        <span class="chip bg-color">远程访问</span>
                     </a>
                     
                     <a href="/tags/xshell/">
