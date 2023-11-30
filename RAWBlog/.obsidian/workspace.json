@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "b8e7622cc022ee5b",
+        "id": "00ad503a4ee0d159",
         "type": "tabs",
         "children": [
           {
-            "id": "202be17a2788b63a",
+            "id": "535e5a630cea2d12",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "windows安装linux.md",
+                "file": "深度学习-1 本地环境部署.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "177e32b64711b98c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "释放vdisk占用空间.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "windows安装linux.md",
+                "file": "释放vdisk占用空间.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "windows安装linux.md",
+                "file": "释放vdisk占用空间.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "windows安装linux.md"
+                "file": "释放vdisk占用空间.md"
               }
             }
           }
@@ -146,11 +159,20 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "202be17a2788b63a",
+  "active": "177e32b64711b98c",
   "lastOpenFiles": [
+    "深度学习-1 本地环境部署.md",
+    "释放vdisk占用空间.md",
+    "16.升级cuda.md",
+    "14.windows安装linux.md",
+    "15. 使用screen在SSH断开后保持程序运行.md",
+    "13.内网穿透.md",
+    "12.使用SSH远程访问.md",
+    "关闭windows登录用户密码.md",
+    "关闭windows10自动更新.md",
+    "windows安装linux.md",
     "blogpic/windows安装linux-3.png",
     "windows安装linux/image-20230909162856961.png.md",
-    "windows安装linux.md",
     "windows安装linux",
     "blogpic/windows安装linux-2.png",
     "blogpic/windows安装linux-1.png",
@@ -161,15 +183,11 @@
     "blogpic/windows下使用FEMINIST-2.png",
     "blogpic/windows下使用FEMINIST-1.png",
     "11.博客的多终端同步.md",
-    "12.使用SSH远程访问.md",
-    "13.内网穿透.md",
     "blogpic/13.内网穿透-3.png",
     "blogpic/13.内网穿透-2.png",
     "blogpic/13.内网穿透-1.png",
-    "深度学习-1 本地环境部署.md",
     "blogpic/12.内网穿透-5.png",
     "blogpic/12.内网穿透-4.png",
-    "blogpic/12.内网穿透-3.png",
     "机器学习-1.md",
     "深度学习 科学上网.md",
     "机器学习-4 - ol.md",
@@ -180,11 +198,6 @@
     "404.md",
     "7.matery主题设置.md",
     "6.matery进阶设置.md",
-    "2.博客主题设置.md",
-    "1.博客部署配置.md",
-    "3.上传新博客内容.md",
-    "论文阅读.md",
-    "机器学习-6.md",
     "blogpic/obsidian 入门教程-2.~vsdx",
     "blogpic/相对路径.vsdx",
     "blogpic/~$$绝对路径.~vsdx",
