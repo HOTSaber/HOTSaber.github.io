@@ -651,6 +651,64 @@
 <li>生效范围：仅对当前用户有效</li>
 <li>如果有后续的环境变量加载文件覆盖了<code>PATH</code>定义，则可能不生效</li>
 </ul>
+<h1 id="安装cudnn"><a href="#安装cudnn" class="headerlink" title="安装cudnn"></a>安装cudnn</h1><h2 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h2><p>CUDA需要配合cudnn才能正常工作，将cudnn的四个文件（夹），复制到CUDA的安装路径即可，即CUDA文件夹。<br>往系统环境变量中的 path 添加如下路径（<strong>根据自己的路径进行修改</strong>）</p>
+<pre class="line-numbers language-none"><code class="language-none">C:\Program Files\NVIDIA\CUDA\bin
+C:\Program Files\NVIDIA\CUDA\include
+C:\Program Files\NVIDIA\CUDA\lib
+C:\Program Files\NVIDIA\CUDA\libnvvp<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>检验：</p>
+<p>配置完成后，我们可以验证是否配置成功，主要使用CUDA内置的<code>deviceQuery.exe</code> 和 <code>bandwidthTest.exe</code>：<br>首先win+R启动cmd，cd到<strong>安装目录</strong>下的 <code>…\extras\demo_suite</code>,然后分别执行<code>.\bandwidthTest.exe</code>和<code>.\deviceQuery.exe</code>,应该得到下图.</p>
+<pre class="line-numbers language-none"><code class="language-none">cd C:\Program Files\NVIDIA\CUDA\extras\demo_suite 
+.\bandwidthTest.exe 
+.\deviceQuery.exe<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h2><p><a target="_blank" rel="noopener" href="https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html">官方教程</a>与<a target="_blank" rel="noopener" href="https://blog.csdn.net/JianJuly/article/details/102793103">CSDN参考</a><br>安装linus解压工具</p>
+<pre class="line-numbers language-none"><code class="language-none">sudo apt-get install zlib1g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>打开<a target="_blank" rel="noopener" href="https://developer.nvidia.com/rdp/cudnn-archive">下载链接</a>，选择相应的版本并下载。选择方法可参考<a href="%5Bhttps://blog.csdn.net/MumuziD/article/details/118760650%5D(https://blog.csdn.net/MumuziD/article/details/118760650)">链接</a>，，建议直接选择<code>cuDNN Library for Linux (x86_64)</code><br>进入cudnn压缩包所在的文件夹，解压文件</p>
+<pre class="line-numbers language-none"><code class="language-none">tar -xvf [$文件名]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>将文件拷贝到相应cuda目录下</p>
+<pre class="line-numbers language-none"><code class="language-none">sudo cp cudnn-*-archive&#x2F;include&#x2F;cudnn*.h &#x2F;usr&#x2F;local&#x2F;cuda&#x2F;include 
+sudo cp -P cudnn-*-archive&#x2F;lib&#x2F;libcudnn* &#x2F;usr&#x2F;local&#x2F;cuda&#x2F;lib64 
+sudo chmod a+r &#x2F;usr&#x2F;local&#x2F;cuda&#x2F;include&#x2F;cudnn*.h &#x2F;usr&#x2F;local&#x2F;cuda&#x2F;lib64&#x2F;libcudnn*<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>查看cudnn版本</p>
+<pre class="line-numbers language-none"><code class="language-none">cat &#x2F;usr&#x2F;local&#x2F;cuda&#x2F;include&#x2F;cudnn_version.h | grep CUDNN_MAJOR -A 2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>出现如下的信息，则为配置成功</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#define CUDNN_MAJOR 8</span>
+<span class="token comment">#define CUDNN_MINOR 4</span>
+<span class="token comment">#define CUDNN_PATCHLEVEL 0</span>
+--
+<span class="token comment">#define CUDNN_VERSION (CUDNN_MAJOR * 1000 + CUDNN_MINOR * 100 + CUDNN_PATCHLEVEL)</span>
+
+<span class="token comment">#endif /* CUDNN_VERSION_H */</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="cuda卸载"><a href="#cuda卸载" class="headerlink" title="cuda卸载"></a>cuda卸载</h1><h2 id="linux-1"><a href="#linux-1" class="headerlink" title="linux"></a>linux</h2><p>详见<a target="_blank" rel="noopener" href="https://blog.csdn.net/ziqibit/article/details/129935737">链接</a>与<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/648709952">链接</a><br>如果需要换不同的版本，建议多版本并存，这里先不涉及，如果要彻底卸载，根据以下操作<br>权限不够前面加sudo，我这里用root进行安装</p>
+<h3 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h3><ol>
+<li>准备删除cuda<br><code>apt-get remove cuda</code></li>
+<li>自动卸载<br><code>apt autoremove</code></li>
+<li>删除其它的cuda<br>&#96;apt autoremove cuda*&#96;&#96;</li>
+<li>删除下载安装包（也可以不删除）<br><code>rm /usr/local/my_cuda/cuda-repo-ubuntu2204-12-1-local_12.1.0-530.30.02-1_amd64.deb</code></li>
+<li>查找包相关<br><code>dpkg -l |grep cuda</code></li>
+<li>手动删除相关的包。否则再安装别的版本会失败<br><code>dpkg -P cuda-repo-ubuntu2204-12-1-local cuda-toolkit-12-1-config-common cuda-toolkit-12-config-common cuda-toolkit-config-common cuda-visual-tools-12-1</code><br>名字使用第5步中的</li>
+</ol>
+<h3 id="方案二"><a href="#方案二" class="headerlink" title="方案二"></a>方案二</h3><p>进入下面这个目录：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> /usr/local/cuda-10.0/bin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>在这个目录中，可以找到卸载程序，名为：<code>uninstall_cuda_10.0.pl</code></p>
+<p>这里需要注意，如果版本大于10.0，则卸载程序的名字为：<code>cuda-uninstaller</code></p>
+<p>执行卸载命令：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># version &lt;= 10.0</span>
+<span class="token function">sudo</span> ./uninstall_cuda_10.0.pl  <span class="token comment"># 10.0可替换为自己的版本号</span>
+<span class="token comment"># version > 10.0</span>
+<span class="token function">sudo</span> ./cuda-uninstaller<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>如果完成卸载后，当前目录（&#x2F;usr&#x2F;local&#x2F;cuda-10.0）没有被删除，则证明还存在当时安装cuDNN时留下的文件</p>
+<p>删除cuDNN（若没有安装Cudnn，可忽略此步骤）：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">rm</span> <span class="token parameter variable">-rf</span> /usr/local/cuda-10.0  <span class="token comment"># 10.0可替换为自己的版本号</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>综上，就彻底删掉了Cuda相关的文件</p>
+<h2 id="windows-1"><a href="#windows-1" class="headerlink" title="windows"></a>windows</h2><ul>
+<li>进入控制面板，将如下所示打勾的NVIDIA GeForce Experience，NVIDIA PhysX 系统软件，NVIDIA 图形驱动程序的保留，其他的NVIDIA标识全部双击卸载。</li>
+<li>然后打开杀毒软件进行垃圾清理，将注册表删除即可；或者WIN+R 输入regedit，点击确定进入注册表编辑器，然后打开<code>HKEY-LOCAL-MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall</code>文件夹删掉NVIDIA的注册表。</li>
+</ul>
 
                 
             </div>
@@ -774,18 +832,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/11/30/16.%E5%8D%87%E7%BA%A7cuda/">
+                <a href="/2023/12/01/201.office%E9%80%9A%E8%BF%87%E6%A0%B7%E5%BC%8F%E7%AE%A1%E7%90%86%E6%A0%BC%E5%BC%8F/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="多cuda版本并存">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="样式管理">
                         
-                        <span class="card-title">多cuda版本并存</span>
+                        <span class="card-title">样式管理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -795,39 +852,34 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-11-30
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-12-01
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    深度学习
+                            <a href="/categories/%E6%96%87%E6%A1%A3%E7%BC%96%E8%BE%91%E4%B8%8E%E7%AE%A1%E7%90%86/" class="post-category">
+                                    文档编辑与管理
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/linux/">
-                        <span class="chip bg-color">linux</span>
+                    <a href="/tags/office/">
+                        <span class="chip bg-color">office</span>
                     </a>
                     
-                    <a href="/tags/PATH/">
-                        <span class="chip bg-color">PATH</span>
+                    <a href="/tags/%E6%A0%B7%E5%BC%8F%E7%AE%A1%E7%90%86/">
+                        <span class="chip bg-color">样式管理</span>
                     </a>
                     
-                    <a href="/tags/cuda/">
-                        <span class="chip bg-color">cuda</span>
-                    </a>
-                    
-                    <a href="/tags/nvcc/">
-                        <span class="chip bg-color">nvcc</span>
+                    <a href="/tags/%E6%A0%BC%E5%BC%8F/">
+                        <span class="chip bg-color">格式</span>
                     </a>
                     
                 </div>
@@ -883,16 +935,16 @@
                         <span class="chip bg-color">远程访问</span>
                     </a>
                     
+                    <a href="/tags/linux/">
+                        <span class="chip bg-color">linux</span>
+                    </a>
+                    
                     <a href="/tags/xshell/">
                         <span class="chip bg-color">xshell</span>
                     </a>
                     
                     <a href="/tags/xftp/">
                         <span class="chip bg-color">xftp</span>
-                    </a>
-                    
-                    <a href="/tags/linux/">
-                        <span class="chip bg-color">linux</span>
                     </a>
                     
                     <a href="/tags/screen/">
