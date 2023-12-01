@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "深度学习-1 本地环境部署.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "177e32b64711b98c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "释放vdisk占用空间.md",
+                "file": "201.office通过样式管理格式.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "96657e4ced1269eb",
@@ -98,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "释放vdisk占用空间.md",
+                "file": "201.office通过样式管理格式.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "释放vdisk占用空间.md",
+                "file": "201.office通过样式管理格式.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "释放vdisk占用空间.md"
+                "file": "201.office通过样式管理格式.md"
               }
             }
           }
@@ -159,11 +147,24 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "177e32b64711b98c",
+  "active": "535e5a630cea2d12",
   "lastOpenFiles": [
+    "blogpic/201.office通过样式管理格式-26.png",
+    "blogpic/201.office通过样式管理格式-25.png",
+    "blogpic/201.office通过样式管理格式-24.png",
+    "blogpic/201.office通过样式管理格式-23.png",
+    "blogpic/201.office通过样式管理格式-22.png",
+    "blogpic/201.office通过样式管理格式-21.png",
+    "blogpic/201.office通过样式管理格式-20.png",
+    "blogpic/201.office通过样式管理格式-19.png",
+    "blogpic/201.office通过样式管理格式-18.png",
+    "blogpic/201.office通过样式管理格式-17.png",
+    "blogpic/201.office通过样式管理格式-16.png",
+    "201.office通过样式管理格式.md",
+    "201.office通过样式管理格式-2.png.md",
+    "16.升级cuda.md",
     "深度学习-1 本地环境部署.md",
     "释放vdisk占用空间.md",
-    "16.升级cuda.md",
     "14.windows安装linux.md",
     "15. 使用screen在SSH断开后保持程序运行.md",
     "13.内网穿透.md",
@@ -171,23 +172,13 @@
     "关闭windows登录用户密码.md",
     "关闭windows10自动更新.md",
     "windows安装linux.md",
-    "blogpic/windows安装linux-3.png",
     "windows安装linux/image-20230909162856961.png.md",
     "windows安装linux",
-    "blogpic/windows安装linux-2.png",
-    "blogpic/windows安装linux-1.png",
     "windows安装linux/image-20230909155557206.png.md",
     "Prism plugin.md",
     "sakura.md",
     "task in future.md",
-    "blogpic/windows下使用FEMINIST-2.png",
-    "blogpic/windows下使用FEMINIST-1.png",
     "11.博客的多终端同步.md",
-    "blogpic/13.内网穿透-3.png",
-    "blogpic/13.内网穿透-2.png",
-    "blogpic/13.内网穿透-1.png",
-    "blogpic/12.内网穿透-5.png",
-    "blogpic/12.内网穿透-4.png",
     "机器学习-1.md",
     "深度学习 科学上网.md",
     "机器学习-4 - ol.md",
@@ -195,9 +186,6 @@
     "9.md语法.md",
     "().md",
     "obsidian 入门教程.md",
-    "404.md",
-    "7.matery主题设置.md",
-    "6.matery进阶设置.md",
     "blogpic/obsidian 入门教程-2.~vsdx",
     "blogpic/相对路径.vsdx",
     "blogpic/~$$绝对路径.~vsdx",
