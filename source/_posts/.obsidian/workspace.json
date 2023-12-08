@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "16.升级cuda.md",
+                "file": "201.office通过样式管理格式.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "16.升级cuda.md",
+                "file": "201.office通过样式管理格式.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "16.升级cuda.md",
+                "file": "201.office通过样式管理格式.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "16.升级cuda.md"
+                "file": "201.office通过样式管理格式.md"
               }
             }
           }
@@ -163,20 +163,20 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
     }
   },
   "active": "a174ba2fb6603523",
   "lastOpenFiles": [
+    "16.升级cuda.md",
     "深度学习-1 本地环境部署.md",
     "14.windows安装linux.md",
     "15. 使用screen在SSH断开后保持程序运行.md",
-    "16.升级cuda.md",
     "12.使用SSH远程访问.md",
     "17.多cuda版本并存.md",
     "13.内网穿透.md",
