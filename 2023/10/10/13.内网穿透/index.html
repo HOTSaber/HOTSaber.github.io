@@ -563,6 +563,14 @@
                                 <span class="chip bg-color">远程访问</span>
                             </a>
                         
+                            <a href="/tags/xshell/">
+                                <span class="chip bg-color">xshell</span>
+                            </a>
+                        
+                            <a href="/tags/xftp/">
+                                <span class="chip bg-color">xftp</span>
+                            </a>
+                        
                             <a href="/tags/linux/">
                                 <span class="chip bg-color">linux</span>
                             </a>
@@ -573,14 +581,6 @@
                         
                             <a href="/tags/frp/">
                                 <span class="chip bg-color">frp</span>
-                            </a>
-                        
-                            <a href="/tags/xshell/">
-                                <span class="chip bg-color">xshell</span>
-                            </a>
-                        
-                            <a href="/tags/xftp/">
-                                <span class="chip bg-color">xftp</span>
                             </a>
                         
                     </div>
@@ -675,7 +675,7 @@ CD #用于更改当前工作目录 cd ..为返回上一级<span aria-hidden="tru
 mac命令行：<pre class="line-numbers language-none"><code class="language-none">ssh -p portnumber username@cloud_ip<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 xshell：<pre class="line-numbers language-none"><code class="language-none">ssh username@cloud_ip portumber<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 </ul>
-<h1 id="自启动配置"><a href="#自启动配置" class="headerlink" title="自启动配置"></a>自启动配置</h1><h2 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h2><ul>
+<h1 id="自启动配置"><a href="#自启动配置" class="headerlink" title="自启动配置"></a>自启动配置</h1><h2 id="云端linux"><a href="#云端linux" class="headerlink" title="云端linux"></a>云端linux</h2><ul>
 <li>确保安装了<code>systemd</code><pre class="line-numbers language-none"><code class="language-none"># yum
 yum install systemd
 # apt
@@ -687,14 +687,16 @@ After&#x3D;network.target
 
 [Service]
 Type&#x3D;simple
-User&#x3D;root  #此处用户名需要修改
+User&#x3D;root
+#此处用户名需要修改
 Restart&#x3D;on-failure
 RestartSec&#x3D;5s
-ExecStart&#x3D;&#x2F;root&#x2F;frp_0.51.3_linux_amd64&#x2F;frps -c &#x2F;root&#x2F;frp_0.51.3_linux_amd64&#x2F;frps.ini #此处文件路径需要修改
+ExecStart&#x3D;&#x2F;root&#x2F;frp_0.51.3_linux_amd64&#x2F;frps -c &#x2F;root&#x2F;frp_0.51.3_linux_amd64&#x2F;frps.ini
+#此处文件路径需要修改
 LimitNOFILE&#x3D;1048576
 
 [Install]
-WantedBy&#x3D;multi-user.target<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+WantedBy&#x3D;multi-user.target<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <strong>路径要使用绝对路径，可以通过<code>pwd</code>来查看路径</strong></li>
 <li>使用以下命令，实现开机自启动：<pre class="line-numbers language-none"><code class="language-none">systemctl daemon-reload  
 systemctl enable frps  
@@ -707,7 +709,25 @@ systemctl restart frps #重启进程
 systemctl stop frps #停止进程
 systemctl status frps #查看进程日志<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
-<h2 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h2><ul>
+<h2 id="linux客户端"><a href="#linux客户端" class="headerlink" title="linux客户端"></a>linux客户端</h2><p> 同上，使用<code>vim /lib/systemd/system/frpc.service</code>创建并编辑 <code>frpc.service</code> 文件。写入以下内容：</p>
+<pre class="line-numbers language-none"><code class="language-none">[Unit]
+Description&#x3D;Frp cliant Service
+After&#x3D;network.target
+
+[Service]
+Type&#x3D;simple
+User&#x3D;ps
+#此处用户名需要修改
+Restart&#x3D;on-failure
+RestartSec&#x3D;5s
+ExecStart&#x3D;&#x2F;home&#x2F;ps&#x2F;tools&#x2F;frp_0.51.3_linux_amd64&#x2F;frpc -c &#x2F;home&#x2F;ps&#x2F;tools&#x2F;frp_0.51.3_linux_amd64&#x2F;frpc.ini
+#此处文件路径需要修改
+LimitNOFILE&#x3D;1048576
+
+[Install]
+WantedBy&#x3D;multi-user.target<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>路径要使用绝对路径，可以通过<code>pwd</code>来查看路径</strong>，并使用<code>systemctl enable frps</code>打开自启动</p>
+<h2 id="windows客户端"><a href="#windows客户端" class="headerlink" title="windows客户端"></a>windows客户端</h2><ul>
 <li>在<code>frps</code>文件中新建批处理文件<code>autostart.bat</code>文件：<pre class="line-numbers language-none"><code class="language-none">@echo off
 chcp 65001
 title 内网穿透_不要关闭此窗口！！！
@@ -752,7 +772,16 @@ c.NotebookApp.notebook_dir &#x3D; &#39;设置Notebook启动进入的目录&#39; 
 <li>配置完成，重启notebook即可<br>使用<code>nohup</code>命令后台运行jupyter notebook，并将输出的内容追加的内容输出到<code>jupyter.out</code>文件中，同时将错误信息也输出到文件中。<pre class="line-numbers language-none"><code class="language-none">nohup jupyter notebook &gt;&gt;jupyter.out 2&gt;&amp;1 &amp;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li>使用<code>frp</code>配置中的云服务器IP+端口号即可以远程访问</li>
 </ol>
-
+<h1 id="多个-SSH-服务复用同一端口"><a href="#多个-SSH-服务复用同一端口" class="headerlink" title="多个 SSH 服务复用同一端口"></a>多个 SSH 服务复用同一端口</h1><p>修改不同实例名即可</p>
+<pre class="line-numbers language-none"><code class="language-none">[ssh3]#修改这里的实例名
+type &#x3D; tcp
+local_ip &#x3D; 127.0.0.1
+local_port &#x3D; 22
+remote_port &#x3D; 2333<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>由于云主机的frp服务器端口是开放的，任意的frp客户端都可以随意在服务器注册端口映射，这样子在公网上及其不安全，所以建议要</p>
+<p>默认情况下只要知道 FRP 服务端开放的端口，任意 FRP 客户端都可以随意在服务端上注册端口映射，这样对于在公网上的 FRP 服务来说显然不太安全。FRP 提供了身份验证机制来提高 FRP 服务端的安全性。<br>可以使用token加强验证。详见<a target="_blank" rel="noopener" href="https://gofrp.org/zh-cn/docs/examples/stcp/">frp帮助文档</a></p>
+<pre class="line-numbers language-none"><code class="language-none">#在common中加入以下参数
+token &#x3D; [密码] #在frps与frpc的common中都加入以下参数<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -828,6 +857,14 @@ c.NotebookApp.notebook_dir &#x3D; &#39;设置Notebook启动进入的目录&#39; 
                                     <span class="chip bg-color">远程访问</span>
                                 </a>
                             
+                                <a href="/tags/xshell/">
+                                    <span class="chip bg-color">xshell</span>
+                                </a>
+                            
+                                <a href="/tags/xftp/">
+                                    <span class="chip bg-color">xftp</span>
+                                </a>
+                            
                                 <a href="/tags/linux/">
                                     <span class="chip bg-color">linux</span>
                                 </a>
@@ -838,14 +875,6 @@ c.NotebookApp.notebook_dir &#x3D; &#39;设置Notebook启动进入的目录&#39; 
                             
                                 <a href="/tags/frp/">
                                     <span class="chip bg-color">frp</span>
-                                </a>
-                            
-                                <a href="/tags/xshell/">
-                                    <span class="chip bg-color">xshell</span>
-                                </a>
-                            
-                                <a href="/tags/xftp/">
-                                    <span class="chip bg-color">xftp</span>
                                 </a>
                             
                         </div>
@@ -941,6 +970,14 @@ c.NotebookApp.notebook_dir &#x3D; &#39;设置Notebook启动进入的目录&#39; 
                         <span class="chip bg-color">远程访问</span>
                     </a>
                     
+                    <a href="/tags/xshell/">
+                        <span class="chip bg-color">xshell</span>
+                    </a>
+                    
+                    <a href="/tags/xftp/">
+                        <span class="chip bg-color">xftp</span>
+                    </a>
+                    
                     <a href="/tags/linux/">
                         <span class="chip bg-color">linux</span>
                     </a>
@@ -951,14 +988,6 @@ c.NotebookApp.notebook_dir &#x3D; &#39;设置Notebook启动进入的目录&#39; 
                     
                     <a href="/tags/frp/">
                         <span class="chip bg-color">frp</span>
-                    </a>
-                    
-                    <a href="/tags/xshell/">
-                        <span class="chip bg-color">xshell</span>
-                    </a>
-                    
-                    <a href="/tags/xftp/">
-                        <span class="chip bg-color">xftp</span>
                     </a>
                     
                 </div>
