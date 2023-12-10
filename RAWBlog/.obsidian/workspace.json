@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "c5a2eb757909062f",
+        "id": "cc54d6d05e1f8e6b",
         "type": "tabs",
         "children": [
           {
-            "id": "b74713d0502ac540",
+            "id": "fa06b67ca61ca406",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "107.docker教程.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "107.docker教程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "107.docker教程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "107.docker教程.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,19 +138,35 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "b74713d0502ac540",
+  "active": "fa06b67ca61ca406",
   "lastOpenFiles": [
-    "释放vdisk占用空间.md",
+    "107.windows安装linux.md",
+    "108..md",
+    "未命名",
     "107.docker教程.md",
-    "16.升级cuda.md",
-    "个性化修改.md",
+    "task in future.md",
+    "sakura.md",
+    "Prism plugin.md",
+    "204.office zotero使用教程.md",
+    "深度学习 科学上网 (2).md",
+    "深度学习 科学上网.md",
+    "107.深度学习-1 本地环境部署.md",
+    "203.office共享文档与在线协作.md",
+    "202.office 部署教程.md",
+    "200.obsidian 入门教程.md",
+    "论文阅读.md",
+    "联邦学习顶会论文阅读.md",
+    "科学上网.md",
+    "机器学习-3 - ol.md",
+    "机器学习-2.md",
     "第六次会议(1).md",
+    "个性化修改.md",
+    "_关闭windows10自动更新.md",
+    "_关闭windows登录用户密码.md",
+    "_释放vdisk占用空间.md",
     "201.office通过样式管理格式.md",
+    "16.升级cuda.md",
     "404.md",
-    "2023-12-04.md",
-    "15. 使用screen在SSH断开后保持程序运行.md",
-    "关闭windows10自动更新.md",
-    "关闭windows登录用户密码.md",
     "blogpic/201.office通过样式管理格式-26.png",
     "blogpic/201.office通过样式管理格式-25.png",
     "blogpic/201.office通过样式管理格式-24.png",
@@ -169,22 +177,7 @@
     "blogpic/201.office通过样式管理格式-19.png",
     "blogpic/201.office通过样式管理格式-18.png",
     "blogpic/201.office通过样式管理格式-17.png",
-    "201.office通过样式管理格式-2.png.md",
-    "深度学习-1 本地环境部署.md",
-    "14.windows安装linux.md",
-    "13.内网穿透.md",
-    "12.使用SSH远程访问.md",
-    "windows安装linux.md",
-    "windows安装linux/image-20230909162856961.png.md",
     "windows安装linux",
-    "windows安装linux/image-20230909155557206.png.md",
-    "Prism plugin.md",
-    "sakura.md",
-    "task in future.md",
-    "11.博客的多终端同步.md",
-    "机器学习-1.md",
-    "深度学习 科学上网.md",
-    "机器学习-4 - ol.md",
     "blogpic/obsidian 入门教程-2.~vsdx",
     "blogpic/相对路径.vsdx",
     "blogpic/~$$绝对路径.~vsdx",
@@ -192,7 +185,6 @@
     "blogpic/obsidian 入门教程-1.~vsdx",
     "blogpic/路径.vsdx",
     "新建文件夹/test.py",
-    "新建文件夹/新建 文本文档.txt",
-    "新建文件夹"
+    "新建文件夹/新建 文本文档.txt"
   ]
 }
