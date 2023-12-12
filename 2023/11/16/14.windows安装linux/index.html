@@ -557,6 +557,10 @@
                                 <span class="chip bg-color">SSH</span>
                             </a>
                         
+                            <a href="/tags/linux/">
+                                <span class="chip bg-color">linux</span>
+                            </a>
+                        
                             <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
                                 <span class="chip bg-color">多终端</span>
                             </a>
@@ -571,10 +575,6 @@
                         
                             <a href="/tags/xftp/">
                                 <span class="chip bg-color">xftp</span>
-                            </a>
-                        
-                            <a href="/tags/linux/">
-                                <span class="chip bg-color">linux</span>
                             </a>
                         
                             <a href="/tags/%E4%BA%91/">
@@ -706,7 +706,8 @@ remote_port &#x3D; 2222<span aria-hidden="true" class="line-numbers-rows"><span>
 <h1 id="配置免密访问"><a href="#配置免密访问" class="headerlink" title="配置免密访问"></a>配置免密访问</h1><p>使用<code>ssh-keygen</code>在linux端生成公私钥对<br>在<code>/root/.ssh</code>下，新建<code>authorized_keys</code>文件，将pubkey复制进<code>authorized_keys</code>文件中，以回车相隔<br>在windows系统中，重启服务器</p>
 <h1 id="windows如何使用FEMNIST数据集"><a href="#windows如何使用FEMNIST数据集" class="headerlink" title="windows如何使用FEMNIST数据集"></a>windows如何使用FEMNIST数据集</h1><p>项目代码：<a target="_blank" rel="noopener" href="https://github.com/SMILELab-FL/FedLab-benchmarks/blob/master/fedlab_benchmarks/leaf/README_zh_cn.md">FedLab-benchmarks&#x2F;fedlab_benchmarks&#x2F;leaf&#x2F;README_zh_cn.md at master ·SMILELab-FL&#x2F;FedLab-benchmarks (github.com)</a></p>
 <p>下载到本地后，你会发现需要linux系统来运行</p>
-<h1 id="linux环境配置"><a href="#linux环境配置" class="headerlink" title="linux环境配置"></a>linux环境配置</h1><h2 id="安装解压工具"><a href="#安装解压工具" class="headerlink" title="安装解压工具"></a>安装解压工具</h2><pre class="line-numbers language-none"><code class="language-none">sudo apt install zip<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h1 id="linux环境配置"><a href="#linux环境配置" class="headerlink" title="linux环境配置"></a>linux环境配置</h1><h2 id="安装解压工具与必备工具"><a href="#安装解压工具与必备工具" class="headerlink" title="安装解压工具与必备工具"></a>安装解压工具与必备工具</h2><pre class="line-numbers language-none"><code class="language-none">sudo apt install zip
+sudo apt install build-essential<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h2 id="安装nvidia-tools"><a href="#安装nvidia-tools" class="headerlink" title="安装nvidia tools"></a>安装nvidia tools</h2><pre class="line-numbers language-none"><code class="language-none">apt install nvidia-cuda-toolkit<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>此项安装已包含cuda（疑似，待验证doge）</p>
 <h2 id="安装python"><a href="#安装python" class="headerlink" title="安装python"></a>安装python</h2><ul>
@@ -719,9 +720,20 @@ sudo apt install software-properties-common
 sudo add-apt-repository ppa:deadsnakes&#x2F;ppa <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
 <li>再运行<code>sudo apt-get install python3.8</code>即可</li>
 </ul>
-<h2 id="安装conda"><a href="#安装conda" class="headerlink" title="安装conda"></a>安装conda</h2><p>使用以下命令，或是自行下载将安装包拷贝进linux服务器</p>
-<pre class="line-numbers language-none"><code class="language-none">wget https:&#x2F;&#x2F;repo.anaconda.com&#x2F;archive&#x2F;Anaconda3-2023.09-0-Linux-x86_64.sh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>url可访问<a target="_blank" rel="noopener" href="https://www.anaconda.com/download#downloads">anaconda官网</a>，找到安装包下载地址获得<br>使用<code>bash 文件名</code>安装，如<code>bash Anaconda3-2023.09-0-Linux-x86_64.sh</code></p>
+<h2 id="安装conda"><a href="#安装conda" class="headerlink" title="安装conda"></a>安装conda</h2><ul>
+<li>使用以下命令，或是自行下载将安装包拷贝进linux服务器<pre class="line-numbers language-none"><code class="language-none">wget https:&#x2F;&#x2F;repo.anaconda.com&#x2F;archive&#x2F;Anaconda3-2023.09-0-Linux-x86_64.sh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+url可访问<a target="_blank" rel="noopener" href="https://www.anaconda.com/download#downloads">anaconda官网</a>，找到安装包下载地址获得<br>使用<code>bash 文件名</code>安装，如<code>bash Anaconda3-2023.09-0-Linux-x86_64.sh</code></li>
+<li>安装后提示<pre class="line-numbers language-none"><code class="language-none">installation finished.
+Do you wish to update your shell profile to automatically initialize conda?
+This will activate conda on startup and change the command prompt when activated.
+If you&#39;d prefer that conda&#39;s base environment not be activated on startup,
+   run the following command when conda is activated:
+
+conda config --set auto_activate_base false #使用此命令控制base环境自启
+
+You can undo this by running &#96;conda init --reverse $SHELL&#96;? [yes|no]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>如无设置base环境自启动，可使用以下命令激活base环境<pre class="line-numbers language-none"><code class="language-none">source activate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ul>
 <h2 id="安装cuda"><a href="#安装cuda" class="headerlink" title="安装cuda"></a>安装cuda</h2><p>访问<a target="_blank" rel="noopener" href="https://developer.nvidia.com/cuda-toolkit-archive">cuda官网</a>，按服务器系统配置选择安装环境，按提示步骤安装即可<br>本教程使用以下安装代码：</p>
 <pre class="line-numbers language-none"><code class="language-none">wget https:&#x2F;&#x2F;developer.download.nvidia.com&#x2F;compute&#x2F;cuda&#x2F;12.3.1&#x2F;local_installers&#x2F;cuda_12.3.1_545.23.08_linux.run
 sudo sh cuda_12.3.1_545.23.08_linux.run<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
@@ -806,6 +818,10 @@ chmod ogu+x &#x2F;usr&#x2F;bin&#x2F;nvidia-smi<span aria-hidden="true" class="li
                                     <span class="chip bg-color">SSH</span>
                                 </a>
                             
+                                <a href="/tags/linux/">
+                                    <span class="chip bg-color">linux</span>
+                                </a>
+                            
                                 <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
                                     <span class="chip bg-color">多终端</span>
                                 </a>
@@ -820,10 +836,6 @@ chmod ogu+x &#x2F;usr&#x2F;bin&#x2F;nvidia-smi<span aria-hidden="true" class="li
                             
                                 <a href="/tags/xftp/">
                                     <span class="chip bg-color">xftp</span>
-                                </a>
-                            
-                                <a href="/tags/linux/">
-                                    <span class="chip bg-color">linux</span>
                                 </a>
                             
                                 <a href="/tags/%E4%BA%91/">
@@ -919,6 +931,10 @@ chmod ogu+x &#x2F;usr&#x2F;bin&#x2F;nvidia-smi<span aria-hidden="true" class="li
                         <span class="chip bg-color">SSH</span>
                     </a>
                     
+                    <a href="/tags/linux/">
+                        <span class="chip bg-color">linux</span>
+                    </a>
+                    
                     <a href="/tags/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
                         <span class="chip bg-color">远程访问</span>
                     </a>
@@ -929,10 +945,6 @@ chmod ogu+x &#x2F;usr&#x2F;bin&#x2F;nvidia-smi<span aria-hidden="true" class="li
                     
                     <a href="/tags/xftp/">
                         <span class="chip bg-color">xftp</span>
-                    </a>
-                    
-                    <a href="/tags/linux/">
-                        <span class="chip bg-color">linux</span>
                     </a>
                     
                     <a href="/tags/screen/">
@@ -988,6 +1000,10 @@ chmod ogu+x &#x2F;usr&#x2F;bin&#x2F;nvidia-smi<span aria-hidden="true" class="li
                         <span class="chip bg-color">SSH</span>
                     </a>
                     
+                    <a href="/tags/linux/">
+                        <span class="chip bg-color">linux</span>
+                    </a>
+                    
                     <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
                         <span class="chip bg-color">多终端</span>
                     </a>
@@ -1002,10 +1018,6 @@ chmod ogu+x &#x2F;usr&#x2F;bin&#x2F;nvidia-smi<span aria-hidden="true" class="li
                     
                     <a href="/tags/xftp/">
                         <span class="chip bg-color">xftp</span>
-                    </a>
-                    
-                    <a href="/tags/linux/">
-                        <span class="chip bg-color">linux</span>
                     </a>
                     
                     <a href="/tags/%E4%BA%91/">

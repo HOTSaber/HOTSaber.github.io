@@ -4,11 +4,11 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="zotero使用教程, 挖掘机">
+    <meta name="keywords" content="docker教程, 挖掘机">
     <meta name="description" content="
-内容待更新
+详情请参考docker快速入门与官方文档
 
-">
+Install using the apt repositoryBefore you install Docker Engine for the first time on a new host">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +20,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>zotero使用教程 | 挖掘机</title>
+    <title>docker教程 | 挖掘机</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -529,7 +529,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">zotero使用教程</h1>
+                    <h1 class="description center-align post-title">docker教程</h1>
                 </div>
             </div>
         </div>
@@ -553,28 +553,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/office/">
-                                <span class="chip bg-color">office</span>
+                            <a href="/tags/docker/">
+                                <span class="chip bg-color">docker</span>
                             </a>
                         
-                            <a href="/tags/%E6%A0%BC%E5%BC%8F/">
-                                <span class="chip bg-color">格式</span>
-                            </a>
-                        
-                            <a href="/tags/zotero/">
-                                <span class="chip bg-color">zotero</span>
-                            </a>
-                        
-                            <a href="/tags/chrome-%E6%8F%92%E4%BB%B6/">
-                                <span class="chip bg-color">chrome 插件</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86/">
-                                <span class="chip bg-color">文献管理</span>
-                            </a>
-                        
-                            <a href="/tags/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/">
-                                <span class="chip bg-color">参考文献</span>
+                            <a href="/tags/linux/">
+                                <span class="chip bg-color">linux</span>
                             </a>
                         
                     </div>
@@ -585,8 +569,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%96%87%E6%A1%A3%E7%BC%96%E8%BE%91%E4%B8%8E%E7%AE%A1%E7%90%86/" class="post-category">
-                                文档编辑与管理
+                            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                深度学习
                             </a>
                         
                     </div>
@@ -598,7 +582,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-09-22
+                    2023-12-12
                 </div>
                 
 
@@ -623,8 +607,42 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <hr>
-<p>内容待更新</p>
+<p>详情请参考<a target="_blank" rel="noopener" href="https://docker.easydoc.net/doc/81170005/cCewZWoN/lTKfePfP#nav_6">docker快速入门</a>与<a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/ubuntu/">官方文档</a></p>
 <hr>
+<h3 id="Install-using-the-apt-repository"><a href="#Install-using-the-apt-repository" class="headerlink" title="Install using the apt repository"></a><a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository">Install using the apt repository</a></h3><p>Before you install Docker Engine for the first time on a new host machine, you need to set up the Docker repository. Afterward, you can install and update Docker from the repository.</p>
+<ol>
+<li><p>Set up Docker’s <code>apt</code> repository.</p>
+ <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># Add Docker's official GPG key:</span>
+<span class="token function">sudo</span> <span class="token function">apt-get</span> update
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> ca-certificates <span class="token function">curl</span> gnupg
+<span class="token function">sudo</span> <span class="token function">install</span> <span class="token parameter variable">-m</span> 0755 <span class="token parameter variable">-d</span> /etc/apt/keyrings
+<span class="token function">curl</span> <span class="token parameter variable">-fsSL</span> https://download.docker.com/linux/ubuntu/gpg <span class="token operator">|</span> <span class="token function">sudo</span> gpg <span class="token parameter variable">--dearmor</span> <span class="token parameter variable">-o</span> /etc/apt/keyrings/docker.gpg
+<span class="token function">sudo</span> <span class="token function">chmod</span> a+r /etc/apt/keyrings/docker.gpg
+
+<span class="token comment"># Add the repository to Apt sources:</span>
+<span class="token builtin class-name">echo</span> <span class="token punctuation">\</span>
+  <span class="token string">"deb [arch=<span class="token variable"><span class="token variable">$(</span>dpkg --print-architecture<span class="token variable">)</span></span> signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  <span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">.</span> /etc/os-release <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$VERSION_CODENAME</span>"</span><span class="token variable">)</span></span> stable"</span> <span class="token operator">|</span> <span class="token punctuation">\</span>
+  <span class="token function">sudo</span> <span class="token function">tee</span> /etc/apt/sources.list.d/docker.list <span class="token operator">></span> /dev/null
+<span class="token function">sudo</span> <span class="token function">apt-get</span> update<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>If you use an Ubuntu derivative distro, such as Linux Mint, you may need to use <code>UBUNTU_CODENAME</code> instead of <code>VERSION_CODENAME</code>.
+ </p>
+</blockquote>
+</li>
+<li><h2 id="Install-the-Docker-packages-Latest-Specific-version"><a href="#Install-the-Docker-packages-Latest-Specific-version" class="headerlink" title="Install the Docker packages. Latest Specific version
+ "></a>Install the Docker packages.<br><br> Latest Specific version
+ </h2><h2 id="To-install-the-latest-version-run"><a href="#To-install-the-latest-version-run" class="headerlink" title=" To install the latest version, run: 
+ "></a> To install the latest version, run:<br><br> <pre class="line-numbers language-console" data-language="console"><code class="language-console">$ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+ </h2></li>
+<li><p>Verify that the Docker Engine installation is successful by running the <code>hello-world</code> image.</p>
+ <pre class="line-numbers language-console" data-language="console"><code class="language-console">$ sudo docker run hello-world<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p> This command downloads a test image and runs it in a container. When the container runs, it prints a confirmation message and exits.</p>
+</li>
+</ol>
+<p>You have now successfully installed and started Docker Engine.</p>
+<h4 id="Upgrade-Docker-Engine"><a href="#Upgrade-Docker-Engine" class="headerlink" title="Upgrade Docker Engine"></a><a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/ubuntu/#upgrade-docker-engine">Upgrade Docker Engine</a></h4><p>To upgrade Docker Engine, follow step 2 of the <a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository">installation instructions</a>, choosing the new version you want to install.</p>
 
                 
             </div>
@@ -651,7 +669,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2023/09/22/zotero%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">http://example.com/2023/09/22/zotero%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</a>
+                    <a href="http://example.com/2023/12/12/107.docker%E6%95%99%E7%A8%8B/">http://example.com/2023/12/12/107.docker%E6%95%99%E7%A8%8B/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -689,28 +707,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/office/">
-                                    <span class="chip bg-color">office</span>
+                                <a href="/tags/docker/">
+                                    <span class="chip bg-color">docker</span>
                                 </a>
                             
-                                <a href="/tags/%E6%A0%BC%E5%BC%8F/">
-                                    <span class="chip bg-color">格式</span>
-                                </a>
-                            
-                                <a href="/tags/zotero/">
-                                    <span class="chip bg-color">zotero</span>
-                                </a>
-                            
-                                <a href="/tags/chrome-%E6%8F%92%E4%BB%B6/">
-                                    <span class="chip bg-color">chrome 插件</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86/">
-                                    <span class="chip bg-color">文献管理</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/">
-                                    <span class="chip bg-color">参考文献</span>
+                                <a href="/tags/linux/">
+                                    <span class="chip bg-color">linux</span>
                                 </a>
                             
                         </div>
@@ -756,17 +758,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/09/28/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/">
+                <a href="/2023/12/12/107.docker%E6%95%99%E7%A8%8B/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="深度学习：本地环境部署">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="docker教程">
                         
-                        <span class="card-title">深度学习：本地环境部署</span>
+                        <span class="card-title">docker教程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -776,9 +779,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-09-28
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-12-12
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -791,31 +794,16 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">深度学习</span>
+                    <a href="/tags/docker/">
+                        <span class="chip bg-color">docker</span>
                     </a>
                     
-                    <a href="/tags/%E7%8E%AF%E5%A2%83/">
-                        <span class="chip bg-color">环境</span>
-                    </a>
-                    
-                    <a href="/tags/Anaconda/">
-                        <span class="chip bg-color">Anaconda</span>
-                    </a>
-                    
-                    <a href="/tags/CUDA/">
-                        <span class="chip bg-color">CUDA</span>
-                    </a>
-                    
-                    <a href="/tags/Pytorch/">
-                        <span class="chip bg-color">Pytorch</span>
-                    </a>
-                    
-                    <a href="/tags/CMD%E5%91%BD%E4%BB%A4/">
-                        <span class="chip bg-color">CMD命令</span>
+                    <a href="/tags/linux/">
+                        <span class="chip bg-color">linux</span>
                     </a>
                     
                 </div>
@@ -829,13 +817,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/09/18/11.%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%A4%9A%E7%BB%88%E7%AB%AF%E5%90%8C%E6%AD%A5/">
+                <a href="/2023/12/08/()/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="博客的多终端同步">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">博客的多终端同步</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -846,47 +834,15 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-12-08
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/" class="post-category">
-                                    博客搭建记录
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Austin
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/node-js/">
-                        <span class="chip bg-color">node.js</span>
-                    </a>
-                    
-                    <a href="/tags/Git/">
-                        <span class="chip bg-color">Git</span>
-                    </a>
-                    
-                    <a href="/tags/SSH/">
-                        <span class="chip bg-color">SSH</span>
-                    </a>
-                    
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
-                    </a>
-                    
-                    <a href="/tags/Github/">
-                        <span class="chip bg-color">Github</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
-                        <span class="chip bg-color">多终端</span>
-                    </a>
-                    
                 </div>
                 
             </div>
