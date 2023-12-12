@@ -11,8 +11,12 @@
             "id": "fa06b67ca61ca406",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "200.obsidian 入门教程.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "200.obsidian 入门教程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "200.obsidian 入门教程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "200.obsidian 入门教程.md"
+              }
             }
           }
         ]
@@ -140,20 +148,21 @@
   },
   "active": "fa06b67ca61ca406",
   "lastOpenFiles": [
+    "108.nccl实现多GPU交互.md",
     "107.windows安装linux.md",
-    "108..md",
-    "未命名",
     "107.docker教程.md",
+    "107.深度学习-1 本地环境部署.md",
+    "200.obsidian 入门教程.md",
+    "201.office通过样式管理格式.md",
+    "204.office zotero使用教程.md",
+    "未命名",
     "task in future.md",
     "sakura.md",
     "Prism plugin.md",
-    "204.office zotero使用教程.md",
     "深度学习 科学上网 (2).md",
     "深度学习 科学上网.md",
-    "107.深度学习-1 本地环境部署.md",
     "203.office共享文档与在线协作.md",
     "202.office 部署教程.md",
-    "200.obsidian 入门教程.md",
     "论文阅读.md",
     "联邦学习顶会论文阅读.md",
     "科学上网.md",
@@ -164,7 +173,6 @@
     "_关闭windows10自动更新.md",
     "_关闭windows登录用户密码.md",
     "_释放vdisk占用空间.md",
-    "201.office通过样式管理格式.md",
     "16.升级cuda.md",
     "404.md",
     "blogpic/201.office通过样式管理格式-26.png",
