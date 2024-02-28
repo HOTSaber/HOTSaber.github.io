@@ -684,7 +684,7 @@ sudo chmod a+r &#x2F;usr&#x2F;local&#x2F;cuda&#x2F;include&#x2F;cudnn*.h &#x2F;u
 <h3 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h3><ol>
 <li>准备删除cuda<br><code>apt-get remove cuda</code></li>
 <li>自动卸载<br><code>apt autoremove</code></li>
-<li>删除其它的cuda<br>&#96;apt autoremove cuda*&#96;&#96;</li>
+<li>删除其它的cuda<br>&#96;apt autoremove cuda*</li>
 <li>删除下载安装包（也可以不删除）<br><code>rm /usr/local/my_cuda/cuda-repo-ubuntu2204-12-1-local_12.1.0-530.30.02-1_amd64.deb</code></li>
 <li>查找包相关<br><code>dpkg -l |grep cuda</code></li>
 <li>手动删除相关的包。否则再安装别的版本会失败<br><code>dpkg -P cuda-repo-ubuntu2204-12-1-local cuda-toolkit-12-1-config-common cuda-toolkit-12-config-common cuda-toolkit-config-common cuda-visual-tools-12-1</code><br>名字使用第5步中的</li>
@@ -874,12 +874,12 @@ sudo chmod a+r &#x2F;usr&#x2F;local&#x2F;cuda&#x2F;include&#x2F;cudnn*.h &#x2F;u
                         <span class="chip bg-color">office</span>
                     </a>
                     
-                    <a href="/tags/%E6%A0%B7%E5%BC%8F%E7%AE%A1%E7%90%86/">
-                        <span class="chip bg-color">样式管理</span>
-                    </a>
-                    
                     <a href="/tags/%E6%A0%BC%E5%BC%8F/">
                         <span class="chip bg-color">格式</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%A0%B7%E5%BC%8F%E7%AE%A1%E7%90%86/">
+                        <span class="chip bg-color">样式管理</span>
                     </a>
                     
                 </div>
@@ -931,6 +931,10 @@ sudo chmod a+r &#x2F;usr&#x2F;local&#x2F;cuda&#x2F;include&#x2F;cudnn*.h &#x2F;u
                         <span class="chip bg-color">SSH</span>
                     </a>
                     
+                    <a href="/tags/linux/">
+                        <span class="chip bg-color">linux</span>
+                    </a>
+                    
                     <a href="/tags/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
                         <span class="chip bg-color">远程访问</span>
                     </a>
@@ -941,10 +945,6 @@ sudo chmod a+r &#x2F;usr&#x2F;local&#x2F;cuda&#x2F;include&#x2F;cudnn*.h &#x2F;u
                     
                     <a href="/tags/xftp/">
                         <span class="chip bg-color">xftp</span>
-                    </a>
-                    
-                    <a href="/tags/linux/">
-                        <span class="chip bg-color">linux</span>
                     </a>
                     
                     <a href="/tags/screen/">
@@ -1137,7 +1137,7 @@ sudo chmod a+r &#x2F;usr&#x2F;local&#x2F;cuda&#x2F;include&#x2F;cudnn*.h &#x2F;u
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2023</span>
+                <span id="year">2019-2024</span>
             
             <a href="/about" target="_blank">Austin</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
