@@ -553,12 +553,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/SSH/">
-                                <span class="chip bg-color">SSH</span>
-                            </a>
-                        
                             <a href="/tags/linux/">
                                 <span class="chip bg-color">linux</span>
+                            </a>
+                        
+                            <a href="/tags/SSH/">
+                                <span class="chip bg-color">SSH</span>
                             </a>
                         
                             <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
@@ -684,7 +684,8 @@ sudo systemctl enable ssh #使用systemd实现ssh自启动<span aria-hidden="tru
 <li>Port 222</li>
 <li>PermitRootLogin Yes</li>
 <li>PasswordAuthentication Yes<pre class="line-numbers language-none"><code class="language-none">sudo vim &#x2F;etc&#x2F;hosts.allow<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-添加一行：sshd:ALL<br><strong>然后重启ssh服务：</strong><pre class="line-numbers language-none"><code class="language-none">sudo service ssh --full-restart<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+添加一行：sshd:ALL<br><strong>然后重启ssh服务：</strong><pre class="line-numbers language-none"><code class="language-none">sudo service ssh --full-restart<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+windows powershell命令:<pre class="line-numbers language-none"><code class="language-none">Restart-Service sshd<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 </ul>
 <p>在<code>C:/users/Appdata/Roaming/Microsoft/Windows/开始菜单/程序/startup</code>中，新建vbs文件，内容如下：</p>
 <pre class="line-numbers language-none"><code class="language-none">CreateObject(&quot;Wscript.Shell&quot;).run &quot;wsl -d Ubuntu -u root -e &#x2F;etc&#x2F;init.d&#x2F;ssh start&quot;,vbhide
@@ -695,6 +696,10 @@ Shell.ShellExecute &quot;cmd.exe&quot;,&quot;&#x2F;c netsh interface portproxy a
 <p>第二行需要进行一定的延时，其中10就是十秒，可以根据自己的机器情况进行修改，估计5秒就够了。延时是因为代码的运行很快，接下来就会运行cmd进行端口映射，但是当已经运行完netsh的时候wsl可能还没有启动，导致端口映射依然是上次关机时候的wsl的ip，所以需要延时几秒钟再执行。</p>
 <p>第三、四行就是执行nesth的命令，将connectaddress后的ip地址用域名wslhost替换，‘runas’参数以管理员身份运行cmd，后面的参数0表示隐藏窗口后台执行。</p>
 <p>但是，众所周知，每次以管理员身份执行cmd的时候，都会弹框让用户确定“是”，“否”。需要进一步隐藏。打开设置，在左上角搜索框搜索管理员，选择更改用户账户控制设置，然后拉到底</p>
+<p>（可选）可额外添加docker自启动内容如下:</p>
+<pre class="line-numbers language-none"><code class="language-none">Set ws &#x3D; WScript.CreateObject(&quot;WScript.Shell&quot;)        
+ws.run &quot;wsl -d Ubuntu -u root &#x2F;etc&#x2F;init.wsl&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>其中‘Ubuntu’为WSL2子系统的名字</p>
 <h3 id="frp端口映射"><a href="#frp端口映射" class="headerlink" title="frp端口映射"></a>frp端口映射</h3><p>在<code>frpc.ini</code>中加入以下内容</p>
 <pre class="line-numbers language-none"><code class="language-none">[ssh2]
 type &#x3D; tcp
@@ -742,6 +747,7 @@ sudo sh cuda_12.3.1_545.23.08_linux.run<span aria-hidden="true" class="line-numb
 <p>使用<code>nvcc -V</code>查看nvidia信息<br>使用以下命令启用linux中的<code>nvidia-smi</code>命令</p>
 <pre class="line-numbers language-none"><code class="language-none">cp &#x2F;usr&#x2F;lib&#x2F;wsl&#x2F;lib&#x2F;nvidia-smi &#x2F;usr&#x2F;bin&#x2F;nvidia-smi
 chmod ogu+x &#x2F;usr&#x2F;bin&#x2F;nvidia-smi<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>deb文件安装方式请参考<a target="_blank" rel="noopener" href="https://docs.nvidia.com/deeplearning/cudnn/installation/linux.html#ubuntu-debian-local-installation">官方文档</a></p>
 <h2 id="配置conda虚拟环境"><a href="#配置conda虚拟环境" class="headerlink" title="配置conda虚拟环境"></a>配置conda虚拟环境</h2><ul>
 <li>在安装完成anaconda后，使用<code>bash</code>进入anaconda命令行</li>
 <li>使用<code>conda create --name 名字 python=3.8</code>新建一个虚拟环境</li>
@@ -814,12 +820,12 @@ chmod ogu+x &#x2F;usr&#x2F;bin&#x2F;nvidia-smi<span aria-hidden="true" class="li
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/SSH/">
-                                    <span class="chip bg-color">SSH</span>
-                                </a>
-                            
                                 <a href="/tags/linux/">
                                     <span class="chip bg-color">linux</span>
+                                </a>
+                            
+                                <a href="/tags/SSH/">
+                                    <span class="chip bg-color">SSH</span>
                                 </a>
                             
                                 <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
@@ -927,12 +933,12 @@ chmod ogu+x &#x2F;usr&#x2F;bin&#x2F;nvidia-smi<span aria-hidden="true" class="li
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/SSH/">
-                        <span class="chip bg-color">SSH</span>
-                    </a>
-                    
                     <a href="/tags/linux/">
                         <span class="chip bg-color">linux</span>
+                    </a>
+                    
+                    <a href="/tags/SSH/">
+                        <span class="chip bg-color">SSH</span>
                     </a>
                     
                     <a href="/tags/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
@@ -996,12 +1002,12 @@ chmod ogu+x &#x2F;usr&#x2F;bin&#x2F;nvidia-smi<span aria-hidden="true" class="li
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/SSH/">
-                        <span class="chip bg-color">SSH</span>
-                    </a>
-                    
                     <a href="/tags/linux/">
                         <span class="chip bg-color">linux</span>
+                    </a>
+                    
+                    <a href="/tags/SSH/">
+                        <span class="chip bg-color">SSH</span>
                     </a>
                     
                     <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
@@ -1214,7 +1220,7 @@ chmod ogu+x &#x2F;usr&#x2F;bin&#x2F;nvidia-smi<span aria-hidden="true" class="li
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2023</span>
+                <span id="year">2019-2024</span>
             
             <a href="/about" target="_blank">Austin</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>

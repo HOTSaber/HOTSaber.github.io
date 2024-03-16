@@ -655,7 +655,7 @@ anaconda安装过程中可提供python安装，如果确定安装anaconda可以�
 <li>可使用<code>conda list</code>或<code>pip list</code>查看目前环境所安装的包<br><strong>注意<code>pip</code>,<code>pip3</code>,<code>conda</code>安装命令的安装位置不一样，可在CMD中使用<code>where pip</code>找pip所在位置</strong><br><strong>目前测试使用<code>pip install</code>安装的包，在不同conda环境中是通用的</strong></li>
 </ul>
 <h2 id="在线安装"><a href="#在线安装" class="headerlink" title="在线安装"></a>在线安装</h2><ul>
-<li>在<a target="_blank" rel="noopener" href="https://pytorch.org/get-started/locally/">Pytorch官网</a>，选择对应版本，得到安装命令<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2-4.png" alt="深度学习-1 本地环境部署-4"><br>在这一步中我们要安装<code>torch</code>、<code>torchvision</code>、<code>torchaudio</code>三个包，其中<code>torch</code>包有3G左右，如果下载慢，可以使用离线下载本地安装的方式</li>
+<li>在<a target="_blank" rel="noopener" href="https://pytorch.org/get-started/locally/">Pytorch官网</a>，选择对应版本，得到安装命令<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2-4.png" alt="深度学习-1 本地环境部署-4"></li>
 <li><code>pip</code>包的安装目录可用以下命令查询:<pre class="line-numbers language-none"><code class="language-none">python -m site --user-site<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><code>conda</code>安装包下载目录为<code>~/Anaconda3/pkgs</code>，安装在<code>~/Anaconda3/Lib/site-packages</code></li>
 </ul>
@@ -666,7 +666,8 @@ https:&#x2F;&#x2F;mirrors.163.com&#x2F;pypi&#x2F;simple&#x2F; #网易<span aria-
 <li>同理，conda可以使用以下命令配置镜像源<pre class="line-numbers language-none"><code class="language-none">conda config --add channels https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;main&#x2F;
 conda config --add channels https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;r&#x2F;
 conda config --add channels https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;msys2&#x2F;
-conda config --set show_channel_urls yes<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
+conda config --set show_channel_urls yes<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+在这一步中我们要安装<code>torch</code>、<code>torchvision</code>、<code>torchaudio</code>三个包，其中<code>torch</code>包有3G左右，如果下载慢，可以使用离线下载本地安装的方式</li>
 </ul>
 <h2 id="本地安装"><a href="#本地安装" class="headerlink" title="本地安装"></a>本地安装</h2><h3 id="离线下载"><a href="#离线下载" class="headerlink" title="离线下载"></a>离线下载</h3><ol>
 <li>仍然在anaconda powershell中使用官网命令下载所需包，但使用<code>ctrl + c</code>中断下载进程<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2-5.png" alt="深度学习-1 本地环境部署-5"></li>
@@ -1148,7 +1149,7 @@ torch.cuda.is_available()<span aria-hidden="true" class="line-numbers-rows"><spa
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2023</span>
+                <span id="year">2019-2024</span>
             
             <a href="/about" target="_blank">Austin</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>

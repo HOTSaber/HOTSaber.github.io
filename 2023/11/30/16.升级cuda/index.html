@@ -6,9 +6,7 @@
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="多cuda版本并存, 挖掘机">
     <meta name="description" content="多cuda版本并存详见链接与链接以及Linux环境变量配置方法与加载顺序
-
-进入&amp;#x2F;usr&amp;#x2F;local目录 使用 stat cuda命令，可以看到指向的是什么cuda版本
-查看环境变量path，命令：  echo $PAT">
+修改cuda软链接切换版本在Linux中，/usr/local/目录通常用于存放手动安装的软件。对于CUDA来说，它可能包括cuda这个软链接（快捷方式）来指向具体的">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -615,15 +613,19 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="多cuda版本并存"><a href="#多cuda版本并存" class="headerlink" title="多cuda版本并存"></a>多cuda版本并存</h1><p>详见<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_44850917/article/details/134170999">链接</a>与<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_46093829/article/details/128073309">链接</a>以及<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_46307478/article/details/128972918">Linux环境变量配置方法与加载顺序</a></p>
-<ul>
-<li>进入&#x2F;usr&#x2F;local目录 使用 <code>stat cuda</code>命令，可以看到指向的是什么cuda版本</li>
-<li>查看环境变量path，命令：<br>  <code>echo $PATH</code><br>  发现原因：是因为&#x2F;usr&#x2F;bin在PATH中相较&#x2F;usr&#x2F;local&#x2F;cuda靠前，因此优先级高，所以nvcc –V命令会按照PATH顺序，先去&#x2F;usr&#x2F;bin里面找，应该是在这文件夹里的nvcc中找到了9.1版本的cuda，所以就不去别的地方找了，就没有找到处我们想要的cuda版本；</li>
-<li>这里使用  <pre class="line-numbers language-none"><code class="language-none">export PATH&#x3D;&#x2F;usr&#x2F;local&#x2F;cuda&#x2F;bin:&#x2F;root&#x2F;anaconda3&#x2F;bin:&#x2F;root&#x2F;anaconda3&#x2F;condabin:&#x2F;usr&#x2F;local&#x2F;sbin:&#x2F;usr&#x2F;local&#x2F;bin:&#x2F;usr&#x2F;sbin:&#x2F;usr&#x2F;bin:&#x2F;sbin:&#x2F;bin:&#x2F;usr&#x2F;games:&#x2F;usr&#x2F;local&#x2F;games:&#x2F;snap&#x2F;bin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-  将cuda path提到最前，原有PATH可以使用<code>export</code>或<code>echo $PATH</code>查看已有PATH内容<br>  以有PATH内容可由<code>$PATH</code>代替，各path路径间用<code>:</code>隔开</li>
-<li><code>export PATH=/usr/local/cuda/bin:$PATH</code>校果一样</li>
-<li>但敲指令只对当前终端有效</li>
-<li>所以将指令添加到<code>~/.bashrc</code>文件的最后一行，并使用<code>source ~/.bashrc</code>重新加载一下文件中的命令，使得命令永久生效</li>
-</ul>
+<h2 id="修改cuda软链接切换版本"><a href="#修改cuda软链接切换版本" class="headerlink" title="修改cuda软链接切换版本"></a>修改cuda软链接切换版本</h2><p>在Linux中，<code>/usr/local/</code>目录通常用于存放手动安装的软件。对于CUDA来说，它可能包括<code>cuda</code>这个软链接（快捷方式）来指向具体的CUDA安装目录。如果你想修改这个软链接指向的文件，你可以使用<code>ln</code>命令来重新创建这个软链接。</p>
+<p>首先，你需要知道新的CUDA安装目录的路径。假设新的CUDA安装目录是<code>/usr/local/cuda-11.2</code>（这只是一个例子，实际的路径可能会不同）。</p>
+<p>然后，你可以使用以下命令来删除旧的软链接并创建一个新的软链接：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">rm</span> /usr/local/cuda
+<span class="token function">sudo</span> <span class="token function">ln</span> <span class="token parameter variable">-s</span> /usr/local/cuda-11.2 /usr/local/cuda<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>这里，<code>rm</code>命令用于删除旧的软链接，<code>ln -s</code>命令用于创建一个新的软链接。<code>-s</code>选项告诉<code>ln</code>命令创建一个符号链接（也就是软链接）。</p>
+<p>请注意，使用<code>sudo</code>是因为<code>/usr/local/</code>目录通常需要管理员权限才能修改。</p>
+<p>另外，修改CUDA软链接后，你可能还需要更新你的环境变量，以确保系统可以找到正确的CUDA路径。这通常涉及到编辑<code>~/.bashrc</code>、<code>~/.bash_profile</code>或<code>/etc/profile</code>文件，并在其中添加或更新以下行：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span>/usr/local/cuda/bin:<span class="token environment constant">$PATH</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">LD_LIBRARY_PATH</span><span class="token operator">=</span>/usr/local/cuda/lib64:<span class="token variable">$LD_LIBRARY_PATH</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>然后，你需要运行<code>source ~/.bashrc</code>（或你编辑的相应文件）来使更改生效。</p>
 <h2 id="Linux环境变量配置方法一：export-PATH"><a href="#Linux环境变量配置方法一：export-PATH" class="headerlink" title="Linux环境变量配置方法一：export PATH"></a>Linux环境变量配置方法一：<code>export PATH</code></h2><p>使用<code>export</code>命令直接修改<code>PATH</code>的值。</p>
 <p>例如，配置MySQL进入环境变量的方法:</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span>/home/uusama/mysql/bin:<span class="token environment constant">$PATH</span>
@@ -927,12 +929,12 @@ sudo chmod a+r &#x2F;usr&#x2F;local&#x2F;cuda&#x2F;include&#x2F;cudnn*.h &#x2F;u
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/SSH/">
-                        <span class="chip bg-color">SSH</span>
-                    </a>
-                    
                     <a href="/tags/linux/">
                         <span class="chip bg-color">linux</span>
+                    </a>
+                    
+                    <a href="/tags/SSH/">
+                        <span class="chip bg-color">SSH</span>
                     </a>
                     
                     <a href="/tags/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
@@ -1137,7 +1139,7 @@ sudo chmod a+r &#x2F;usr&#x2F;local&#x2F;cuda&#x2F;include&#x2F;cudnn*.h &#x2F;u
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2023</span>
+                <span id="year">2019-2024</span>
             
             <a href="/about" target="_blank">Austin</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
