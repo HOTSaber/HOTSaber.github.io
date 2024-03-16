@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "9e96073caaa5a2be",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_linux检测网络.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_linux 通用指令.md",
+                "file": "_linux检测网络.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_linux 通用指令.md",
+                "file": "_linux检测网络.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_linux 通用指令.md"
+                "file": "_linux检测网络.md"
               }
             }
           }
@@ -146,10 +159,11 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "c8829373f4b241b3",
+  "active": "9e96073caaa5a2be",
   "lastOpenFiles": [
-    "14.windows安装linux.md",
     "_linux 通用指令.md",
+    "_linux检测网络.md",
+    "14.windows安装linux.md",
     "16.升级cuda.md",
     "15. 使用screen在SSH断开后保持程序运行.md",
     "_linux 清理大文件.md",
@@ -173,7 +187,6 @@
     "_关闭windows登录用户密码.md",
     "task in future.md",
     "_关闭windows10自动更新.md",
-    "Prism plugin.md",
     "未命名",
     "blogpic/201.office通过样式管理格式-26.png",
     "blogpic/201.office通过样式管理格式-25.png",
