@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "14.windows安装linux.md",
+                "file": "111.linux安装教程.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "14.windows安装linux.md",
+                "file": "111.linux安装教程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "14.windows安装linux.md",
+                "file": "111.linux安装教程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "14.windows安装linux.md"
+                "file": "111.linux安装教程.md"
               }
             }
           }
@@ -148,9 +148,10 @@
   },
   "active": "479fe566c4bbfc68",
   "lastOpenFiles": [
-    "16.升级cuda.md",
     "13.内网穿透.md",
+    "111.linux安装教程.md",
     "14.windows安装linux.md",
+    "16.升级cuda.md",
     "15. 使用screen在SSH断开后保持程序运行.md",
     "107.docker教程.md",
     "108.nccl实现多GPU交互.md",
@@ -177,7 +178,6 @@
     "office 部署教程.md",
     "blogpic/11.博客的多终端同步-2.png",
     "7.matery主题设置.md",
-    "8.obsidian 入门教程.md",
     "blogpic/11.博客的多终端同步-1.png",
     "blogpic/office共享与在线协作-1.png",
     "blogpic/office 部署教程-1.png",

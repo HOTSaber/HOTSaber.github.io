@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "db7b79cd1f280f1c",
+        "id": "dee501ca954989eb",
         "type": "tabs",
         "children": [
           {
-            "id": "c8829373f4b241b3",
+            "id": "27ffe1127a8fb3f1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_linux 通用指令.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9e96073caaa5a2be",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_linux检测网络.md",
+                "file": "111.linux安装教程.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_linux检测网络.md",
+                "file": "111.linux安装教程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_linux检测网络.md",
+                "file": "111.linux安装教程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_linux检测网络.md"
+                "file": "111.linux安装教程.md"
               }
             }
           }
@@ -159,20 +146,27 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "9e96073caaa5a2be",
+  "active": "27ffe1127a8fb3f1",
   "lastOpenFiles": [
     "_linux 通用指令.md",
+    "_linux日志管理.md",
+    "111.linux安装教程.md",
+    "_linux 清理大文件.md",
+    "_释放vdisk占用空间.md",
+    "_关闭windows登录用户密码.md",
+    "109.nginx教程.md",
+    "109.neo4j教程.md",
+    "110.modelscope使用教程.md",
+    "blogpic/111.linux安装教程-1.png",
+    "blogpic/111.linux安装教程-1.png",
     "_linux检测网络.md",
     "14.windows安装linux.md",
     "16.升级cuda.md",
     "15. 使用screen在SSH断开后保持程序运行.md",
-    "_linux 清理大文件.md",
     "_cuda版本.md",
     "_windows下gitbash'wget'.md",
     "_Vim编辑器.md",
     "_linux下看service.md",
-    "_linux日志管理.md",
-    "_释放vdisk占用空间.md",
     "107.解决：Docker Desktop Unexpected WSL error.md",
     "107.深度学习-1 本地环境部署.md",
     "107.windows安装linux.md",
@@ -182,11 +176,6 @@
     "107.docker教程.md",
     "13.内网穿透.md",
     "108.nccl实现多GPU交互.md",
-    "109.nginx教程.md",
-    "109.neo4j教程.md",
-    "_关闭windows登录用户密码.md",
-    "task in future.md",
-    "_关闭windows10自动更新.md",
     "未命名",
     "blogpic/201.office通过样式管理格式-26.png",
     "blogpic/201.office通过样式管理格式-25.png",
@@ -196,8 +185,6 @@
     "blogpic/201.office通过样式管理格式-21.png",
     "blogpic/201.office通过样式管理格式-20.png",
     "blogpic/201.office通过样式管理格式-19.png",
-    "blogpic/201.office通过样式管理格式-18.png",
-    "blogpic/201.office通过样式管理格式-17.png",
     "windows安装linux",
     "blogpic/obsidian 入门教程-2.~vsdx",
     "blogpic/相对路径.vsdx",

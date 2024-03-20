@@ -9,7 +9,7 @@
 4. `htop`是一个更加友好和交互式的进程查看工具。'ps'、`top`
 5. `kill [PID]`结束特定进程，由PID确定。
 6. `reboot`重启服务器
-7.  `mkdir [folder_name]`新建文件夹，如果您希望创建的文件夹路径中的某些文件夹尚不存在，并希望`mkdir`命令自动创建它们，您可以使用`-p`选项`mkdir -p /path/to/my_folder`这将创建`path`,`to`,和`my_folder`如果他们不存在的话
+7.  `mkdir [folder_name]`新建文件夹，如果您希望创建的文件夹路径中的某些文件夹尚不存在，并希望`mkdir`命令自动创建它们，您可以使用`-p`选项`mkdir -p /path/to/my_folder`这将创建`path`,`to`,和`my_folder`【父目录】如果他们不存在的话
 8. `touch [my_file.txt]`新建文件
 9. `sudo dpkg -i package_name.deb`请将`package_name.deb`替换为实际的包名。这个命令会将DEB文件安装到系统中。如果在安装过程中提示缺少依赖关系，你可以运行以下命令来自动安装缺失的依赖项并解决依赖关系问题：`sudo apt-get install -f`
 10. 在Linux中，复制和移动文件或目录的命令分别是`cp`和`mv`。
