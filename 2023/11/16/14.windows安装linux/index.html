@@ -747,14 +747,56 @@ sudo sh cuda_12.3.1_545.23.08_linux.run<span aria-hidden="true" class="line-numb
 <p>使用<code>nvcc -V</code>查看nvidia信息<br>使用以下命令启用linux中的<code>nvidia-smi</code>命令</p>
 <pre class="line-numbers language-none"><code class="language-none">cp &#x2F;usr&#x2F;lib&#x2F;wsl&#x2F;lib&#x2F;nvidia-smi &#x2F;usr&#x2F;bin&#x2F;nvidia-smi
 chmod ogu+x &#x2F;usr&#x2F;bin&#x2F;nvidia-smi<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>deb文件安装方式请参考<a target="_blank" rel="noopener" href="https://docs.nvidia.com/deeplearning/cudnn/installation/linux.html#ubuntu-debian-local-installation">官方文档</a></p>
+<p>deb文件安装方式请参考<a target="_blank" rel="noopener" href="https://docs.nvidia.com/deeplearning/cudnn/installation/linux.html#ubuntu-debian-local-installation">官方文档</a><br>更新你的环境变量，以确保系统可以找到正确的CUDA路径。这通常涉及到编辑<code>~/.bashrc</code>、<code>~/.bash_profile</code>或<code>/etc/profile</code>文件，并在其中添加或更新以下行：</p>
+<p>bash</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span>/usr/local/cuda/bin:<span class="token environment constant">$PATH</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">LD_LIBRARY_PATH</span><span class="token operator">=</span>/usr/local/cuda/lib64:<span class="token variable">$LD_LIBRARY_PATH</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>然后，你需要运行<code>source ~/.bashrc</code>（或你编辑的相应文件）来使更改生效。</p>
+<h2 id="安装cudnn"><a href="#安装cudnn" class="headerlink" title="安装cudnn"></a>安装cudnn</h2><h3 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h3><p>CUDA需要配合cudnn才能正常工作，将cudnn的四个文件（夹），复制到CUDA的安装路径即可，即CUDA文件夹。<br>往系统环境变量中的 path 添加如下路径（<strong>根据自己的路径进行修改</strong>）</p>
+<pre class="line-numbers language-none"><code class="language-none">C:\Program Files\NVIDIA\CUDA\bin
+C:\Program Files\NVIDIA\CUDA\include
+C:\Program Files\NVIDIA\CUDA\lib
+C:\Program Files\NVIDIA\CUDA\libnvvp<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>检验：</p>
+<p>配置完成后，我们可以验证是否配置成功，主要使用CUDA内置的<code>deviceQuery.exe</code> 和 <code>bandwidthTest.exe</code>：<br>首先win+R启动cmd，cd到<strong>安装目录</strong>下的 <code>…\extras\demo_suite</code>,然后分别执行<code>.\bandwidthTest.exe</code>和<code>.\deviceQuery.exe</code>,应该得到下图.</p>
+<pre class="line-numbers language-none"><code class="language-none">cd C:\Program Files\NVIDIA\CUDA\extras\demo_suite 
+.\bandwidthTest.exe 
+.\deviceQuery.exe<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h3><p><a target="_blank" rel="noopener" href="https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html">官方教程</a>与<a target="_blank" rel="noopener" href="https://gist.github.com/denguir/b21aa66ae7fb1089655dd9de8351a202">Github参考</a><br>安装linus解压工具</p>
+<pre class="line-numbers language-none"><code class="language-none">sudo apt-get install zlib1g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>打开<a target="_blank" rel="noopener" href="https://developer.nvidia.com/rdp/cudnn-archive">下载链接</a>，选择相应的版本并下载。选择方法可参考<a href="%5Bhttps://blog.csdn.net/MumuziD/article/details/118760650%5D(https://blog.csdn.net/MumuziD/article/details/118760650)">链接</a>，，建议直接选择<code>cuDNN Library for Linux (x86_64)</code><br>进入cudnn压缩包所在的文件夹，解压文件</p>
+<pre class="line-numbers language-none"><code class="language-none">tar -xvf [$文件名]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>将文件拷贝到相应cuda目录下</p>
+<pre class="line-numbers language-none"><code class="language-none">sudo cp cudnn-*-archive&#x2F;include&#x2F;cudnn*.h &#x2F;usr&#x2F;local&#x2F;cuda&#x2F;include 
+sudo cp -P cudnn-*-archive&#x2F;lib&#x2F;libcudnn* &#x2F;usr&#x2F;local&#x2F;cuda&#x2F;lib64 
+sudo chmod a+r &#x2F;usr&#x2F;local&#x2F;cuda&#x2F;include&#x2F;cudnn*.h &#x2F;usr&#x2F;local&#x2F;cuda&#x2F;lib64&#x2F;libcudnn*<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>查看cudnn版本</p>
+<pre class="line-numbers language-none"><code class="language-none">cat &#x2F;usr&#x2F;local&#x2F;cuda&#x2F;include&#x2F;cudnn_version.h | grep CUDNN_MAJOR -A 2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>出现如下的信息，则为配置成功</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#define CUDNN_MAJOR 8</span>
+<span class="token comment">#define CUDNN_MINOR 4</span>
+<span class="token comment">#define CUDNN_PATCHLEVEL 0</span>
+--
+<span class="token comment">#define CUDNN_VERSION (CUDNN_MAJOR * 1000 + CUDNN_MINOR * 100 + CUDNN_PATCHLEVEL)</span>
+
+<span class="token comment">#endif /* CUDNN_VERSION_H */</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>或使用deb文件本地安装：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> ./<span class="token operator">&lt;</span>filename.deb<span class="token operator">></span>
+<span class="token function">sudo</span> <span class="token function">cp</span> /var/cudnn-<span class="token operator">&lt;</span>something<span class="token operator">></span>.gpg /usr/share/keyrings/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>My cuDNN version is 8, adapt the following to your version:</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> update
+<span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> libcudnn8
+<span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> libcudnn8-dev
+<span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> libcudnn8-samples<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="配置conda虚拟环境"><a href="#配置conda虚拟环境" class="headerlink" title="配置conda虚拟环境"></a>配置conda虚拟环境</h2><ul>
 <li>在安装完成anaconda后，使用<code>bash</code>进入anaconda命令行</li>
 <li>使用<code>conda create --name 名字 python=3.8</code>新建一个虚拟环境</li>
 <li>使用<code>conda env list</code>查看虚拟环境列表</li>
 <li>使用<code>conda activate 名字</code>进入一个虚拟环境</li>
 <li>安装相应包，使用镜像加速<pre class="line-numbers language-none"><code class="language-none">pip install jupyter d2l torch torchvision -i https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simple<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li>其他包就和在本地命令行安装一样，但<strong>安装包过大的话，建议采用离线安装。可以用移动硬盘到现教407线下拷贝</strong><br><strong>PS</strong>:离线安装请见<a target="_blank" rel="noopener" href="https://hotsaber.github.io/2023/09/28/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/">深度学习：本地环境部署</a>中的<code>安装Pytorch</code>-<code>本地安装</code></li>
+<li>其他包就和在本地命令行安装一样，但<strong>安装包过大的话，建议采用离线安装。可以用移动硬盘到现教407线下拷贝</strong><br><strong>PS</strong>:<strong>pytorch</strong>安装与离线安装请见<a target="_blank" rel="noopener" href="https://hotsaber.github.io/2023/09/28/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2/">深度学习：本地环境部署</a>中的<code>安装Pytorch</code>-<code>本地安装</code></li>
 </ul>
 
                 

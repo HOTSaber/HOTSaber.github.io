@@ -4,12 +4,11 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="挖掘机">
+    <meta name="keywords" content="modelscope使用教程, 挖掘机">
     <meta name="description" content="1.访问modelscope官网，搜索想要下载的模型modelscope官网
-2.使用SDK或git方式下载模型SDK下载新建并进入一个.py文件
+2.使用SDK或git方式下载模型SDK下载#新建并进入一个.py文件
 touch download_llama.py
-vim download_llama.py
-">
+vim download_llama.py">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +20,7 @@ vim download_llama.py
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>挖掘机</title>
+    <title>modelscope使用教程 | 挖掘机</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -525,12 +524,12 @@ vim download_llama.py
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">modelscope使用教程</h1>
                 </div>
             </div>
         </div>
@@ -552,12 +551,33 @@ vim download_llama.py
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/modelscope/">
+                                <span class="chip bg-color">modelscope</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%8E%AF%E5%A2%83/">
+                                <span class="chip bg-color">环境</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">深度学习</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                深度学习
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -566,7 +586,7 @@ vim download_llama.py
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-03-20
+                    2024-03-25
                 </div>
                 
 
@@ -591,7 +611,7 @@ vim download_llama.py
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="1-访问modelscope官网，搜索想要下载的模型"><a href="#1-访问modelscope官网，搜索想要下载的模型" class="headerlink" title="1.访问modelscope官网，搜索想要下载的模型"></a>1.访问modelscope官网，搜索想要下载的模型</h1><p><a target="_blank" rel="noopener" href="https://modelscope.cn/">modelscope官网</a></p>
-<h1 id="2-使用SDK或git方式下载模型"><a href="#2-使用SDK或git方式下载模型" class="headerlink" title="2.使用SDK或git方式下载模型"></a>2.使用SDK或git方式下载模型</h1><h2 id="SDK下载"><a href="#SDK下载" class="headerlink" title="SDK下载"></a>SDK下载</h2><pre class="line-numbers language-text" data-language="text"><code class="language-text">新建并进入一个.py文件
+<h1 id="2-使用SDK或git方式下载模型"><a href="#2-使用SDK或git方式下载模型" class="headerlink" title="2.使用SDK或git方式下载模型"></a>2.使用SDK或git方式下载模型</h1><h2 id="SDK下载"><a href="#SDK下载" class="headerlink" title="SDK下载"></a>SDK下载</h2><pre class="line-numbers language-text" data-language="text"><code class="language-text">#新建并进入一个.py文件
 touch download_llama.py
 vim download_llama.py
 #模型下载，复制代码到上述文件
@@ -599,7 +619,7 @@ from modelscope import snapshot_download
 model_dir = snapshot_download('skyline2006/llama-7b')
 #推出编辑模式，然后运行此脚本
 python download_llama.py<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h1 id="Git下载"><a href="#Git下载" class="headerlink" title="Git下载"></a>Git下载</h1><p>git下载很简单，直接在当前路径文件夹下运行以下命令即可</p>
+<h2 id="Git下载"><a href="#Git下载" class="headerlink" title="Git下载"></a>Git下载</h2><p>git下载很简单，直接在当前路径文件夹下运行以下命令即可</p>
 <pre class="line-numbers language-text" data-language="text"><code class="language-text">git clone https://www.modelscope.cn/skyline2006/llama-7b.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h1 id="3-下载路径和注意事项"><a href="#3-下载路径和注意事项" class="headerlink" title="3.下载路径和注意事项"></a>3.下载路径和注意事项</h1><p>用SDK方法下载后，下载位置并不是在当前路径下，而是在默认的.&#x2F;root&#x2F;.cache&#x2F;modelscope&#x2F;hub下</p>
 <h1 id="4-环境配置-ModelScope-Library安装"><a href="#4-环境配置-ModelScope-Library安装" class="headerlink" title="4.环境配置(ModelScope Library安装)"></a>4.环境配置(ModelScope Library安装)</h1><p><a target="_blank" rel="noopener" href="https://modelscope.cn/docs/%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85">官方文档</a></p>
@@ -650,7 +670,7 @@ python download_llama.py<span aria-hidden="true" class="line-numbers-rows"><span
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2024/03/20/110.modelscope%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">http://example.com/2024/03/20/110.modelscope%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</a>
+                    <a href="http://example.com/2024/03/25/110.modelscope%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">http://example.com/2024/03/25/110.modelscope%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -687,7 +707,19 @@ python download_llama.py<span aria-hidden="true" class="line-numbers-rows"><span
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/modelscope/">
+                                    <span class="chip bg-color">modelscope</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%8E%AF%E5%A2%83/">
+                                    <span class="chip bg-color">环境</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">深度学习</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -736,13 +768,13 @@ python download_llama.py<span aria-hidden="true" class="line-numbers-rows"><span
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2024/03/20/110.modelscope%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">
+                <a href="/2024/03/25/110.modelscope%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="modelscope使用教程">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">modelscope使用教程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -753,17 +785,37 @@ python download_llama.py<span aria-hidden="true" class="line-numbers-rows"><span
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-25
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Austin
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    深度学习
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/modelscope/">
+                        <span class="chip bg-color">modelscope</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%8E%AF%E5%A2%83/">
+                        <span class="chip bg-color">环境</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">深度学习</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
