@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "315e068397b65d5c",
+        "id": "0c1d7d26ad1e4909",
         "type": "tabs",
         "children": [
           {
-            "id": "44fea626508b4bf1",
+            "id": "1bc8fac73e17f5c9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "110.modelscope使用教程.md",
+                "file": "107.深度学习-1 本地环境部署.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "110.modelscope使用教程.md",
+                "file": "107.深度学习-1 本地环境部署.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "110.modelscope使用教程.md",
+                "file": "107.深度学习-1 本地环境部署.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "110.modelscope使用教程.md"
+                "file": "107.深度学习-1 本地环境部署.md"
               }
             }
           }
@@ -146,10 +146,16 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "44fea626508b4bf1",
+  "active": "1bc8fac73e17f5c9",
   "lastOpenFiles": [
-    "_git建立本地与github链接.md",
+    "109.neo4j教程.md",
     "110.modelscope使用教程.md",
+    "_linux加载U盘.md",
+    "_linux 通用指令.md",
+    "_openAI_api.md",
+    "_Qwen_systemprompt.md",
+    "_Ubuntu查看端口占用.md",
+    "_git建立本地与github链接.md",
     "107.深度学习-1 本地环境部署.md",
     "107.windows安装linux.md",
     "111.linux安装教程.md",
@@ -166,16 +172,10 @@
     "_git命令.md",
     "_cuda版本.md",
     "_Ubuntu安装Nvidia驱动.md",
-    "_linux 通用指令.md",
     "_linux日志管理.md",
     "_释放vdisk占用空间.md",
-    "_关闭windows登录用户密码.md",
-    "109.nginx教程.md",
-    "109.neo4j教程.md",
     "blogpic/111.linux安装教程-1.png",
     "blogpic/111.linux安装教程-1.png",
-    "_linux检测网络.md",
-    "15. 使用screen在SSH断开后保持程序运行.md",
     "未命名",
     "blogpic/201.office通过样式管理格式-26.png",
     "blogpic/201.office通过样式管理格式-25.png",

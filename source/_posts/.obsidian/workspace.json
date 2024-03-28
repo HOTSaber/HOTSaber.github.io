@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "201.office通过样式管理格式.md",
+                "file": "110.modelscope使用教程.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "201.office通过样式管理格式.md",
+                "file": "110.modelscope使用教程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "201.office通过样式管理格式.md",
+                "file": "110.modelscope使用教程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "201.office通过样式管理格式.md"
+                "file": "110.modelscope使用教程.md"
               }
             }
           }
@@ -148,8 +148,8 @@
   },
   "active": "479fe566c4bbfc68",
   "lastOpenFiles": [
-    "204.office zotero使用教程.md",
     "201.office通过样式管理格式.md",
+    "204.office zotero使用教程.md",
     "111.linux安装教程.md",
     "110.modelscope使用教程.md",
     "108.nccl实现多GPU交互.md",
