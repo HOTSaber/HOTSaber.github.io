@@ -555,12 +555,12 @@
                                 <span class="chip bg-color">SSH</span>
                             </a>
                         
-                            <a href="/tags/linux/">
-                                <span class="chip bg-color">linux</span>
-                            </a>
-                        
                             <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
                                 <span class="chip bg-color">多终端</span>
+                            </a>
+                        
+                            <a href="/tags/linux/">
+                                <span class="chip bg-color">linux</span>
                             </a>
                         
                             <a href="/tags/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
@@ -782,6 +782,26 @@ remote_port &#x3D; 2333<span aria-hidden="true" class="line-numbers-rows"><span>
 <p>默认情况下只要知道 FRP 服务端开放的端口，任意 FRP 客户端都可以随意在服务端上注册端口映射，这样对于在公网上的 FRP 服务来说显然不太安全。FRP 提供了身份验证机制来提高 FRP 服务端的安全性。<br>可以使用token加强验证。详见<a target="_blank" rel="noopener" href="https://gofrp.org/zh-cn/docs/examples/stcp/">frp帮助文档</a></p>
 <pre class="line-numbers language-none"><code class="language-none">#在common中加入以下参数
 token &#x3D; [密码] #在frps与frpc的common中都加入以下参数<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h1 id="frp配置实现转发多个http站点"><a href="#frp配置实现转发多个http站点" class="headerlink" title="frp配置实现转发多个http站点"></a>frp配置实现转发多个http站点</h1><p>将新加的[web]项type改为tcp，后面也不用加域名或者ip。<br>frp会直接将其当作tcp数据包处理，只处理到了传输层(tcp)，而没有到<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E5%BA%94%E7%94%A8%E5%B1%82&spm=1001.2101.3001.7020">应用层</a>(http)。<br>配置如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">[web]
+type &#x3D; http
+local_port &#x3D; 8501
+remote_port &#x3D; 8080
+custom_domains &#x3D; 122.51.109.45
+
+[web2]
+type &#x3D; tcp
+local_ip &#x3D; 127.0.0.1
+local_port &#x3D; 9995
+remote_port &#x3D; 9995
+
+[web3]
+type &#x3D; tcp
+local_ip &#x3D; 127.0.0.1
+local_port &#x3D; 8502
+remote_port &#x3D; 8081<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
                 
             </div>
             <hr/>
@@ -849,12 +869,12 @@ token &#x3D; [密码] #在frps与frpc的common中都加入以下参数<span aria
                                     <span class="chip bg-color">SSH</span>
                                 </a>
                             
-                                <a href="/tags/linux/">
-                                    <span class="chip bg-color">linux</span>
-                                </a>
-                            
                                 <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
                                     <span class="chip bg-color">多终端</span>
+                                </a>
+                            
+                                <a href="/tags/linux/">
+                                    <span class="chip bg-color">linux</span>
                                 </a>
                             
                                 <a href="/tags/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
@@ -962,12 +982,12 @@ token &#x3D; [密码] #在frps与frpc的common中都加入以下参数<span aria
                         <span class="chip bg-color">SSH</span>
                     </a>
                     
-                    <a href="/tags/linux/">
-                        <span class="chip bg-color">linux</span>
-                    </a>
-                    
                     <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
                         <span class="chip bg-color">多终端</span>
+                    </a>
+                    
+                    <a href="/tags/linux/">
+                        <span class="chip bg-color">linux</span>
                     </a>
                     
                     <a href="/tags/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
