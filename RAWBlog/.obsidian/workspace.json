@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "1bc8fac73e17f5c9",
+            "id": "5b0d336eb6b9bdb8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "107.深度学习-1 本地环境部署.md",
+                "file": "13.内网穿透.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#frp配置实现转发多个http站点",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +65,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "107.深度学习-1 本地环境部署.md",
+                "file": "13.内网穿透.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "107.深度学习-1 本地环境部署.md",
+                "file": "13.内网穿透.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "107.深度学习-1 本地环境部署.md"
+                "file": "13.内网穿透.md"
               }
             }
           }
@@ -146,34 +147,34 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "1bc8fac73e17f5c9",
+  "active": "5b0d336eb6b9bdb8",
   "lastOpenFiles": [
-    "109.neo4j教程.md",
-    "110.modelscope使用教程.md",
-    "_linux加载U盘.md",
+    "_git安装.md",
     "_linux 通用指令.md",
-    "_openAI_api.md",
-    "_Qwen_systemprompt.md",
-    "_Ubuntu查看端口占用.md",
-    "_git建立本地与github链接.md",
-    "107.深度学习-1 本地环境部署.md",
-    "107.windows安装linux.md",
-    "111.linux安装教程.md",
-    "14.windows安装linux.md",
-    "16.升级cuda.md",
-    "107.解决：Docker Desktop Unexpected WSL error.md",
-    "107.docker教程.md",
-    "203.office共享文档与在线协作.md",
-    "204.office zotero使用教程.md",
-    "202.office 部署教程.md",
-    "201.office通过样式管理格式.md",
-    "200.obsidian 入门教程.md",
-    "_linux 清理大文件.md",
     "_git命令.md",
+    "_windows下gitbash'wget'.md",
+    "_gitignore.md",
+    "_linux 清理大文件.md",
+    "_git建立本地与github链接.md",
     "_cuda版本.md",
-    "_Ubuntu安装Nvidia驱动.md",
-    "_linux日志管理.md",
-    "_释放vdisk占用空间.md",
+    "_linux文件描述符的最大数量.md",
+    "16.升级cuda.md",
+    "107.深度学习-1 本地环境部署.md",
+    "111.linux安装教程.md",
+    "13.内网穿透.md",
+    "107.windows安装linux.md",
+    "109.nginx教程.md",
+    "110.modelscope使用教程.md",
+    "109.neo4j教程.md",
+    "108.nccl实现多GPU交互.md",
+    "_openAI_api.md",
+    "_linux下看service.md",
+    "15. 使用screen在SSH断开后保持程序运行.md",
+    "未命名.md",
+    "107.docker教程.md",
+    "14.windows安装linux.md",
+    "_linux加载U盘.md",
+    "_Qwen_systemprompt.md",
     "blogpic/111.linux安装教程-1.png",
     "blogpic/111.linux安装教程-1.png",
     "未命名",

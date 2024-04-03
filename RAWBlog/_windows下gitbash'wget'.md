@@ -16,9 +16,33 @@ Chocolatey是Windows的包管理器，类似于Linux中的apt或yum。它允许�
     ```
     
 3. 安装完成后，你可以使用`choco install`命令来安装各种软件包，比如`choco install mingw`或`choco install cygwin`（如果可用的话）。
+4. 使用`choco -v`来查看chocolatey版本
 ## 在git bash中安装wget
 1. 使用管理员打开powershell
 2. 使用以下命令安装wget
 ```
 choco install wget
 ```
+## 在git bash中安装git-lfs
+1. 使用管理员打开powershell
+2. 使用以下命令安装wget
+```
+choco install git-lfs
+```
+1. git-lfs install  
+这个命令用于安装git-lfs扩展。在使用git-lfs之前，你需要先安装并初始化它。
+
+2. git-lfs track  
+通过这个命令，你可以指定要跟踪的文件或文件类型。跟踪文件后，Git会自动使用Git LFS来处理它们。
+
+3. git-lfs ls-files  
+这个命令会显示当前被Git LFS跟踪的文件列表。你可以使用它来查看哪些文件已经被Git LFS处理了。
+
+4. git-lfs pull  
+使用这个命令，你可以从远程仓库中拉取Git LFS管理的文件。它会下载文件的LFS指针，并根据需要下载实际的文件内容。
+
+5. git-lfs push  
+这个命令用于将本地修改的Git LFS文件推送到远程仓库中。它会上传文件的LFS指针以及实际的文件内容。
+
+6. git-lfs clone  
+使用这个命令，你可以从远程仓库克隆一个包含Git LFS文件的项目。它会自动下载Git LFS文件的LFS指针和实际内容。
