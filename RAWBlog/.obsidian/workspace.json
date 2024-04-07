@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "0c1d7d26ad1e4909",
+        "id": "285335ddadff300a",
         "type": "tabs",
         "children": [
           {
-            "id": "5b0d336eb6b9bdb8",
+            "id": "eb56d45e7b14e763",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13.内网穿透.md",
+                "file": "_git命令.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b9fff56c232e7ae9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_git.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -48,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#frp配置实现转发多个http站点",
+                "query": "清华",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,8 +78,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -86,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "13.内网穿透.md",
+                "file": "_git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "13.内网穿透.md",
+                "file": "_git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "13.内网穿透.md"
+                "file": "_git.md"
               }
             }
           }
@@ -147,34 +159,34 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "5b0d336eb6b9bdb8",
+  "active": "b9fff56c232e7ae9",
   "lastOpenFiles": [
-    "_git安装.md",
-    "_linux 通用指令.md",
     "_git命令.md",
-    "_windows下gitbash'wget'.md",
-    "_gitignore.md",
-    "_linux 清理大文件.md",
-    "_git建立本地与github链接.md",
-    "_cuda版本.md",
-    "_linux文件描述符的最大数量.md",
-    "16.升级cuda.md",
+    "_git.md",
+    "_git安装.md",
     "107.深度学习-1 本地环境部署.md",
-    "111.linux安装教程.md",
-    "13.内网穿透.md",
-    "107.windows安装linux.md",
-    "109.nginx教程.md",
-    "110.modelscope使用教程.md",
-    "109.neo4j教程.md",
-    "108.nccl实现多GPU交互.md",
-    "_openAI_api.md",
-    "_linux下看service.md",
     "15. 使用screen在SSH断开后保持程序运行.md",
-    "未命名.md",
     "107.docker教程.md",
-    "14.windows安装linux.md",
-    "_linux加载U盘.md",
+    "109.neo4j教程.md",
+    "_abutiongraph.md",
+    "README.md",
+    "_linux 通用指令.md",
+    "_0.0.0.0与127.0.0.1（本地回环地址）.md",
+    "_Ubuntu查看端口占用.md",
+    "_linux 清理大文件.md",
+    "_Ubuntu安装Nvidia驱动.md",
     "_Qwen_systemprompt.md",
+    "_openAI_api.md",
+    "_windows下gitbash'wget'.md",
+    "_linux加载U盘.md",
+    "_linux检测网络.md",
+    "_linux日志管理.md",
+    "_linux文件描述符的最大数量.md",
+    "_linux下看service.md",
+    "_Vim编辑器.md",
+    "2.博客主题设置.md",
+    "1.博客部署配置.md",
+    "_释放vdisk占用空间.md",
     "blogpic/111.linux安装教程-1.png",
     "blogpic/111.linux安装教程-1.png",
     "未命名",
