@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "285335ddadff300a",
+        "id": "d1c7fe06cc0a6962",
         "type": "tabs",
         "children": [
           {
-            "id": "eb56d45e7b14e763",
+            "id": "c350e3c40f5a9634",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_git命令.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b9fff56c232e7ae9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_git.md",
+                "file": "112.使用docker多开neo4j.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -61,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "清华",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_git.md",
+                "file": "112.使用docker多开neo4j.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_git.md",
+                "file": "112.使用docker多开neo4j.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_git.md"
+                "file": "112.使用docker多开neo4j.md"
               }
             }
           }
@@ -159,34 +146,34 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "b9fff56c232e7ae9",
+  "active": "c350e3c40f5a9634",
   "lastOpenFiles": [
-    "_git命令.md",
-    "_git.md",
-    "_git安装.md",
-    "107.深度学习-1 本地环境部署.md",
-    "15. 使用screen在SSH断开后保持程序运行.md",
+    "109.nginx教程.md",
+    "108.nccl实现多GPU交互.md",
+    "107.windows安装linux.md",
     "107.docker教程.md",
     "109.neo4j教程.md",
+    "112.使用docker多开neo4j.md",
+    "111.linux安装教程.md",
+    "110.modelscope使用教程.md",
+    "_关闭windows10自动更新.md",
+    "_linux 通用指令.md",
+    "_linux加载U盘.md",
+    "_git建立本地与github链接.md",
+    "未命名 1.md",
+    "_git命令.md",
+    "107.深度学习-1 本地环境部署.md",
+    "_git.md",
+    "_git安装.md",
+    "15. 使用screen在SSH断开后保持程序运行.md",
     "_abutiongraph.md",
     "README.md",
-    "_linux 通用指令.md",
     "_0.0.0.0与127.0.0.1（本地回环地址）.md",
     "_Ubuntu查看端口占用.md",
     "_linux 清理大文件.md",
     "_Ubuntu安装Nvidia驱动.md",
     "_Qwen_systemprompt.md",
     "_openAI_api.md",
-    "_windows下gitbash'wget'.md",
-    "_linux加载U盘.md",
-    "_linux检测网络.md",
-    "_linux日志管理.md",
-    "_linux文件描述符的最大数量.md",
-    "_linux下看service.md",
-    "_Vim编辑器.md",
-    "2.博客主题设置.md",
-    "1.博客部署配置.md",
-    "_释放vdisk占用空间.md",
     "blogpic/111.linux安装教程-1.png",
     "blogpic/111.linux安装教程-1.png",
     "未命名",
