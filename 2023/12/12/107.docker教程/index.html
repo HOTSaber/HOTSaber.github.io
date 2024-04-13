@@ -8,7 +8,9 @@
     <meta name="description" content="
 详情请参考docker快速入门与官方文档
 
-Install using the apt repositoryBefore you install Docker Engine for the first time on a new host">
+使用 apt 存储库安装在新主机上首次安装 Docker Engine 之前，需要设置 Docker 存储库。之后，您可以从存储库安装和更新 Docker。
+
+设置 Docker 的 apt 存">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -609,9 +611,9 @@ Install using the apt repositoryBefore you install Docker Engine for the first t
                 <hr>
 <p>详情请参考<a target="_blank" rel="noopener" href="https://docker.easydoc.net/doc/81170005/cCewZWoN/lTKfePfP#nav_6">docker快速入门</a>与<a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/ubuntu/">官方文档</a></p>
 <hr>
-<h3 id="Install-using-the-apt-repository"><a href="#Install-using-the-apt-repository" class="headerlink" title="Install using the apt repository"></a><a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository">Install using the apt repository</a></h3><p>Before you install Docker Engine for the first time on a new host machine, you need to set up the Docker repository. Afterward, you can install and update Docker from the repository.</p>
+<h3 id="使用-apt-存储库安装"><a href="#使用-apt-存储库安装" class="headerlink" title="使用 apt 存储库安装"></a><a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository">使用 apt 存储库安装</a></h3><p>在新主机上首次安装 Docker Engine 之前，需要设置 Docker 存储库。之后，您可以从存储库安装和更新 Docker。</p>
 <ol>
-<li><p>Set up Docker’s <code>apt</code> repository.</p>
+<li><p>设置 Docker 的 <code>apt</code> 存储库</p>
  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># Add Docker's official GPG key:</span>
 <span class="token function">sudo</span> <span class="token function">apt-get</span> update
 <span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> ca-certificates <span class="token function">curl</span> gnupg
@@ -626,23 +628,19 @@ Install using the apt repositoryBefore you install Docker Engine for the first t
   <span class="token function">sudo</span> <span class="token function">tee</span> /etc/apt/sources.list.d/docker.list <span class="token operator">></span> /dev/null
 <span class="token function">sudo</span> <span class="token function">apt-get</span> update<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
-<p><strong>Note</strong></p>
-<p>If you use an Ubuntu derivative distro, such as Linux Mint, you may need to use <code>UBUNTU_CODENAME</code> instead of <code>VERSION_CODENAME</code>.
+<p><strong>Note</strong><br>如果您使用 Ubuntu 衍生发行版，例如 Linux Mint，您可能需要 <code>UBUNTU_CODENAME</code> 使用 <code>VERSION_CODENAME</code>.
  </p>
 </blockquote>
 </li>
-<li><h2 id="Install-the-Docker-packages-Latest-Specific-version"><a href="#Install-the-Docker-packages-Latest-Specific-version" class="headerlink" title="Install the Docker packages. Latest Specific version
- "></a>Install the Docker packages.<br><br> Latest Specific version
- </h2><h2 id="To-install-the-latest-version-run"><a href="#To-install-the-latest-version-run" class="headerlink" title=" To install the latest version, run: 
- "></a> To install the latest version, run:<br><br> <pre class="line-numbers language-console" data-language="console"><code class="language-console">$ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<li><h2 id="安装-Docker-软件包-最新具体版本-要安装最新版本，请运行："><a href="#安装-Docker-软件包-最新具体版本-要安装最新版本，请运行：" class="headerlink" title="安装 Docker 软件包. 最新具体版本 要安装最新版本，请运行： 
+ "></a>安装 Docker 软件包.<br> 最新具体版本<br> 要安装最新版本，请运行：<br> <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
  </h2></li>
-<li><p>Verify that the Docker Engine installation is successful by running the <code>hello-world</code> image.</p>
- <pre class="line-numbers language-console" data-language="console"><code class="language-console">$ sudo docker run hello-world<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p> This command downloads a test image and runs it in a container. When the container runs, it prints a confirmation message and exits.</p>
+<li><p>通过运行镜像来验证Docker Engine安装是否成功 <code>hello-world</code> 。</p>
+ <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">docker</span> run hello-world<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p> 此命令下载测试映像并在容器中运行它。当容器运行时，它会打印一条确认消息并退出。<br>您现在已经成功安装并启动了 Docker Engine。</p>
 </li>
 </ol>
-<p>You have now successfully installed and started Docker Engine.</p>
-<h4 id="Upgrade-Docker-Engine"><a href="#Upgrade-Docker-Engine" class="headerlink" title="Upgrade Docker Engine"></a><a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/ubuntu/#upgrade-docker-engine">Upgrade Docker Engine</a></h4><p>To upgrade Docker Engine, follow step 2 of the <a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository">installation instructions</a>, choosing the new version you want to install.</p>
+<h4 id="升级Docker引擎"><a href="#升级Docker引擎" class="headerlink" title="升级Docker引擎"></a><a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/ubuntu/#upgrade-docker-engine">升级Docker引擎</a></h4><p>要升级Docker Engine，请按照 <a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository">安装说明</a>的步骤2进行操作，选择要安装的版本。</p>
 
                 
             </div>
