@@ -628,12 +628,12 @@
   <span class="token function">sudo</span> <span class="token function">tee</span> /etc/apt/sources.list.d/docker.list <span class="token operator">></span> /dev/null
 <span class="token function">sudo</span> <span class="token function">apt-get</span> update<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
-<p><strong>Note</strong><br>如果您使用 Ubuntu 衍生发行版，例如 Linux Mint，您可能需要 <code>UBUNTU_CODENAME</code> 使用 <code>VERSION_CODENAME</code>.
+<p>Note<br>如果您使用 Ubuntu 衍生发行版，例如 Linux Mint，您可能需要 <code>UBUNTU_CODENAME</code> 使用 <code>VERSION_CODENAME</code>.
  </p>
 </blockquote>
 </li>
-<li><h2 id="安装-Docker-软件包-最新具体版本-要安装最新版本，请运行："><a href="#安装-Docker-软件包-最新具体版本-要安装最新版本，请运行：" class="headerlink" title="安装 Docker 软件包 最新具体版本 要安装最新版本，请运行：
- "></a>安装 Docker 软件包<br> 最新具体版本<br> 要安装最新版本，请运行：<br><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<li><h2 id="安装-Docker-软件包-要安装最新版本，请运行："><a href="#安装-Docker-软件包-要安装最新版本，请运行：" class="headerlink" title="安装 Docker 软件包 要安装最新版本，请运行：
+ "></a><strong>安装 Docker 软件包</strong><br> 要安装最新版本，请运行：<br><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
  </h2></li>
 <li><p>通过运行镜像来验证Docker Engine安装是否成功 <code>hello-world</code> 。</p>
  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">docker</span> run hello-world<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>

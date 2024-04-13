@@ -97,7 +97,7 @@
       <link href="/2023/12/12/107.docker%E6%95%99%E7%A8%8B/"/>
       <url>/2023/12/12/107.docker%E6%95%99%E7%A8%8B/</url>
       
-        <content type="html"><![CDATA[<hr><p>详情请参考<a href="https://docker.easydoc.net/doc/81170005/cCewZWoN/lTKfePfP#nav_6">docker快速入门</a>与<a href="https://docs.docker.com/engine/install/ubuntu/">官方文档</a></p><hr><h3 id="使用-apt-存储库安装"><a href="#使用-apt-存储库安装" class="headerlink" title="使用 apt 存储库安装"></a><a href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository">使用 apt 存储库安装</a></h3><p>在新主机上首次安装 Docker Engine 之前，需要设置 Docker 存储库。之后，您可以从存储库安装和更新 Docker。</p><ol><li><p>设置 Docker 的 <code>apt</code> 存储库</p> <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># Add Docker's official GPG key:</span><span class="token function">sudo</span> <span class="token function">apt-get</span> update<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> ca-certificates <span class="token function">curl</span> gnupg<span class="token function">sudo</span> <span class="token function">install</span> <span class="token parameter variable">-m</span> 0755 <span class="token parameter variable">-d</span> /etc/apt/keyrings<span class="token function">curl</span> <span class="token parameter variable">-fsSL</span> https://download.docker.com/linux/ubuntu/gpg <span class="token operator">|</span> <span class="token function">sudo</span> gpg <span class="token parameter variable">--dearmor</span> <span class="token parameter variable">-o</span> /etc/apt/keyrings/docker.gpg<span class="token function">sudo</span> <span class="token function">chmod</span> a+r /etc/apt/keyrings/docker.gpg<span class="token comment"># Add the repository to Apt sources:</span><span class="token builtin class-name">echo</span> <span class="token punctuation">\</span>  <span class="token string">"deb [arch=<span class="token variable"><span class="token variable">$(</span>dpkg --print-architecture<span class="token variable">)</span></span> signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \  <span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">.</span> /etc/os-release <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$VERSION_CODENAME</span>"</span><span class="token variable">)</span></span> stable"</span> <span class="token operator">|</span> <span class="token punctuation">\</span>  <span class="token function">sudo</span> <span class="token function">tee</span> /etc/apt/sources.list.d/docker.list <span class="token operator">></span> /dev/null<span class="token function">sudo</span> <span class="token function">apt-get</span> update<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><blockquote><p><strong>Note</strong><br>如果您使用 Ubuntu 衍生发行版，例如 Linux Mint，您可能需要 <code>UBUNTU_CODENAME</code> 使用 <code>VERSION_CODENAME</code>. </p></blockquote></li><li><h2 id="安装-Docker-软件包-最新具体版本-要安装最新版本，请运行："><a href="#安装-Docker-软件包-最新具体版本-要安装最新版本，请运行：" class="headerlink" title="安装 Docker 软件包 最新具体版本 要安装最新版本，请运行： "></a>安装 Docker 软件包<br> 最新具体版本<br> 要安装最新版本，请运行：<br><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre> </h2></li><li><p>通过运行镜像来验证Docker Engine安装是否成功 <code>hello-world</code> 。</p> <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">docker</span> run hello-world<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p> 此命令下载测试映像并在容器中运行它。当容器运行时，它会打印一条确认消息并退出。<br>您现在已经成功安装并启动了 Docker Engine。</p></li></ol><h4 id="升级Docker引擎"><a href="#升级Docker引擎" class="headerlink" title="升级Docker引擎"></a><a href="https://docs.docker.com/engine/install/ubuntu/#upgrade-docker-engine">升级Docker引擎</a></h4><p>要升级Docker Engine，请按照 <a href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository">安装说明</a>的步骤2进行操作，选择要安装的版本。</p>]]></content>
+        <content type="html"><![CDATA[<hr><p>详情请参考<a href="https://docker.easydoc.net/doc/81170005/cCewZWoN/lTKfePfP#nav_6">docker快速入门</a>与<a href="https://docs.docker.com/engine/install/ubuntu/">官方文档</a></p><hr><h3 id="使用-apt-存储库安装"><a href="#使用-apt-存储库安装" class="headerlink" title="使用 apt 存储库安装"></a><a href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository">使用 apt 存储库安装</a></h3><p>在新主机上首次安装 Docker Engine 之前，需要设置 Docker 存储库。之后，您可以从存储库安装和更新 Docker。</p><ol><li><p>设置 Docker 的 <code>apt</code> 存储库</p> <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># Add Docker's official GPG key:</span><span class="token function">sudo</span> <span class="token function">apt-get</span> update<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> ca-certificates <span class="token function">curl</span> gnupg<span class="token function">sudo</span> <span class="token function">install</span> <span class="token parameter variable">-m</span> 0755 <span class="token parameter variable">-d</span> /etc/apt/keyrings<span class="token function">curl</span> <span class="token parameter variable">-fsSL</span> https://download.docker.com/linux/ubuntu/gpg <span class="token operator">|</span> <span class="token function">sudo</span> gpg <span class="token parameter variable">--dearmor</span> <span class="token parameter variable">-o</span> /etc/apt/keyrings/docker.gpg<span class="token function">sudo</span> <span class="token function">chmod</span> a+r /etc/apt/keyrings/docker.gpg<span class="token comment"># Add the repository to Apt sources:</span><span class="token builtin class-name">echo</span> <span class="token punctuation">\</span>  <span class="token string">"deb [arch=<span class="token variable"><span class="token variable">$(</span>dpkg --print-architecture<span class="token variable">)</span></span> signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \  <span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">.</span> /etc/os-release <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$VERSION_CODENAME</span>"</span><span class="token variable">)</span></span> stable"</span> <span class="token operator">|</span> <span class="token punctuation">\</span>  <span class="token function">sudo</span> <span class="token function">tee</span> /etc/apt/sources.list.d/docker.list <span class="token operator">></span> /dev/null<span class="token function">sudo</span> <span class="token function">apt-get</span> update<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><blockquote><p>Note<br>如果您使用 Ubuntu 衍生发行版，例如 Linux Mint，您可能需要 <code>UBUNTU_CODENAME</code> 使用 <code>VERSION_CODENAME</code>. </p></blockquote></li><li><h2 id="安装-Docker-软件包-要安装最新版本，请运行："><a href="#安装-Docker-软件包-要安装最新版本，请运行：" class="headerlink" title="安装 Docker 软件包 要安装最新版本，请运行： "></a><strong>安装 Docker 软件包</strong><br> 要安装最新版本，请运行：<br><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre> </h2></li><li><p>通过运行镜像来验证Docker Engine安装是否成功 <code>hello-world</code> 。</p> <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">docker</span> run hello-world<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p> 此命令下载测试映像并在容器中运行它。当容器运行时，它会打印一条确认消息并退出。<br>您现在已经成功安装并启动了 Docker Engine。</p></li></ol><h4 id="升级Docker引擎"><a href="#升级Docker引擎" class="headerlink" title="升级Docker引擎"></a><a href="https://docs.docker.com/engine/install/ubuntu/#upgrade-docker-engine">升级Docker引擎</a></h4><p>要升级Docker Engine，请按照 <a href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository">安装说明</a>的步骤2进行操作，选择要安装的版本。</p>]]></content>
       
       
       <categories>
@@ -180,9 +180,9 @@
             
             <tag> office </tag>
             
-            <tag> 样式管理 </tag>
-            
             <tag> 格式 </tag>
+            
+            <tag> 样式管理 </tag>
             
         </tags>
       
@@ -419,17 +419,17 @@
       
         <tags>
             
-            <tag> office </tag>
-            
-            <tag> 格式 </tag>
-            
             <tag> zotero </tag>
+            
+            <tag> office </tag>
             
             <tag> chrome 插件 </tag>
             
             <tag> 文献管理 </tag>
             
             <tag> 参考文献 </tag>
+            
+            <tag> 格式 </tag>
             
         </tags>
       
@@ -562,35 +562,6 @@
     
     
     <entry>
-      <title>markdown 格式语法</title>
-      <link href="/2023/07/06/9.md%E8%AF%AD%E6%B3%95/"/>
-      <url>/2023/07/06/9.md%E8%AF%AD%E6%B3%95/</url>
-      
-        <content type="html"><![CDATA[<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><pre class="line-numbers language-none"><code class="language-none"># H1  ## H2  ### H3  #### H4  ##### H5  ###### H6<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1 id="分行符"><a href="#分行符" class="headerlink" title="分行符"></a>分行符</h1><pre class="line-numbers language-none"><code class="language-none">----<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h1 id="序号"><a href="#序号" class="headerlink" title="序号"></a>序号</h1><h2 id="无序标题"><a href="#无序标题" class="headerlink" title="无序标题"></a>无序标题</h2><pre class="line-numbers language-none"><code class="language-none">- XXXX- XXXX- XXXX<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h2 id="有序标题"><a href="#有序标题" class="headerlink" title="有序标题"></a>有序标题</h2><pre class="line-numbers language-none"><code class="language-none">1. XXX2. XXX3. XXX<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h1 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h1><h2 id="行内代码"><a href="#行内代码" class="headerlink" title="行内代码"></a>行内代码</h2><pre class="line-numbers language-none"><code class="language-none">&#96;XXX&#96;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="行间代码"><a href="#行间代码" class="headerlink" title="行间代码"></a>行间代码</h2><pre class="line-numbers language-none"><code class="language-none">&lt;code&gt;&#96;&#96;&#96;&lt;code&gt;XXX&lt;code&gt;&#96;&#96;&#96;&lt;code&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><h2 id="网络链接"><a href="#网络链接" class="headerlink" title="网络链接"></a>网络链接</h2><pre class="line-numbers language-none"><code class="language-none">[名称](网址)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="图片链接"><a href="#图片链接" class="headerlink" title="图片链接"></a>图片链接</h2><pre class="line-numbers language-none"><code class="language-none">![图名](地址)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;例子一|123|234|345||:-|:-:|-:||abc|bcd|cde||abc|bcd|cde||abc|bcd|cde|&#x2F;&#x2F;例子二|123|234|345||:---|:---:|---:||abc|bcd|cde||abc|bcd|cde||abc|bcd|cde|&#x2F;&#x2F;例子三123|234|345:-|:-:|-:abc|bcd|cdeabc|bcd|cdeabc|bcd|cde<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1 id="文本强调"><a href="#文本强调" class="headerlink" title="文本强调"></a>文本强调</h1><pre class="line-numbers language-none"><code class="language-none">*斜体***加粗*****粗斜体***~~~删除线~~~<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h1 id="转义"><a href="#转义" class="headerlink" title="转义"></a>转义</h1><pre class="line-numbers language-none"><code class="language-none">\\\&#96;\*\+\_<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> 文档编辑与管理 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 格式 </tag>
-            
-            <tag> markdown </tag>
-            
-            <tag> 语法 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>office 365 部署教程</title>
       <link href="/2023/07/06/office%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/"/>
       <url>/2023/07/06/office%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/</url>
@@ -612,6 +583,35 @@
             <tag> office 365 </tag>
             
             <tag> office tool </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>markdown 格式语法</title>
+      <link href="/2023/07/06/9.md%E8%AF%AD%E6%B3%95/"/>
+      <url>/2023/07/06/9.md%E8%AF%AD%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><pre class="line-numbers language-none"><code class="language-none"># H1  ## H2  ### H3  #### H4  ##### H5  ###### H6<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1 id="分行符"><a href="#分行符" class="headerlink" title="分行符"></a>分行符</h1><pre class="line-numbers language-none"><code class="language-none">----<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h1 id="序号"><a href="#序号" class="headerlink" title="序号"></a>序号</h1><h2 id="无序标题"><a href="#无序标题" class="headerlink" title="无序标题"></a>无序标题</h2><pre class="line-numbers language-none"><code class="language-none">- XXXX- XXXX- XXXX<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h2 id="有序标题"><a href="#有序标题" class="headerlink" title="有序标题"></a>有序标题</h2><pre class="line-numbers language-none"><code class="language-none">1. XXX2. XXX3. XXX<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h1 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h1><h2 id="行内代码"><a href="#行内代码" class="headerlink" title="行内代码"></a>行内代码</h2><pre class="line-numbers language-none"><code class="language-none">&#96;XXX&#96;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="行间代码"><a href="#行间代码" class="headerlink" title="行间代码"></a>行间代码</h2><pre class="line-numbers language-none"><code class="language-none">&lt;code&gt;&#96;&#96;&#96;&lt;code&gt;XXX&lt;code&gt;&#96;&#96;&#96;&lt;code&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><h2 id="网络链接"><a href="#网络链接" class="headerlink" title="网络链接"></a>网络链接</h2><pre class="line-numbers language-none"><code class="language-none">[名称](网址)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="图片链接"><a href="#图片链接" class="headerlink" title="图片链接"></a>图片链接</h2><pre class="line-numbers language-none"><code class="language-none">![图名](地址)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F;例子一|123|234|345||:-|:-:|-:||abc|bcd|cde||abc|bcd|cde||abc|bcd|cde|&#x2F;&#x2F;例子二|123|234|345||:---|:---:|---:||abc|bcd|cde||abc|bcd|cde||abc|bcd|cde|&#x2F;&#x2F;例子三123|234|345:-|:-:|-:abc|bcd|cdeabc|bcd|cdeabc|bcd|cde<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1 id="文本强调"><a href="#文本强调" class="headerlink" title="文本强调"></a>文本强调</h1><pre class="line-numbers language-none"><code class="language-none">*斜体***加粗*****粗斜体***~~~删除线~~~<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h1 id="转义"><a href="#转义" class="headerlink" title="转义"></a>转义</h1><pre class="line-numbers language-none"><code class="language-none">\\\&#96;\*\+\_<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 文档编辑与管理 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> markdown </tag>
+            
+            <tag> 格式 </tag>
+            
+            <tag> 语法 </tag>
             
         </tags>
       
