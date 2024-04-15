@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "d1c7fe06cc0a6962",
+        "id": "b43fdcee884d5ff3",
         "type": "tabs",
         "children": [
           {
-            "id": "c350e3c40f5a9634",
+            "id": "09ea3eeefec25941",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "200.obsidian 入门教程.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "200.obsidian 入门教程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "200.obsidian 入门教程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "200.obsidian 入门教程.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,9 +138,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c350e3c40f5a9634",
+  "active": "09ea3eeefec25941",
   "lastOpenFiles": [
     "300.使用GitHub搭建图床.md",
+    "200.obsidian 入门教程.md",
     "301.Git安装.md",
     "7.matery主题设置.md",
     "2.博客主题设置.md",
@@ -174,7 +167,6 @@
     "test",
     "resize.py",
     "新建 Text Document.txt",
-    "200.obsidian 入门教程.md",
     "4.搭建图床.md",
     "14.windows安装linux.md",
     "12.使用SSH远程访问.md",
