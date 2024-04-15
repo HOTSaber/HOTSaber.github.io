@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "7.matery主题设置.md",
+                "file": "200.obsidian 入门教程.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "7.matery主题设置.md",
+                "file": "200.obsidian 入门教程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "7.matery主题设置.md",
+                "file": "200.obsidian 入门教程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "7.matery主题设置.md"
+                "file": "200.obsidian 入门教程.md"
               }
             }
           }
@@ -148,12 +148,14 @@
   },
   "active": "c350e3c40f5a9634",
   "lastOpenFiles": [
+    "300.使用GitHub搭建图床.md",
+    "301.Git安装.md",
+    "7.matery主题设置.md",
     "2.博客主题设置.md",
     "5.home-page-configuration.md",
     "6.matery进阶设置.md",
     "1.博客部署配置.md",
     "3.上传新博客内容.md",
-    "300.使用GitHub搭建图床.md",
     "204.office zotero使用教程.md",
     "机器学习-4 - ol.md",
     "机器学习-6.md",
@@ -186,8 +188,6 @@
     "108.nccl实现多GPU交互.md",
     "107.windows安装linux.md",
     "107.docker教程.md",
-    "109.neo4j教程.md",
-    "110.modelscope使用教程.md",
     "未命名",
     "windows安装linux",
     "blogpic/obsidian 入门教程-2.~vsdx",
