@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "112.使用docker多开neo4j.md",
+                "file": "7.matery主题设置.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "112.使用docker多开neo4j.md",
+                "file": "7.matery主题设置.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "112.使用docker多开neo4j.md",
+                "file": "7.matery主题设置.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "112.使用docker多开neo4j.md"
+                "file": "7.matery主题设置.md"
               }
             }
           }
@@ -138,61 +138,61 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
     }
   },
   "active": "c350e3c40f5a9634",
   "lastOpenFiles": [
+    "2.博客主题设置.md",
+    "5.home-page-configuration.md",
+    "6.matery进阶设置.md",
+    "1.博客部署配置.md",
+    "3.上传新博客内容.md",
+    "300.使用GitHub搭建图床.md",
+    "204.office zotero使用教程.md",
+    "机器学习-4 - ol.md",
+    "机器学习-6.md",
+    "联邦学习顶会论文阅读.md",
+    "blogpic/12.内网穿透-3.png",
+    "resize.py~",
+    "test/邹璧林.jpg",
+    "test/深度学习-1 本地环境部署-9.png",
+    "test/深度学习-1 本地环境部署-8.png",
+    "test/深度学习-1 本地环境部署-7.png",
+    "test/深度学习-1 本地环境部署-6.png",
+    "test/深度学习-1 本地环境部署-5.png",
+    "test/深度学习-1 本地环境部署-4.png",
+    "test/深度学习-1 本地环境部署-3.png",
+    "test/深度学习-1 本地环境部署-2.png",
+    "test",
+    "resize.py",
+    "新建 Text Document.txt",
+    "200.obsidian 入门教程.md",
+    "4.搭建图床.md",
+    "14.windows安装linux.md",
+    "12.使用SSH远程访问.md",
+    "11.博客的多终端同步.md",
+    "10.ChuanhuChatGPT使用教程.md",
+    "112.使用docker多开neo4j.md",
+    "_git pull时发生冲突.md",
+    "107.深度学习-1 本地环境部署.md",
+    "111.linux安装教程.md",
     "109.nginx教程.md",
     "108.nccl实现多GPU交互.md",
     "107.windows安装linux.md",
     "107.docker教程.md",
     "109.neo4j教程.md",
-    "112.使用docker多开neo4j.md",
-    "111.linux安装教程.md",
     "110.modelscope使用教程.md",
-    "_关闭windows10自动更新.md",
-    "_linux 通用指令.md",
-    "_linux加载U盘.md",
-    "_git建立本地与github链接.md",
-    "未命名 1.md",
-    "_git命令.md",
-    "107.深度学习-1 本地环境部署.md",
-    "_git.md",
-    "_git安装.md",
-    "15. 使用screen在SSH断开后保持程序运行.md",
-    "_abutiongraph.md",
-    "README.md",
-    "_0.0.0.0与127.0.0.1（本地回环地址）.md",
-    "_Ubuntu查看端口占用.md",
-    "_linux 清理大文件.md",
-    "_Ubuntu安装Nvidia驱动.md",
-    "_Qwen_systemprompt.md",
-    "_openAI_api.md",
-    "blogpic/111.linux安装教程-1.png",
-    "blogpic/111.linux安装教程-1.png",
     "未命名",
-    "blogpic/201.office通过样式管理格式-26.png",
-    "blogpic/201.office通过样式管理格式-25.png",
-    "blogpic/201.office通过样式管理格式-24.png",
-    "blogpic/201.office通过样式管理格式-23.png",
-    "blogpic/201.office通过样式管理格式-22.png",
-    "blogpic/201.office通过样式管理格式-21.png",
-    "blogpic/201.office通过样式管理格式-20.png",
-    "blogpic/201.office通过样式管理格式-19.png",
     "windows安装linux",
     "blogpic/obsidian 入门教程-2.~vsdx",
     "blogpic/相对路径.vsdx",
     "blogpic/~$$绝对路径.~vsdx",
-    "blogpic/绝对路径.vsdx",
-    "blogpic/obsidian 入门教程-1.~vsdx",
-    "blogpic/路径.vsdx",
-    "新建文件夹/test.py",
-    "新建文件夹/新建 文本文档.txt"
+    "blogpic/绝对路径.vsdx"
   ]
 }
