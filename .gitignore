@@ -6,3 +6,5 @@ node_modules/
 public/
 .deploy*/
 _multiconfig.yml
+RAWBlog/.obsidian/workspace.json
+source/_posts/.obsidian/workspace.json
