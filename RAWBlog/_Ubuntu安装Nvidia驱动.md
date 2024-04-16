@@ -5,7 +5,8 @@
 2. 确保系统是最新的：
     
     ```
-    sudo apt updatesudo apt upgrade
+    sudo apt update
+    sudo apt upgrade
     ```
     
 3. 添加NVIDIA PPA（可选，推荐）：

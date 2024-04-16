@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "112.使用docker多开neo4j.md",
+                "file": "_linux 通用指令.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "112.使用docker多开neo4j.md",
+                "file": "_linux 通用指令.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "112.使用docker多开neo4j.md",
+                "file": "_linux 通用指令.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "112.使用docker多开neo4j.md"
+                "file": "_linux 通用指令.md"
               }
             }
           }
@@ -148,12 +148,13 @@
   },
   "active": "c350e3c40f5a9634",
   "lastOpenFiles": [
+    "_Ubuntu安装Nvidia驱动.md",
+    "112.使用docker多开neo4j.md",
     "109.nginx教程.md",
     "108.nccl实现多GPU交互.md",
     "107.windows安装linux.md",
     "107.docker教程.md",
     "109.neo4j教程.md",
-    "112.使用docker多开neo4j.md",
     "111.linux安装教程.md",
     "110.modelscope使用教程.md",
     "_关闭windows10自动更新.md",
@@ -171,7 +172,6 @@
     "_0.0.0.0与127.0.0.1（本地回环地址）.md",
     "_Ubuntu查看端口占用.md",
     "_linux 清理大文件.md",
-    "_Ubuntu安装Nvidia驱动.md",
     "_Qwen_systemprompt.md",
     "_openAI_api.md",
     "blogpic/111.linux安装教程-1.png",
