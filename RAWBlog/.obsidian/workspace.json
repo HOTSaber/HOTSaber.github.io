@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "新建文件夹/obsidian 入门教程.md",
+                "file": "_gitignore.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "新建文件夹/obsidian 入门教程.md",
+                "file": "_gitignore.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "新建文件夹/obsidian 入门教程.md",
+                "file": "_gitignore.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "新建文件夹/obsidian 入门教程.md"
+                "file": "_gitignore.md"
               }
             }
           }
@@ -148,8 +148,25 @@
   },
   "active": "c350e3c40f5a9634",
   "lastOpenFiles": [
+    "新建文件夹/obsidian 入门教程.md",
+    "obsidian 入门教程-2.py",
+    "deleted/10.ChuanhuChatGPT使用教程.md",
+    "deleted",
+    "blogpic/300.使用GitHub搭建图床-1.png",
+    "blogpic/200.obsidian 入门教程-4.png",
+    "blogpic/200.obsidian 入门教程-3.png",
+    "blogpic/200.obsidian 入门教程-2.png",
+    "blogpic/obsidian 入门教程-10.png",
+    "_git pull时发生冲突.md",
+    "301.Git安装.md",
+    "300.使用GitHub搭建图床.md",
+    "新建文件夹/obsidian 入门教程-2.png",
+    "新建文件夹/obsidian 入门教程-7.png",
+    "新建文件夹/obsidian 入门教程-6.png",
+    "新建文件夹/obsidian 入门教程-5.png",
+    "新建文件夹/obsidian 入门教程-4.png",
+    "obsidian 入门教程-1.py",
     "_abutiongraph.md",
-    "新建文件夹/_abutiongraph-1.png",
     "_cuda版本.md",
     "_git.md",
     "_git安装.md",
@@ -158,24 +175,9 @@
     "_Ubuntu安装Nvidia驱动.md",
     "_Qwen_systemprompt.md",
     "200.obsidian 入门教程.md",
-    "新建文件夹/200.obsidian 入门教程-1.png",
     "_linux 通用指令.md",
-    "新建文件夹/obsidian 入门教程.md",
-    "新建文件夹/obsidian 入门教程-4.png",
-    "新建文件夹/obsidian 入门教程-5.png",
-    "新建文件夹/obsidian 入门教程-3.png",
-    "新建文件夹/obsidian 入门教程-2.png",
-    "新建文件夹/_linux 通用指令-1.png",
     "新建文件夹",
     "_linux 通用指令-1.py",
-    "deleted/10.ChuanhuChatGPT使用教程.md",
-    "deleted",
-    "blogpic/300.使用GitHub搭建图床-1.png",
-    "blogpic/200.obsidian 入门教程-4.png",
-    "blogpic/200.obsidian 入门教程-3.png",
-    "_git pull时发生冲突.md",
-    "301.Git安装.md",
-    "300.使用GitHub搭建图床.md",
     "112.使用docker多开neo4j.md",
     "109.nginx教程.md",
     "108.nccl实现多GPU交互.md",
@@ -186,13 +188,10 @@
     "110.modelscope使用教程.md",
     "_关闭windows10自动更新.md",
     "_linux加载U盘.md",
-    "未命名 1.md",
     "未命名",
     "windows安装linux",
     "blogpic/obsidian 入门教程-2.~vsdx",
     "blogpic/相对路径.vsdx",
-    "blogpic/~$$绝对路径.~vsdx",
-    "blogpic/绝对路径.vsdx",
-    "blogpic/obsidian 入门教程-1.~vsdx"
+    "blogpic/~$$绝对路径.~vsdx"
   ]
 }
