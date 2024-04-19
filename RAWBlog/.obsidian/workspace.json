@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_gitignore.md",
+                "file": "_linux下看service.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "16254b75413ea7a4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_linux下关闭nvidia自动更新.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -48,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#０是关闭，1是开启，将所有值改为0",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +78,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -85,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_gitignore.md",
+                "file": "_linux下关闭nvidia自动更新.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_gitignore.md",
+                "file": "_linux下关闭nvidia自动更新.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_gitignore.md"
+                "file": "_linux下关闭nvidia自动更新.md"
               }
             }
           }
@@ -146,8 +160,11 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "c350e3c40f5a9634",
+  "active": "80832654ed2fc32a",
   "lastOpenFiles": [
+    "_linux下看service.md",
+    "_linux下关闭nvidia自动更新.md",
+    "_gitignore.md",
     "新建文件夹/obsidian 入门教程.md",
     "obsidian 入门教程-2.py",
     "deleted/10.ChuanhuChatGPT使用教程.md",
@@ -186,8 +203,6 @@
     "109.neo4j教程.md",
     "111.linux安装教程.md",
     "110.modelscope使用教程.md",
-    "_关闭windows10自动更新.md",
-    "_linux加载U盘.md",
     "未命名",
     "windows安装linux",
     "blogpic/obsidian 入门教程-2.~vsdx",
