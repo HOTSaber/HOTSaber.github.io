@@ -37,14 +37,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_linux中python运行输出log文件.md",
+                "file": "_Qwen_systemprompt.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2147084a1d14cc35",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_python.os.walk().md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -110,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_linux中python运行输出log文件.md",
+                "file": "_python.os.walk().md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_linux中python运行输出log文件.md",
+                "file": "_python.os.walk().md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_linux中python运行输出log文件.md"
+                "file": "_python.os.walk().md"
               }
             }
           }
@@ -171,10 +183,13 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "d08e239f8385e063",
+  "active": "2147084a1d14cc35",
   "lastOpenFiles": [
-    "_torch与torchvision不匹配问题.md",
+    "_Qwen_systemprompt.md",
+    "_python.os.walk().md",
+    "_openAI_api.md",
     "_linux中python运行输出log文件.md",
+    "_torch与torchvision不匹配问题.md",
     "_linux下关闭nvidia自动更新.md",
     "_linux下看service.md",
     "_gitignore.md",
@@ -203,7 +218,6 @@
     "_git建立本地与github链接.md",
     "_git命令.md",
     "_Ubuntu安装Nvidia驱动.md",
-    "_Qwen_systemprompt.md",
     "200.obsidian 入门教程.md",
     "_linux 通用指令.md",
     "新建文件夹",
@@ -212,8 +226,6 @@
     "109.nginx教程.md",
     "108.nccl实现多GPU交互.md",
     "107.windows安装linux.md",
-    "107.docker教程.md",
-    "109.neo4j教程.md",
     "未命名",
     "windows安装linux",
     "blogpic/obsidian 入门教程-2.~vsdx",
