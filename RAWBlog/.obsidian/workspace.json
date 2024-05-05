@@ -4,59 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "d1c7fe06cc0a6962",
+        "id": "bd847501e15f3ebc",
         "type": "tabs",
         "children": [
           {
-            "id": "c350e3c40f5a9634",
+            "id": "29bc3ce9eb4a8803",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_linux下看service.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9392431ac95b5d25",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_torch与torchvision不匹配问题.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d08e239f8385e063",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_Qwen_systemprompt.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2147084a1d14cc35",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_python.os.walk().md",
+                "file": "109.neo4j教程.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -122,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_python.os.walk().md",
+                "file": "109.neo4j教程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_python.os.walk().md",
+                "file": "109.neo4j教程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_python.os.walk().md"
+                "file": "109.neo4j教程.md"
               }
             }
           }
@@ -175,23 +138,28 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
     }
   },
-  "active": "2147084a1d14cc35",
+  "active": "29bc3ce9eb4a8803",
   "lastOpenFiles": [
+    "_neo4j_备份与恢复数据.md",
+    "109.neo4j教程.md",
+    "_linux下看service.md",
+    "_torch与torchvision不匹配问题.md",
     "_Qwen_systemprompt.md",
+    "使用docker多开neo4j.md",
+    "_neo4j_节点属性.md",
+    "_neo4jbrowse_命令.md",
     "_python.os.walk().md",
     "_openAI_api.md",
     "_linux中python运行输出log文件.md",
-    "_torch与torchvision不匹配问题.md",
     "_linux下关闭nvidia自动更新.md",
-    "_linux下看service.md",
     "_gitignore.md",
     "新建文件夹/obsidian 入门教程.md",
     "obsidian 入门教程-2.py",
@@ -219,13 +187,8 @@
     "_git命令.md",
     "_Ubuntu安装Nvidia驱动.md",
     "200.obsidian 入门教程.md",
-    "_linux 通用指令.md",
     "新建文件夹",
     "_linux 通用指令-1.py",
-    "112.使用docker多开neo4j.md",
-    "109.nginx教程.md",
-    "108.nccl实现多GPU交互.md",
-    "107.windows安装linux.md",
     "未命名",
     "windows安装linux",
     "blogpic/obsidian 入门教程-2.~vsdx",

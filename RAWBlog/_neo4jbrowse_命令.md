@@ -1,0 +1,3 @@
+清空数据库
+MATCH (n)
+DETACH DELETE n
