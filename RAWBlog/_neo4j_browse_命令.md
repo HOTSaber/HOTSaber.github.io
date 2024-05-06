@@ -76,3 +76,14 @@ for record in results:
 	n, r, m, o = record['n'], record['r'], record['m'], record['o'] 
 	print(f"节点 {n} 通过关系 {r} 与节点 {m} 相连，节点 {m} 又与节点 {o} 相连")
 ```
+# 排除语句
+如果您想要筛选出与`文件编号`节点有关系，并且`m`节点不是`层级`标签的节点，您可以在MATCH语句中添加一个WHERE子句来排除具有特定标签的节点。以下是一个修改后的Cypher查询示例：
+
+```cypher
+MATCH (file:文件编号 {name: '100'})-[r]-(m)  
+WHERE NOT m:层级  
+RETURN file, r, m  
+LIMIT 250
+```
+
+在这个查询中，`WHERE NOT m:层级`确保`m`节点不具有`层级`标签。这样，返回的`m`节点将排除所有带有`层级`标签的节点。`LIMIT 250`则限制了返回结果的数量，最多返回250条记录。
