@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_linux下看service.md",
+                "file": "_neo4j_browse_命令.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_linux下看service.md",
+                "file": "_neo4j_browse_命令.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_linux下看service.md",
+                "file": "_neo4j_browse_命令.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_linux下看service.md"
+                "file": "_neo4j_browse_命令.md"
               }
             }
           }
@@ -148,19 +148,19 @@
   },
   "active": "c350e3c40f5a9634",
   "lastOpenFiles": [
+    "_neo4j_节点属性.md",
+    "_linux下看service.md",
     "_torch与torchvision不匹配问题.md",
     "_Qwen_systemprompt.md",
-    "_neo4jbrowse_命令.md",
+    "_neo4j_browse_命令.md",
     "_git pull时发生冲突.md",
     "使用docker多开neo4j.md",
-    "_neo4j_节点属性.md",
     "_neo4j_备份与恢复数据.md",
     "15. 使用screen在SSH断开后保持程序运行.md",
     "_python.os.walk().md",
     "_openAI_api.md",
     "_linux中python运行输出log文件.md",
     "_linux下关闭nvidia自动更新.md",
-    "_linux下看service.md",
     "_gitignore.md",
     "新建文件夹/obsidian 入门教程.md",
     "obsidian 入门教程-2.py",
