@@ -29,7 +29,8 @@ git pull
 
 如果你决定不需要你的本地更改：
 ```bash
-git checkout -- RAWBlog/.obsidian/workspace.json git pull
+git checkout -- RAWBlog/.obsidian/workspace.json
+git pull
 ```
 - `git checkout -- <file>` 将放弃目录或文件中的更改，将其还原为最后一次提交状态。
 - 继续使用 `git pull` 来更新你的分支。
