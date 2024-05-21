@@ -92,15 +92,6 @@
     <ul class="sub-nav menus_item_child ">
       
       <li>
-        <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0">
-          
-          <i class="fas fa-tv" style="margin-top: -20px; zoom: 0.6;"></i>
-          
-          <span>机器学习</span>
-        </a>
-      </li>
-      
-      <li>
         <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0">
           
           <i class="fas fa-brain" style="margin-top: -20px; zoom: 0.6;"></i>
@@ -110,11 +101,11 @@
       </li>
       
       <li>
-        <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95">
+        <a href="/categories/GitHub">
           
-          <i class="fas fa-file" style="margin-top: -20px; zoom: 0.6;"></i>
+          <i class="fa-brands fa-github" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>博客部署</span>
+          <span>GitHub</span>
         </a>
       </li>
       
@@ -124,6 +115,24 @@
           <i class="fas fa-file-word" style="margin-top: -20px; zoom: 0.6;"></i>
           
           <span>文档编辑与管理</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0">
+          
+          <i class="fas fa-tv" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>机器学习</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95">
+          
+          <i class="fas fa-file" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>博客部署</span>
         </a>
       </li>
       
@@ -288,16 +297,6 @@
               
                 <li>
 
-                  <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0 " style="margin-left:75px">
-				  
-				   <i class="fa fas fa-tv" style="position: absolute;left:50px" ></i>
-			      
-		          <span>机器学习</span>
-                  </a>
-                </li>
-              
-                <li>
-
                   <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0 " style="margin-left:75px">
 				  
 				   <i class="fa fas fa-brain" style="position: absolute;left:50px" ></i>
@@ -308,11 +307,11 @@
               
                 <li>
 
-                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95 " style="margin-left:75px">
+                  <a href="/categories/GitHub " style="margin-left:75px">
 				  
-				   <i class="fa fas fa-file" style="position: absolute;left:50px" ></i>
+				   <i class="fa fa-brands fa-github" style="position: absolute;left:50px" ></i>
 			      
-		          <span>博客部署</span>
+		          <span>GitHub</span>
                   </a>
                 </li>
               
@@ -323,6 +322,26 @@
 				   <i class="fa fas fa-file-word" style="position: absolute;left:50px" ></i>
 			      
 		          <span>文档编辑与管理</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-tv" style="position: absolute;left:50px" ></i>
+			      
+		          <span>机器学习</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-file" style="position: absolute;left:50px" ></i>
+			      
+		          <span>博客部署</span>
                   </a>
                 </li>
               
@@ -603,6 +622,161 @@
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
+                    <a href="/2023/11/28/15.%20%E4%BD%BF%E7%94%A8screen%E5%9C%A8SSH%E6%96%AD%E5%BC%80%E5%90%8E%E4%BF%9D%E6%8C%81%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="使用screen在SSH断开后保持程序运行">
+                            
+                            <span class="card-title">使用screen在SSH断开后保持程序运行</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                
+
+本方案基于linux，采用screen保证程序在ssh断开后还能运行，且再次打开screen还可以看到运行记录
+使用nohup也可，但要记住PID号
+
+
+安装screen工具（略过）sudo  apt-get  install scre
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-11-28
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    深度学习
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/SSH/">
+                            <span class="chip bg-color">SSH</span>
+                        </a>
+                        
+                        <a href="/tags/linux/">
+                            <span class="chip bg-color">linux</span>
+                        </a>
+                        
+                        <a href="/tags/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
+                            <span class="chip bg-color">远程访问</span>
+                        </a>
+                        
+                        <a href="/tags/xshell/">
+                            <span class="chip bg-color">xshell</span>
+                        </a>
+                        
+                        <a href="/tags/xftp/">
+                            <span class="chip bg-color">xftp</span>
+                        </a>
+                        
+                        <a href="/tags/screen/">
+                            <span class="chip bg-color">screen</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2023/11/16/14.windows%E5%AE%89%E8%A3%85linux/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="windows安装linux子系统">
+                            
+                            <span class="card-title">windows安装linux子系统</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                windows安装linux
+详情可见官方文档：如何使用 WSL 在 Windows 上安装 Linux与设置 WSL 开发环境
+
+如果使用 wsl --install -d Ubuntu 安装 Ubuntu WSL 分发版失败，您可以尝试
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-11-16
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    深度学习
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/SSH/">
+                            <span class="chip bg-color">SSH</span>
+                        </a>
+                        
+                        <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
+                            <span class="chip bg-color">多终端</span>
+                        </a>
+                        
+                        <a href="/tags/linux/">
+                            <span class="chip bg-color">linux</span>
+                        </a>
+                        
+                        <a href="/tags/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
+                            <span class="chip bg-color">远程访问</span>
+                        </a>
+                        
+                        <a href="/tags/xshell/">
+                            <span class="chip bg-color">xshell</span>
+                        </a>
+                        
+                        <a href="/tags/xftp/">
+                            <span class="chip bg-color">xftp</span>
+                        </a>
+                        
+                        <a href="/tags/%E4%BA%91/">
+                            <span class="chip bg-color">云</span>
+                        </a>
+                        
+                        <a href="/tags/frp/">
+                            <span class="chip bg-color">frp</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
                     <a href="/2023/10/10/13.%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">
                         <div class="card-image">
                             
@@ -644,12 +818,12 @@
                             <span class="chip bg-color">SSH</span>
                         </a>
                         
-                        <a href="/tags/linux/">
-                            <span class="chip bg-color">linux</span>
-                        </a>
-                        
                         <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
                             <span class="chip bg-color">多终端</span>
+                        </a>
+                        
+                        <a href="/tags/linux/">
+                            <span class="chip bg-color">linux</span>
                         </a>
                         
                         <a href="/tags/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/">
@@ -870,12 +1044,16 @@ anaconda安装过程中可提供python安装，如果确定安装anaconda可以�
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/zotero/">
-                            <span class="chip bg-color">zotero</span>
-                        </a>
-                        
                         <a href="/tags/office/">
                             <span class="chip bg-color">office</span>
+                        </a>
+                        
+                        <a href="/tags/%E6%A0%BC%E5%BC%8F/">
+                            <span class="chip bg-color">格式</span>
+                        </a>
+                        
+                        <a href="/tags/zotero/">
+                            <span class="chip bg-color">zotero</span>
                         </a>
                         
                         <a href="/tags/chrome-%E6%8F%92%E4%BB%B6/">
@@ -888,10 +1066,6 @@ anaconda安装过程中可提供python安装，如果确定安装anaconda可以�
                         
                         <a href="/tags/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/">
                             <span class="chip bg-color">参考文献</span>
-                        </a>
-                        
-                        <a href="/tags/%E6%A0%BC%E5%BC%8F/">
-                            <span class="chip bg-color">格式</span>
                         </a>
                         
                     </div>
@@ -951,16 +1125,16 @@ Github 操作新建一个分支，并设定为默认分支PS：hexo d命令使�
                             <span class="chip bg-color">Git</span>
                         </a>
                         
+                        <a href="/tags/GitHub/">
+                            <span class="chip bg-color">GitHub</span>
+                        </a>
+                        
                         <a href="/tags/SSH/">
                             <span class="chip bg-color">SSH</span>
                         </a>
                         
                         <a href="/tags/hexo/">
                             <span class="chip bg-color">hexo</span>
-                        </a>
-                        
-                        <a href="/tags/Github/">
-                            <span class="chip bg-color">Github</span>
                         </a>
                         
                         <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
@@ -1068,10 +1242,10 @@ Github 操作新建一个分支，并设定为默认分支PS：hexo d命令使�
                                 
 本教程主要用于组会记录员使用，记录员需熟练使用md格式文档，后续会议记录我们会将md文档共享在小组博客，以供大家学习使用
 
-部署从官网下载安装程序
-使用前设置新建一个仓库
-选定位置新建一个仓库此后md文档与相应附件都尽量保存在仓库目录下
-
+部署从管网下载安装程序
+使用前设置仓库
+选定位置新建一个仓库
+或者直接打开一个文件夹做为仓库此后md文档与相应附件
                             
                         </div>
                         <div class="publish-info">
@@ -1082,8 +1256,8 @@ Github 操作新建一个分支，并设定为默认分支PS：hexo d命令使�
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/%E6%96%87%E6%A1%A3%E7%BC%96%E8%BE%91%E4%B8%8E%E7%AE%A1%E7%90%86/" class="post-category">
-                                    文档编辑与管理
+                                <a href="/categories/GitHub/" class="post-category">
+                                    GitHub
                                 </a>
                                 
                                 
@@ -1108,131 +1282,6 @@ Github 操作新建一个分支，并设定为默认分支PS：hexo d命令使�
                         
                         <a href="/tags/%E8%BD%AC%E4%B9%89/">
                             <span class="chip bg-color">转义</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2023/07/06/10.ChuanhuChatGPT%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="ChuanhuChatGPT使用教程">
-                            
-                            <span class="card-title">ChuanhuChatGPT使用教程</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                
-
-使用请访问实验室自搭GPT平台
-访问网址不需要挂VPN
-申请账号请联系微信：HT4925151
-原始代码出处请访问GITHUB项目川虎ChatGPT
-
-
-登录申请账号请联系微信：HT4925151
-提问直接提问
-直接提问
-不需要挂VPN
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-06
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E6%96%87%E6%A1%A3%E7%BC%96%E8%BE%91%E4%B8%8E%E7%AE%A1%E7%90%86/" class="post-category">
-                                    文档编辑与管理
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/ChatGPT/">
-                            <span class="chip bg-color">ChatGPT</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2023/07/06/office%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="office 365 部署教程">
-                            
-                            <span class="card-title">office 365 部署教程</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                
-
-为什么使用office 365或高版本office? 详见office共享与在线协作
-官方详细教程可访问网址
-部署前需要卸载老版本，并清除注册信息与重置office设置
-如卸载失败，可以使用工具箱中的移除office功能强制移除
-
-
-O
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-06
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E6%96%87%E6%A1%A3%E7%BC%96%E8%BE%91%E4%B8%8E%E7%AE%A1%E7%90%86/" class="post-category">
-                                    文档编辑与管理
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/office/">
-                            <span class="chip bg-color">office</span>
-                        </a>
-                        
-                        <a href="/tags/office-365/">
-                            <span class="chip bg-color">office 365</span>
-                        </a>
-                        
-                        <a href="/tags/office-tool/">
-                            <span class="chip bg-color">office tool</span>
                         </a>
                         
                     </div>
@@ -1270,7 +1319,7 @@ O
 有序标题1. XXX
 2. XXX
 3. XXX
-代码块
+任务列
                             
                         </div>
                         <div class="publish-info">
@@ -1293,12 +1342,12 @@ O
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/markdown/">
-                            <span class="chip bg-color">markdown</span>
-                        </a>
-                        
                         <a href="/tags/%E6%A0%BC%E5%BC%8F/">
                             <span class="chip bg-color">格式</span>
+                        </a>
+                        
+                        <a href="/tags/markdown/">
+                            <span class="chip bg-color">markdown</span>
                         </a>
                         
                         <a href="/tags/%E8%AF%AD%E6%B3%95/">
@@ -1328,7 +1377,7 @@ O
             
         </div>
         <div class="page-info col m4 l4 hide-on-small-only">
-            <div class="center-align b-text-gray">2 / 3</div>
+            <div class="center-align b-text-gray">2 / 4</div>
         </div>
         <div class="col s6 m4 l4">
             

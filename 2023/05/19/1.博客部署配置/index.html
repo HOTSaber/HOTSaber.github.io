@@ -102,15 +102,6 @@ npm -v
     <ul class="sub-nav menus_item_child ">
       
       <li>
-        <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0">
-          
-          <i class="fas fa-tv" style="margin-top: -20px; zoom: 0.6;"></i>
-          
-          <span>机器学习</span>
-        </a>
-      </li>
-      
-      <li>
         <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0">
           
           <i class="fas fa-brain" style="margin-top: -20px; zoom: 0.6;"></i>
@@ -120,11 +111,11 @@ npm -v
       </li>
       
       <li>
-        <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95">
+        <a href="/categories/GitHub">
           
-          <i class="fas fa-file" style="margin-top: -20px; zoom: 0.6;"></i>
+          <i class="fa-brands fa-github" style="margin-top: -20px; zoom: 0.6;"></i>
           
-          <span>博客部署</span>
+          <span>GitHub</span>
         </a>
       </li>
       
@@ -134,6 +125,24 @@ npm -v
           <i class="fas fa-file-word" style="margin-top: -20px; zoom: 0.6;"></i>
           
           <span>文档编辑与管理</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0">
+          
+          <i class="fas fa-tv" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>机器学习</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95">
+          
+          <i class="fas fa-file" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>博客部署</span>
         </a>
       </li>
       
@@ -298,16 +307,6 @@ npm -v
               
                 <li>
 
-                  <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0 " style="margin-left:75px">
-				  
-				   <i class="fa fas fa-tv" style="position: absolute;left:50px" ></i>
-			      
-		          <span>机器学习</span>
-                  </a>
-                </li>
-              
-                <li>
-
                   <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0 " style="margin-left:75px">
 				  
 				   <i class="fa fas fa-brain" style="position: absolute;left:50px" ></i>
@@ -318,11 +317,11 @@ npm -v
               
                 <li>
 
-                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95 " style="margin-left:75px">
+                  <a href="/categories/GitHub " style="margin-left:75px">
 				  
-				   <i class="fa fas fa-file" style="position: absolute;left:50px" ></i>
+				   <i class="fa fa-brands fa-github" style="position: absolute;left:50px" ></i>
 			      
-		          <span>博客部署</span>
+		          <span>GitHub</span>
                   </a>
                 </li>
               
@@ -333,6 +332,26 @@ npm -v
 				   <i class="fa fas fa-file-word" style="position: absolute;left:50px" ></i>
 			      
 		          <span>文档编辑与管理</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-tv" style="position: absolute;left:50px" ></i>
+			      
+		          <span>机器学习</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-file" style="position: absolute;left:50px" ></i>
+			      
+		          <span>博客部署</span>
                   </a>
                 </li>
               
@@ -661,7 +680,7 @@ git config --global user.email &quot;youremail&quot;<span aria-hidden="true" cla
 <li>可以使用以下命令验证<pre class="line-numbers language-none"><code class="language-none">git config user.name
 git config user.email<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
 <li>生成SSH Keys，一直回车即可<pre class="line-numbers language-none"><code class="language-none">ssh-keygen -t rsa -C &quot;youremail&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li>找到<code>.shh</code>文件夹(.ssh文件通常在系统用户文件中)，奖公钥（id_rsa.pub中的内容）填写进github账户中</li>
+<li>找到<code>.shh</code>文件夹(.ssh文件通常在系统用户文件中)，将公钥（id_rsa.pub中的内容）填写进github账户中</li>
 <li>或使用以下命令查询SSH（可选）<pre class="line-numbers language-none"><code class="language-none">cat ~&#x2F;.ssh&#x2F;id_rsa.pub<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li>使用<code>ssh -T git@github.com</code>以验证是否成功<br><strong>详细SSH设置请参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36667170/article/details/79094257">Git教程 SSH keys配置</a></strong></li>
 </ul>
