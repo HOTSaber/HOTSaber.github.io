@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_neo4j_browse_命令.md",
+                "file": "9.md语法.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_neo4j_browse_命令.md",
+                "file": "9.md语法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_neo4j_browse_命令.md",
+                "file": "9.md语法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_neo4j_browse_命令.md"
+                "file": "9.md语法.md"
               }
             }
           }
@@ -172,9 +172,9 @@
   },
   "active": "c350e3c40f5a9634",
   "lastOpenFiles": [
+    "_neo4j_browse_命令.md",
     "107.深度学习-1 本地环境部署.md",
     "_python_跨文件import.md",
-    "_neo4j_browse_命令.md",
     "_Neo4j使用.md",
     "_linux压缩与解压.md",
     "6.matery进阶设置.md",
