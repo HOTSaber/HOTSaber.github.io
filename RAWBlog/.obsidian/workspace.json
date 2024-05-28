@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "9.md语法.md",
+                "file": "_gitignore.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "9.md语法.md",
+                "file": "_gitignore.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "9.md语法.md",
+                "file": "_gitignore.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "9.md语法.md"
+                "file": "_gitignore.md"
               }
             }
           }
@@ -172,6 +172,8 @@
   },
   "active": "c350e3c40f5a9634",
   "lastOpenFiles": [
+    "9.md语法.md",
+    "_zotero_note.md",
     "_neo4j_browse_命令.md",
     "107.深度学习-1 本地环境部署.md",
     "_python_跨文件import.md",
@@ -183,7 +185,6 @@
     "3.上传新博客内容.md",
     "2.博客主题设置.md",
     "1.博客部署配置.md",
-    "9.md语法.md",
     "联邦学习顶会论文阅读.md",
     "论文阅读.md",
     "_torch与torchvision不匹配问题.md",
@@ -197,7 +198,6 @@
     "_neo4j_节点属性.md",
     "_linux下看service.md",
     "_Qwen_systemprompt.md",
-    "使用docker多开neo4j.md",
     "obsidian 入门教程-2.py",
     "deleted",
     "blogpic/300.使用GitHub搭建图床-1.png",
