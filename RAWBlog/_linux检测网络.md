@@ -3,13 +3,13 @@
 首先，你需要安装`nethogs`。在终端中执行以下命令：
 
 ```bash
-bash复制代码sudo apt-get install nethogs
+sudo apt-get install nethogs
 ```
 
 安装完成后，你可以通过运行`nethogs`命令来查看网络使用情况。例如，如果你想查看第一个网络接口（通常是`eth0`或`wlan0`，具体取决于你的系统配置）的网络使用情况，可以运行：
 
 ```bash
-bash复制代码sudo nethogs eth0
+sudo nethogs eth0
 ```
 
 请注意，你可能需要根据你的网络接口名称进行调整。运行上述命令后，你将看到一个按带宽使用的进程排序的列表，从而可以判断哪些程序正在下载数据。

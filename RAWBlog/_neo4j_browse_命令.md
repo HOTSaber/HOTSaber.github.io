@@ -94,6 +94,12 @@ WHERE NOT o:条款编号 AND NOT o:文件编号 AND NOT o:层级 AND N
 RETURN n, r, m, s, o
 LIMIT 300
 ```
+
+```
+MATCH (n:`层级`)-[r]-(f) 
+
+RETURN n, r, f LIMIT 300
+```
 ## 查询解释
 
 - **MATCH** 部分：这里定义了一个图模式，表示从具有特定属性的节点 `n` 开始，通过任意类型的关系 `r` 连接到节点 `m`，再通过关系 `s` 连接到节点 `o`。

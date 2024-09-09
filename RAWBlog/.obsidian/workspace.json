@@ -13,13 +13,74 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_gitignore.md",
+                "file": "_neo4j GDS.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2a4053a5a006b5c0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_Neo4j使用.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7a66b4bde5488d6d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "112.使用docker多开neo4j.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d37055766a2f01ec",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "113.doccano文本注释工具.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1f21230bf1e7cc67",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_linux 清理大文件.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "39b17ed5cf719592",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_pip 安装与升级包.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -85,7 +146,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_gitignore.md",
+                "file": "_pip 安装与升级包.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +163,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_gitignore.md",
+                "file": "_pip 安装与升级包.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +186,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_gitignore.md"
+                "file": "_pip 安装与升级包.md"
               }
             }
           }
@@ -146,34 +207,34 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "c350e3c40f5a9634",
+  "active": "39b17ed5cf719592",
   "lastOpenFiles": [
-    "_python_跨文件import.md",
-    "_gitignore.md",
-    "9.md语法.md",
-    "_zotero_note.md",
-    "_neo4j_browse_命令.md",
+    "_linux 清理大文件.md",
+    "_pip 安装与升级包.md",
+    "110.modelscope使用教程.md",
+    "113.doccano文本注释工具.md",
+    "112.使用docker多开neo4j.md",
+    "_linux 通用指令.md",
+    "_linux加载U盘.md",
+    "_linux检测网络.md",
     "107.深度学习-1 本地环境部署.md",
     "_Neo4j使用.md",
+    "109.neo4j教程.md",
+    "_neo4j GDS.md",
+    "_gitignore.md",
+    "_neo4j_备份与恢复数据.md",
     "_linux压缩与解压.md",
+    "_neo4j_browse_命令.md",
+    "_neo4j_节点属性.md",
+    "_python_跨文件import.md",
+    "9.md语法.md",
+    "_zotero_note.md",
     "6.matery进阶设置.md",
     "5.home-page-configuration.md",
     "4.搭建图床.md",
     "3.上传新博客内容.md",
     "2.博客主题设置.md",
     "1.博客部署配置.md",
-    "联邦学习顶会论文阅读.md",
-    "论文阅读.md",
-    "_torch与torchvision不匹配问题.md",
-    "_linux 通用指令.md",
-    "_python_包思想.md",
-    "_git建立本地与github链接.md",
-    "_git.md",
-    "_git pull时发生冲突.md",
-    "_git安装.md",
-    "_git命令.md",
-    "_neo4j_节点属性.md",
-    "_linux下看service.md",
     "obsidian 入门教程-2.py",
     "deleted",
     "blogpic/300.使用GitHub搭建图床-1.png",
