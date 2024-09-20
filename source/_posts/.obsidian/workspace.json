@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "9.md语法.md",
+                "file": "深度学习-1 本地环境部署.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "9.md语法.md",
+                "file": "深度学习-1 本地环境部署.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "9.md语法.md",
+                "file": "深度学习-1 本地环境部署.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "9.md语法.md"
+                "file": "深度学习-1 本地环境部署.md"
               }
             }
           }
@@ -148,6 +148,9 @@
   },
   "active": "3050f9569f3666ac",
   "lastOpenFiles": [
+    "14.windows安装linux.md",
+    "111.linux安装教程.md",
+    "9.md语法.md",
     "深度学习-1 本地环境部署.md"
   ]
 }

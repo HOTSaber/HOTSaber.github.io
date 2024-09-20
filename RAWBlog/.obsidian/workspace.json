@@ -73,14 +73,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_pip 安装与升级包.md",
+                "file": "107.深度学习-1 本地环境部署.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "41516c17e58db88c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "107.深度学习-1 本地环境部署.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -146,7 +158,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_pip 安装与升级包.md",
+                "file": "107.深度学习-1 本地环境部署.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,7 +175,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_pip 安装与升级包.md",
+                "file": "107.深度学习-1 本地环境部署.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -186,7 +198,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_pip 安装与升级包.md"
+                "file": "107.深度学习-1 本地环境部署.md"
               }
             }
           }
@@ -207,9 +219,14 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "39b17ed5cf719592",
+  "active": "2c4dbdef15fa54b9",
   "lastOpenFiles": [
+    "未命名 2.md",
+    "107.深度学习-1 本地环境部署.md",
     "_linux 清理大文件.md",
+    "_cuda版本.md",
+    "_abutiongraph.md",
+    "_释放vdisk占用空间.md",
     "_pip 安装与升级包.md",
     "110.modelscope使用教程.md",
     "113.doccano文本注释工具.md",
@@ -217,7 +234,6 @@
     "_linux 通用指令.md",
     "_linux加载U盘.md",
     "_linux检测网络.md",
-    "107.深度学习-1 本地环境部署.md",
     "_Neo4j使用.md",
     "109.neo4j教程.md",
     "_neo4j GDS.md",
@@ -231,10 +247,6 @@
     "_zotero_note.md",
     "6.matery进阶设置.md",
     "5.home-page-configuration.md",
-    "4.搭建图床.md",
-    "3.上传新博客内容.md",
-    "2.博客主题设置.md",
-    "1.博客部署配置.md",
     "obsidian 入门教程-2.py",
     "deleted",
     "blogpic/300.使用GitHub搭建图床-1.png",
