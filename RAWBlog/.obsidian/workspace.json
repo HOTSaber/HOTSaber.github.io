@@ -4,15 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "99be8cf7e1fe0d7b",
+        "id": "d141d6005eed13be",
         "type": "tabs",
         "children": [
           {
-            "id": "d078ddbfe8690141",
+            "id": "1b450c88945cc304",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "image",
+              "state": {
+                "file": "blogpic/_V2ray脚本使用-3.png"
+              }
             }
           }
         ]
@@ -81,6 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "blogpic/_V2ray脚本使用-3.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "blogpic/_V2ray脚本使用-3.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +122,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "blogpic/_V2ray脚本使用-3.png"
+              }
             }
           }
         ]
@@ -130,54 +136,54 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
     }
   },
-  "active": "d078ddbfe8690141",
+  "active": "2c4dbdef15fa54b9",
   "lastOpenFiles": [
-    "_python中的文件复制与移动.md",
-    "_python_f.read()与as f读取的区别.md",
-    "_neo4j GDS.md",
-    "未命名 2.md",
-    "107.深度学习-1 本地环境部署.md",
-    "_linux 清理大文件.md",
-    "_cuda版本.md",
-    "_abutiongraph.md",
-    "_释放vdisk占用空间.md",
-    "_pip 安装与升级包.md",
-    "110.modelscope使用教程.md",
-    "113.doccano文本注释工具.md",
-    "112.使用docker多开neo4j.md",
-    "_linux 通用指令.md",
-    "_linux加载U盘.md",
-    "_linux检测网络.md",
-    "_Neo4j使用.md",
-    "109.neo4j教程.md",
-    "_gitignore.md",
-    "_neo4j_备份与恢复数据.md",
-    "_linux压缩与解压.md",
+    "blogpic/_V2ray脚本使用-1.png",
+    "blogpic/_V2ray脚本使用-2.png",
+    "blogpic/2qtz2.png",
+    "blogpic/11.博客的多终端同步-2.png",
+    "blogpic/1xtkv.png",
+    "_V2ray脚本使用.md",
+    "blogpic/_V2ray脚本使用-3.png",
+    "[[]].md",
+    "_windows下gitbash'wget'.md",
+    "![_V2ray脚本使用-2.png].md",
     "_neo4j_browse_命令.md",
-    "_neo4j_节点属性.md",
+    "_0.0.0.0与127.0.0.1（本地回环地址）.md",
+    "blogpic/tpybg.png",
+    "blogpic/qvpy3.png",
+    "blogpic/oyvf9.png",
+    "blogpic/zogfv.png",
+    "blogpic/xz3dz.png",
+    "_git pull时发生冲突.md",
+    "未命名 2.md",
+    "_python中的文件复制与移动.md",
     "_python_跨文件import.md",
-    "9.md语法.md",
-    "_zotero_note.md",
+    "_python_包思想.md",
+    "_python_f.read()与as f读取的区别.md",
+    "_pip 安装与升级包.md",
+    "_neo4j GDS.md",
+    "_linux压缩与解压.md",
+    "_Neo4j使用.md",
+    "113.doccano文本注释工具.md",
+    "107.深度学习-1 本地环境部署.md",
+    "108.nccl实现多GPU交互.md",
+    "107.windows安装linux.md",
+    "_cuda版本.md",
+    "_git建立本地与github链接.md",
+    "_git.md",
+    "_git安装.md",
+    "_git命令.md",
     "obsidian 入门教程-2.py",
     "deleted",
-    "blogpic/300.使用GitHub搭建图床-1.png",
-    "blogpic/200.obsidian 入门教程-4.png",
-    "blogpic/200.obsidian 入门教程-3.png",
-    "blogpic/200.obsidian 入门教程-2.png",
-    "blogpic/obsidian 入门教程-10.png",
-    "新建文件夹/obsidian 入门教程-2.png",
-    "新建文件夹/obsidian 入门教程-7.png",
-    "新建文件夹/obsidian 入门教程-6.png",
-    "新建文件夹/obsidian 入门教程-5.png",
-    "新建文件夹/obsidian 入门教程-4.png",
     "obsidian 入门教程-1.py",
     "新建文件夹",
     "_linux 通用指令-1.py",
