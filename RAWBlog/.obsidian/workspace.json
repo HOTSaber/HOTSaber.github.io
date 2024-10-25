@@ -11,11 +11,44 @@
             "id": "d078ddbfe8690141",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "_warp.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "_warp"
+            }
+          },
+          {
+            "id": "8a04210dfefd3989",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.4"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.4"
+            }
+          },
+          {
+            "id": "2dd1e63a5282d4c3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_linux 通用指令.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "_linux 通用指令"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -35,7 +68,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
             }
           },
           {
@@ -50,7 +85,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
             }
           },
           {
@@ -58,7 +95,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
             }
           }
         ]
@@ -81,6 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "_webDAV.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,7 +128,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "_webDAV 的反向链接列表"
             }
           },
           {
@@ -97,9 +139,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "_webDAV.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "_webDAV 的出链列表"
             }
           },
           {
@@ -110,7 +155,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
             }
           },
           {
@@ -118,7 +165,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "_webDAV.md"
+              },
+              "icon": "lucide-list",
+              "title": "_webDAV 的大纲"
             }
           }
         ]
@@ -138,17 +189,19 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "d078ddbfe8690141",
+  "active": "2dd1e63a5282d4c3",
   "lastOpenFiles": [
+    "_cuda版本.md",
+    "_abutiongraph.md",
+    "_释放vdisk占用空间.md",
+    "_webDAV.md",
+    "_warp.md",
     "_python中的文件复制与移动.md",
     "_python_f.read()与as f读取的区别.md",
     "_neo4j GDS.md",
     "未命名 2.md",
     "107.深度学习-1 本地环境部署.md",
     "_linux 清理大文件.md",
-    "_cuda版本.md",
-    "_abutiongraph.md",
-    "_释放vdisk占用空间.md",
     "_pip 安装与升级包.md",
     "110.modelscope使用教程.md",
     "113.doccano文本注释工具.md",
@@ -164,8 +217,6 @@
     "_neo4j_browse_命令.md",
     "_neo4j_节点属性.md",
     "_python_跨文件import.md",
-    "9.md语法.md",
-    "_zotero_note.md",
     "obsidian 入门教程-2.py",
     "deleted",
     "blogpic/300.使用GitHub搭建图床-1.png",
