@@ -1,3 +1,4 @@
+
 在Ubuntu 22.04 LTS上部署WebDAV可以通过Apache或Nginx等Web服务器实现。以下是使用Apache部署WebDAV的步骤：
 
 ### 步骤 1：安装Apache
@@ -149,3 +150,54 @@ sudo ufw allow 'Apache'
 ```bash
 sudo tail -f /var/log/apache2/error.log
 ```
+
+# 步骤9: 在windows上配置webdav为共享磁盘
+****
+参考[Windows下WebDAV映射网络驱动器若干问题](https://www.cnblogs.com/qianjiashi/p/15704595.html "发布于 2021-12-18 11:04")与[在 Windows 上使用 WebDAV 装载共享文件夹](https://docs.qnap.com/operating-system/qts/4.5.x/zh-cn/GUID-31D5B05F-F29E-4D61-9758-C8CF839C14FD.html)
+****
+## 前言
+
+发现 `Windows` 默认只支持 `HTTPS` 方式的 `WebDAV` 映射，默认不支持 `HTTP` 方式的 `WebDAV` 映射，有没有办法在不安装第三方客户端的情况下，让 `Windows` 支持 `HTTP` 方式的 `WebDAV` 映射呢？上网一查是有的，只不过要改注册表
+
+## 具体操作
+
+1. 改注册表
+
+`计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WebClient\Parameters` 下，把 `BasicAuthLevel` 的值改为 `2` ( ‘1’ 默认只支持 HTTPS，’2’ 支持 HTTP 和 HTTPS)
+
+2. 重启服务
+
+`以管理员身份运行CMD`
+
+```dos
+net stop webclient 
+net start webclient
+```
+
+或者
+进入`控制面板 -> 系统和安全(或系统和维护) -> 管理工具 -> 服务`，打开的弹窗中，找到 `WebClient`，启动之(如果已停止的话)，并且最好设置`启动类型`为`自动`。
+
+3. 映射网络驱动器
+
+计算机 –> 右键 –> 映射网络驱动器 –> 填写相应的信息 –> 完成
+注意启用`登录时重新连接`以及`使用其他凭据连接`。
+
+第二个问题：
+
+转载自：https://blog.52nyg.com/2021/06/691
+
+WebDav连接上后，结果提示：
+
+在webdav中复制文件出来会提示此错误:"文件大小超出允许的限制，无法保存"
+
+这是因为Windows默认限制为50MB文件大小 超出不允许复制
+
+解决方法：  
+1. 按 Win + R 键  
+2. 在运行窗口输入regedit,按回车  
+3. 在打开的注册表编辑器中进入这个地址：HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WebClient\Parameters  
+4. 找到FileSizeLimitInBytes，双击打开  
+5. 在打开的设置窗口，选择decimal（十进制）  
+6. 修改限制的大小，比如加个0（默认是50M,即50000000）其实有最大值限制，4294967295~4,095.9MB=4GB，也就是32位系统能提供的最大值了
+7. 修改好后，再选择hexadecimal（十六进制）  
+8. 保存，然后重启电脑
