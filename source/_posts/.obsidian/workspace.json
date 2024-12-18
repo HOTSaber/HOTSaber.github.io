@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "深度学习-1 本地环境部署.md",
+                "file": "112.使用docker多开neo4j.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "深度学习-1 本地环境部署"
+              "title": "112.使用docker多开neo4j"
             }
           }
         ]
@@ -164,9 +164,14 @@
   },
   "active": "3050f9569f3666ac",
   "lastOpenFiles": [
-    "14.windows安装linux.md",
+    "201.office通过样式管理格式.md",
+    "112.使用docker多开neo4j.md",
     "111.linux安装教程.md",
-    "9.md语法.md",
-    "深度学习-1 本地环境部署.md"
+    "110.modelscope使用教程.md",
+    "108.nccl实现多GPU交互.md",
+    "107.docker教程.md",
+    "深度学习-1 本地环境部署.md",
+    "14.windows安装linux.md",
+    "9.md语法.md"
   ]
 }
