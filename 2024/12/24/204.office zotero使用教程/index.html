@@ -1,0 +1,1444 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta name="keywords" content="zotero使用教程, 挖掘机">
+    <meta name="description" content="
+相关链接:Zotero官网Zotero官方下载页面Zotero官方样式编辑网站
+
+安装ZoteroZotero包含两个部分，Zotero软件本体与Zotero connecter。两者都可以通过访问Zotero官方下载页面进行下载。Zot">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>zotero使用教程 | 挖掘机</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">挖掘机</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>主页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-book" style="zoom: 0.6;"></i>
+      
+      <span>记录</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0">
+          
+          <i class="fas fa-brain" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>深度学习</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E7%BC%96%E7%A8%8B%E4%B8%8E%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE">
+          
+          <i class="fa-brands fa-github" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>编程与系统配置</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E6%96%87%E6%A1%A3%E7%BC%96%E8%BE%91%E4%B8%8E%E7%AE%A1%E7%90%86">
+          
+          <i class="fas fa-file-word" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>文档编辑与管理</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0">
+          
+          <i class="fas fa-tv" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>机器学习</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95">
+          
+          <i class="fas fa-file" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>博客部署</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/tags">
+          
+          <i class="fas fa-tags" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>标签</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories">
+          
+          <i class="fas fa-bookmark" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>分类</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/archives">
+          
+          <i class="fas fa-archive" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>归档</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>工具</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/mac">
+          
+          <i class="fab fa-windows" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Windows软件</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/link">
+          
+          <i class="fas fa-link" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>常用链接</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/navigation">
+          
+          <i class="fas fa-location-arrow" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>导航</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>其他</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/friends">
+          
+          <i class="fas fa-address-book" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>友情链接</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/about">
+          
+          <i class="fas fa-user-circle" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>关于我</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">挖掘机</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			主页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-book"></i>
+			
+			记录
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-brain" style="position: absolute;left:50px" ></i>
+			      
+		          <span>深度学习</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/%E7%BC%96%E7%A8%8B%E4%B8%8E%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE " style="margin-left:75px">
+				  
+				   <i class="fa fa-brands fa-github" style="position: absolute;left:50px" ></i>
+			      
+		          <span>编程与系统配置</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/%E6%96%87%E6%A1%A3%E7%BC%96%E8%BE%91%E4%B8%8E%E7%AE%A1%E7%90%86 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-file-word" style="position: absolute;left:50px" ></i>
+			      
+		          <span>文档编辑与管理</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-tv" style="position: absolute;left:50px" ></i>
+			      
+		          <span>机器学习</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95 " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-file" style="position: absolute;left:50px" ></i>
+			      
+		          <span>博客部署</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/tags " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-tags" style="position: absolute;left:50px" ></i>
+			      
+		          <span>标签</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-bookmark" style="position: absolute;left:50px" ></i>
+			      
+		          <span>分类</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/archives " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-archive" style="position: absolute;left:50px" ></i>
+			      
+		          <span>归档</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			工具
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/mac " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-windows" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Windows软件</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/link " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-link" style="position: absolute;left:50px" ></i>
+			      
+		          <span>常用链接</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/navigation " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-location-arrow" style="position: absolute;left:50px" ></i>
+			      
+		          <span>导航</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-user-circle"></i>
+			
+			其他
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/friends " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-address-book" style="position: absolute;left:50px" ></i>
+			      
+		          <span>友情链接</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/about " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-user-circle" style="position: absolute;left:50px" ></i>
+			      
+		          <span>关于我</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/HOTSaber/HOTSaber.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/HOTSaber/HOTSaber.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">zotero使用教程</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/office/">
+                                <span class="chip bg-color">office</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%A0%BC%E5%BC%8F/">
+                                <span class="chip bg-color">格式</span>
+                            </a>
+                        
+                            <a href="/tags/zotero/">
+                                <span class="chip bg-color">zotero</span>
+                            </a>
+                        
+                            <a href="/tags/chrome/">
+                                <span class="chip bg-color">chrome</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86/">
+                                <span class="chip bg-color">文献管理</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/">
+                                <span class="chip bg-color">参考文献</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%96%87%E6%A1%A3%E7%BC%96%E8%BE%91%E4%B8%8E%E7%AE%A1%E7%90%86/" class="post-category">
+                                文档编辑与管理
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2024-12-24
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <hr>
+<p>相关链接:<br><a target="_blank" rel="noopener" href="https://www.zotero.org/">Zotero官网</a><br><a target="_blank" rel="noopener" href="https://www.zotero.org/download/">Zotero官方下载页面</a><br><a target="_blank" rel="noopener" href="https://editor.citationstyles.org/about/">Zotero官方样式编辑网站</a></p>
+<hr>
+<h1 id="安装Zotero"><a href="#安装Zotero" class="headerlink" title="安装Zotero"></a>安装Zotero</h1><p>Zotero包含两个部分，<code>Zotero软件本体</code>与<code>Zotero connecter</code>。两者都可以通过访问<a target="_blank" rel="noopener" href="https://www.zotero.org/download/">Zotero官方下载页面</a>进行下载。<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/204.office%20zotero%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-1.png" alt="204.office zotero使用教程-1"><br><code>Zotero connecter</code>推荐与<code>chrome</code>搭配使用，官网链接会跳转到<code>chrome应用商店</code>，需要<code>科学上网</code>访问。</p>
+<h1 id="配置常用插件"><a href="#配置常用插件" class="headerlink" title="配置常用插件"></a>配置常用插件</h1><p>Zotero插件一搬均为开源插件，普遍公布于<a target="_blank" rel="noopener" href="https://github.com/">Github</a>。<br>进入项目后找到<code>Releases</code>版块，即可下载各版本的插件，一般插件文件以<code>.xpi</code>为后缀。<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/204.office%20zotero%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-2.png" alt="204.office zotero使用教程-2"></p>
+<p>在下载好<code>.xpi</code>插件文件后，在Zotero上打开<code>工具</code>–&gt;<code>插件</code>，打开<code>插件管理器</code>，选择<code>管理插件选项</code>–&gt;<code>Install Plugin From File</code>，选择下载好的<code>.xpi</code>文件，即可完成插件安装<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/204.office%20zotero%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-3.png" alt="204.office zotero使用教程-3"><br>在<code>编辑</code>–&gt;<code>设置</code>中，可以看到新添插件的具体选项配置，可以通过对应<code>Github项目</code>中的说明文档，进行个性化配置。</p>
+<h2 id="Jasminum"><a href="#Jasminum" class="headerlink" title="Jasminum"></a>Jasminum</h2><p><a target="_blank" rel="noopener" href="https://github.com/l0o0/jasminum">jasminum项目链接</a><br>一个简单的 Zotero 中文插件，旨在提升 Zotero 中文用户的使用体验。主要功能有：</p>
+<pre class="line-numbers language-none"><code class="language-none">1. 中文期刊附件（PDF&#x2F;CAJ）的元数据抓取，支持添加PDF&#x2F;CAJ时自动抓取元数据功能
+2. 集成 Zotero 中文社区转换器的下载与更新功能
+3. 为知网学位论文PDF添加章节书签（依赖于PDFtk）
+4. 更新中文文献引用次数，核心期刊信息
+5. 合并&#x2F;拆分姓，名，识别文献条目语言，下载知网附件，统一日期格式等<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="DOI-manager"><a href="#DOI-manager" class="headerlink" title="DOI manager"></a>DOI manager</h2><p><a target="_blank" rel="noopener" href="https://github.com/bwiernik/zotero-shortdoi">DOI manager项目链接</a><br>这个插件能自动帮助你更新文献的DOI信息，DOI是scihub自动下载的必要信息。</p>
+<h2 id="SciPDF"><a href="#SciPDF" class="headerlink" title="SciPDF"></a>SciPDF</h2><p><a target="_blank" rel="noopener" href="https://github.com/syt2/zotero-scipdf">SciPDF项目链接</a><br>这是一个用于 Zotero7 的 Sci-Hub 插件。<br>此插件利用了 Zotero 内自带的 <a target="_blank" rel="noopener" href="https://www.zotero.org/support/kb/custom_pdf_resolvers">PDF resolvers</a>方案，将 Sci-Hub 的 resolver 自动填入 <code>extensions.zotero.findPDFs.resolvers</code> 字段，以实现在zotero内从sci-hub下载pdf。</p>
+<h2 id="Linter-for-Zotero"><a href="#Linter-for-Zotero" class="headerlink" title="Linter for Zotero"></a>Linter for Zotero</h2><p><a target="_blank" rel="noopener" href="https://github.com/northword/zotero-format-metadata">Linter for Zotero项目链接</a></p>
+<p>可以规范化&#x2F;格式化条目的元数据（字段数据）。</p>
+<pre class="line-numbers language-none"><code class="language-none">1. 快速设置上下标、粗体和斜体
+2. 重复条目检查
+当新增条目时，插件自动检查该条目是否与库中已有条目重复，若有重复，则提示用户确认。
+3. 条目类型检查
+当添加网页类型条目，且其网址包含学术出版商域名时，提示用户。
+4.将标题转为“句首大写”
+Zotero 文档建议将标题存储为“句子式大写”的格式，这将有利于 CSL 对其执行“title case”变换 2。Zotero 7 内置了将标题转为“句子式大写”的功能，预置了一些特例识别，本插件在其基础上，增加了针对化学式等的专有名词识别。
+5. 期刊及其期刊缩写
+对于期刊标题，插件将使相同的期刊统一。
+插件内置了一个包含约 10 万条期刊缩写的数据集（来自 JabRef ），插件将首先在本地数据集里查询期刊缩写；
+若无则根据 ISSN List of Title Word Abbreviations 推断其缩写（可在首选项中关闭此行为）；
+若仍没有找到缩写，则以期刊全称代替（可在首选项中关闭此行为）。
+6. 根据高校名称填写高校所在地
+7. 根据标识符补全条目的期、卷、页等信息
+8. 自动填写条目语言
+插件根据条目的标题判断其语言，并将识别结果填入“语言字段”，这对于 CSL 完成参考文献表双语排版（如 et al 与 等 混排）非常重要。
+
+默认的，插件被限制仅识别简体中文和英文，你可以在首选项中关闭语言限制或添加其他常用语言的 ISO 639-1 代码。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="Zotero-PDF-Translate"><a href="#Zotero-PDF-Translate" class="headerlink" title="Zotero PDF Translate"></a>Zotero PDF Translate</h2><p><a target="_blank" rel="noopener" href="https://github.com/windingwind/zotero-pdf-translate">Zotero PDF Translate项目链接</a><br>翻译插件,主要功能有：</p>
+<pre class="line-numbers language-none"><code class="language-none">- 划词翻译（自动&#x2F;手动）
+- 标题、摘要翻译与源文本&#x2F;翻译结果显示切换
+- 批注翻译（自动&#x2F;手动）
+- 支持15+种翻译服务与4+种字典服务
+- 自定义翻译侧栏UI，支持同时使用多种翻译引擎<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="Delete-item-s-with-attachment-s"><a href="#Delete-item-s-with-attachment-s" class="headerlink" title="Delete item(s) with attachment(s)"></a>Delete item(s) with attachment(s)</h2><p><a target="_blank" rel="noopener" href="https://github.com/redleafnew/delitemwithatt">Delete item(s) with attachment(s)项目链接</a><br>插件用途</p>
+<pre class="line-numbers language-none"><code class="language-none">1. 删除条目或分类的同时将链接的附件也一块删除。
+2. 根据条目标题语言将所选条目语言字段设置为&#96;en-US&#96;或&#96;zh-CN&#96;。
+3. 将附件导出。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h1 id="使用Zotero插入引用"><a href="#使用Zotero插入引用" class="headerlink" title="使用Zotero插入引用"></a>使用Zotero插入引用</h1><h2 id="导入文献"><a href="#导入文献" class="headerlink" title="导入文献"></a>导入文献</h2><h3 id="connecter插件导入"><a href="#connecter插件导入" class="headerlink" title="connecter插件导入"></a><code>connecter</code>插件导入</h3><ul>
+<li>确保<code>Zotero本体软件</code>正运行</li>
+<li>使用安装了<code>Zotero connecter</code>插件的浏览器进入<code>文献搜索网站</code>，如：<a target="_blank" rel="noopener" href="https://www.cnki.net/">CNKI</a>,<a target="_blank" rel="noopener" href="https://webofscience.clarivate.cn/wos/alldb/basic-search">web of science</a>,<a target="_blank" rel="noopener" href="https://scholar.google.com/">google学术</a>，<a target="_blank" rel="noopener" href="https://xueshu.baidu.com/">百度学术</a>等。</li>
+<li>如果可以进入文件详情，则<code>connecter</code>插件会抓取页面信息，此时就可以使用<code>connecter</code>插件进行文献导入。<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/204.office%20zotero%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-4.png" alt="204.office zotero使用教程-4"></li>
+<li>出现以上界面时按<code>回车</code>键即可将文献导入Zotero</li>
+</ul>
+<h3 id="手动导入"><a href="#手动导入" class="headerlink" title="手动导入"></a>手动导入</h3><p>对于有时无法进入详情页的情况，我们可以复制<code>BibTex</code>格式的引用内容，然后手工导入进Zotero。这里我们已谷歌学术为例：<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/204.office%20zotero%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-5.png" alt="204.office zotero使用教程-5">只<img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/204.office%20zotero%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-6.png" alt="204.office zotero使用教程-6"><br>只需要<code>ctrl+A</code>全选，然后复制所有内容，进入Zotero下选择相应目录，使用快捷键<code>shift+ctrl+alt+I</code>或<code>文件</code>–&gt;<code>从剪贴板导入</code>即可。<br>但这种导入方法不会自动下载文献原文，需要自己手动添加额外的附件。</p>
+<h2 id="插入引用"><a href="#插入引用" class="headerlink" title="插入引用"></a>插入引用</h2><p>引用分为插入<code>引用标识</code>与插入<code>参考目录</code>即<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/204.office%20zotero%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-12.png" alt="204.office zotero使用教程-12"></p>
+<h3 id="插入引用标识"><a href="#插入引用标识" class="headerlink" title="插入引用标识"></a>插入引用标识</h3><ul>
+<li>只需要把光标停留在需要插入的位置，然后在<code>Zotero</code>标签下，选择<code>Add/Edit Citation</code>即可，在弹出的窗口中可以直接搜索关键词，也可以进入传统视图在分类中浏览选择文献。<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/204.office%20zotero%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-13.png" alt="204.office zotero使用教程-13"></li>
+<li><strong>需要注意的是，在第一次插入时，会出现<code>样式选择</code>界面</strong><br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/204.office%20zotero%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-15.png" alt="204.office zotero使用教程-15"><br>我们可以到<a target="_blank" rel="noopener" href="https://github.com/zotero-chinese/styles">zotero-chinese&#x2F;styles项目</a>中去找别人已经修改好的文献样式，或者自己在某一样式的基础上进行<a target="_blank" rel="noopener" href="http://hotsaber.github.io/2024/12/24/204.office%20zotero%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/#%E6%A0%B7%E5%BC%8F%E7%BC%96%E8%BE%91">样式编辑</a></li>
+<li>此外使用<code>多重来源</code>功能，可以在同一位置插入多篇引文。<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/204.office%20zotero%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-16.png" alt="204.office zotero使用教程-16"></li>
+</ul>
+<h3 id="插入参考目录"><a href="#插入参考目录" class="headerlink" title="插入参考目录"></a>插入参考目录</h3><p>只需要把光标停留在文档最后，选择<code>Add/Edit Bibliography</code>即可自动插入参考目录。</p>
+<h1 id="Zotero的进阶技巧"><a href="#Zotero的进阶技巧" class="headerlink" title="Zotero的进阶技巧"></a>Zotero的进阶技巧</h1><h2 id="样式编辑"><a href="#样式编辑" class="headerlink" title="样式编辑"></a>样式编辑</h2><p><a target="_blank" rel="noopener" href="https://editor.citationstyles.org/about/">Zotero官方样式编辑网站</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/663211485">参考博客</a></p>
+<ul>
+<li>进入网站后我们选择<code>Visual editor</code>进入可视化编辑页面。</li>
+<li>在<code>style</code> 菜单中选择<code>load style</code>开加载一个样式模板<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/204.office%20zotero%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-17.png" alt="204.office zotero使用教程-17"></li>
+<li>Zotero的数据存储位置可以在Zotero<code>编辑--&gt;设置--&gt;高级--&gt;数据存储位置</code>查看，而所有样式都保存在<code>数据存储位置</code>下的<code>styles</code>文件中。</li>
+<li>我们可以选择<code>Example Citations</code>中的一个<code>Citation</code>,进入Advanced选项，使用自己导出的条目(json格式)来充当样例。</li>
+<li>设置首字母大写 - 依次点开MACROS-Macro：author-Names-Name part，设置text-case，默认的是uppercase全大写</li>
+<li>其他的分述如下：<br>  lowercase：全小写<br>  uppercase：全大写<br>  capitalize-first：首字母大写 </li>
+<li>Zotero官方的样式编辑器有一个很好用的功能，只要我们点击对应字段，就可以直接跳转到具体的参数中，不用去机械的记忆那些参数选择的具体路径 - 比如下面点击了标题字段，就可以跳转到标题的参数设置选项中。这个原理其实很简单，每一个字段对应对应的变量，我们鼠标选择的是字段，但Zotero可以把我们转换为对应的变量设置页面。</li>
+<li>修改完之后，进入<code>Style--&gt;save style--&gt;Download Style</code>我们将其下载下来。<br>我们下载的这个样式是在导入的样式基础上进行修改的，里面的名称ID、名称之类标识信息都还没有发生变化。如果直接导入Zotero参考文献样式管理库中，会存在重名的问题。 用文本管理器打开下载的这个样式，参考文献样式相关的信息放在info块中。我们对title和id进行修改，加一些自己特定的标识符，从而与原作者有所区分。<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/204.office%20zotero%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-18.png" alt="204.office zotero使用教程-18"><br>最后将样式导入到Zotero中即可。</li>
+</ul>
+<h2 id="异地同步与共享协作"><a href="#异地同步与共享协作" class="headerlink" title="异地同步与共享协作"></a>异地同步与共享协作</h2><p>需要注意Zotero的数据同步分为<code>数据同步</code>与<code>文件同步</code>，其中<code>数据同步</code>是指<code>引文数据</code>，<code>文件同步</code>则同步的是<code>附件数据</code>。同账号下的数据同步是通过官方账号实现的，而附件数据就需要官方账号中的存储空间或使用其他方法同步。</p>
+<h3 id="导出法"><a href="#导出法" class="headerlink" title="导出法"></a>导出法</h3><p>这种方法只能导出<code>引文数据</code>，不会保存任何<code>附件数据</code>。</p>
+<ul>
+<li>在想要导出分享的分类上右键，选择导出分类，与导出文件类型。<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/204.office%20zotero%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-7.png" alt="204.office zotero使用教程-7"></li>
+<li>被分享者，只需要收到导出文件，然后导入即可。</li>
+</ul>
+<h2 id="备份法"><a href="#备份法" class="headerlink" title="备份法"></a>备份法</h2><p>这种方法可以共享<code>全部数据</code>，但可能会导致数据覆盖。</p>
+<ul>
+<li>在<code>编辑</code>–&gt;<code>设置</code>–&gt;<code>高级</code>中，可以看到数据存储位置。<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/204.office%20zotero%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-8.png" alt="204.office zotero使用教程-8"></li>
+<li>我们可以打开数据文件夹，备份其中内容，替换被共享电脑上的数据。</li>
+</ul>
+<h3 id="云端法"><a href="#云端法" class="headerlink" title="云端法"></a>云端法</h3><p>配置云端应当是异地同步的最好办法。</p>
+<ul>
+<li>云端需<a target="_blank" rel="noopener" href="http://hotsaber.github.io/2024/12/24/302.%E4%BA%91%E7%AB%AF%E9%83%A8%E7%BD%B2webDAV/">部署webDAV</a>，webDAV上保存的是<code>附件数据</code></li>
+<li>在<code>编辑--&gt;设置--&gt;同步</code>中的<code>文件同步</code>，设置你部署webDAV的服务器地址与用户密码等信息即可<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/204.office%20zotero%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-11.png" alt="204.office zotero使用教程-11"></li>
+</ul>
+<h3 id="Zotero群组共享"><a href="#Zotero群组共享" class="headerlink" title="Zotero群组共享"></a>Zotero群组共享</h3><p>Zotero中，用户的文献一般放在我的文库（My Library）中，如果你想和别人<strong>共享文献&#x2F;协同研究</strong>，那么你可以建一个群组（Group Library）。</p>
+<ul>
+<li>通过<code>文件--&gt;新建文献库--&gt;新建群组</code>来新建一个群组<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/204.office%20zotero%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-9.png" alt="204.office zotero使用教程-9"></li>
+<li>此时会跳转到<a target="_blank" rel="noopener" href="https://www.zotero.org/groups/new/">Zotero群组创建页面</a>。<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/204.office%20zotero%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-10.png" alt="204.office zotero使用教程-10"><br>从上图可以看出群组主要有以下三种类型，它们的特点是：<pre class="line-numbers language-none"><code class="language-none">1. Public, Open Membership：公开访问，成员公开加入。（不可上传附件）
+2. Public, Closed Membership：公开访问，成员申请&#x2F;邀请加入。（可上传附件）
+3. Private Membership：仅群成员可访问群组，成员申请&#x2F;邀请加入。（可上传附件）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+也就是说，如果想上传附件（比如PDF）到群组，千万不要选择Public, Open Membership，可参考下方提示。<br>新建完毕后，重启Zotero，该群组便自动在侧边栏出现</li>
+</ul>
+<p>此时，你可以把PDF文献拖进去，或者从我的文库中拖动文献到群组，都是可以的。一切就像我的文库中的操作一样，有题录有附件。</p>
+<p><strong>但要注意：Zotero群组中的PDF附件只能通过Zotero官方自带的空间同步，无法通过WebDAV方式同步。</strong></p>
+<p>如何邀请别人进组：在Zotero内双击群组的名称。此时会自动跳转到浏览器，并打开该群组的网页链接。可以将该群组的网页链接发送给团队成员了，团队成员访问该链接就能申请加入了。<strong>申请后需要群组管理员同意才能加入。</strong></p>
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><h3 id="无法自动获取知网文献pdf原文"><a href="#无法自动获取知网文献pdf原文" class="headerlink" title="无法自动获取知网文献pdf原文"></a>无法自动获取知网文献<code>pdf</code>原文</h3><p>需要更新<code>Translators</code>,在Zotero的<code>设置</code>中，找到<code>高级</code>选项下的<code>更新翻译器</code>。点击<code>更新全部</code>按钮，确保所有的<code>Translators</code>（特别是针对知网的CNKI translator）都是最新版本。这对于确保Zotero能够准确抓取到网页信息至关重要。</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Austin</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://example.com/2024/12/24/204.office%20zotero%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">http://example.com/2024/12/24/204.office%20zotero%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Austin</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/office/">
+                                    <span class="chip bg-color">office</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%A0%BC%E5%BC%8F/">
+                                    <span class="chip bg-color">格式</span>
+                                </a>
+                            
+                                <a href="/tags/zotero/">
+                                    <span class="chip bg-color">zotero</span>
+                                </a>
+                            
+                                <a href="/tags/chrome/">
+                                    <span class="chip bg-color">chrome</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86/">
+                                    <span class="chip bg-color">文献管理</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/">
+                                    <span class="chip bg-color">参考文献</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2024/12/24/302.%E4%BA%91%E7%AB%AF%E9%83%A8%E7%BD%B2webDAV/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="云端部署webDAV">
+                        
+                        <span class="card-title">云端部署webDAV</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-12-24
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BC%96%E7%A8%8B%E4%B8%8E%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE/" class="post-category">
+                                    编程与系统配置
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/linux/">
+                        <span class="chip bg-color">linux</span>
+                    </a>
+                    
+                    <a href="/tags/Ubuntu/">
+                        <span class="chip bg-color">Ubuntu</span>
+                    </a>
+                    
+                    <a href="/tags/webDAV/">
+                        <span class="chip bg-color">webDAV</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+                        <span class="chip bg-color">云服务器</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%85%B1%E4%BA%AB/">
+                        <span class="chip bg-color">共享</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2024/04/16/301.Git%E5%AE%89%E8%A3%85/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Git安装">
+                        
+                        <span class="card-title">Git安装</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-16
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BC%96%E7%A8%8B%E4%B8%8E%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE/" class="post-category">
+                                    编程与系统配置
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Git/">
+                        <span class="chip bg-color">Git</span>
+                    </a>
+                    
+                    <a href="/tags/GitHub/">
+                        <span class="chip bg-color">GitHub</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('2'),
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2024</span>
+            
+            <a href="/about" target="_blank">Austin</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/HOTSaber" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:aucnm0202@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我:aucnm0202@163.com" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=4925151" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 4925151" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+    <a href="weixin://dl/business/?ticket=ta428dhj739hg3efe6e theme.socialLink.weichat " class="tooltipped" target="_blank" data-tooltip="微信联系我: HT4925151" data-position="top" data-delay="50">
+        <i class="fab fa-weixin"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+
+</body>
+
+</html>
