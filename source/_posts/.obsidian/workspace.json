@@ -13,20 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-<<<<<<< HEAD
-                "file": "112.使用docker多开neo4j.md",
-=======
-                "file": "12.使用SSH远程访问.md",
->>>>>>> 2d7d801c12f8f87504b084c8c29f5c6b71b4259e
+                "file": "204.office zotero使用教程.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-<<<<<<< HEAD
-              "title": "112.使用docker多开neo4j"
-=======
-              "title": "12.使用SSH远程访问"
->>>>>>> 2d7d801c12f8f87504b084c8c29f5c6b71b4259e
+              "title": "204.office zotero使用教程"
             }
           }
         ]
@@ -51,7 +43,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "文件列表"
             }
           },
           {
@@ -162,30 +154,32 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
     }
   },
   "active": "3050f9569f3666ac",
   "lastOpenFiles": [
-<<<<<<< HEAD
-    "201.office通过样式管理格式.md",
+    "8.obsidian 入门教程.md",
+    "9.md语法.md",
+    "204.office zotero使用教程.md",
+    "302.云端部署webDAV.md",
+    "14.windows安装linux.md",
+    "13.内网穿透.md",
+    "11.博客的多终端同步.md",
+    "12.使用SSH远程访问.md",
+    "300.使用GitHub搭建图床.md",
+    "301.Git安装.md",
     "112.使用docker多开neo4j.md",
-    "111.linux安装教程.md",
-    "110.modelscope使用教程.md",
-    "108.nccl实现多GPU交互.md",
     "107.docker教程.md",
-    "深度学习-1 本地环境部署.md",
-    "14.windows安装linux.md",
-=======
-    "深度学习-1 本地环境部署.md",
-    "14.windows安装linux.md",
+    "108.nccl实现多GPU交互.md",
+    "110.modelscope使用教程.md",
     "111.linux安装教程.md",
->>>>>>> 2d7d801c12f8f87504b084c8c29f5c6b71b4259e
-    "9.md语法.md"
+    "201.office通过样式管理格式.md",
+    "深度学习-1 本地环境部署.md"
   ]
 }

@@ -10,8 +10,8 @@ menu:
       - name: 深度学习
         url: /categories/深度学习
         icon: fas fa-brain
-      - name: GitHub
-        url: /categories/GitHub
+      - name: 编程与系统配置
+        url: /categories/编程与系统配置
         icon: fa-brands fa-github
       - name: 文档编辑与管理
         url: /categories/文档编辑与管理
