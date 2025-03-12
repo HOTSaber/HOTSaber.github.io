@@ -570,12 +570,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/SSH/">
-                                <span class="chip bg-color">SSH</span>
-                            </a>
-                        
                             <a href="/tags/linux/">
                                 <span class="chip bg-color">linux</span>
+                            </a>
+                        
+                            <a href="/tags/SSH/">
+                                <span class="chip bg-color">SSH</span>
                             </a>
                         
                             <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
@@ -586,20 +586,20 @@
                                 <span class="chip bg-color">远程访问</span>
                             </a>
                         
-                            <a href="/tags/xshell/">
-                                <span class="chip bg-color">xshell</span>
-                            </a>
-                        
-                            <a href="/tags/xftp/">
-                                <span class="chip bg-color">xftp</span>
-                            </a>
-                        
                             <a href="/tags/%E4%BA%91/">
                                 <span class="chip bg-color">云</span>
                             </a>
                         
                             <a href="/tags/frp/">
                                 <span class="chip bg-color">frp</span>
+                            </a>
+                        
+                            <a href="/tags/xshell/">
+                                <span class="chip bg-color">xshell</span>
+                            </a>
+                        
+                            <a href="/tags/xftp/">
+                                <span class="chip bg-color">xftp</span>
                             </a>
                         
                     </div>
@@ -699,7 +699,17 @@ xshell：<pre class="line-numbers language-none"><code class="language-none">ssh
 yum install systemd
 # apt
 apt install systemd<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
-<li>使用文本编辑器，如 <code>vim</code> 创建并编辑 <code>frps.service</code> 文件。此处的文件名称决定了服务的名称。<pre class="line-numbers language-none"><code class="language-none">vim &#x2F;lib&#x2F;systemd&#x2F;system&#x2F;frps.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>使用文本编辑器，如 <code>vim</code> 创建并编辑 <code>frps.service</code> 文件。此处的文件名称决定了服务的名称。<pre class="line-numbers language-none"><code class="language-none">vim &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;frps.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+或<pre class="line-numbers language-none"><code class="language-none">vim &#x2F;lib&#x2F;systemd&#x2F;system&#x2F;frps.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><strong>ps:</strong> 1. <code>/lib/systemd/system/</code>（或 <code>/usr/lib/systemd/system/</code>）<ul>
+<li>系统级服务文件存放位置</li>
+<li>通常由软件包管理器自动安装到这里</li>
+<li><strong>不建议直接修改这里的文件</strong>（系统更新可能覆盖）<br> 2.<code>/etc/systemd/system/</code></li>
+<li>用户自定义服务文件存放位置</li>
+<li>优先级高于 <code>/lib/systemd/system/</code></li>
+<li>适合用户自己创建的服务</li>
+</ul>
+</li>
 <li>写入以下内容：<pre class="line-numbers language-none"><code class="language-none">[Unit]
 Description&#x3D;Frp Server Service
 After&#x3D;network.target
@@ -723,7 +733,7 @@ systemctl start frps
 systemctl status frps<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 显示以下内容则表示自启成功：<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/13.%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F-3.png" alt="13.内网穿透-3"><br>命令功能参考如下：<pre class="line-numbers language-none"><code class="language-none">systemctl start frps #启动frps
 systemctl enable frps #打开自启动
-systemctl  disable frps #关闭自启动
+systemctl disable frps #关闭自启动
 systemctl restart frps #重启进程
 systemctl stop frps #停止进程
 systemctl status frps #查看进程日志<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
@@ -884,12 +894,12 @@ remote_port &#x3D; 8081<span aria-hidden="true" class="line-numbers-rows"><span>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/SSH/">
-                                    <span class="chip bg-color">SSH</span>
-                                </a>
-                            
                                 <a href="/tags/linux/">
                                     <span class="chip bg-color">linux</span>
+                                </a>
+                            
+                                <a href="/tags/SSH/">
+                                    <span class="chip bg-color">SSH</span>
                                 </a>
                             
                                 <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
@@ -900,20 +910,20 @@ remote_port &#x3D; 8081<span aria-hidden="true" class="line-numbers-rows"><span>
                                     <span class="chip bg-color">远程访问</span>
                                 </a>
                             
-                                <a href="/tags/xshell/">
-                                    <span class="chip bg-color">xshell</span>
-                                </a>
-                            
-                                <a href="/tags/xftp/">
-                                    <span class="chip bg-color">xftp</span>
-                                </a>
-                            
                                 <a href="/tags/%E4%BA%91/">
                                     <span class="chip bg-color">云</span>
                                 </a>
                             
                                 <a href="/tags/frp/">
                                     <span class="chip bg-color">frp</span>
+                                </a>
+                            
+                                <a href="/tags/xshell/">
+                                    <span class="chip bg-color">xshell</span>
+                                </a>
+                            
+                                <a href="/tags/xftp/">
+                                    <span class="chip bg-color">xftp</span>
                                 </a>
                             
                         </div>
@@ -997,12 +1007,12 @@ remote_port &#x3D; 8081<span aria-hidden="true" class="line-numbers-rows"><span>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/SSH/">
-                        <span class="chip bg-color">SSH</span>
-                    </a>
-                    
                     <a href="/tags/linux/">
                         <span class="chip bg-color">linux</span>
+                    </a>
+                    
+                    <a href="/tags/SSH/">
+                        <span class="chip bg-color">SSH</span>
                     </a>
                     
                     <a href="/tags/%E5%A4%9A%E7%BB%88%E7%AB%AF/">
@@ -1013,20 +1023,20 @@ remote_port &#x3D; 8081<span aria-hidden="true" class="line-numbers-rows"><span>
                         <span class="chip bg-color">远程访问</span>
                     </a>
                     
-                    <a href="/tags/xshell/">
-                        <span class="chip bg-color">xshell</span>
-                    </a>
-                    
-                    <a href="/tags/xftp/">
-                        <span class="chip bg-color">xftp</span>
-                    </a>
-                    
                     <a href="/tags/%E4%BA%91/">
                         <span class="chip bg-color">云</span>
                     </a>
                     
                     <a href="/tags/frp/">
                         <span class="chip bg-color">frp</span>
+                    </a>
+                    
+                    <a href="/tags/xshell/">
+                        <span class="chip bg-color">xshell</span>
+                    </a>
+                    
+                    <a href="/tags/xftp/">
+                        <span class="chip bg-color">xftp</span>
                     </a>
                     
                 </div>
