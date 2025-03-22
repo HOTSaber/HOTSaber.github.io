@@ -16,7 +16,6 @@ tags:
 **********
 # Office tool plus 部署工具
 ## 下载地址
-- [百度网盘](https://pan.baidu.com/s/17S1IMN5U4X-5kvri-iL2LA)
 - [官网下载](https://otp.landian.vip/zh-cn/download.html)（下载包含框架版本）
 # 清除旧版本Office
 1. 卸载WPS Office，两者共存容易出问题
