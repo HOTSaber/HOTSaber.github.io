@@ -630,7 +630,7 @@
                 <hr>
 <p>详情请参考<a target="_blank" rel="noopener" href="https://docker.easydoc.net/doc/81170005/cCewZWoN/lTKfePfP#nav_6">docker快速入门</a>与<a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/ubuntu/">官方文档</a></p>
 <hr>
-<h3 id="使用-apt-存储库安装"><a href="#使用-apt-存储库安装" class="headerlink" title="使用 apt 存储库安装"></a><a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository">使用 apt 存储库安装</a></h3><p>在新主机上首次安装 Docker Engine 之前，需要设置 Docker 存储库。之后，您可以从存储库安装和更新 Docker。</p>
+<h1 id="使用-apt-存储库安装"><a href="#使用-apt-存储库安装" class="headerlink" title="使用 apt 存储库安装"></a><a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository">使用 apt 存储库安装</a></h1><p>在新主机上首次安装 Docker Engine 之前，需要设置 Docker 存储库。之后，您可以从存储库安装和更新 Docker。</p>
 <ol>
 <li><p>设置 Docker 的 <code>apt</code> 存储库</p>
  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># Add Docker's official GPG key:</span>
@@ -659,7 +659,66 @@
 <p> 此命令下载测试映像并在容器中运行它。当容器运行时，它会打印一条确认消息并退出。<br>您现在已经成功安装并启动了 Docker Engine。</p>
 </li>
 </ol>
-<h4 id="升级Docker引擎"><a href="#升级Docker引擎" class="headerlink" title="升级Docker引擎"></a><a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/ubuntu/#upgrade-docker-engine">升级Docker引擎</a></h4><p>要升级Docker Engine，请按照 <a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository">安装说明</a>的步骤2进行操作，选择要安装的版本。</p>
+<h1 id="升级Docker引擎"><a href="#升级Docker引擎" class="headerlink" title="升级Docker引擎"></a><a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/ubuntu/#upgrade-docker-engine">升级Docker引擎</a></h1><p>要升级Docker Engine，请按照 <a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository">安装说明</a>的步骤2进行操作，选择要安装的版本。</p>
+<h1 id="启用docker镜像加速"><a href="#启用docker镜像加速" class="headerlink" title="启用docker镜像加速"></a>启用docker镜像加速</h1><h2 id="启用国内镜像加速器"><a href="#启用国内镜像加速器" class="headerlink" title="启用国内镜像加速器"></a><strong>启用国内镜像加速器</strong></h2><p>• <strong>编辑 Docker 配置文件</strong><br>  在 <code>/etc/docker/daemon.json</code> 中添加国内镜像源（如阿里云、腾讯云）：<br>  <pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">&#123;</span>
+  <span class="token property">"registry-mirrors"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token string">"https://docker.m.daocloud.io"</span><span class="token punctuation">,</span>
+    <span class="token string">"https://hub-mirror.c.163.com"</span><span class="token punctuation">,</span>
+	<span class="token string">"https://mirror.ccs.tencentyun.com"</span><span class="token punctuation">,</span>
+	<span class="token string">"https://registry.docker-cn.com"</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><br>  • 重启 Docker 服务生效：<br>    <pre class="line-numbers language-none"><code class="language-none">&#96;&#96;&#96;bash
+	sudo systemctl daemon-reload
+    sudo systemctl restart docker<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></p>
+<p>• <strong>验证加速器状态</strong><br>  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">docker</span> info <span class="token operator">|</span> <span class="token function">grep</span> <span class="token string">"Registry Mirrors"</span>
+<span class="token comment"># 应显示配置的镜像地址</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></p>
+<h2 id="手动拉取镜像"><a href="#手动拉取镜像" class="headerlink" title="手动拉取镜像"></a><strong>手动拉取镜像</strong></h2><p>• <strong>针对关键服务镜像单独拉取</strong><br>  例如拉取 Redis 镜像：<br>  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">docker</span> pull redis:latest
+<span class="token comment"># 若失败可尝试更换标签（如 alpine 版本）</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></p>
+<p>• <strong>使用代理服务器</strong>（适用于企业内网）<br>  在 Docker 配置或环境变量中设置代理：<br>  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable">HTTP_PROXY</span><span class="token operator">=</span><span class="token string">"http://proxy_ip:port"</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">HTTPS_PROXY</span><span class="token operator">=</span><span class="token string">"http://proxy_ip:port"</span>
+<span class="token function">docker</span> compose up <span class="token parameter variable">-d</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></p>
+<h2 id="其他优化措施"><a href="#其他优化措施" class="headerlink" title="其他优化措施"></a><strong>其他优化措施</strong></h2><p>• <strong>调整 Docker 客户端超时时间</strong><br>  修改 Docker 配置文件 <code>/etc/docker/daemon.json</code>：<br>  <pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">&#123;</span>
+  <span class="token property">"max-concurrent-downloads"</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+  <span class="token property">"max-download-attempts"</span><span class="token operator">:</span> <span class="token number">5</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></p>
+<p>• <strong>清理本地缓存后重试</strong><br>  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">docker</span> system prune <span class="token parameter variable">-a</span>  <span class="token comment"># 清理无效镜像和缓存</span>
+<span class="token function">docker</span> compose up <span class="token parameter variable">-d</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></p>
+<hr>
+<h2 id="关联问题排查"><a href="#关联问题排查" class="headerlink" title="关联问题排查"></a><strong>关联问题排查</strong></h2><table>
+<thead>
+<tr>
+<th>现象</th>
+<th>排查方向</th>
+<th>参考方案</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>部分服务镜像拉取成功</td>
+<td>Docker Hub 限流</td>
+<td>等待 1 小时后重试</td>
+</tr>
+<tr>
+<td>仅特定镜像失败</td>
+<td>镜像标签兼容性问题</td>
+<td>检查 compose 文件版本</td>
+</tr>
+<tr>
+<td>报错 “TLS handshake timeout”</td>
+<td>系统时间不同步</td>
+<td>同步时间：<code>ntpdate pool.ntp.org</code></td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="操作验证"><a href="#操作验证" class="headerlink" title="操作验证"></a><strong>操作验证</strong></h2><p>完成上述步骤后，执行以下命令验证：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">docker</span> compose up <span class="token parameter variable">-d</span> --no-build  <span class="token comment"># 跳过构建直接启动</span>
+<span class="token function">docker</span> compose logs <span class="token parameter variable">-f</span> web       <span class="token comment"># 监控关键服务日志</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>若仍存在问题，可提供以下信息进一步排查：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">docker</span> info         <span class="token comment"># Docker 系统配置</span>
+<span class="token function">docker</span> network <span class="token function">ls</span>   <span class="token comment"># 网络状态</span>
+iptables <span class="token parameter variable">-L</span> <span class="token parameter variable">-n</span>     <span class="token comment"># 防火墙规则</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<hr>
 
                 
             </div>
