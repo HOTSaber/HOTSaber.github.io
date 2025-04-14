@@ -53,17 +53,17 @@
       
         <tags>
             
-            <tag> zotero </tag>
-            
             <tag> office </tag>
+            
+            <tag> 格式 </tag>
+            
+            <tag> zotero </tag>
             
             <tag> chrome </tag>
             
             <tag> 文献管理 </tag>
             
             <tag> 参考文献 </tag>
-            
-            <tag> 格式 </tag>
             
         </tags>
       
@@ -308,9 +308,9 @@
             
             <tag> office </tag>
             
-            <tag> 格式 </tag>
-            
             <tag> 样式管理 </tag>
+            
+            <tag> 格式 </tag>
             
         </tags>
       
@@ -409,13 +409,13 @@
             
             <tag> 远程访问 </tag>
             
-            <tag> 云 </tag>
-            
-            <tag> frp </tag>
-            
             <tag> xshell </tag>
             
             <tag> xftp </tag>
+            
+            <tag> 云 </tag>
+            
+            <tag> frp </tag>
             
         </tags>
       
@@ -448,13 +448,13 @@
             
             <tag> 远程访问 </tag>
             
-            <tag> 云 </tag>
-            
-            <tag> frp </tag>
-            
             <tag> xshell </tag>
             
             <tag> xftp </tag>
+            
+            <tag> 云 </tag>
+            
+            <tag> frp </tag>
             
         </tags>
       
@@ -547,8 +547,6 @@
       
         <tags>
             
-            <tag> node.js </tag>
-            
             <tag> Git </tag>
             
             <tag> GitHub </tag>
@@ -556,6 +554,8 @@
             <tag> SSH </tag>
             
             <tag> hexo </tag>
+            
+            <tag> node.js </tag>
             
             <tag> 多终端 </tag>
             
@@ -663,7 +663,7 @@
       <link href="/2023/07/06/office%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/"/>
       <url>/2023/07/06/office%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/</url>
       
-        <content type="html"><![CDATA[<hr><ol><li>为什么使用<code>office 365</code>或高版本<code>office</code>? 详见<a href="https://hotsaber.github.io/2023/09/18/office%E5%85%B1%E4%BA%AB%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C/">office共享与在线协作</a></li><li>官方详细教程可访问<a href="https://www.coolhub.top/archives/42">网址</a></li><li><strong>部署前需要卸载老版本，并清除注册信息与重置office设置</strong></li><li><strong>如卸载失败，可以使用<code>工具箱</code>中的<code>移除office</code>功能强制移除</strong></li></ol><hr><h1 id="Office-tool-plus-部署工具"><a href="#Office-tool-plus-部署工具" class="headerlink" title="Office tool plus 部署工具"></a>Office tool plus 部署工具</h1><h2 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h2><ul><li><a href="https://otp.landian.vip/zh-cn/download.html">官网下载</a>（下载包含框架版本）</li></ul><h1 id="清除旧版本Office"><a href="#清除旧版本Office" class="headerlink" title="清除旧版本Office"></a>清除旧版本Office</h1><ol><li>卸载WPS Office，两者共存容易出问题</li><li>卸载旧版本 Office，按照标准流程操作，请勿直接强制移除。</li><li>清除旧版本激活信息，看下面的截图来学习。</li><li>清除 Office 设置，在[工具箱] -&gt; [重置 Office 为默认设置]。</li><li><strong>如卸载失败，可以使用<code>工具箱</code>中的<code>移除office</code>功能强制移除</strong></li></ol><ul><li>清除激活信息<br><img src="https://www.coolhub.top/wp-content/uploads/2023/01/clear-activation-v10.png"><br><img src="https://www.coolhub.top/wp-content/uploads/2022/06/clear-activation.png"></li><li>重置Office设置<br><img src="https://www.coolhub.top/wp-content/uploads/2023/01/reset-office-settings-v10.png"><br><img src="https://www.coolhub.top/wp-content/uploads/2020/04/reset-Office-settings.png"></li></ul><h1 id="Office安装（部署）"><a href="#Office安装（部署）" class="headerlink" title="Office安装（部署）"></a>Office安装（部署）</h1><h2 id="指令安装"><a href="#指令安装" class="headerlink" title="指令安装"></a>指令安装</h2><ul><li>按下 Ctrl + Shift + P 打开命令框,输入以下命令，部署off365企业应用版，与visio2019<pre class="line-numbers language-none"><code class="language-none">deploy &#x2F;addProduct O365ProPlusRetail_zh-cn_Access,Bing,Groove,Lync,OneDrive,OneNote,Outlook,Publisher,Teams &#x2F;addProduct VisioStd2019Volume_zh-cn_Groove,OneDrive &#x2F;channel Current &#x2F;downloadFirst<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li><strong>手动部署请参考<a href="https://www.coolhub.top/archives/11">网址</a></strong><br>部分设置可参考下图<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%20%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B.png"></li></ul><h1 id="激活Office"><a href="#激活Office" class="headerlink" title="激活Office"></a>激活Office</h1><h2 id="指令激活"><a href="#指令激活" class="headerlink" title="指令激活"></a>指令激活</h2><pre class="line-numbers language-none"><code class="language-none">ospp &#x2F;insLicID MondoVolume &#x2F;sethst:kms.loli.best &#x2F;setprt:1688 &#x2F;act<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><strong>上述代码可一次性激活 Office, Visio, Project，同时适用 Win 7&#x2F;8，能使用 Office 的所有功能。</strong></p><h2 id="手动激活"><a href="#手动激活" class="headerlink" title="手动激活"></a>手动激活</h2><ol><li>**安装 Office 批量许可证 (Volume)**，无论如何，这里你都要选批量许可证。</li><li>设置一个 KMS 主机地址（可以设置端口为 1688）并保存设置。</li><li>点击激活按钮，等待激活完成。<br><strong>office 365企业版需要选择Office Mondo 2016 批量许可证</strong><br><img src="https://www.coolhub.top/wp-content/uploads/2022/06/clear-activation.png"></li></ol><hr><p><strong>如有更多问题可以访问<a href="">官网教程</a></strong><br>或通过软件中的帮助链接访问管网教程<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%20%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B-1.png"></p>]]></content>
+        <content type="html"><![CDATA[<hr><ol><li>为什么使用<code>office 365</code>或高版本<code>office</code>? 详见<a href="https://hotsaber.github.io/2023/09/18/office%E5%85%B1%E4%BA%AB%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C/">office共享与在线协作</a></li><li>官方详细教程可访问<a href="https://www.coolhub.top/archives/42">网址</a></li><li><strong>部署前需要卸载老版本，并清除注册信息与重置office设置</strong></li><li><strong>如卸载失败，可以使用<code>工具箱</code>中的<code>移除office</code>功能强制移除</strong></li></ol><hr><h1 id="Office-tool-plus-部署工具"><a href="#Office-tool-plus-部署工具" class="headerlink" title="Office tool plus 部署工具"></a>Office tool plus 部署工具</h1><h2 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h2><ul><li><a href="https://otp.landian.vip/zh-cn/download.html">官网下载</a>（下载包含框架版本）</li></ul><h1 id="清除旧版本Office"><a href="#清除旧版本Office" class="headerlink" title="清除旧版本Office"></a>清除旧版本Office</h1><ol><li>卸载旧版本 Office，按照标准流程操作，请勿直接强制移除。</li><li>清除旧版本激活信息，看下面的截图来学习。</li><li>清除 Office 设置，在[工具箱] -&gt; [重置 Office 为默认设置]。</li><li><strong>如卸载失败，可以使用<code>工具箱</code>中的<code>移除office</code>功能强制移除</strong></li></ol><ul><li>清除激活信息<br><img src="https://www.coolhub.top/wp-content/uploads/2023/01/clear-activation-v10.png"><br><img src="https://www.coolhub.top/wp-content/uploads/2022/06/clear-activation.png"></li><li>重置Office设置<br><img src="https://www.coolhub.top/wp-content/uploads/2023/01/reset-office-settings-v10.png"><br><img src="https://www.coolhub.top/wp-content/uploads/2020/04/reset-Office-settings.png"></li></ul><h1 id="Office安装（部署）"><a href="#Office安装（部署）" class="headerlink" title="Office安装（部署）"></a>Office安装（部署）</h1><h2 id="指令安装"><a href="#指令安装" class="headerlink" title="指令安装"></a>指令安装</h2><ul><li>按下 Ctrl + Shift + P 打开命令框,输入以下命令，部署off365企业应用版，与visio2019<pre class="line-numbers language-none"><code class="language-none">deploy &#x2F;addProduct O365ProPlusRetail_zh-cn_Access,Bing,Groove,Lync,OneDrive,OneNote,Outlook,Publisher,Teams &#x2F;addProduct VisioStd2019Volume_zh-cn_Groove,OneDrive &#x2F;channel Current &#x2F;downloadFirst<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li><strong>手动部署请参考<a href="https://www.coolhub.top/archives/11">网址</a></strong><br>部分设置可参考下图<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%20%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B.png"></li></ul><h1 id="激活Office"><a href="#激活Office" class="headerlink" title="激活Office"></a>激活Office</h1><h2 id="指令激活"><a href="#指令激活" class="headerlink" title="指令激活"></a>指令激活</h2><pre class="line-numbers language-none"><code class="language-none">ospp &#x2F;insLicID MondoVolume &#x2F;sethst:kms.loli.best &#x2F;setprt:1688 &#x2F;act<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><strong>上述代码可一次性激活 Office, Visio, Project，同时适用 Win 7&#x2F;8，能使用 Office 的所有功能。</strong></p><h2 id="手动激活"><a href="#手动激活" class="headerlink" title="手动激活"></a>手动激活</h2><ol><li>**安装 Office 批量许可证 (Volume)**，无论如何，这里你都要选批量许可证。</li><li>设置一个 KMS 主机地址（可以设置端口为 1688）并保存设置。</li><li>点击激活按钮，等待激活完成。<br><strong>office 365企业版需要选择Office Mondo 2016 批量许可证</strong><br><img src="https://www.coolhub.top/wp-content/uploads/2022/06/clear-activation.png"></li></ol><hr><p><strong>如有更多问题可以访问<a href="">官网教程</a></strong><br>或通过软件中的帮助链接访问管网教程<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%20%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B-1.png"></p>]]></content>
       
       
       <categories>
@@ -869,13 +869,13 @@
       
         <tags>
             
+            <tag> markdown </tag>
+            
             <tag> 图床 </tag>
             
             <tag> PicGo </tag>
             
             <tag> Obsidian </tag>
-            
-            <tag> markdown </tag>
             
             <tag> 腾讯云 </tag>
             
@@ -995,17 +995,17 @@
       
         <tags>
             
-            <tag> node.js </tag>
-            
             <tag> Git </tag>
             
             <tag> GitHub </tag>
             
-            <tag> 环境配置 </tag>
-            
             <tag> SSH </tag>
             
             <tag> hexo </tag>
+            
+            <tag> node.js </tag>
+            
+            <tag> 环境配置 </tag>
             
         </tags>
       
