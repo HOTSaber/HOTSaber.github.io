@@ -1,5 +1,109 @@
 设置 `.gitignore` 文件可以帮助你指定 Git 忽略跟踪某些文件或文件夹。以下是如何设置 `.gitignore` 文件的步骤：
 
+
+要永久让 Git 忽略 `source/_posts/.obsidian/workspace.json` 文件，需通过 ​**`.gitignore` 文件配置规则**并结合 ​**Git 缓存清理操作**。以下是具体步骤：
+
+---
+
+### 一、配置 `.gitignore` 文件
+
+1. ​**创建或编辑 `.gitignore` 文件**  
+    在项目根目录下创建 `.gitignore` 文件（若不存在），使用文本编辑器打开。
+    
+2. ​**添加忽略规则**  
+    在文件中添加以下规则之一（根据需求选择）：
+    
+    gitignore
+    
+    复制
+    
+    ```gitignore
+    # 精确匹配路径（推荐）
+    source/_posts/.obsidian/workspace.json
+    
+    # 或忽略整个 .obsidian 目录下的 workspace.json
+    .obsidian/workspace.json
+    
+    # 或忽略所有 .obsidian 目录中的内容（若需完全忽略该插件配置）
+    .obsidian/
+    ```
+    
+    - 使用 `/` 表示目录层级，`*` 可匹配通配符。
+    - 注释以 `#` 开头，用于说明规则。
+
+---
+
+### 二、处理已跟踪的文件（若文件已被提交过）
+
+如果该文件 ​**已被 Git 跟踪**​（即曾提交到仓库中），仅修改 `.gitignore` 无效，需执行以下操作：
+
+bash
+
+复制
+
+```bash
+# 从 Git 缓存中移除文件（保留本地文件）
+git rm --cached source/_posts/.obsidian/workspace.json
+
+# 提交删除操作到仓库
+git commit -m "停止跟踪 workspace.json 文件"
+```
+
+---
+
+### 三、提交并生效规则
+
+1. ​**提交 `.gitignore` 文件**  
+    将更新后的 `.gitignore` 提交到仓库，确保规则对所有协作者生效：
+    
+    bash
+    
+    复制
+    
+    ```bash
+    git add .gitignore
+    git commit -m "添加忽略 workspace.json 的规则"
+    ```
+    
+2. ​**验证忽略效果**  
+    执行 `git status`，确认该文件不再出现在未跟踪文件列表中。
+    
+
+---
+
+### 四、注意事项
+
+1. ​**路径匹配规则**
+    
+    - 规则中的路径需相对于 `.gitignore` 所在目录。
+    - 若文件位于子目录中，需使用完整路径（如 `source/_posts/.obsidian/workspace.json`）。
+2. ​**全局忽略配置（可选）​**  
+    若需在所有项目中忽略此类文件，可配置全局忽略规则：
+    
+    bash
+    
+    复制
+    
+    ```bash
+    git config --global core.excludesfile ~/.gitignore_global
+    ```
+    
+    在 `~/.gitignore_global` 中添加相同规则。
+    
+
+---
+
+### 五、常见问题
+
+- ​**忽略规则不生效**：检查文件是否已被 Git 跟踪，若已跟踪需先执行 `git rm --cached`。
+- ​**IDE 自动生成文件**：`.obsidian` 目录通常由笔记工具生成，建议直接忽略整个目录。
+
+---
+
+通过上述步骤，Git 将永久忽略该文件，避免后续提交冲突。若需恢复跟踪，只需从 `.gitignore` 中移除规则并重新添加文件。
+
+
+
 1. **创建 `.gitignore` 文件**：  
     在项目根目录下创建一个名为 `.gitignore` 的文件。你可以使用文本编辑器（如 Notepad++、VSCode 等）来创建并编辑这个文件。
     

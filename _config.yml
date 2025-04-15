@@ -46,17 +46,15 @@ future: true
 #syntax_highlighter: highlight.js
 #highlight:
 #  auto_detect: false
-#  line_number: true
+#  line_number: false
 #  line_threshold: 0
 #  tab_replace: ""
-#  exclude_languages:
-#    - example
 #  wrap: true
 #  hljs: false
 syntax_highlighter: prismjs
 prismjs:
-  preprocess: true
-  line_number: true
+  preprocess: false
+  line_number: false
   line_threshold: 0
   tab_replace: ""
 #  custom_css: 'path/to/your/custom.css' # optional
