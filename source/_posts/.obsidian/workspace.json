@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "office部署教程.md",
+                "file": "204.office zotero使用教程.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "office部署教程"
+              "title": "204.office zotero使用教程"
             }
           }
         ]
@@ -165,9 +165,10 @@
   },
   "active": "3050f9569f3666ac",
   "lastOpenFiles": [
+    "205.绘图技巧.md",
+    "office部署教程.md",
     "112.使用docker多开neo4j.md",
     "107.docker教程.md",
-    "office部署教程.md",
     "深度学习-1 本地环境部署.md",
     "13.内网穿透.md",
     "12.使用SSH远程访问.md",
