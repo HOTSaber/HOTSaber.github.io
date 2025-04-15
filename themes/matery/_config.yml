@@ -7,18 +7,21 @@ menu:
   记录:
     icon: fas fa-book
     children:
-      - name: 机器学习
-        url: /categories/机器学习
-        icon: fas fa-tv
       - name: 深度学习
         url: /categories/深度学习
         icon: fas fa-brain
-      - name: 博客部署
-        url: /categories/博客搭建记录
-        icon: fas fa-file
+      - name: 编程与系统配置
+        url: /categories/编程与系统配置
+        icon: fa-brands fa-github
       - name: 文档编辑与管理
         url: /categories/文档编辑与管理
         icon: fas fa-file-word
+      - name: 机器学习
+        url: /categories/机器学习
+        icon: fas fa-tv
+      - name: 博客部署
+        url: /categories/博客搭建记录
+        icon: fas fa-file
       - name: 标签 #Tags:
         url: /tags
         icon: fas fa-tags

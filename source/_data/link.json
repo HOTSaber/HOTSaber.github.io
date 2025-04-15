@@ -1,8 +1,8 @@
 [{
-    "avatar": "https://mojie.me/favicon.ico",
-    "name": "魔戒",
-    "introduction": "高性价比科学上网",
-    "url": "https://www.mojie.me",
+    "avatar": "https://xiake.pro/static/images/xiake.png",
+    "name": "虾壳",
+    "introduction": "GitHub下载加速",
+    "url": "http://xiake.pro/",
     "title": "访问网站"
 },{
     "avatar": "https://my.zerotier.com/favicon.ico",
@@ -35,10 +35,10 @@
     "url": "https://pypi.org/",
     "title": "访问网站"
 },{
-    "avatar": "https://huggingface.co/front/assets/huggingface_logo-noborder.svg",
-    "name": "ChatGPT",
-    "introduction": "实验室自用ChatGPT",
-    "url": "https://huggingface.co/spaces/aucnm/ChuanhuChatGPT",
+    "avatar": "http://openkg.cn/wp-content/uploads/2024/01/openkg2.png",
+    "name": "开放知识图谱",
+    "introduction": "知识图谱数据库",
+    "url": "http://openkg.cn/",
     "title": "访问网站"
 },{
     "avatar": "https://img.alicdn.com/tfs/TB1_ZXuNcfpK1RjSZFOXXa6nFXa-32-32.ico",
