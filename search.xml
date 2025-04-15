@@ -84,17 +84,17 @@
       
         <tags>
             
-            <tag> zotero </tag>
-            
             <tag> office </tag>
+            
+            <tag> 格式 </tag>
+            
+            <tag> zotero </tag>
             
             <tag> chrome </tag>
             
             <tag> 文献管理 </tag>
             
             <tag> 参考文献 </tag>
-            
-            <tag> 格式 </tag>
             
         </tags>
       
@@ -239,9 +239,9 @@
       
         <tags>
             
-            <tag> SSH </tag>
-            
             <tag> linux </tag>
+            
+            <tag> SSH </tag>
             
             <tag> Ubuntu </tag>
             
@@ -339,9 +339,9 @@
             
             <tag> office </tag>
             
-            <tag> 格式 </tag>
-            
             <tag> 样式管理 </tag>
+            
+            <tag> 格式 </tag>
             
         </tags>
       
@@ -397,9 +397,9 @@
       
         <tags>
             
-            <tag> SSH </tag>
-            
             <tag> linux </tag>
+            
+            <tag> SSH </tag>
             
             <tag> 远程访问 </tag>
             
@@ -432,21 +432,21 @@
       
         <tags>
             
+            <tag> linux </tag>
+            
             <tag> SSH </tag>
             
             <tag> 多终端 </tag>
             
-            <tag> linux </tag>
-            
             <tag> 远程访问 </tag>
-            
-            <tag> 云 </tag>
-            
-            <tag> frp </tag>
             
             <tag> xshell </tag>
             
             <tag> xftp </tag>
+            
+            <tag> 云 </tag>
+            
+            <tag> frp </tag>
             
         </tags>
       
@@ -471,21 +471,21 @@
       
         <tags>
             
+            <tag> linux </tag>
+            
             <tag> SSH </tag>
             
             <tag> 多终端 </tag>
             
-            <tag> linux </tag>
-            
             <tag> 远程访问 </tag>
-            
-            <tag> 云 </tag>
-            
-            <tag> frp </tag>
             
             <tag> xshell </tag>
             
             <tag> xftp </tag>
+            
+            <tag> 云 </tag>
+            
+            <tag> frp </tag>
             
         </tags>
       
