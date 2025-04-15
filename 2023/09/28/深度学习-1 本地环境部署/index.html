@@ -639,9 +639,6 @@ anaconda安装过程中可提供python安装，如果确定安装anaconda可以�
         <hr class="clearfix">
 
         
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.min.css">
-        
 
         
 
@@ -668,21 +665,34 @@ anaconda安装过程中可提供python安装，如果确定安装anaconda可以�
 <li>使用<code>nvcc -V</code>查看现安装的CUDA版本</li>
 </ul>
 <h1 id="安装cudnn"><a href="#安装cudnn" class="headerlink" title="安装cudnn"></a>安装cudnn</h1><h2 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h2><p>CUDA需要配合cudnn才能正常工作，将cudnn的四个文件（夹），复制到CUDA的安装路径即可，即CUDA文件夹。<br>往系统环境变量中的 path 添加如下路径（<strong>根据自己的路径进行修改</strong>）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">C:\Program Files\NVIDIA\CUDA\bin</span><br><span class="line">C:\Program Files\NVIDIA\CUDA\include</span><br><span class="line">C:\Program Files\NVIDIA\CUDA\lib</span><br><span class="line">C:\Program Files\NVIDIA\CUDA\libnvvp</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">C:\Program Files\NVIDIA\CUDA\bin
+C:\Program Files\NVIDIA\CUDA\include
+C:\Program Files\NVIDIA\CUDA\lib
+C:\Program Files\NVIDIA\CUDA\libnvvp<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>检验：</p>
 <p>配置完成后，我们可以验证是否配置成功，主要使用CUDA内置的<code>deviceQuery.exe</code> 和 <code>bandwidthTest.exe</code>：<br>首先win+R启动cmd，cd到<strong>安装目录</strong>下的 <code>…\extras\demo_suite</code>,然后分别执行<code>.\bandwidthTest.exe</code>和<code>.\deviceQuery.exe</code>,应该得到下图.</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd C:\Program Files\NVIDIA\CUDA\extras\demo_suite </span><br><span class="line">.\bandwidthTest.exe </span><br><span class="line">.\deviceQuery.exe</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">cd C:\Program Files\NVIDIA\CUDA\extras\demo_suite 
+.\bandwidthTest.exe 
+.\deviceQuery.exe<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h2 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h2><p><a target="_blank" rel="noopener" href="https://docs.nvidia.com/deeplearning/cudnn/latest/installation/linux.html#package-manager-installation">官方教程</a>与<a target="_blank" rel="noopener" href="https://blog.csdn.net/JianJuly/article/details/102793103">CSDN参考</a><br>安装linus解压工具</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt-get install zlib1g</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">sudo apt-get install zlib1g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>打开<a target="_blank" rel="noopener" href="https://developer.nvidia.com/rdp/cudnn-archive">下载链接</a>，选择相应的版本并下载。选择方法可参考<a href="%5Bhttps://blog.csdn.net/MumuziD/article/details/118760650%5D(https://blog.csdn.net/MumuziD/article/details/118760650)">链接</a>，，建议直接选择<code>cuDNN Library for Linux (x86_64)</code><br>进入cudnn压缩包所在的文件夹，解压文件</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tar -xvf [$文件名]</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">tar -xvf [$文件名]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>将文件拷贝到相应cuda目录下</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo cp cudnn-*-archive/include/cudnn*.h /usr/local/cuda/include </span><br><span class="line">sudo cp -P cudnn-*-archive/lib/libcudnn* /usr/local/cuda/lib64 </span><br><span class="line">sudo chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn*</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">sudo cp cudnn-*-archive&#x2F;include&#x2F;cudnn*.h &#x2F;usr&#x2F;local&#x2F;cuda&#x2F;include 
+sudo cp -P cudnn-*-archive&#x2F;lib&#x2F;libcudnn* &#x2F;usr&#x2F;local&#x2F;cuda&#x2F;lib64 
+sudo chmod a+r &#x2F;usr&#x2F;local&#x2F;cuda&#x2F;include&#x2F;cudnn*.h &#x2F;usr&#x2F;local&#x2F;cuda&#x2F;lib64&#x2F;libcudnn*<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>查看cudnn版本</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat /usr/local/cuda/include/cudnn_version.h | grep CUDNN_MAJOR -A 2</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">cat &#x2F;usr&#x2F;local&#x2F;cuda&#x2F;include&#x2F;cudnn_version.h | grep CUDNN_MAJOR -A 2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>出现如下的信息，则为配置成功</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">define CUDNN_MAJOR 8</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">define CUDNN_MINOR 4</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">define CUDNN_PATCHLEVEL 0</span></span><br><span class="line">--</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">define CUDNN_VERSION (CUDNN_MAJOR * 1000 + CUDNN_MINOR * 100 + CUDNN_PATCHLEVEL)</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">endif /* CUDNN_VERSION_H */</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#define CUDNN_MAJOR 8</span>
+<span class="token comment">#define CUDNN_MINOR 4</span>
+<span class="token comment">#define CUDNN_PATCHLEVEL 0</span>
+--
+<span class="token comment">#define CUDNN_VERSION (CUDNN_MAJOR * 1000 + CUDNN_MINOR * 100 + CUDNN_PATCHLEVEL)</span>
+
+<span class="token comment">#endif /* CUDNN_VERSION_H */</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h1 id="安装Pytorch"><a href="#安装Pytorch" class="headerlink" title="安装Pytorch"></a>安装Pytorch</h1><h2 id="构建虚拟环境"><a href="#构建虚拟环境" class="headerlink" title="构建虚拟环境"></a>构建虚拟环境</h2><ul>
 <li>如果有需要，使用<code>conda create --name 名字 python=3.8</code>新建一个虚拟环境<br><strong>当不标明python版本时<code>python=3.8</code>，对应env文件下不会出现python.exe</strong></li>
 <li>使用<code>conda activate 名字</code>进入虚拟环境安装</li>
@@ -691,15 +701,24 @@ anaconda安装过程中可提供python安装，如果确定安装anaconda可以�
 </ul>
 <h2 id="在线安装"><a href="#在线安装" class="headerlink" title="在线安装"></a>在线安装</h2><ul>
 <li>在<a target="_blank" rel="noopener" href="https://pytorch.org/get-started/locally/">Pytorch官网</a>，选择对应版本，得到安装命令<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2-4.png" alt="深度学习-1 本地环境部署-4"></li>
-<li><code>pip</code>包的安装目录可用以下命令查询:<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python -m site --user-site</span><br></pre></td></tr></table></figure></li>
+<li><code>pip</code>包的安装目录可用以下命令查询:<pre class="line-numbers language-none"><code class="language-none">python -m site --user-site<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><code>conda</code>安装包下载目录为<code>~/Anaconda3/pkgs</code>，安装在<code>~/Anaconda3/Lib/site-packages</code></li>
 </ul>
 <h2 id="使用镜像加速"><a href="#使用镜像加速" class="headerlink" title="使用镜像加速"></a>使用镜像加速</h2><ul>
-<li>pip 可以在命令最后加<code>-i 镜像地址</code>来进行加速下载，地址如下<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://pypi.tuna.tsinghua.edu.cn/simple #清华镜像</span><br><span class="line">https://mirrors.aliyun.com/pypi/simple/ #阿里</span><br><span class="line">https://mirrors.163.com/pypi/simple/ #网易</span><br></pre></td></tr></table></figure></li>
-<li>也可修改pip.ini来实现配置镜像路径<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#查找pip.ini的存放位置</span><br><span class="line">pip config -v list</span><br></pre></td></tr></table></figure>
-返回如下内容，修改global对应路径下的文件，会全局生效<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">For variant &#x27;global&#x27;, will try loading &#x27;C:\ProgramData\pip\pip.ini&#x27;</span><br><span class="line">For variant &#x27;user&#x27;, will try loading &#x27;C:\Users\YourUserName\pip\pip.ini&#x27;</span><br><span class="line">For variant &#x27;site&#x27;, will try loading &#x27;&lt;path_to_your_conda_env&gt;\Lib\site-packages\pip\pip.ini&#x27;</span><br></pre></td></tr></table></figure>
-在文件中添加以下内容<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[global]</span><br><span class="line">index-url = https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure></li>
-<li>同理，conda可以使用以下命令配置镜像源<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r/</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2/</span><br><span class="line">conda config --set show_channel_urls yes</span><br></pre></td></tr></table></figure>
+<li>pip 可以在命令最后加<code>-i 镜像地址</code>来进行加速下载，地址如下<pre class="line-numbers language-none"><code class="language-none">https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simple #清华镜像
+https:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;pypi&#x2F;simple&#x2F; #阿里
+https:&#x2F;&#x2F;mirrors.163.com&#x2F;pypi&#x2F;simple&#x2F; #网易<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+<li>也可修改pip.ini来实现配置镜像路径<pre class="line-numbers language-none"><code class="language-none">#查找pip.ini的存放位置
+pip config -v list<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+返回如下内容，修改global对应路径下的文件，会全局生效<pre class="line-numbers language-none"><code class="language-none">For variant &#39;global&#39;, will try loading &#39;C:\ProgramData\pip\pip.ini&#39;
+For variant &#39;user&#39;, will try loading &#39;C:\Users\YourUserName\pip\pip.ini&#39;
+For variant &#39;site&#39;, will try loading &#39;&lt;path_to_your_conda_env&gt;\Lib\site-packages\pip\pip.ini&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+在文件中添加以下内容<pre class="line-numbers language-none"><code class="language-none">[global]
+index-url &#x3D; https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simple<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<li>同理，conda可以使用以下命令配置镜像源<pre class="line-numbers language-none"><code class="language-none">conda config --add channels https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;main&#x2F;
+conda config --add channels https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;r&#x2F;
+conda config --add channels https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;anaconda&#x2F;pkgs&#x2F;msys2&#x2F;
+conda config --set show_channel_urls yes<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 在这一步中我们要安装<code>torch</code>、<code>torchvision</code>、<code>torchaudio</code>三个包，其中<code>torch</code>包有3G左右，如果下载慢，可以使用离线下载本地安装的方式</li>
 </ul>
 <h2 id="本地安装"><a href="#本地安装" class="headerlink" title="本地安装"></a>本地安装</h2><h3 id="离线下载"><a href="#离线下载" class="headerlink" title="离线下载"></a>离线下载</h3><ol>
@@ -707,27 +726,35 @@ anaconda安装过程中可提供python安装，如果确定安装anaconda可以�
 <li>使用下载地址，在迅雷等下载软件中下载<br><strong>可以修改命令分别下载<code>torchvision</code>与<code>torchaudio</code>以得到下载地址，但这两个包很小，可以直接在线下载</strong><br>PS:也可去<a target="_blank" rel="noopener" href="https://download.pytorch.org/whl/torch/">官网</a>下载相应版本安装包</li>
 </ol>
 <h3 id="本地安装-1"><a href="#本地安装-1" class="headerlink" title="本地安装"></a>本地安装</h3><ol>
-<li>使用以下命令定位到本地安装文件目录<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">盘符名:    #如D:,定位到特定磁盘</span><br><span class="line">dir        #显示当前文件下的所有文件</span><br><span class="line">cd 文件名   #打开文件</span><br><span class="line">cd ..       #反回上一级文件夹</span><br><span class="line">cd /        #反回根磁盘</span><br></pre></td></tr></table></figure>
+<li>使用以下命令定位到本地安装文件目录<pre class="line-numbers language-none"><code class="language-none">盘符名:    #如D:,定位到特定磁盘
+dir        #显示当前文件下的所有文件
+cd 文件名   #打开文件
+cd ..       #反回上一级文件夹
+cd &#x2F;        #反回根磁盘<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 直到使用<code>dir</code>可以看到安装文件为止<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2-7.png" alt="深度学习-1 本地环境部署-7"><br><strong>conda 安装包放到anaconda目录下的<code>pkgs</code>文件中</strong></li>
 <li>使用<code>pip install 文件名</code>或 <code>conda install --use-local 文件名</code>安装本地包，在安装过程中会下载一些其他依赖包<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2-6.png" alt="深度学习-1 本地环境部署-6"><br><strong>总共需要将<code>torch</code>、<code>torchvision</code>、<code>torchaudio</code>都安装好</strong></li>
 </ol>
 <h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><ul>
 <li>在anaconda powershell中使用<code>conda activate 环境名</code>进入conda环境</li>
 <li>键入<code>python</code>进入python模式</li>
-<li>使用<code>import torch</code>导入torch包<br>依次使用使用以下命令测试<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a = torch.ones((3,1)).cuda(0)</span><br><span class="line">b = torch.ones((3,1)).cuda(0)</span><br><span class="line">a + b</span><br></pre></td></tr></table></figure>
+<li>使用<code>import torch</code>导入torch包<br>依次使用使用以下命令测试<pre class="line-numbers language-none"><code class="language-none">a &#x3D; torch.ones((3,1)).cuda(0)
+b &#x3D; torch.ones((3,1)).cuda(0)
+a + b<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 得到运算结果：<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2-8.png" alt="深度学习-1 本地环境部署-8"><br>使用<code>exit()</code>或<code>quit()</code>退出python </li>
-<li>也可使用以下命令<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python</span><br><span class="line">import torch</span><br><span class="line">torch.cuda.is_available()</span><br></pre></td></tr></table></figure>
+<li>也可使用以下命令<pre class="line-numbers language-none"><code class="language-none">python
+import torch
+torch.cuda.is_available()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 返回ture即可</li>
 </ul>
 <h1 id="安装jupyter-note-book与-d2l"><a href="#安装jupyter-note-book与-d2l" class="headerlink" title="安装jupyter note book与 d2l"></a>安装jupyter note book与 d2l</h1><p>1. </p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install jupyter d2l</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">pip install jupyter d2l<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ol start="2">
 <li>去<a target="_blank" rel="noopener" href="https://zh-v2.d2l.ai/">官网</a>下载jupyter记事本压缩包，并解压<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-1%20%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2-9.png" alt="深度学习-1 本地环境部署-9"></li>
-<li>进行jupyter note book，找到解压文件开始学习<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jupyter note book</span><br></pre></td></tr></table></figure></li>
+<li>进行jupyter note book，找到解压文件开始学习<pre class="line-numbers language-none"><code class="language-none">jupyter note book<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 </ol>
 <h1 id="将虚拟环境添加到jupyter-notebook"><a href="#将虚拟环境添加到jupyter-notebook" class="headerlink" title="将虚拟环境添加到jupyter notebook"></a>将虚拟环境添加到jupyter notebook</h1><ul>
-<li>安装<code>ipykernel</code>:<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install ipykernel</span><br></pre></td></tr></table></figure></li>
-<li>将环境添加到jupyter notebook<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python -m ipykernel install --user --name env_name</span><br></pre></td></tr></table></figure></li>
+<li>安装<code>ipykernel</code>:<pre class="line-numbers language-none"><code class="language-none">pip install ipykernel<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>将环境添加到jupyter notebook<pre class="line-numbers language-none"><code class="language-none">python -m ipykernel install --user --name env_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li>重启jupyter notebook</li>
 </ul>
 
@@ -1003,9 +1030,6 @@ anaconda安装过程中可提供python安装，如果确定安装anaconda可以�
 <!-- 代码块功能依赖 -->
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
-
-  <!-- 是否加载使用自带的 prismjs. -->
-  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
 
 
 <!-- 代码语言 -->

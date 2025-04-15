@@ -623,9 +623,6 @@
         <hr class="clearfix">
 
         
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.min.css">
-        
 
         
 
@@ -635,17 +632,22 @@
 <h2 id="修改cuda软链接切换版本"><a href="#修改cuda软链接切换版本" class="headerlink" title="修改cuda软链接切换版本"></a>修改cuda软链接切换版本</h2><p>在Linux中，<code>/usr/local/</code>目录通常用于存放手动安装的软件。对于CUDA来说，它可能包括<code>cuda</code>这个软链接（快捷方式）来指向具体的CUDA安装目录。如果你想修改这个软链接指向的文件，你可以使用<code>ln</code>命令来重新创建这个软链接。</p>
 <p>首先，你需要知道新的CUDA安装目录的路径。假设新的CUDA安装目录是<code>/usr/local/cuda-11.2</code>（这只是一个例子，实际的路径可能会不同）。</p>
 <p>然后，你可以使用以下命令来删除旧的软链接并创建一个新的软链接：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">rm</span> /usr/local/cuda</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">ln</span> -s /usr/local/cuda-11.2 /usr/local/cuda</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">rm</span> /usr/local/cuda
+<span class="token function">sudo</span> <span class="token function">ln</span> <span class="token parameter variable">-s</span> /usr/local/cuda-11.2 /usr/local/cuda<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>这里，<code>rm</code>命令用于删除旧的软链接，<code>ln -s</code>命令用于创建一个新的软链接。<code>-s</code>选项告诉<code>ln</code>命令创建一个符号链接（也就是软链接）。</p>
 <p>请注意，使用<code>sudo</code>是因为<code>/usr/local/</code>目录通常需要管理员权限才能修改。</p>
 <p>另外，修改CUDA软链接后，你可能还需要更新你的环境变量，以确保系统可以找到正确的CUDA路径。这通常涉及到编辑<code>~/.bashrc</code>、<code>~/.bash_profile</code>或<code>/etc/profile</code>文件，并在其中添加或更新以下行：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=/usr/local/cuda/bin:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=/usr/local/cuda/lib64:<span class="variable">$LD_LIBRARY_PATH</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span>/usr/local/cuda/bin:<span class="token environment constant">$PATH</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">LD_LIBRARY_PATH</span><span class="token operator">=</span>/usr/local/cuda/lib64:<span class="token variable">$LD_LIBRARY_PATH</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>然后，你需要运行<code>source ~/.bashrc</code>（或你编辑的相应文件）来使更改生效。</p>
 <h2 id="Linux环境变量配置方法一：export-PATH"><a href="#Linux环境变量配置方法一：export-PATH" class="headerlink" title="Linux环境变量配置方法一：export PATH"></a>Linux环境变量配置方法一：<code>export PATH</code></h2><p>使用<code>export</code>命令直接修改<code>PATH</code>的值。</p>
 <p>例如，配置MySQL进入环境变量的方法:</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">export PATH=/home/uusama/mysql/bin:$PATH</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">或者把PATH放在前面</span></span><br><span class="line">export PATH=$PATH:/home/uusama/mysql/bin</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span>/home/uusama/mysql/bin:<span class="token environment constant">$PATH</span>
+
+<span class="token comment"># 或者把PATH放在前面</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token environment constant">$PATH</span>:/home/uusama/mysql/bin<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>注意事项：</p>
 <ul>
@@ -655,7 +657,10 @@
 <li>配置的环境变量中不要忘了加上原来的配置，即<code>$PATH</code>部分，避免覆盖原来配置【具体表现为，把原来的PATH看作一个目录，与新增加的环境变量用冒号 : 隔开；原来的PATH看作一个目录($PATH)，与新增加的环境变量用冒号 : 隔开；原来的PATH看作一个目录，与新增加的环境变量用冒号:隔开；原来的PATH可以放在前面，也可以放在后面】</li>
 </ul>
 <h2 id="Linux环境变量配置方法二：vim-bashrc"><a href="#Linux环境变量配置方法二：vim-bashrc" class="headerlink" title="Linux环境变量配置方法二：vim ~/.bashrc"></a>Linux环境变量配置方法二：<code>vim ~/.bashrc</code></h2><p>通过修改用户目录下的<code>~/.bashrc</code>文件进行配置：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim ~/.bashrc</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">在最后一行加上</span></span><br><span class="line">export PATH=$PATH:/home/uusama/mysql/bin</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">vim</span> ~/.bashrc
+
+<span class="token comment"># 在最后一行加上</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token environment constant">$PATH</span>:/home/uusama/mysql/bin<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>注意事项：</p>
 <ul>
@@ -665,21 +670,34 @@
 <li>如果有后续的环境变量加载文件覆盖了<code>PATH</code>定义，则可能不生效</li>
 </ul>
 <h1 id="安装cudnn"><a href="#安装cudnn" class="headerlink" title="安装cudnn"></a>安装cudnn</h1><h2 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h2><p>CUDA需要配合cudnn才能正常工作，将cudnn的四个文件（夹），复制到CUDA的安装路径即可，即CUDA文件夹。<br>往系统环境变量中的 path 添加如下路径（<strong>根据自己的路径进行修改</strong>）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">C:\Program Files\NVIDIA\CUDA\bin</span><br><span class="line">C:\Program Files\NVIDIA\CUDA\include</span><br><span class="line">C:\Program Files\NVIDIA\CUDA\lib</span><br><span class="line">C:\Program Files\NVIDIA\CUDA\libnvvp</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">C:\Program Files\NVIDIA\CUDA\bin
+C:\Program Files\NVIDIA\CUDA\include
+C:\Program Files\NVIDIA\CUDA\lib
+C:\Program Files\NVIDIA\CUDA\libnvvp<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>检验：</p>
 <p>配置完成后，我们可以验证是否配置成功，主要使用CUDA内置的<code>deviceQuery.exe</code> 和 <code>bandwidthTest.exe</code>：<br>首先win+R启动cmd，cd到<strong>安装目录</strong>下的 <code>…\extras\demo_suite</code>,然后分别执行<code>.\bandwidthTest.exe</code>和<code>.\deviceQuery.exe</code>,应该得到下图.</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd C:\Program Files\NVIDIA\CUDA\extras\demo_suite </span><br><span class="line">.\bandwidthTest.exe </span><br><span class="line">.\deviceQuery.exe</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">cd C:\Program Files\NVIDIA\CUDA\extras\demo_suite 
+.\bandwidthTest.exe 
+.\deviceQuery.exe<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h2 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h2><p><a target="_blank" rel="noopener" href="https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html">官方教程</a>与<a target="_blank" rel="noopener" href="https://blog.csdn.net/JianJuly/article/details/102793103">CSDN参考</a><br>安装linus解压工具</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt-get install zlib1g</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">sudo apt-get install zlib1g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>打开<a target="_blank" rel="noopener" href="https://developer.nvidia.com/rdp/cudnn-archive">下载链接</a>，选择相应的版本并下载。选择方法可参考<a href="%5Bhttps://blog.csdn.net/MumuziD/article/details/118760650%5D(https://blog.csdn.net/MumuziD/article/details/118760650)">链接</a>，，建议直接选择<code>cuDNN Library for Linux (x86_64)</code><br>进入cudnn压缩包所在的文件夹，解压文件</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tar -xvf [$文件名]</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">tar -xvf [$文件名]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>将文件拷贝到相应cuda目录下</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo cp cudnn-*-archive/include/cudnn*.h /usr/local/cuda/include </span><br><span class="line">sudo cp -P cudnn-*-archive/lib/libcudnn* /usr/local/cuda/lib64 </span><br><span class="line">sudo chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn*</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">sudo cp cudnn-*-archive&#x2F;include&#x2F;cudnn*.h &#x2F;usr&#x2F;local&#x2F;cuda&#x2F;include 
+sudo cp -P cudnn-*-archive&#x2F;lib&#x2F;libcudnn* &#x2F;usr&#x2F;local&#x2F;cuda&#x2F;lib64 
+sudo chmod a+r &#x2F;usr&#x2F;local&#x2F;cuda&#x2F;include&#x2F;cudnn*.h &#x2F;usr&#x2F;local&#x2F;cuda&#x2F;lib64&#x2F;libcudnn*<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>查看cudnn版本</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat /usr/local/cuda/include/cudnn_version.h | grep CUDNN_MAJOR -A 2</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">cat &#x2F;usr&#x2F;local&#x2F;cuda&#x2F;include&#x2F;cudnn_version.h | grep CUDNN_MAJOR -A 2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>出现如下的信息，则为配置成功</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">define CUDNN_MAJOR 8</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">define CUDNN_MINOR 4</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">define CUDNN_PATCHLEVEL 0</span></span><br><span class="line">--</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">define CUDNN_VERSION (CUDNN_MAJOR * 1000 + CUDNN_MINOR * 100 + CUDNN_PATCHLEVEL)</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">endif /* CUDNN_VERSION_H */</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#define CUDNN_MAJOR 8</span>
+<span class="token comment">#define CUDNN_MINOR 4</span>
+<span class="token comment">#define CUDNN_PATCHLEVEL 0</span>
+--
+<span class="token comment">#define CUDNN_VERSION (CUDNN_MAJOR * 1000 + CUDNN_MINOR * 100 + CUDNN_PATCHLEVEL)</span>
+
+<span class="token comment">#endif /* CUDNN_VERSION_H */</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h1 id="cuda卸载"><a href="#cuda卸载" class="headerlink" title="cuda卸载"></a>cuda卸载</h1><h2 id="linux-1"><a href="#linux-1" class="headerlink" title="linux"></a>linux</h2><p>详见<a target="_blank" rel="noopener" href="https://blog.csdn.net/ziqibit/article/details/129935737">链接</a>与<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/648709952">链接</a><br>如果需要换不同的版本，建议多版本并存，这里先不涉及，如果要彻底卸载，根据以下操作<br>权限不够前面加sudo，我这里用root进行安装</p>
 <h3 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h3><ol>
 <li>准备删除cuda<br><code>apt-get remove cuda</code></li>
@@ -690,16 +708,19 @@
 <li>手动删除相关的包。否则再安装别的版本会失败<br><code>dpkg -P cuda-repo-ubuntu2204-12-1-local cuda-toolkit-12-1-config-common cuda-toolkit-12-config-common cuda-toolkit-config-common cuda-visual-tools-12-1</code><br>名字使用第5步中的</li>
 </ol>
 <h3 id="方案二"><a href="#方案二" class="headerlink" title="方案二"></a>方案二</h3><p>进入下面这个目录：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/local/cuda-10.0/bin</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> /usr/local/cuda-10.0/bin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>在这个目录中，可以找到卸载程序，名为：<code>uninstall_cuda_10.0.pl</code></p>
 <p>这里需要注意，如果版本大于10.0，则卸载程序的名字为：<code>cuda-uninstaller</code></p>
 <p>执行卸载命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># version &lt;= 10.0</span></span><br><span class="line"><span class="built_in">sudo</span> ./uninstall_cuda_10.0.pl  <span class="comment"># 10.0可替换为自己的版本号</span></span><br><span class="line"><span class="comment"># version &gt; 10.0</span></span><br><span class="line"><span class="built_in">sudo</span> ./cuda-uninstaller</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># version &lt;= 10.0</span>
+<span class="token function">sudo</span> ./uninstall_cuda_10.0.pl  <span class="token comment"># 10.0可替换为自己的版本号</span>
+<span class="token comment"># version > 10.0</span>
+<span class="token function">sudo</span> ./cuda-uninstaller<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>如果完成卸载后，当前目录（&#x2F;usr&#x2F;local&#x2F;cuda-10.0）没有被删除，则证明还存在当时安装cuDNN时留下的文件</p>
 <p>删除cuDNN（若没有安装Cudnn，可忽略此步骤）：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">rm</span> -rf /usr/local/cuda-10.0  <span class="comment"># 10.0可替换为自己的版本号</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">rm</span> <span class="token parameter variable">-rf</span> /usr/local/cuda-10.0  <span class="token comment"># 10.0可替换为自己的版本号</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>综上，就彻底删掉了Cuda相关的文件</p>
 <h2 id="windows-1"><a href="#windows-1" class="headerlink" title="windows"></a>windows</h2><ul>
@@ -963,9 +984,6 @@
 <!-- 代码块功能依赖 -->
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
-
-  <!-- 是否加载使用自带的 prismjs. -->
-  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
 
 
 <!-- 代码语言 -->

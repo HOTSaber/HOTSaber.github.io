@@ -639,9 +639,6 @@
         <hr class="clearfix">
 
         
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.min.css">
-        
 
         
 
@@ -656,9 +653,24 @@
 </ul>
 <h2 id="本地配置"><a href="#本地配置" class="headerlink" title="本地配置"></a>本地配置</h2><p>可以先在本地上把配置⽂件编辑好，再上传到Windows PC和Linux</p>
 <ul>
-<li>配置服务端文件<code>frpc.ini</code>：<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[common]</span><br><span class="line">bind_port = 7000</span><br><span class="line">vhost_http_port = 8080</span><br></pre></td></tr></table></figure></li>
+<li>配置服务端文件<code>frpc.ini</code>：<pre class="line-numbers language-none"><code class="language-none">[common]
+bind_port &#x3D; 7000
+vhost_http_port &#x3D; 8080<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
 <li>其中<code>bind_port</code>是SSH用端口，<code>vhost_http_port</code>是用来映射Jupyter notebook的端口，完整的参数可以参考<code>frps_full.ini</code> ，这⾥不作展开；</li>
-<li>配置客户端文件<code>frpc.ini</code>:<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[common]</span><br><span class="line">server_addr = [cloud_ip]</span><br><span class="line">server_port = 7000</span><br><span class="line"></span><br><span class="line">[ssh]</span><br><span class="line">type = tcp</span><br><span class="line">local_ip = 127.0.0.1</span><br><span class="line">local_port = 22</span><br><span class="line">remote_port = 6000</span><br><span class="line"></span><br><span class="line">[web]</span><br><span class="line">type = http</span><br><span class="line">local_port = 8888</span><br><span class="line">custom_domains = [cloud_ip]</span><br></pre></td></tr></table></figure></li>
+<li>配置客户端文件<code>frpc.ini</code>:<pre class="line-numbers language-none"><code class="language-none">[common]
+server_addr &#x3D; [cloud_ip]
+server_port &#x3D; 7000
+
+[ssh]
+type &#x3D; tcp
+local_ip &#x3D; 127.0.0.1
+local_port &#x3D; 22
+remote_port &#x3D; 6000
+
+[web]
+type &#x3D; http
+local_port &#x3D; 8888
+custom_domains &#x3D; [cloud_ip]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 <li>主要修改了<code>server_addr</code>为我们的云服务器IP, 并配置了两个映射规则，分别是SSH与web，用于SSH远程访问与映射jupyter notebook。</li>
 <li>将frp分别上传到服务器和客户端（可以把没⽤的⽂件删掉，服务端只保留<code>frps</code>相关的文件，客户端只保留<code>frpc</code>相关的文件）</li>
 </ul>
@@ -667,19 +679,25 @@
 </ul>
 <h1 id="启动frp进程"><a href="#启动frp进程" class="headerlink" title="启动frp进程"></a>启动frp进程</h1><p>先使用命令符加载进frp文件侠下</p>
 <ul>
-<li>服务端<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./frps -c ./frps.ini</span><br></pre></td></tr></table></figure>
+<li>服务端<pre class="line-numbers language-none"><code class="language-none">.&#x2F;frps -c .&#x2F;frps.ini<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <strong>出现权限问题可使用<code>chmod 777 ./frps</code>提升<code>frps</code>文件权限</strong></li>
-<li>客户端<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">frpc -c frpc.ini</span><br></pre></td></tr></table></figure>
- linux 命令：<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ls #列出当前目录的所有文件和子目录名称</span><br><span class="line">CD #用于更改当前工作目录 cd ..为返回上一级</span><br><span class="line">pwd #用于显示当前所在的工作目录的全路径名称</span><br></pre></td></tr></table></figure>
-windows 命令：<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dir #列出当前目录的所有文件和子目录名称</span><br><span class="line">CD #用于更改当前工作目录 cd ..为返回上一级</span><br></pre></td></tr></table></figure></li>
-<li>在其他电脑上使用ssh测试：<br>windows命令行：<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh username@cloud_ip -p portnumber</span><br></pre></td></tr></table></figure>
-mac命令行：<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -p portnumber username@cloud_ip</span><br></pre></td></tr></table></figure>
-xshell：<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh username@cloud_ip portumber</span><br></pre></td></tr></table></figure></li>
+<li>客户端<pre class="line-numbers language-none"><code class="language-none">frpc -c frpc.ini<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+ linux 命令：<pre class="line-numbers language-none"><code class="language-none">ls #列出当前目录的所有文件和子目录名称
+CD #用于更改当前工作目录 cd ..为返回上一级
+pwd #用于显示当前所在的工作目录的全路径名称<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+windows 命令：<pre class="line-numbers language-none"><code class="language-none">dir #列出当前目录的所有文件和子目录名称
+CD #用于更改当前工作目录 cd ..为返回上一级<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<li>在其他电脑上使用ssh测试：<br>windows命令行：<pre class="line-numbers language-none"><code class="language-none">ssh username@cloud_ip -p portnumber<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+mac命令行：<pre class="line-numbers language-none"><code class="language-none">ssh -p portnumber username@cloud_ip<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+xshell：<pre class="line-numbers language-none"><code class="language-none">ssh username@cloud_ip portumber<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 </ul>
 <h1 id="自启动配置"><a href="#自启动配置" class="headerlink" title="自启动配置"></a>自启动配置</h1><h2 id="云端linux"><a href="#云端linux" class="headerlink" title="云端linux"></a>云端linux</h2><ul>
-<li>确保安装了<code>systemd</code><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># yum</span><br><span class="line">yum install systemd</span><br><span class="line"># apt</span><br><span class="line">apt install systemd</span><br></pre></td></tr></table></figure></li>
-<li>使用文本编辑器，如 <code>vim</code> 创建并编辑 <code>frps.service</code> 文件。此处的文件名称决定了服务的名称。<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim /etc/systemd/system/frps.service</span><br></pre></td></tr></table></figure>
-或<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim /lib/systemd/system/frps.service</span><br></pre></td></tr></table></figure></li>
+<li>确保安装了<code>systemd</code><pre class="line-numbers language-none"><code class="language-none"># yum
+yum install systemd
+# apt
+apt install systemd<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>使用文本编辑器，如 <code>vim</code> 创建并编辑 <code>frps.service</code> 文件。此处的文件名称决定了服务的名称。<pre class="line-numbers language-none"><code class="language-none">vim &#x2F;etc&#x2F;systemd&#x2F;system&#x2F;frps.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+或<pre class="line-numbers language-none"><code class="language-none">vim &#x2F;lib&#x2F;systemd&#x2F;system&#x2F;frps.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li><strong>ps:</strong> 1. <code>/lib/systemd/system/</code>（或 <code>/usr/lib/systemd/system/</code>）<ul>
 <li>系统级服务文件存放位置</li>
 <li>通常由软件包管理器自动安装到这里</li>
@@ -689,16 +707,71 @@ xshell：<figure class="highlight plaintext"><table><tr><td class="code"><pre><s
 <li>适合用户自己创建的服务</li>
 </ul>
 </li>
-<li>写入以下内容：<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=Frp Server Service</span><br><span class="line">After=network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=simple</span><br><span class="line">User=root</span><br><span class="line">#此处用户名需要修改</span><br><span class="line">Restart=on-failure</span><br><span class="line">RestartSec=5s</span><br><span class="line">ExecStart=/root/frp_0.51.3_linux_amd64/frps -c /root/frp_0.51.3_linux_amd64/frps.ini</span><br><span class="line">#此处文件路径需要修改</span><br><span class="line">LimitNOFILE=1048576</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
+<li>写入以下内容：<pre class="line-numbers language-none"><code class="language-none">[Unit]
+Description&#x3D;Frp Server Service
+After&#x3D;network.target
+
+[Service]
+Type&#x3D;simple
+User&#x3D;root
+#此处用户名需要修改
+Restart&#x3D;on-failure
+RestartSec&#x3D;5s
+ExecStart&#x3D;&#x2F;root&#x2F;frp_0.51.3_linux_amd64&#x2F;frps -c &#x2F;root&#x2F;frp_0.51.3_linux_amd64&#x2F;frps.ini
+#此处文件路径需要修改
+LimitNOFILE&#x3D;1048576
+
+[Install]
+WantedBy&#x3D;multi-user.target<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <strong>路径要使用绝对路径，可以通过<code>pwd</code>来查看路径</strong></li>
-<li>使用以下命令，实现开机自启动：<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">systemctl daemon-reload  </span><br><span class="line">systemctl enable frps  </span><br><span class="line">systemctl start frps  </span><br><span class="line">systemctl status frps</span><br></pre></td></tr></table></figure>
-显示以下内容则表示自启成功：<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/13.%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F-3.png" alt="13.内网穿透-3"><br>命令功能参考如下：<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">systemctl start frps #启动frps</span><br><span class="line">systemctl enable frps #打开自启动</span><br><span class="line">systemctl disable frps #关闭自启动</span><br><span class="line">systemctl restart frps #重启进程</span><br><span class="line">systemctl stop frps #停止进程</span><br><span class="line">systemctl status frps #查看进程日志</span><br></pre></td></tr></table></figure></li>
+<li>使用以下命令，实现开机自启动：<pre class="line-numbers language-none"><code class="language-none">systemctl daemon-reload  
+systemctl enable frps  
+systemctl start frps  
+systemctl status frps<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+显示以下内容则表示自启成功：<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/13.%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F-3.png" alt="13.内网穿透-3"><br>命令功能参考如下：<pre class="line-numbers language-none"><code class="language-none">systemctl start frps #启动frps
+systemctl enable frps #打开自启动
+systemctl disable frps #关闭自启动
+systemctl restart frps #重启进程
+systemctl stop frps #停止进程
+systemctl status frps #查看进程日志<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 <h2 id="linux客户端"><a href="#linux客户端" class="headerlink" title="linux客户端"></a>linux客户端</h2><p> 同上，使用<code>vim /lib/systemd/system/frpc.service</code>创建并编辑 <code>frpc.service</code> 文件。写入以下内容：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=Frp cliant Service</span><br><span class="line">After=network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=simple</span><br><span class="line">User=ps</span><br><span class="line">#此处用户名需要修改</span><br><span class="line">Restart=always</span><br><span class="line">RestartSec=5</span><br><span class="line">ExecStart=/home/ps/tools/frp_0.51.3_linux_amd64/frpc -c /home/ps/tools/frp_0.51.3_linux_amd64/frpc.ini</span><br><span class="line">#此处文件路径需要修改</span><br><span class="line">LimitNOFILE=1048576</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">[Unit]
+Description&#x3D;Frp cliant Service
+After&#x3D;network.target
+
+[Service]
+Type&#x3D;simple
+User&#x3D;ps
+#此处用户名需要修改
+Restart&#x3D;always
+RestartSec&#x3D;5
+ExecStart&#x3D;&#x2F;home&#x2F;ps&#x2F;tools&#x2F;frp_0.51.3_linux_amd64&#x2F;frpc -c &#x2F;home&#x2F;ps&#x2F;tools&#x2F;frp_0.51.3_linux_amd64&#x2F;frpc.ini
+#此处文件路径需要修改
+LimitNOFILE&#x3D;1048576
+
+[Install]
+WantedBy&#x3D;multi-user.target<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>路径要使用绝对路径，可以通过<code>pwd</code>来查看路径</strong>，并使用<code>systemctl enable frps</code>打开自启动</p>
 <h2 id="windows客户端"><a href="#windows客户端" class="headerlink" title="windows客户端"></a>windows客户端</h2><ul>
-<li>在<code>frps</code>文件中新建批处理文件<code>autostart.bat</code>文件：<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line">chcp 65001</span><br><span class="line">title 内网穿透_不要关闭此窗口！！！</span><br><span class="line">echo ---------------------分割线-----------------</span><br><span class="line">echo 不要关闭此窗口！！！ </span><br><span class="line">echo 不要关闭此窗口！！！</span><br><span class="line">echo 不要关闭此窗口！！！</span><br><span class="line">echo ---------------------分割线-----------------</span><br><span class="line"></span><br><span class="line">if not defined TAG (</span><br><span class="line">	set TAG=1</span><br><span class="line">	start wt -p &quot;cmd&quot; %0 #要确保安装了windows terminal，如果没有安装，可以在Microsoft store中安装</span><br><span class="line">	exit</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">:home</span><br><span class="line">frpc -c frpc.ini</span><br><span class="line">goto home #为了崩溃或者异常后可以重启</span><br></pre></td></tr></table></figure></li>
+<li>在<code>frps</code>文件中新建批处理文件<code>autostart.bat</code>文件：<pre class="line-numbers language-none"><code class="language-none">@echo off
+chcp 65001
+title 内网穿透_不要关闭此窗口！！！
+echo ---------------------分割线-----------------
+echo 不要关闭此窗口！！！ 
+echo 不要关闭此窗口！！！
+echo 不要关闭此窗口！！！
+echo ---------------------分割线-----------------
+
+if not defined TAG (
+	set TAG&#x3D;1
+	start wt -p &quot;cmd&quot; %0 #要确保安装了windows terminal，如果没有安装，可以在Microsoft store中安装
+	exit
+)
+
+:home
+frpc -c frpc.ini
+goto home #为了崩溃或者异常后可以重启<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 <li>创建<code>autostart.bat</code>的快捷⽅式</li>
 <li>打开 <code>C:\Users\username\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\</code>，将快捷⽅式粘贴到进去</li>
 <li>这个⽅法在每次PC开机时，就会弹出Windows Terminal的窗⼝，可能有点碍事，但你可以直接看到frpc的运⾏状态</li>
@@ -707,21 +780,52 @@ xshell：<figure class="highlight plaintext"><table><tr><td class="code"><pre><s
 </ul>
 <h1 id="jupyter-notebook配置"><a href="#jupyter-notebook配置" class="headerlink" title="jupyter notebook配置"></a>jupyter notebook配置</h1><p>详情可见<a target="_blank" rel="noopener" href="https://bingqiangzhou.github.io/2020/06/18/DailyJungle-FrpAndJupyterNotebookRemoteConfig.html">frp实现内网穿透以及配置Jupyter Notebook远程连接</a>与<a target="_blank" rel="noopener" href="https://blog.csdn.net/WeDon_t/article/details/112982371">使用frp穿透远程访问Jupyter Notebook方法</a></p>
 <h2 id="生成nootbook配置文件"><a href="#生成nootbook配置文件" class="headerlink" title="生成nootbook配置文件"></a>生成nootbook配置文件</h2><p>执行以下命令，会在用户目录下生成的配置文件<code>~/.jupyter/jupyter_notebook_config.py</code>，之后在这个文件中再进行配置。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jupyter notebook --generate-config</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">jupyter notebook --generate-config<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="详细配置设置"><a href="#详细配置设置" class="headerlink" title="详细配置设置"></a>详细配置设置</h2><ol>
-<li>进入<code>python</code>环境：<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from notebook.auth import passwd</span><br><span class="line">passwd()</span><br><span class="line">#设置自己的密码，例如123</span><br><span class="line">#然后两次输入确认生成加密字符串</span><br><span class="line">#一定保留好加密字符串</span><br></pre></td></tr></table></figure></li>
-<li>对<code>~/.jupyter/jupyter_notebook_config.py</code>进行配置允许访问：<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">c.NotebookApp.allow_remote_access = True  #允许远程访问</span><br><span class="line">c.NotebookApp.allow_root = True          #允许root访问</span><br><span class="line">c.NotebookApp.ip=&#x27;*&#x27;                     # 这一项为noteboook运行所占用的IP</span><br><span class="line">c.NotebookApp.password = &#x27;上面复制的加密字符串&#x27;  </span><br><span class="line">c.NotebookApp.open_browser = False       # 禁止自动打开浏览器  </span><br><span class="line">c.NotebookApp.port =8888                 # 端口</span><br><span class="line">c.NotebookApp.notebook_dir = &#x27;设置Notebook启动进入的目录&#x27; </span><br></pre></td></tr></table></figure>
+<li>进入<code>python</code>环境：<pre class="line-numbers language-none"><code class="language-none">from notebook.auth import passwd
+passwd()
+#设置自己的密码，例如123
+#然后两次输入确认生成加密字符串
+#一定保留好加密字符串<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>对<code>~/.jupyter/jupyter_notebook_config.py</code>进行配置允许访问：<pre class="line-numbers language-none"><code class="language-none">c.NotebookApp.allow_remote_access &#x3D; True  #允许远程访问
+c.NotebookApp.allow_root &#x3D; True          #允许root访问
+c.NotebookApp.ip&#x3D;&#39;*&#39;                     # 这一项为noteboook运行所占用的IP
+c.NotebookApp.password &#x3D; &#39;上面复制的加密字符串&#39;  
+c.NotebookApp.open_browser &#x3D; False       # 禁止自动打开浏览器  
+c.NotebookApp.port &#x3D;8888                 # 端口
+c.NotebookApp.notebook_dir &#x3D; &#39;设置Notebook启动进入的目录&#39; <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <strong>注意：如果用frp做内网穿透的话，这里的端口需要对应上面frp客户端web服务配置的端口号，tensorboard可视化等等其他web服务也是一样</strong></li>
-<li>配置完成，重启notebook即可<br>使用<code>nohup</code>命令后台运行jupyter notebook，并将输出的内容追加的内容输出到<code>jupyter.out</code>文件中，同时将错误信息也输出到文件中。<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nohup jupyter notebook &gt;&gt;jupyter.out 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure></li>
+<li>配置完成，重启notebook即可<br>使用<code>nohup</code>命令后台运行jupyter notebook，并将输出的内容追加的内容输出到<code>jupyter.out</code>文件中，同时将错误信息也输出到文件中。<pre class="line-numbers language-none"><code class="language-none">nohup jupyter notebook &gt;&gt;jupyter.out 2&gt;&amp;1 &amp;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li>使用<code>frp</code>配置中的云服务器IP+端口号即可以远程访问</li>
 </ol>
 <h1 id="多个-SSH-服务复用同一端口"><a href="#多个-SSH-服务复用同一端口" class="headerlink" title="多个 SSH 服务复用同一端口"></a>多个 SSH 服务复用同一端口</h1><p>修改不同实例名即可</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[ssh3]#修改这里的实例名</span><br><span class="line">type = tcp</span><br><span class="line">local_ip = 127.0.0.1</span><br><span class="line">local_port = 22</span><br><span class="line">remote_port = 2333</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">[ssh3]#修改这里的实例名
+type &#x3D; tcp
+local_ip &#x3D; 127.0.0.1
+local_port &#x3D; 22
+remote_port &#x3D; 2333<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>由于云主机的frp服务器端口是开放的，任意的frp客户端都可以随意在服务器注册端口映射，这样子在公网上及其不安全，所以建议要</p>
 <p>默认情况下只要知道 FRP 服务端开放的端口，任意 FRP 客户端都可以随意在服务端上注册端口映射，这样对于在公网上的 FRP 服务来说显然不太安全。FRP 提供了身份验证机制来提高 FRP 服务端的安全性。<br>可以使用token加强验证。详见<a target="_blank" rel="noopener" href="https://gofrp.org/zh-cn/docs/examples/stcp/">frp帮助文档</a></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#在common中加入以下参数</span><br><span class="line">token = [密码] #在frps与frpc的common中都加入以下参数</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">#在common中加入以下参数
+token &#x3D; [密码] #在frps与frpc的common中都加入以下参数<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h1 id="frp配置实现转发多个http站点"><a href="#frp配置实现转发多个http站点" class="headerlink" title="frp配置实现转发多个http站点"></a>frp配置实现转发多个http站点</h1><p>将新加的[web]项type改为tcp，后面也不用加域名或者ip。<br>frp会直接将其当作tcp数据包处理，只处理到了传输层(tcp)，而没有到<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E5%BA%94%E7%94%A8%E5%B1%82&spm=1001.2101.3001.7020">应用层</a>(http)。<br>配置如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[web]</span><br><span class="line">type = http</span><br><span class="line">local_port = 8501</span><br><span class="line">remote_port = 8080</span><br><span class="line">custom_domains = 122.51.109.45</span><br><span class="line"></span><br><span class="line">[web2]</span><br><span class="line">type = tcp</span><br><span class="line">local_ip = 127.0.0.1</span><br><span class="line">local_port = 9995</span><br><span class="line">remote_port = 9995</span><br><span class="line"></span><br><span class="line">[web3]</span><br><span class="line">type = tcp</span><br><span class="line">local_ip = 127.0.0.1</span><br><span class="line">local_port = 8502</span><br><span class="line">remote_port = 8081</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">[web]
+type &#x3D; http
+local_port &#x3D; 8501
+remote_port &#x3D; 8080
+custom_domains &#x3D; 122.51.109.45
+
+[web2]
+type &#x3D; tcp
+local_ip &#x3D; 127.0.0.1
+local_port &#x3D; 9995
+remote_port &#x3D; 9995
+
+[web3]
+type &#x3D; tcp
+local_ip &#x3D; 127.0.0.1
+local_port &#x3D; 8502
+remote_port &#x3D; 8081<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
                 
@@ -1012,9 +1116,6 @@ xshell：<figure class="highlight plaintext"><table><tr><td class="code"><pre><s
 <!-- 代码块功能依赖 -->
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
-
-  <!-- 是否加载使用自带的 prismjs. -->
-  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
 
 
 <!-- 代码语言 -->

@@ -6,7 +6,10 @@
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="页面设置, 挖掘机">
     <meta name="description" content="导航栏设置
-修改主配置文件中的_config.butterfly.yml_如下所示nav:    logo: # image    display_title: true    fixed: false # fixed navigation">
+修改主配置文件中的_config.butterfly.yml_如下所示nav:  
+  logo: # image  
+  display_title: true  
+  fixed: false # fixed navigat">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -631,16 +634,16 @@
         <hr class="clearfix">
 
         
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.min.css">
-        
 
         
 
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="导航栏设置"><a href="#导航栏设置" class="headerlink" title="导航栏设置"></a>导航栏设置</h1><ul>
-<li>修改主配置文件中的<code>_config.butterfly.yml_</code>如下所示<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nav:  </span><br><span class="line">  logo: # image  </span><br><span class="line">  display_title: true  </span><br><span class="line">  fixed: false # fixed navigation bar</span><br></pre></td></tr></table></figure>
+<li>修改主配置文件中的<code>_config.butterfly.yml_</code>如下所示<pre class="line-numbers language-none"><code class="language-none">nav:  
+  logo: # image  
+  display_title: true  
+  fixed: false # fixed navigation bar<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <table>
 <thead>
 <tr>
@@ -664,13 +667,31 @@
 </li>
 </ul>
 <h1 id="菜单-目录"><a href="#菜单-目录" class="headerlink" title="菜单&#x2F;目录"></a>菜单&#x2F;目录</h1><ul>
-<li>修改主配置文件中的<code>_config.butterfly.yml_</code>如下所示<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">  主页: / || fas fa-home  </span><br><span class="line">  博文 || fa fa-graduation-cap:  </span><br><span class="line">    分类: /categories/ || fa fa-archive  </span><br><span class="line">    标签: /tags/ || fa fa-tags  </span><br><span class="line">    归档: /archives/ || fa fa-folder-open  </span><br><span class="line">#  生活 || fas fa-list:#    分享: /shuoshuo/ || fa fa-comments-o  </span><br><span class="line">#    相册: /photos/ || fa fa-camera-retro  </span><br><span class="line">#    音乐: /music/ || fa fa-music  </span><br><span class="line">#    影视: /movies/ || fas fa-video  </span><br><span class="line">  友链: /links/ || fa fa-link  </span><br><span class="line">#  留言板: /comment/ || fa fa-paper-plane  </span><br><span class="line">#  留言板: /messageboard/ || fa fa-paper-plane  </span><br><span class="line">  关于笔者: /about/ || fas fa-heart</span><br></pre></td></tr></table></figure></li>
+<li>修改主配置文件中的<code>_config.butterfly.yml_</code>如下所示<pre class="line-numbers language-none"><code class="language-none">  主页: &#x2F; || fas fa-home  
+  博文 || fa fa-graduation-cap:  
+    分类: &#x2F;categories&#x2F; || fa fa-archive  
+    标签: &#x2F;tags&#x2F; || fa fa-tags  
+    归档: &#x2F;archives&#x2F; || fa fa-folder-open  
+#  生活 || fas fa-list:#    分享: &#x2F;shuoshuo&#x2F; || fa fa-comments-o  
+#    相册: &#x2F;photos&#x2F; || fa fa-camera-retro  
+#    音乐: &#x2F;music&#x2F; || fa fa-music  
+#    影视: &#x2F;movies&#x2F; || fas fa-video  
+  友链: &#x2F;links&#x2F; || fa fa-link  
+#  留言板: &#x2F;comment&#x2F; || fa fa-paper-plane  
+#  留言板: &#x2F;messageboard&#x2F; || fa fa-paper-plane  
+  关于笔者: &#x2F;about&#x2F; || fas fa-heart<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 <li>以上所有的导航栏中的栏目一定都要使用<code>hexo new page 项目名</code>在根目录新建文件夹</li>
 </ul>
 <h1 id="标签页"><a href="#标签页" class="headerlink" title="标签页"></a>标签页</h1><ul>
-<li>前往根目录，使用gitbash，输入以下命令<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
+<li>前往根目录，使用gitbash，输入以下命令<pre class="line-numbers language-none"><code class="language-none">hexo new page tags<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
-<li>找到<code>source/tags/index.md</code>这个文件，并修改这个文件，添加<code>type: &quot;tags&quot;</code>：<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">--- </span><br><span class="line">title: 标签  </span><br><span class="line">date: 2023-05-19 19:35:40  </span><br><span class="line">type: tags  </span><br><span class="line">orderby: random   </span><br><span class="line">order: 1</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<li>找到<code>source/tags/index.md</code>这个文件，并修改这个文件，添加<code>type: &quot;tags&quot;</code>：<pre class="line-numbers language-none"><code class="language-none">--- 
+title: 标签  
+date: 2023-05-19 19:35:40  
+type: tags  
+orderby: random   
+order: 1
+---<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <table>
 <thead>
 <tr>
@@ -694,8 +715,39 @@
 </li>
 </ul>
 </li>
-<li>使用以下命令依次按需求添加自己所需页面，应与<code>菜单\目录</code>中内容相对应，使用命令会自动生成<code>index</code>文件，可以批量新建page后再逐一修改<code>index</code>文件<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new page categories</span><br><span class="line">hexo new page link</span><br></pre></td></tr></table></figure></li>
-<li>在根目录<code>source</code>中创建<code>_data</code>文件夹，在其中创建一个<code>link.yml</code>文件，写入以下内容，其中<code>class_name</code> 和 <code>class_desc</code> 支持 html 格式书写，如不需要，也可以留空。<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">- class_name: 链接</span><br><span class="line">  class_desc: 那些人，那些事</span><br><span class="line">  link_list:</span><br><span class="line">    - name: GitHub</span><br><span class="line">      link: https://github.com/</span><br><span class="line">      avatar: https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/20230520173243.png</span><br><span class="line">      descr: 开源代码托管平台</span><br><span class="line">    - name: Hexo</span><br><span class="line">      link: https://hexo.io/zh-tw/</span><br><span class="line">      avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg</span><br><span class="line">      descr: 快速、简单且強大的博客框架</span><br><span class="line"></span><br><span class="line">- class_name: 网站</span><br><span class="line">  class_desc: 值得推荐的网站</span><br><span class="line">  link_list:</span><br><span class="line">    - name: BiliBili</span><br><span class="line">      link: www.bilibili.com</span><br><span class="line">      avatar: https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/20230520173745.png</span><br><span class="line">      descr: 中国最大学习网站</span><br><span class="line">    - name: Youtube</span><br><span class="line">      link: https://www.youtube.com/</span><br><span class="line">      avatar: https://i.loli.net/2020/05/14/9ZkGg8v3azHJfM1.png</span><br><span class="line">      descr: 视频网站</span><br><span class="line">    - name: Weibo</span><br><span class="line">      link: https://www.weibo.com/</span><br><span class="line">      avatar: https://i.loli.net/2020/05/14/TLJBum386vcnI1P.png</span><br><span class="line">      descr: 中国最大社交分享平台</span><br><span class="line">    - name: Twitter</span><br><span class="line">      link: https://twitter.com/</span><br><span class="line">      avatar: https://i.loli.net/2020/05/14/5VyHPQqR6LWF39a.png</span><br><span class="line">      descr: 社交分享平台</span><br></pre></td></tr></table></figure></li>
+<li>使用以下命令依次按需求添加自己所需页面，应与<code>菜单\目录</code>中内容相对应，使用命令会自动生成<code>index</code>文件，可以批量新建page后再逐一修改<code>index</code>文件<pre class="line-numbers language-none"><code class="language-none">hexo new page categories
+hexo new page link<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<li>在根目录<code>source</code>中创建<code>_data</code>文件夹，在其中创建一个<code>link.yml</code>文件，写入以下内容，其中<code>class_name</code> 和 <code>class_desc</code> 支持 html 格式书写，如不需要，也可以留空。<pre class="line-numbers language-none"><code class="language-none">- class_name: 链接
+  class_desc: 那些人，那些事
+  link_list:
+    - name: GitHub
+      link: https:&#x2F;&#x2F;github.com&#x2F;
+      avatar: https:&#x2F;&#x2F;aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com&#x2F;blogpic&#x2F;20230520173243.png
+      descr: 开源代码托管平台
+    - name: Hexo
+      link: https:&#x2F;&#x2F;hexo.io&#x2F;zh-tw&#x2F;
+      avatar: https:&#x2F;&#x2F;d33wubrfki0l68.cloudfront.net&#x2F;6657ba50e702d84afb32fe846bed54fba1a77add&#x2F;827ae&#x2F;logo.svg
+      descr: 快速、简单且強大的博客框架
+
+- class_name: 网站
+  class_desc: 值得推荐的网站
+  link_list:
+    - name: BiliBili
+      link: www.bilibili.com
+      avatar: https:&#x2F;&#x2F;aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com&#x2F;blogpic&#x2F;20230520173745.png
+      descr: 中国最大学习网站
+    - name: Youtube
+      link: https:&#x2F;&#x2F;www.youtube.com&#x2F;
+      avatar: https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;05&#x2F;14&#x2F;9ZkGg8v3azHJfM1.png
+      descr: 视频网站
+    - name: Weibo
+      link: https:&#x2F;&#x2F;www.weibo.com&#x2F;
+      avatar: https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;05&#x2F;14&#x2F;TLJBum386vcnI1P.png
+      descr: 中国最大社交分享平台
+    - name: Twitter
+      link: https:&#x2F;&#x2F;twitter.com&#x2F;
+      avatar: https:&#x2F;&#x2F;i.loli.net&#x2F;2020&#x2F;05&#x2F;14&#x2F;5VyHPQqR6LWF39a.png
+      descr: 社交分享平台<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 
                 
@@ -866,6 +918,10 @@
                 
                 <div class="card-action article-tags">
                     
+                    <a href="/tags/markdown/">
+                        <span class="chip bg-color">markdown</span>
+                    </a>
+                    
                     <a href="/tags/%E5%9B%BE%E5%BA%8A/">
                         <span class="chip bg-color">图床</span>
                     </a>
@@ -876,10 +932,6 @@
                     
                     <a href="/tags/Obsidian/">
                         <span class="chip bg-color">Obsidian</span>
-                    </a>
-                    
-                    <a href="/tags/markdown/">
-                        <span class="chip bg-color">markdown</span>
                     </a>
                     
                     <a href="/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/">
@@ -958,9 +1010,6 @@
 <!-- 代码块功能依赖 -->
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
-
-  <!-- 是否加载使用自带的 prismjs. -->
-  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
 
 
 <!-- 代码语言 -->

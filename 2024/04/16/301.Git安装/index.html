@@ -619,9 +619,6 @@
         <hr class="clearfix">
 
         
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.min.css">
-        
 
         
 
@@ -633,11 +630,13 @@
 </ul>
 <h1 id="配置连接GitHub"><a href="#配置连接GitHub" class="headerlink" title="配置连接GitHub"></a>配置连接GitHub</h1><ul>
 <li>需要GitHub账号</li>
-<li>在本地，新建文件夹如&#x3D;&#x3D;MyBlog&#x3D;&#x3D;，并在MyBlog中右键点选&#x3D;&#x3D;gitbash here&#x3D;&#x3D;,输入以下命令<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot;</span><br><span class="line">git config --global user.email &quot;youremail&quot;</span><br></pre></td></tr></table></figure></li>
-<li>可以使用以下命令验证<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure></li>
-<li>生成SSH Keys，一直回车即可<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail&quot;</span><br></pre></td></tr></table></figure></li>
+<li>在本地，新建文件夹如&#x3D;&#x3D;MyBlog&#x3D;&#x3D;，并在MyBlog中右键点选&#x3D;&#x3D;gitbash here&#x3D;&#x3D;,输入以下命令<pre class="line-numbers language-none"><code class="language-none">git config --global user.name &quot;yourname&quot;
+git config --global user.email &quot;youremail&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<li>可以使用以下命令验证<pre class="line-numbers language-none"><code class="language-none">git config user.name
+git config user.email<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<li>生成SSH Keys，一直回车即可<pre class="line-numbers language-none"><code class="language-none">ssh-keygen -t rsa -C &quot;youremail&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li>找到<code>.shh</code>文件夹(.ssh文件通常在系统用户文件中)，将公钥（id_rsa.pub中的内容）填写进GitHub账户中</li>
-<li>或使用以下命令查询SSH（可选）<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure></li>
+<li>或使用以下命令查询SSH（可选）<pre class="line-numbers language-none"><code class="language-none">cat ~&#x2F;.ssh&#x2F;id_rsa.pub<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 <li>使用<code>ssh -T git@github.com</code>以验证是否成功<br><strong>详细SSH设置请参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36667170/article/details/79094257">Git教程 SSH keys配置</a></strong></li>
 </ul>
 
@@ -897,9 +896,6 @@
 <!-- 代码块功能依赖 -->
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
-
-  <!-- 是否加载使用自带的 prismjs. -->
-  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
 
 
 <!-- 代码语言 -->
