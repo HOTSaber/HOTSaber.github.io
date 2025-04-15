@@ -18,11 +18,10 @@ tags:
 ## 下载地址
 - [官网下载](https://otp.landian.vip/zh-cn/download.html)（下载包含框架版本）
 # 清除旧版本Office
-1. 卸载WPS Office，两者共存容易出问题
-2. 卸载旧版本 Office，按照标准流程操作，请勿直接强制移除。
-3. 清除旧版本激活信息，看下面的截图来学习。
-4. 清除 Office 设置，在\[工具箱] -> \[重置 Office 为默认设置]。
-5. **如卸载失败，可以使用`工具箱`中的`移除office`功能强制移除**
+1. 卸载旧版本 Office，按照标准流程操作，请勿直接强制移除。
+2. 清除旧版本激活信息，看下面的截图来学习。
+3. 清除 Office 设置，在\[工具箱] -> \[重置 Office 为默认设置]。
+4. **如卸载失败，可以使用`工具箱`中的`移除office`功能强制移除**
 - 清除激活信息
 ![](https://www.coolhub.top/wp-content/uploads/2023/01/clear-activation-v10.png)
 ![](https://www.coolhub.top/wp-content/uploads/2022/06/clear-activation.png)

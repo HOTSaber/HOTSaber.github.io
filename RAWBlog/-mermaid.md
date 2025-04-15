@@ -1,10 +1,17 @@
 ```mermaid
-graph LR; 
-A--> B & C & D 
-B--> A & E 
-C--> A & E 
-D--> A & E 
-E--> B & C & D
+sequenceDiagram
+    participant Loop as LoopComponent
+    participant Processor as DataToMessage
+    participant System as LangFlow框架
+
+    Loop->>System: 初始化原始数据列表
+    loop 每次迭代
+        Loop->>Processor: 传递当前item (Data对象)
+        Processor->>Loop: 返回处理后的Data对象
+        Note right of Loop: 关键点：处理后的数据需要被Loop捕获
+    end
+    Loop->>System: 收集所有处理结果到aggregated
+    System->>Loop: 触发done_output
 ```
 ```mermaid
 graph LR
