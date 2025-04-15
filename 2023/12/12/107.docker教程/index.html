@@ -55,7 +55,7 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<meta name="generator" content="Hexo 7.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 
 <body>
@@ -633,56 +633,27 @@
 <h1 id="使用-apt-存储库安装"><a href="#使用-apt-存储库安装" class="headerlink" title="使用 apt 存储库安装"></a><a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository">使用 apt 存储库安装</a></h1><p>在新主机上首次安装 Docker Engine 之前，需要设置 Docker 存储库。之后，您可以从存储库安装和更新 Docker。</p>
 <ol>
 <li><p>设置 Docker 的 <code>apt</code> 存储库</p>
- <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># Add Docker's official GPG key:</span>
-<span class="token function">sudo</span> <span class="token function">apt-get</span> update
-<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> ca-certificates <span class="token function">curl</span> gnupg
-<span class="token function">sudo</span> <span class="token function">install</span> <span class="token parameter variable">-m</span> 0755 <span class="token parameter variable">-d</span> /etc/apt/keyrings
-<span class="token function">curl</span> <span class="token parameter variable">-fsSL</span> https://download.docker.com/linux/ubuntu/gpg <span class="token operator">|</span> <span class="token function">sudo</span> gpg <span class="token parameter variable">--dearmor</span> <span class="token parameter variable">-o</span> /etc/apt/keyrings/docker.gpg
-<span class="token function">sudo</span> <span class="token function">chmod</span> a+r /etc/apt/keyrings/docker.gpg
-
-<span class="token comment"># Add the repository to Apt sources:</span>
-<span class="token builtin class-name">echo</span> <span class="token punctuation">\</span>
-  <span class="token string">"deb [arch=<span class="token variable"><span class="token variable">$(</span>dpkg --print-architecture<span class="token variable">)</span></span> signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-  <span class="token variable"><span class="token variable">$(</span><span class="token builtin class-name">.</span> /etc/os-release <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$VERSION_CODENAME</span>"</span><span class="token variable">)</span></span> stable"</span> <span class="token operator">|</span> <span class="token punctuation">\</span>
-  <span class="token function">sudo</span> <span class="token function">tee</span> /etc/apt/sources.list.d/docker.list <span class="token operator">></span> /dev/null
-<span class="token function">sudo</span> <span class="token function">apt-get</span> update<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Add Docker&#x27;s official GPG key:</span></span><br><span class="line"><span class="built_in">sudo</span> apt-get update</span><br><span class="line"><span class="built_in">sudo</span> apt-get install ca-certificates curl gnupg</span><br><span class="line"><span class="built_in">sudo</span> install -m 0755 -d /etc/apt/keyrings</span><br><span class="line">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | <span class="built_in">sudo</span> gpg --dearmor -o /etc/apt/keyrings/docker.gpg</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">chmod</span> a+r /etc/apt/keyrings/docker.gpg</span><br><span class="line"></span><br><span class="line"><span class="comment"># Add the repository to Apt sources:</span></span><br><span class="line"><span class="built_in">echo</span> \</span><br><span class="line">  <span class="string">&quot;deb [arch=<span class="subst">$(dpkg --print-architecture)</span> signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \</span></span><br><span class="line"><span class="string">  <span class="subst">$(. /etc/os-release &amp;&amp; echo <span class="string">&quot;<span class="variable">$VERSION_CODENAME</span>&quot;</span>)</span> stable&quot;</span> | \</span><br><span class="line">  <span class="built_in">sudo</span> <span class="built_in">tee</span> /etc/apt/sources.list.d/docker.list &gt; /dev/null</span><br><span class="line"><span class="built_in">sudo</span> apt-get update</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>Note<br>如果您使用 Ubuntu 衍生发行版，例如 Linux Mint，您可能需要 <code>UBUNTU_CODENAME</code> 使用 <code>VERSION_CODENAME</code>.
  </p>
 </blockquote>
 </li>
 <li><h2 id="安装-Docker-软件包-要安装最新版本，请运行："><a href="#安装-Docker-软件包-要安装最新版本，请运行：" class="headerlink" title="安装 Docker 软件包 要安装最新版本，请运行：
- "></a><strong>安装 Docker 软件包</strong><br> 要安装最新版本，请运行：<br><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+ "></a><strong>安装 Docker 软件包</strong><br> 要安装最新版本，请运行：<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin</span><br></pre></td></tr></table></figure>
  </h2></li>
 <li><p>通过运行镜像来验证Docker Engine安装是否成功 <code>hello-world</code> 。</p>
- <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">docker</span> run hello-world<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> docker run hello-world</span><br></pre></td></tr></table></figure>
 <p> 此命令下载测试映像并在容器中运行它。当容器运行时，它会打印一条确认消息并退出。<br>您现在已经成功安装并启动了 Docker Engine。</p>
 </li>
 </ol>
 <h1 id="升级Docker引擎"><a href="#升级Docker引擎" class="headerlink" title="升级Docker引擎"></a><a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/ubuntu/#upgrade-docker-engine">升级Docker引擎</a></h1><p>要升级Docker Engine，请按照 <a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository">安装说明</a>的步骤2进行操作，选择要安装的版本。</p>
-<h1 id="启用docker镜像加速"><a href="#启用docker镜像加速" class="headerlink" title="启用docker镜像加速"></a>启用docker镜像加速</h1><h2 id="启用国内镜像加速器"><a href="#启用国内镜像加速器" class="headerlink" title="启用国内镜像加速器"></a><strong>启用国内镜像加速器</strong></h2><p>• <strong>编辑 Docker 配置文件</strong><br>  在 <code>/etc/docker/daemon.json</code> 中添加国内镜像源（如阿里云、腾讯云）：<br>  <pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">&#123;</span>
-  <span class="token property">"registry-mirrors"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-    <span class="token string">"https://docker.m.daocloud.io"</span><span class="token punctuation">,</span>
-    <span class="token string">"https://hub-mirror.c.163.com"</span><span class="token punctuation">,</span>
-	<span class="token string">"https://mirror.ccs.tencentyun.com"</span><span class="token punctuation">,</span>
-	<span class="token string">"https://registry.docker-cn.com"</span>
-  <span class="token punctuation">]</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><br>  • 重启 Docker 服务生效：<br>    <pre class="line-numbers language-none"><code class="language-none">&#96;&#96;&#96;bash
-	sudo systemctl daemon-reload
-    sudo systemctl restart docker<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></p>
-<p>• <strong>验证加速器状态</strong><br>  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">docker</span> info <span class="token operator">|</span> <span class="token function">grep</span> <span class="token string">"Registry Mirrors"</span>
-<span class="token comment"># 应显示配置的镜像地址</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></p>
-<h2 id="手动拉取镜像"><a href="#手动拉取镜像" class="headerlink" title="手动拉取镜像"></a><strong>手动拉取镜像</strong></h2><p>• <strong>针对关键服务镜像单独拉取</strong><br>  例如拉取 Redis 镜像：<br>  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">docker</span> pull redis:latest
-<span class="token comment"># 若失败可尝试更换标签（如 alpine 版本）</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></p>
-<p>• <strong>使用代理服务器</strong>（适用于企业内网）<br>  在 Docker 配置或环境变量中设置代理：<br>  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable">HTTP_PROXY</span><span class="token operator">=</span><span class="token string">"http://proxy_ip:port"</span>
-<span class="token builtin class-name">export</span> <span class="token assign-left variable">HTTPS_PROXY</span><span class="token operator">=</span><span class="token string">"http://proxy_ip:port"</span>
-<span class="token function">docker</span> compose up <span class="token parameter variable">-d</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></p>
-<h2 id="其他优化措施"><a href="#其他优化措施" class="headerlink" title="其他优化措施"></a><strong>其他优化措施</strong></h2><p>• <strong>调整 Docker 客户端超时时间</strong><br>  修改 Docker 配置文件 <code>/etc/docker/daemon.json</code>：<br>  <pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">&#123;</span>
-  <span class="token property">"max-concurrent-downloads"</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
-  <span class="token property">"max-download-attempts"</span><span class="token operator">:</span> <span class="token number">5</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></p>
-<p>• <strong>清理本地缓存后重试</strong><br>  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">docker</span> system prune <span class="token parameter variable">-a</span>  <span class="token comment"># 清理无效镜像和缓存</span>
-<span class="token function">docker</span> compose up <span class="token parameter variable">-d</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></p>
+<h1 id="启用docker镜像加速"><a href="#启用docker镜像加速" class="headerlink" title="启用docker镜像加速"></a>启用docker镜像加速</h1><h2 id="启用国内镜像加速器"><a href="#启用国内镜像加速器" class="headerlink" title="启用国内镜像加速器"></a><strong>启用国内镜像加速器</strong></h2><p>• <strong>编辑 Docker 配置文件</strong><br>  在 <code>/etc/docker/daemon.json</code> 中添加国内镜像源（如阿里云、腾讯云）：<br>  <figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;registry-mirrors&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="string">&quot;https://docker.m.daocloud.io&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="string">&quot;https://hub-mirror.c.163.com&quot;</span><span class="punctuation">,</span></span><br><span class="line">	<span class="string">&quot;https://mirror.ccs.tencentyun.com&quot;</span><span class="punctuation">,</span></span><br><span class="line">	<span class="string">&quot;https://registry.docker-cn.com&quot;</span></span><br><span class="line">  <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure><br>  • 重启 Docker 服务生效：<br>    <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">```bash</span><br><span class="line">	sudo systemctl daemon-reload</span><br><span class="line">    sudo systemctl restart docker</span><br></pre></td></tr></table></figure></p>
+<p>• <strong>验证加速器状态</strong><br>  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker info | grep <span class="string">&quot;Registry Mirrors&quot;</span></span><br><span class="line"><span class="comment"># 应显示配置的镜像地址</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="手动拉取镜像"><a href="#手动拉取镜像" class="headerlink" title="手动拉取镜像"></a><strong>手动拉取镜像</strong></h2><p>• <strong>针对关键服务镜像单独拉取</strong><br>  例如拉取 Redis 镜像：<br>  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull redis:latest</span><br><span class="line"><span class="comment"># 若失败可尝试更换标签（如 alpine 版本）</span></span><br></pre></td></tr></table></figure></p>
+<p>• <strong>使用代理服务器</strong>（适用于企业内网）<br>  在 Docker 配置或环境变量中设置代理：<br>  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> HTTP_PROXY=<span class="string">&quot;http://proxy_ip:port&quot;</span></span><br><span class="line"><span class="built_in">export</span> HTTPS_PROXY=<span class="string">&quot;http://proxy_ip:port&quot;</span></span><br><span class="line">docker compose up -d</span><br></pre></td></tr></table></figure></p>
+<h2 id="其他优化措施"><a href="#其他优化措施" class="headerlink" title="其他优化措施"></a><strong>其他优化措施</strong></h2><p>• <strong>调整 Docker 客户端超时时间</strong><br>  修改 Docker 配置文件 <code>/etc/docker/daemon.json</code>：<br>  <figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;max-concurrent-downloads&quot;</span><span class="punctuation">:</span> <span class="number">3</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;max-download-attempts&quot;</span><span class="punctuation">:</span> <span class="number">5</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>• <strong>清理本地缓存后重试</strong><br>  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker system prune -a  <span class="comment"># 清理无效镜像和缓存</span></span><br><span class="line">docker compose up -d</span><br></pre></td></tr></table></figure></p>
 <hr>
 <h2 id="关联问题排查"><a href="#关联问题排查" class="headerlink" title="关联问题排查"></a><strong>关联问题排查</strong></h2><table>
 <thead>
@@ -710,13 +681,10 @@
 </tbody></table>
 <hr>
 <h2 id="操作验证"><a href="#操作验证" class="headerlink" title="操作验证"></a><strong>操作验证</strong></h2><p>完成上述步骤后，执行以下命令验证：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">docker</span> compose up <span class="token parameter variable">-d</span> --no-build  <span class="token comment"># 跳过构建直接启动</span>
-<span class="token function">docker</span> compose logs <span class="token parameter variable">-f</span> web       <span class="token comment"># 监控关键服务日志</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker compose up -d --no-build  <span class="comment"># 跳过构建直接启动</span></span><br><span class="line">docker compose logs -f web       <span class="comment"># 监控关键服务日志</span></span><br></pre></td></tr></table></figure>
 
 <p>若仍存在问题，可提供以下信息进一步排查：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">docker</span> info         <span class="token comment"># Docker 系统配置</span>
-<span class="token function">docker</span> network <span class="token function">ls</span>   <span class="token comment"># 网络状态</span>
-iptables <span class="token parameter variable">-L</span> <span class="token parameter variable">-n</span>     <span class="token comment"># 防火墙规则</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker info         <span class="comment"># Docker 系统配置</span></span><br><span class="line">docker network <span class="built_in">ls</span>   <span class="comment"># 网络状态</span></span><br><span class="line">iptables -L -n     <span class="comment"># 防火墙规则</span></span><br></pre></td></tr></table></figure>
 
 <hr>
 
@@ -872,12 +840,12 @@ iptables <span class="token parameter variable">-L</span> <span class="token par
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/linux/">
-                        <span class="chip bg-color">linux</span>
-                    </a>
-                    
                     <a href="/tags/SSH/">
                         <span class="chip bg-color">SSH</span>
+                    </a>
+                    
+                    <a href="/tags/linux/">
+                        <span class="chip bg-color">linux</span>
                     </a>
                     
                     <a href="/tags/Ubuntu/">

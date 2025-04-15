@@ -54,7 +54,7 @@ Network installers (x86)If not already done, make sure you install t">
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<meta name="generator" content="Hexo 7.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 
 <body>
@@ -635,26 +635,7 @@ Network installers (x86)If not already done, make sure you install t">
 <hr>
 <h1 id="下载与安装"><a href="#下载与安装" class="headerlink" title="下载与安装"></a>下载与安装</h1><p>前往<a target="_blank" rel="noopener" href="https://developer.nvidia.com/nccl/nccl-legacy-downloads">官网</a>选择相应cuda版本进行安装<br>如cuda11.6的安装指令如下</p>
 <h4 id="Network-installers-x86"><a href="#Network-installers-x86" class="headerlink" title="Network installers (x86)"></a>Network installers (x86)</h4><p>If not already done, make sure you install the network repository:</p>
-<pre class="line-numbers language-none"><code class="language-none">
-Network Installer for Ubuntu20.04
-
-- $ wget https:&#x2F;&#x2F;developer.download.nvidia.com&#x2F;compute&#x2F;cuda&#x2F;repos&#x2F;ubuntu2004&#x2F;x86_64&#x2F;cuda-keyring_1.0-1_all.deb
-- $ sudo dpkg -i cuda-keyring_1.0-1_all.deb
-- $ sudo apt-get update
-
-Network Installer for Ubuntu18.04
-
-- $ wget https:&#x2F;&#x2F;developer.download.nvidia.com&#x2F;compute&#x2F;cuda&#x2F;repos&#x2F;ubuntu1804&#x2F;x86_64&#x2F;cuda-keyring_1.0-1_all.deb
-- $ sudo dpkg -i cuda-keyring_1.0-1_all.deb
-- $ sudo apt-get update
-
-Network Installer for RedHat&#x2F;CentOS 8
-
-- $ sudo dnf config-manager --add-repo https:&#x2F;&#x2F;developer.download.nvidia.com&#x2F;compute&#x2F;cuda&#x2F;repos&#x2F;rhel8&#x2F;x86_64&#x2F;cuda-rhel8.repo
-
-Network Installer for RedHat&#x2F;CentOS 7
-
-- $ sudo yum-config-manager --add-repo https:&#x2F;&#x2F;developer.download.nvidia.com&#x2F;compute&#x2F;cuda&#x2F;repos&#x2F;rhel7&#x2F;x86_64&#x2F;cuda-rhel7.repo<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">Network Installer for Ubuntu20.04</span><br><span class="line"></span><br><span class="line">- $ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-keyring_1.0-1_all.deb</span><br><span class="line">- $ sudo dpkg -i cuda-keyring_1.0-1_all.deb</span><br><span class="line">- $ sudo apt-get update</span><br><span class="line"></span><br><span class="line">Network Installer for Ubuntu18.04</span><br><span class="line"></span><br><span class="line">- $ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-keyring_1.0-1_all.deb</span><br><span class="line">- $ sudo dpkg -i cuda-keyring_1.0-1_all.deb</span><br><span class="line">- $ sudo apt-get update</span><br><span class="line"></span><br><span class="line">Network Installer for RedHat/CentOS 8</span><br><span class="line"></span><br><span class="line">- $ sudo dnf config-manager --add-repo https://developer.download.nvidia.com/compute/cuda/repos/rhel8/x86_64/cuda-rhel8.repo</span><br><span class="line"></span><br><span class="line">Network Installer for RedHat/CentOS 7</span><br><span class="line"></span><br><span class="line">- $ sudo yum-config-manager --add-repo https://developer.download.nvidia.com/compute/cuda/repos/rhel7/x86_64/cuda-rhel7.repo</span><br></pre></td></tr></table></figure>
 <p>then run the following command to installer NCCL:<br>For Ubuntu:<code>sudo apt install libnccl2=2.12.12-1+cuda11.6 libnccl-dev=2.12.12-1+cuda11.6</code><br>For RHEL&#x2F;Centos: <code>sudo yum install libnccl-2.12.12-1+cuda11.6 libnccl-devel-2.12.12-1+cuda11.6 libnccl-static-2.12.12-1+cuda11.6</code></p>
 
                 

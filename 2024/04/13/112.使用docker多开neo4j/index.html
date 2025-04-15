@@ -9,8 +9,7 @@
 docker安装请见:docker安装教程
 
 使用docker新建neo4j实例下载neo4j的docker镜像docker pull neo4j:latest
-构建新实例docker run \  
-  --name neo4j-ins">
+构建新实例docker run \    --name neo4j-inst">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -55,7 +54,7 @@ docker安装请见:docker安装教程
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<meta name="generator" content="Hexo 7.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 
 <body>
@@ -638,36 +637,10 @@ docker安装请见:docker安装教程
                 <hr>
 <p>docker安装请见:<a href="">docker安装教程</a></p>
 <hr>
-<h1 id="使用docker新建neo4j实例"><a href="#使用docker新建neo4j实例" class="headerlink" title="使用docker新建neo4j实例"></a>使用docker新建neo4j实例</h1><h2 id="下载neo4j的docker镜像"><a href="#下载neo4j的docker镜像" class="headerlink" title="下载neo4j的docker镜像"></a>下载neo4j的docker镜像</h2><pre class="line-numbers language-none"><code class="language-none">docker pull neo4j:latest<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="构建新实例"><a href="#构建新实例" class="headerlink" title="构建新实例"></a>构建新实例</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">docker</span> run <span class="token punctuation">\</span>  
-  <span class="token parameter variable">--name</span> neo4j-instance2 <span class="token punctuation">\</span>  
-  <span class="token parameter variable">-p7475:7474</span> <span class="token parameter variable">-p7688:7687</span> <span class="token punctuation">\</span>  
-  <span class="token parameter variable">-d</span> <span class="token punctuation">\</span>  
-  <span class="token parameter variable">-v</span> <span class="token environment constant">$HOME</span>/neo4j2/data:/data <span class="token punctuation">\</span>  
-  <span class="token parameter variable">-v</span> <span class="token environment constant">$HOME</span>/neo4j2/logs:/logs <span class="token punctuation">\</span>  
-  <span class="token parameter variable">-v</span> <span class="token environment constant">$HOME</span>/neo4j2/import:/import <span class="token punctuation">\</span>  
-  <span class="token parameter variable">-v</span> <span class="token environment constant">$HOME</span>/neo4j2/plugins:/plugins <span class="token punctuation">\</span>  
-  <span class="token parameter variable">--env</span> <span class="token assign-left variable">NEO4J_AUTH</span><span class="token operator">=</span>neo4j/88888888 <span class="token punctuation">\</span>  
-  neo4j:latest<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="代码注释"><a href="#代码注释" class="headerlink" title="代码注释"></a>代码注释</h2><pre class="line-numbers language-none"><code class="language-none">docker run \                   # 命令用于在 Docker 容器中运行一个新的应用实例。  
-  --name neo4j-instance2 \    # 设置容器的名称为 neo4j-instance2，这个名字用于在后续命令中引用容器。  
-  -p7475:7474 \               # 将容器内部使用的 7475 【ip:7475访问web端，后面7474不用改动】端口映射到宿主机的 7475 端口。7474 是 Neo4j 默认的Web接口端口。  
-  -p7688:7687 \               # 将容器内部使用的 7687  【ip:7688 访问数据库端，后面7687 不用改动】端口映射到宿主机的 7688 端口。7687 是 Neo4j 默认的Bolt协议端口，用于数据库连接。  
-  -d \                        # 让容器在后台运行（detached mode）。  
-  -v $HOME&#x2F;neo4j2&#x2F;data:&#x2F;data \ # 将宿主机上的 &#96;$HOME&#x2F;neo4j2&#x2F;data&#96; 目录挂载到容器内的 &#96;&#x2F;data&#96; 目录。这是 Neo4j 数据存储的位置。  
-  -v $HOME&#x2F;neo4j2&#x2F;logs:&#x2F;logs \ # 将宿主机上的 &#96;$HOME&#x2F;neo4j2&#x2F;logs&#96; 目录挂载到容器内的 &#96;&#x2F;logs&#96; 目录。这是 Neo4j 日志文件的存放位置。  
-  -v $HOME&#x2F;neo4j2&#x2F;import:&#x2F;import \ # 将宿主机上的 &#96;$HOME&#x2F;neo4j2&#x2F;import&#96; 目录挂载到容器内的 &#96;&#x2F;import&#96; 目录。可以用来存放要导入到 Neo4j 的数据文件。  
-  -v $HOME&#x2F;neo4j2&#x2F;plugins:&#x2F;plugins \ # 将宿主机上的 &#96;$HOME&#x2F;neo4j2&#x2F;plugins&#96; 目录挂载到容器内的 &#96;&#x2F;plugins&#96; 目录。用于存放 Neo4j 使用的插件。  
-  --env NEO4J_AUTH&#x3D;neo4j&#x2F;【12345678】 \ # 设置环境变量 &#96;NEO4J_AUTH&#96;，用于定义 Neo4j 的默认用户名（neo4j）和密码（test）【密码至少8位】。这是首次访问数据库时需要的认证信息。  
-  neo4j:latest                 # 指定使用哪个镜像运行容器，此处使用的是标记为 latest 的 neo4j 官方镜像。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h1 id="docker命令"><a href="#docker命令" class="headerlink" title="docker命令"></a>docker命令</h1><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#neo4j-instance2修改为自己实例的名字</span>
-<span class="token function">docker</span> restart neo4j-instance2 <span class="token comment">#这条命令会停止并再次启动 `neo4j-instance2` 容器。</span>
-<span class="token function">docker</span> stop neo4j-instance2 <span class="token comment">#使用此命令可以安全地停止 `neo4j-instance2` 容器。</span>
-<span class="token function">docker</span> start neo4j-instance2 <span class="token comment">#如果容器已经停止，使用这个命令可以再次启动它</span>
-<span class="token function">docker</span> stats neo4j-instance2 <span class="token comment">#这个命令提供 `neo4j-instance2` 容器的实时资源使用情况，如 CPU、内存使用、网络 I/O、磁盘 I/O 等。</span>
-<span class="token function">docker</span> logs neo4j-instance2 <span class="token comment">#这个命令将显示 `neo4j-instance2` 容器的控制台输出，这通常包括应用程序和服务的日志消息。这对于调试或了解容器内部发生了什么非常有用。</span>
-<span class="token function">docker</span> inspect neo4j-instance2 <span class="token comment">#这个命令将显示 `neo4j-instance2` 容器的详细配置和状态信息，如网络配置、挂载卷、环境变量等。</span>
-<span class="token function">docker</span> <span class="token function">ps</span> <span class="token comment">#这个命令将列出所有当前运行中的容器。它显示的信息包括容器的 ID、使用的镜像、启动命令、多久前创建、状态、端口等。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="使用docker新建neo4j实例"><a href="#使用docker新建neo4j实例" class="headerlink" title="使用docker新建neo4j实例"></a>使用docker新建neo4j实例</h1><h2 id="下载neo4j的docker镜像"><a href="#下载neo4j的docker镜像" class="headerlink" title="下载neo4j的docker镜像"></a>下载neo4j的docker镜像</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker pull neo4j:latest</span><br></pre></td></tr></table></figure>
+<h2 id="构建新实例"><a href="#构建新实例" class="headerlink" title="构建新实例"></a>构建新实例</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run \  </span><br><span class="line">  --name neo4j-instance2 \  </span><br><span class="line">  -p7475:7474 -p7688:7687 \  </span><br><span class="line">  -d \  </span><br><span class="line">  -v <span class="variable">$HOME</span>/neo4j2/data:/data \  </span><br><span class="line">  -v <span class="variable">$HOME</span>/neo4j2/logs:/logs \  </span><br><span class="line">  -v <span class="variable">$HOME</span>/neo4j2/import:/import \  </span><br><span class="line">  -v <span class="variable">$HOME</span>/neo4j2/plugins:/plugins \  </span><br><span class="line">  --<span class="built_in">env</span> NEO4J_AUTH=neo4j/88888888 \  </span><br><span class="line">  neo4j:latest</span><br></pre></td></tr></table></figure>
+<h2 id="代码注释"><a href="#代码注释" class="headerlink" title="代码注释"></a>代码注释</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run \                   # 命令用于在 Docker 容器中运行一个新的应用实例。  </span><br><span class="line">  --name neo4j-instance2 \    # 设置容器的名称为 neo4j-instance2，这个名字用于在后续命令中引用容器。  </span><br><span class="line">  -p7475:7474 \               # 将容器内部使用的 7475 【ip:7475访问web端，后面7474不用改动】端口映射到宿主机的 7475 端口。7474 是 Neo4j 默认的Web接口端口。  </span><br><span class="line">  -p7688:7687 \               # 将容器内部使用的 7687  【ip:7688 访问数据库端，后面7687 不用改动】端口映射到宿主机的 7688 端口。7687 是 Neo4j 默认的Bolt协议端口，用于数据库连接。  </span><br><span class="line">  -d \                        # 让容器在后台运行（detached mode）。  </span><br><span class="line">  -v $HOME/neo4j2/data:/data \ # 将宿主机上的 `$HOME/neo4j2/data` 目录挂载到容器内的 `/data` 目录。这是 Neo4j 数据存储的位置。  </span><br><span class="line">  -v $HOME/neo4j2/logs:/logs \ # 将宿主机上的 `$HOME/neo4j2/logs` 目录挂载到容器内的 `/logs` 目录。这是 Neo4j 日志文件的存放位置。  </span><br><span class="line">  -v $HOME/neo4j2/import:/import \ # 将宿主机上的 `$HOME/neo4j2/import` 目录挂载到容器内的 `/import` 目录。可以用来存放要导入到 Neo4j 的数据文件。  </span><br><span class="line">  -v $HOME/neo4j2/plugins:/plugins \ # 将宿主机上的 `$HOME/neo4j2/plugins` 目录挂载到容器内的 `/plugins` 目录。用于存放 Neo4j 使用的插件。  </span><br><span class="line">  --env NEO4J_AUTH=neo4j/【12345678】 \ # 设置环境变量 `NEO4J_AUTH`，用于定义 Neo4j 的默认用户名（neo4j）和密码（test）【密码至少8位】。这是首次访问数据库时需要的认证信息。  </span><br><span class="line">  neo4j:latest                 # 指定使用哪个镜像运行容器，此处使用的是标记为 latest 的 neo4j 官方镜像。</span><br></pre></td></tr></table></figure>
+<h1 id="docker命令"><a href="#docker命令" class="headerlink" title="docker命令"></a>docker命令</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#neo4j-instance2修改为自己实例的名字</span></span><br><span class="line">docker restart neo4j-instance2 <span class="comment">#这条命令会停止并再次启动 `neo4j-instance2` 容器。</span></span><br><span class="line">docker stop neo4j-instance2 <span class="comment">#使用此命令可以安全地停止 `neo4j-instance2` 容器。</span></span><br><span class="line">docker start neo4j-instance2 <span class="comment">#如果容器已经停止，使用这个命令可以再次启动它</span></span><br><span class="line">docker stats neo4j-instance2 <span class="comment">#这个命令提供 `neo4j-instance2` 容器的实时资源使用情况，如 CPU、内存使用、网络 I/O、磁盘 I/O 等。</span></span><br><span class="line">docker logs neo4j-instance2 <span class="comment">#这个命令将显示 `neo4j-instance2` 容器的控制台输出，这通常包括应用程序和服务的日志消息。这对于调试或了解容器内部发生了什么非常有用。</span></span><br><span class="line">docker inspect neo4j-instance2 <span class="comment">#这个命令将显示 `neo4j-instance2` 容器的详细配置和状态信息，如网络配置、挂载卷、环境变量等。</span></span><br><span class="line">docker ps <span class="comment">#这个命令将列出所有当前运行中的容器。它显示的信息包括容器的 ID、使用的镜像、启动命令、多久前创建、状态、端口等。</span></span><br></pre></td></tr></table></figure>
                 
             </div>
             <hr/>

@@ -58,7 +58,7 @@ npm -v
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<meta name="generator" content="Hexo 7.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 
 <body>
@@ -675,13 +675,11 @@ npm -v
 <h3 id="配置连接github"><a href="#配置连接github" class="headerlink" title="配置连接github"></a>配置连接github</h3><ul>
 <li>需要github账号</li>
 <li>在github创建名为<code>用户名.github.io</code>的new repository</li>
-<li>在本地，新建文件夹如&#x3D;&#x3D;MyBlog&#x3D;&#x3D;，并在MyBlog中右键点选&#x3D;&#x3D;gitbash here&#x3D;&#x3D;,输入以下命令<pre class="line-numbers language-none"><code class="language-none">git config --global user.name &quot;yourname&quot;
-git config --global user.email &quot;youremail&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
-<li>可以使用以下命令验证<pre class="line-numbers language-none"><code class="language-none">git config user.name
-git config user.email<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
-<li>生成SSH Keys，一直回车即可<pre class="line-numbers language-none"><code class="language-none">ssh-keygen -t rsa -C &quot;youremail&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>在本地，新建文件夹如&#x3D;&#x3D;MyBlog&#x3D;&#x3D;，并在MyBlog中右键点选&#x3D;&#x3D;gitbash here&#x3D;&#x3D;,输入以下命令<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot;</span><br><span class="line">git config --global user.email &quot;youremail&quot;</span><br></pre></td></tr></table></figure></li>
+<li>可以使用以下命令验证<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure></li>
+<li>生成SSH Keys，一直回车即可<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail&quot;</span><br></pre></td></tr></table></figure></li>
 <li>找到<code>.shh</code>文件夹(.ssh文件通常在系统用户文件中)，将公钥（id_rsa.pub中的内容）填写进github账户中</li>
-<li>或使用以下命令查询SSH（可选）<pre class="line-numbers language-none"><code class="language-none">cat ~&#x2F;.ssh&#x2F;id_rsa.pub<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>或使用以下命令查询SSH（可选）<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure></li>
 <li>使用<code>ssh -T git@github.com</code>以验证是否成功<br><strong>详细SSH设置请参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36667170/article/details/79094257">Git教程 SSH keys配置</a></strong></li>
 </ul>
 <h2 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h2><ol>
@@ -706,11 +704,8 @@ git config user.email<span aria-hidden="true" class="line-numbers-rows"><span></
 <li>按<code>ctrl+c</code>关闭本地服务器。</li>
 </ol>
 <h1 id="将hexo，即MyBlock文件部署到github"><a href="#将hexo，即MyBlock文件部署到github" class="headerlink" title="将hexo，即MyBlock文件部署到github"></a>将hexo，即MyBlock文件部署到github</h1><ol>
-<li>如下修改MyBlock文件夹中<code>_config.yml</code>文件<pre class="line-numbers language-none"><code class="language-none">deploy:
-  type: git
-  repository: https:&#x2F;&#x2F;github.com&#x2F;用户名&#x2F;用户名.github.io.git
-  branch: main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
-<li>安装deploy-git<pre class="line-numbers language-none"><code class="language-none">npm install hexo-deployer-git --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>如下修改MyBlock文件夹中<code>_config.yml</code>文件<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/用户名/用户名.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure></li>
+<li>安装deploy-git<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></li>
 <li>然后依次运行以下命令<ul>
 <li><code>hexo clean</code></li>
 <li><code>hexo generate</code></li>
