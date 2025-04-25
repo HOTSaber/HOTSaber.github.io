@@ -55,6 +55,9 @@ vim download_llama.py">
 
 <meta name="generator" content="Hexo 7.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
+<link rel="stylesheet" type="text/css" href="/libs/prism/prism.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/prism/1.9.0/plugins/line-numbers/prism-line-numbers.css">
+
 
 <body>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
@@ -627,16 +630,16 @@ vim download_llama.py">
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="1-访问modelscope官网，搜索想要下载的模型"><a href="#1-访问modelscope官网，搜索想要下载的模型" class="headerlink" title="1.访问modelscope官网，搜索想要下载的模型"></a>1.访问modelscope官网，搜索想要下载的模型</h1><p><a target="_blank" rel="noopener" href="https://modelscope.cn/">modelscope官网</a></p>
-<h1 id="2-使用SDK或git方式下载模型"><a href="#2-使用SDK或git方式下载模型" class="headerlink" title="2.使用SDK或git方式下载模型"></a>2.使用SDK或git方式下载模型</h1><h2 id="SDK下载"><a href="#SDK下载" class="headerlink" title="SDK下载"></a>SDK下载</h2><pre class="line-numbers language-text" data-language="text"><code class="language-text">#新建并进入一个.py文件
+<h1 id="2-使用SDK或git方式下载模型"><a href="#2-使用SDK或git方式下载模型" class="headerlink" title="2.使用SDK或git方式下载模型"></a>2.使用SDK或git方式下载模型</h1><h2 id="SDK下载"><a href="#SDK下载" class="headerlink" title="SDK下载"></a>SDK下载</h2><pre class="language-text" data-language="text"><code class="language-text">#新建并进入一个.py文件
 touch download_llama.py
 vim download_llama.py
 #模型下载，复制代码到上述文件
 from modelscope import snapshot_download 
-model_dir = snapshot_download('skyline2006/llama-7b')
+model_dir &#x3D; snapshot_download(&#39;skyline2006&#x2F;llama-7b&#39;)
 #推出编辑模式，然后运行此脚本
-python download_llama.py<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+python download_llama.py</code></pre>
 <h2 id="Git下载"><a href="#Git下载" class="headerlink" title="Git下载"></a>Git下载</h2><p>git下载很简单，直接在当前路径文件夹下运行以下命令即可</p>
-<pre class="line-numbers language-text" data-language="text"><code class="language-text">git clone https://www.modelscope.cn/skyline2006/llama-7b.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="language-text" data-language="text"><code class="language-text">git clone https:&#x2F;&#x2F;www.modelscope.cn&#x2F;skyline2006&#x2F;llama-7b.git</code></pre>
 <h1 id="3-下载路径和注意事项"><a href="#3-下载路径和注意事项" class="headerlink" title="3.下载路径和注意事项"></a>3.下载路径和注意事项</h1><p>用SDK方法下载后，下载位置并不是在当前路径下，而是在默认的.&#x2F;root&#x2F;.cache&#x2F;modelscope&#x2F;hub下</p>
 <h1 id="4-环境配置-ModelScope-Library安装"><a href="#4-环境配置-ModelScope-Library安装" class="headerlink" title="4.环境配置(ModelScope Library安装)"></a>4.环境配置(ModelScope Library安装)</h1><p><a target="_blank" rel="noopener" href="https://modelscope.cn/docs/%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85">官方文档</a></p>
 <h2 id="1-核心框架"><a href="#1-核心框架" class="headerlink" title="1. 核心框架"></a>1. 核心框架</h2><p>ModelScope Libarary由<strong>核心框架</strong>，以及不同<strong>领域模型</strong>的<strong>对接组件</strong>组成。如果只需要ModelScope模型和数据集访问等基础能力，可以只安装ModelScope的核心框架：</p>
@@ -1008,6 +1011,10 @@ python download_llama.py<span aria-hidden="true" class="line-numbers-rows"><span
 
 </main>
 
+
+
+<script src="/libs/prism/prism.js" defer></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/prism/1.9.0/plugins/line-numbers/prism-line-numbers.js" defer></script>
 
 
 

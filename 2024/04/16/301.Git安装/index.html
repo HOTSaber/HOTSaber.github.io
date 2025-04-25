@@ -57,6 +57,9 @@
 
 <meta name="generator" content="Hexo 7.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
+<link rel="stylesheet" type="text/css" href="/libs/prism/prism.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/prism/1.9.0/plugins/line-numbers/prism-line-numbers.css">
+
 
 <body>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
@@ -630,13 +633,13 @@
 </ul>
 <h1 id="配置连接GitHub"><a href="#配置连接GitHub" class="headerlink" title="配置连接GitHub"></a>配置连接GitHub</h1><ul>
 <li>需要GitHub账号</li>
-<li>在本地，新建文件夹如&#x3D;&#x3D;MyBlog&#x3D;&#x3D;，并在MyBlog中右键点选&#x3D;&#x3D;gitbash here&#x3D;&#x3D;,输入以下命令<pre class="line-numbers language-none"><code class="language-none">git config --global user.name &quot;yourname&quot;
-git config --global user.email &quot;youremail&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
-<li>可以使用以下命令验证<pre class="line-numbers language-none"><code class="language-none">git config user.name
-git config user.email<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
-<li>生成SSH Keys，一直回车即可<pre class="line-numbers language-none"><code class="language-none">ssh-keygen -t rsa -C &quot;youremail&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>在本地，新建文件夹如&#x3D;&#x3D;MyBlog&#x3D;&#x3D;，并在MyBlog中右键点选&#x3D;&#x3D;gitbash here&#x3D;&#x3D;,输入以下命令<pre class="language-none"><code class="language-none">git config --global user.name &quot;yourname&quot;
+git config --global user.email &quot;youremail&quot;</code></pre></li>
+<li>可以使用以下命令验证<pre class="language-none"><code class="language-none">git config user.name
+git config user.email</code></pre></li>
+<li>生成SSH Keys，一直回车即可<pre class="language-none"><code class="language-none">ssh-keygen -t rsa -C &quot;youremail&quot;</code></pre></li>
 <li>找到<code>.shh</code>文件夹(.ssh文件通常在系统用户文件中)，将公钥（id_rsa.pub中的内容）填写进GitHub账户中</li>
-<li>或使用以下命令查询SSH（可选）<pre class="line-numbers language-none"><code class="language-none">cat ~&#x2F;.ssh&#x2F;id_rsa.pub<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>或使用以下命令查询SSH（可选）<pre class="language-none"><code class="language-none">cat ~&#x2F;.ssh&#x2F;id_rsa.pub</code></pre></li>
 <li>使用<code>ssh -T git@github.com</code>以验证是否成功<br><strong>详细SSH设置请参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36667170/article/details/79094257">Git教程 SSH keys配置</a></strong></li>
 </ul>
 
@@ -792,16 +795,12 @@ git config user.email<span aria-hidden="true" class="line-numbers-rows"><span></
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/office/">
-                        <span class="chip bg-color">office</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%A0%BC%E5%BC%8F/">
-                        <span class="chip bg-color">格式</span>
-                    </a>
-                    
                     <a href="/tags/zotero/">
                         <span class="chip bg-color">zotero</span>
+                    </a>
+                    
+                    <a href="/tags/office/">
+                        <span class="chip bg-color">office</span>
                     </a>
                     
                     <a href="/tags/chrome/">
@@ -814,6 +813,10 @@ git config user.email<span aria-hidden="true" class="line-numbers-rows"><span></
                     
                     <a href="/tags/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/">
                         <span class="chip bg-color">参考文献</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%A0%BC%E5%BC%8F/">
+                        <span class="chip bg-color">格式</span>
                     </a>
                     
                 </div>
@@ -999,6 +1002,10 @@ git config user.email<span aria-hidden="true" class="line-numbers-rows"><span></
 
 </main>
 
+
+
+<script src="/libs/prism/prism.js" defer></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/prism/1.9.0/plugins/line-numbers/prism-line-numbers.js" defer></script>
 
 
 

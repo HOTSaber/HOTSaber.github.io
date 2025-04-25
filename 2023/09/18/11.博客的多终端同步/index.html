@@ -56,6 +56,9 @@ Github 操作新建一个分支，并设定为默认分支PS：hexo d命令使�
 
 <meta name="generator" content="Hexo 7.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
+<link rel="stylesheet" type="text/css" href="/libs/prism/prism.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/prism/1.9.0/plugins/line-numbers/prism-line-numbers.css">
+
 
 <body>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
@@ -644,50 +647,50 @@ Github 操作新建一个分支，并设定为默认分支PS：hexo d命令使�
 <hr>
 <h1 id="Github-操作"><a href="#Github-操作" class="headerlink" title="Github 操作"></a>Github 操作</h1><p>新建一个分支，并设定为默认分支<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/11.%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%A4%9A%E7%BB%88%E7%AB%AF%E5%90%8C%E6%AD%A5-1.png" alt="11.博客的多终端同步-1"><br>PS：<code>hexo d</code>命令使用<code>main</code>分支，且是否是默认分支无影响，只要保证push时不会影响到<code>main</code>分支即可</p>
 <h1 id="初始电脑本地操作"><a href="#初始电脑本地操作" class="headerlink" title="初始电脑本地操作"></a>初始电脑本地操作</h1><p>本地任意一空白目录下 git clone 之前的代码</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone git@github.com:yourname/yourname.github.io.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="language-bash" data-language="bash"><code class="language-bash">git clone git@github.com:yourname&#x2F;yourname.github.io.git</code></pre>
 
 <p>clone成功后，删除掉除去<code>.git</code>之外的所有文件夹</p>
 <p>把之前的博客源文件复制过来，除去 <code>.deploy_git</code></p>
 <p>新建or修改 <code>.gitignore</code>文件</p>
-<pre class="line-numbers language-text" data-language="text"><code class="language-text">.DS_Store
+<pre class="language-text" data-language="text"><code class="language-text">.DS_Store
 Thumbs.db
 db.json
 *.log
-node_modules/
-public/
-.deploy*/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+node_modules&#x2F;
+public&#x2F;
+.deploy*&#x2F;</code></pre>
 
 <p>如果你在<code>themes</code>文件夹下 clone 过其它主题文件，把其中的 <code>.git</code>文件夹删除掉</p>
 <p>上传文件到hexo分支</p>
-<pre class="line-numbers language-text" data-language="text"><code class="language-text">git add .
-git commit -m "backup blog source file0305"
-git push <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="language-text" data-language="text"><code class="language-text">git add .
+git commit -m &quot;backup blog source file0305&quot;
+git push </code></pre>
 
 <p>如果没有报错，此时github端应该就可以看到备份的源文件了。</p>
 <h1 id="另一台终端操作"><a href="#另一台终端操作" class="headerlink" title="另一台终端操作"></a>另一台终端操作</h1><p>首先进行一些基础配置，如安装git nodejs与 配置git连接Github等，详见<a target="_blank" rel="noopener" href="https://hotsaber.github.io/2023/05/19/1.%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE/">博客部署配置</a></p>
-<pre class="line-numbers language-text" data-language="text"><code class="language-text"># 在该电脑的本地文件夹下clone Blog源文件
-git clone &lt;url><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="language-text" data-language="text"><code class="language-text"># 在该电脑的本地文件夹下clone Blog源文件
+git clone &lt;url&gt;</code></pre>
 
-<pre class="line-numbers language-text" data-language="text"><code class="language-text"># 或使用
-git clone git@github.com:yourname/yourname.github.io.git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="language-text" data-language="text"><code class="language-text"># 或使用
+git clone git@github.com:yourname&#x2F;yourname.github.io.git</code></pre>
 <p>生成名为<code>yourname.github.io</code>的文件夹<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/11.%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%A4%9A%E7%BB%88%E7%AB%AF%E5%90%8C%E6%AD%A5-2.png" alt="11.博客的多终端同步-2"><br>此后在此文件中<code>git bash</code>安装之前安装的插件</p>
-<pre class="line-numbers language-none"><code class="language-none">npm install -g hexo-cli
-npm install hexo-deployer-git --save<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="language-none"><code class="language-none">npm install -g hexo-cli
+npm install hexo-deployer-git --save</code></pre>
 <p>使用<code>hexo -v </code>验证，使用<code>npm audit fix</code>修复deployer</p>
 <h1 id="撰写新博客"><a href="#撰写新博客" class="headerlink" title="撰写新博客"></a>撰写新博客</h1><p>然后就可以在新电脑上写博客了，将博客部署到网站后，记得push源文件,更新仓库</p>
-<pre class="line-numbers language-text" data-language="text"><code class="language-text">git add .
-git commit -m ""
-git push <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="language-text" data-language="text"><code class="language-text">git add .
+git commit -m &quot;&quot;
+git push </code></pre>
 <p>其他终端同样编辑时，要pull回仓库中的文件，确保自己在最新的文件上进行修改</p>
-<pre class="line-numbers language-none"><code class="language-none">## 多台终端写blog ，记得先和github端 同步 ##
-git pull<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="language-none"><code class="language-none">## 多台终端写blog ，记得先和github端 同步 ##
+git pull</code></pre>
 <p>如出现修改冲突</p>
 <ol>
-<li>放弃本地修改<pre class="line-numbers language-none"><code class="language-none">git reset --hard
-git pull<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
-<li>使用<code>git stash</code>保存当前工作进度<pre class="line-numbers language-none"><code class="language-none">git stash
+<li>放弃本地修改<pre class="language-none"><code class="language-none">git reset --hard
+git pull</code></pre></li>
+<li>使用<code>git stash</code>保存当前工作进度<pre class="language-none"><code class="language-none">git stash
 git pull
-git stash pop<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+git stash pop</code></pre>
 <code>git stash pop</code>把刚才stash到本地栈中的代码pop到本地，但会删除本地stash中的内容<br>也可用<code>git apply</code>恢复，但stash列表中的内容是继续保留的</li>
 </ol>
 
@@ -1066,6 +1069,10 @@ git stash pop<span aria-hidden="true" class="line-numbers-rows"><span></span><sp
 
 </main>
 
+
+
+<script src="/libs/prism/prism.js" defer></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/prism/1.9.0/plugins/line-numbers/prism-line-numbers.js" defer></script>
 
 
 

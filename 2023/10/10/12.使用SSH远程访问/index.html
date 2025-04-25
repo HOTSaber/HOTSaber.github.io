@@ -61,6 +61,9 @@ Ubuntu 系统如何使用 root 用户登录实例
 
 <meta name="generator" content="Hexo 7.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
+<link rel="stylesheet" type="text/css" href="/libs/prism/prism.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/prism/1.9.0/plugins/line-numbers/prism-line-numbers.css">
+
 
 <body>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
@@ -650,44 +653,44 @@ Ubuntu 系统如何使用 root 用户登录实例
 <hr>
 <h1 id="局域网访问"><a href="#局域网访问" class="headerlink" title="局域网访问"></a>局域网访问</h1><h2 id="为windows开启SSH"><a href="#为windows开启SSH" class="headerlink" title="为windows开启SSH"></a>为windows开启SSH</h2><ul>
 <li>设置 &gt; 搜索“添加可选功能” &gt; 添加功能 &gt; 安装OpenSSH客户端</li>
-<li>可以查看ssh的版本来验证是否安装成功：<pre class="line-numbers language-none"><code class="language-none">ssh -V<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>可以查看ssh的版本来验证是否安装成功：<pre class="language-none"><code class="language-none">ssh -V</code></pre></li>
 <li>Win+S搜索“计算机管理”，在“服务”中找到<code>OpenSSH Authentication Agent</code>和<code>OpenSSH SSH Server</code>，将启动类型 改为“⾃动”，并分别启动服务</li>
-<li>检查两项服务的运⾏状态：<pre class="line-numbers language-none"><code class="language-none">Get-Service -Name *ssh*<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-若显示<pre class="line-numbers language-none"><code class="language-none">Status           Name                DisplayName
+<li>检查两项服务的运⾏状态：<pre class="language-none"><code class="language-none">Get-Service -Name *ssh*</code></pre>
+若显示<pre class="language-none"><code class="language-none">Status           Name                DisplayName
 ------           ----                ----------- 
 Running         ssh-agent            OpenSSH Authentication Agent 
-Running         sshd                 OpenSSH SSH Server<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+Running         sshd                 OpenSSH SSH Server</code></pre>
 则表示两项服务已经开启成功</li>
-<li>查看SSH服务器是否已经开始监听默认的22号端⼝：<pre class="line-numbers language-none"><code class="language-none">netstat -an | findstr :22<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-应显示<pre class="line-numbers language-none"><code class="language-none">TCP                   0.0.0.0:22                 0.0.0.0:0                   LISTENING  
-TCP                   [::]:22                    [::]:0                      LISTENING<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<li>查看SSH服务器是否已经开始监听默认的22号端⼝：<pre class="language-none"><code class="language-none">netstat -an | findstr :22</code></pre>
+应显示<pre class="language-none"><code class="language-none">TCP                   0.0.0.0:22                 0.0.0.0:0                   LISTENING  
+TCP                   [::]:22                    [::]:0                      LISTENING</code></pre></li>
 <li>通过<code>ipconfig</code>查询PC的<strong>内网IP地址</strong>，这个其他局域网中的节点奖通过此IP地址访问。</li>
 </ul>
 <h2 id="使用命令行连接"><a href="#使用命令行连接" class="headerlink" title="使用命令行连接"></a>使用命令行连接</h2><ul>
 <li>**要确保访问与被访问节点都已安装并运行SSH服务</li>
-<li>可以运行命令提示符运行以下命令连接目标节点<pre class="line-numbers language-none"><code class="language-none">ssh username@ip<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-注意： Windows 10下， username 应为登陆的微软账号，运⾏该命令后，要输⼊对应微软账户的密码。<br>第⼀次连接会弹出以下内容：<pre class="line-numbers language-none"><code class="language-none">The authenticity of host &#39;centos (101.xxx.xxx.xxx)&#39; can&#39;t be established.  
+<li>可以运行命令提示符运行以下命令连接目标节点<pre class="language-none"><code class="language-none">ssh username@ip</code></pre>
+注意： Windows 10下， username 应为登陆的微软账号，运⾏该命令后，要输⼊对应微软账户的密码。<br>第⼀次连接会弹出以下内容：<pre class="language-none"><code class="language-none">The authenticity of host &#39;centos (101.xxx.xxx.xxx)&#39; can&#39;t be established.  
 ED25519 key fingerprint is SHA256:ZakYgdQayDyXBudJjNDUsfJgTJRz92+HKT5nqP2ckdY.  
 This key is not known by any other names  
 Are you sure you want to continue connecting (yes&#x2F;no&#x2F;[fingerprint])? yes  
-Warning: Permanently added &#39;centos&#39; (ED25519) to the list of known hosts.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+Warning: Permanently added &#39;centos&#39; (ED25519) to the list of known hosts.</code></pre>
 之后便会将公钥保存在 &#x2F;Users&#x2F;username&#x2F;.ssh&#x2F;known_hosts 中。<br>连接到Linux服务器的⽅法类似。</li>
 </ul>
 <h2 id="使用公私钥免秘连接"><a href="#使用公私钥免秘连接" class="headerlink" title="使用公私钥免秘连接"></a>使用公私钥免秘连接</h2><h3 id="创建本地公私钥"><a href="#创建本地公私钥" class="headerlink" title="创建本地公私钥"></a>创建本地公私钥</h3><ul>
-<li>在本地创建公钥和私钥(一路Enter即可，建议使用rsa)，如在GITHUB中生成并配置过，用已有的公私钥即可<pre class="line-numbers language-none"><code class="language-none">ssh-keygen -t rsa<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li>可以检查 ~&#x2F;.ssh ⽬录⽣成的公钥和私钥：<pre class="line-numbers language-none"><code class="language-none">ls ~&#x2F;.ssh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li>将公钥上传到Linux服务器：（无云端可跳过）<pre class="line-numbers language-none"><code class="language-none">ssh-copy-id -i ~&#x2F;.ssh&#x2F;id_rsa.pub username@ip<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<li>在本地创建公钥和私钥(一路Enter即可，建议使用rsa)，如在GITHUB中生成并配置过，用已有的公私钥即可<pre class="language-none"><code class="language-none">ssh-keygen -t rsa</code></pre></li>
+<li>可以检查 ~&#x2F;.ssh ⽬录⽣成的公钥和私钥：<pre class="language-none"><code class="language-none">ls ~&#x2F;.ssh</code></pre></li>
+<li>将公钥上传到Linux服务器：（无云端可跳过）<pre class="language-none"><code class="language-none">ssh-copy-id -i ~&#x2F;.ssh&#x2F;id_rsa.pub username@ip</code></pre>
 <strong>注意私钥一定不要泄露</strong></li>
 <li>公私钥存储在<code>C:\Users\username\.ssh</code>目录下，其中id_rsa为私钥，id_rsa.pub为公钥</li>
 </ul>
 <h3 id="被访问端配置"><a href="#被访问端配置" class="headerlink" title="被访问端配置"></a>被访问端配置</h3><ul>
 <li>使用文档打开<code>C:\Users\username\.ssh\authorized_keys</code>将公钥内容全部添加进文件中，当有多个公钥时，使用回车分隔，每行一个公钥</li>
 <li>修改 <code>C:\ProgramData\ssh\sshd_config</code>：</li>
-<li>确保以下三行没有注释：	<pre class="line-numbers language-none"><code class="language-none">PubkeyAuthentication yes  
+<li>确保以下三行没有注释：	<pre class="language-none"><code class="language-none">PubkeyAuthentication yes  
 AuthorizedKeysFile .ssh&#x2F;authorized_keys  
-PasswordAuthentication no<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
-<li>确保以下两行被注释 <pre class="line-numbers language-none"><code class="language-none">#Match Group administrators  
-# AuthorizedKeysFile  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+PasswordAuthentication no</code></pre></li>
+<li>确保以下两行被注释 <pre class="language-none"><code class="language-none">#Match Group administrators  
+# AuthorizedKeysFile  </code></pre></li>
 <li>使用<code>Restart-Service sshd </code>重启sshd服务，若失败则⼿动在“计算机管理” &gt; “服务”中重启OpenSSH SSH<br>Server</li>
 <li>在访问端测试免密登陆</li>
 </ul>
@@ -1095,6 +1098,10 @@ PasswordAuthentication no<span aria-hidden="true" class="line-numbers-rows"><spa
 
 </main>
 
+
+
+<script src="/libs/prism/prism.js" defer></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/prism/1.9.0/plugins/line-numbers/prism-line-numbers.js" defer></script>
 
 
 

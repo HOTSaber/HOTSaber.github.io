@@ -58,6 +58,9 @@
 
 <meta name="generator" content="Hexo 7.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
+<link rel="stylesheet" type="text/css" href="/libs/prism/prism.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/prism/1.9.0/plugins/line-numbers/prism-line-numbers.css">
+
 
 <body>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
@@ -652,8 +655,8 @@
 <li>进入BIOS-startup-Boot设置，将USB设备调为第一顺位</li>
 </ol>
 <h1 id="安装linux"><a href="#安装linux" class="headerlink" title="安装linux"></a>安装linux</h1><ul>
-<li>使用USB系统盘启动后，可以使用Install Ubuntu进行安装<br>  这里会有一个坑，Ubuntu启动时卡在logo页面，无法继续安装步骤，问题原因是显卡驱动与Ubuntu系统不兼容，解决方法：<br>  移动到 Install Ubuntu 此项上，然后输入e（edit模式），进入到编辑模式界面找到  <pre class="line-numbers language-none"><code class="language-none">quiet splash ---<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-  去掉后面的 splash 后面的 —               修改成如下  <pre class="line-numbers language-none"><code class="language-none">quiet splash nouveau.modeset&#x3D;0<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>使用USB系统盘启动后，可以使用Install Ubuntu进行安装<br>  这里会有一个坑，Ubuntu启动时卡在logo页面，无法继续安装步骤，问题原因是显卡驱动与Ubuntu系统不兼容，解决方法：<br>  移动到 Install Ubuntu 此项上，然后输入e（edit模式），进入到编辑模式界面找到  <pre class="language-none"><code class="language-none">quiet splash ---</code></pre>
+  去掉后面的 splash 后面的 —               修改成如下  <pre class="language-none"><code class="language-none">quiet splash nouveau.modeset&#x3D;0</code></pre></li>
 <li>然后F10重启，重新安装<br>  根据具体情况尝试修改：  <a target="_blank" rel="noopener" href="https://itsfoss.com/fix-ubuntu-freezing/" title="Fixing Ubuntu Freezing at Boot Time">Fixing Ubuntu Freezing at Boot Time</a></li>
 <li>也可尝试使用<code>Ubuntu(safe graphics)</code></li>
 <li>在用户配置用户名和密码时，Use Active Directory不需要选择</li>
@@ -661,7 +664,7 @@
 <h1 id="双系统切换-略过"><a href="#双系统切换-略过" class="headerlink" title="双系统切换(略过)"></a>双系统切换(略过)</h1><p>此时Ubuntu系统安装完成后，接下来就是设置双系统（window 和 Ubuntu ）切换</p>
 <p>进入BIOS设置 ,把 UEFI&#x2F;Legacy Boot  模式 设置成 Both<br>以后每次开机重启，进入Boot Menu然后通过 上下键选择你想要进入的系统即可。</p>
 <h1 id="安装后续操作"><a href="#安装后续操作" class="headerlink" title="安装后续操作"></a>安装后续操作</h1><p>重启后重新进入<code>UEFI Firmware Settings</code>找到Secure boot，改为disabled（略过）</p>
-<h2 id="1-更新系统"><a href="#1-更新系统" class="headerlink" title="1.更新系统"></a>1.更新系统</h2><pre class="line-numbers language-none"><code class="language-none">#更新系统
+<h2 id="1-更新系统"><a href="#1-更新系统" class="headerlink" title="1.更新系统"></a>1.更新系统</h2><pre class="language-none"><code class="language-none">#更新系统
 sudo apt update &amp;&amp; sudo apt upgrade -y
 #更新软件源
 sudo apt-get update &amp;&amp; sudo apt-get upgrade
@@ -671,37 +674,37 @@ sudo apt install build-essential
 #安装网络工具
 sudo apt install net-tools
 #安装systemctl
-sudo apt install systemd<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+sudo apt install systemd</code></pre>
 <h2 id="2-配置SSH"><a href="#2-配置SSH" class="headerlink" title="2.配置SSH"></a>2.配置SSH</h2><ol>
-<li>安装ssh服务<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> autoremove <span class="token parameter variable">--purge</span> openssh-server <span class="token parameter variable">-y</span> <span class="token operator">&amp;&amp;</span> <span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> openssh-server <span class="token parameter variable">-y</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>安装ssh服务<pre class="language-bash" data-language="bash"><code class="language-bash">sudo apt autoremove --purge openssh-server -y &amp;&amp; sudo apt install openssh-server -y</code></pre></li>
 <li>编辑文件<code>vim /etc/ssh/sshd_config</code>, 修改端口等参数，并开启需要的功能</li>
 </ol>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 端口自定 </span>
-Port <span class="token number">22</span> 
-<span class="token comment"># 密码验证</span>
-PasswordAuthentication <span class="token function">yes</span> 
-<span class="token comment"># 允许免密访问</span>
-PubkeyAuthentication <span class="token function">yes</span>
-AuthorizedKeysFile	.ssh/authorized_keys .ssh/authorized_keys2
-<span class="token comment">#是否允许管理员账户远程访问</span>
-PermitRootLogin <span class="token function">yes</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="language-bash" data-language="bash"><code class="language-bash"># 端口自定 
+Port 22 
+# 密码验证
+PasswordAuthentication yes 
+# 允许免密访问
+PubkeyAuthentication yes
+AuthorizedKeysFile	.ssh&#x2F;authorized_keys .ssh&#x2F;authorized_keys2
+#是否允许管理员账户远程访问
+PermitRootLogin yes</code></pre>
 <p><em><strong>重启服务<code>sudo service ssh --full-restart</code><br>生成key, <code>ssh-keygen -t rsa</code>一路回车</strong></em><br>3. 使用<code>systemctl enable ssh</code>命令配置SSH自启动，其他systemctl命令如下：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">systemctl daemon-reload  
-systemctl start <span class="token function">ssh</span> <span class="token comment">#启动frps</span>
-systemctl <span class="token builtin class-name">enable</span> <span class="token function">ssh</span> <span class="token comment">#打开自启动</span>
-systemctl disable <span class="token function">ssh</span> <span class="token comment">#关闭自启动</span>
-systemctl restart <span class="token function">ssh</span> <span class="token comment">#重启进程</span>
-systemctl stop <span class="token function">ssh</span> <span class="token comment">#停止进程</span>
-systemctl status <span class="token function">ssh</span> <span class="token comment">#查看进程日志</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="language-bash" data-language="bash"><code class="language-bash">systemctl daemon-reload  
+systemctl start ssh #启动frps
+systemctl enable ssh #打开自启动
+systemctl disable ssh #关闭自启动
+systemctl restart ssh #重启进程
+systemctl stop ssh #停止进程
+systemctl status ssh #查看进程日志</code></pre>
 <ol start="4">
 <li>配置免密访问</li>
 </ol>
 <ul>
 <li>使用<code>su root</code>切换root账户</li>
-<li>使用以下命令新建并修改authorized_keys文件<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">mkdir</span> <span class="token parameter variable">-p</span> ~/.ssh <span class="token comment">#新建.ssh文件夹</span>
-<span class="token builtin class-name">cd</span> /root/.ssh
-<span class="token function">touch</span> authorized_keys <span class="token comment">#新建authorized_keys文件</span>
-<span class="token function">vim</span> authorized_keys <span class="token comment">#修改文件内容，添加相应公钥，用:wq保存退出即可</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>使用以下命令新建并修改authorized_keys文件<pre class="language-bash" data-language="bash"><code class="language-bash">mkdir -p ~&#x2F;.ssh #新建.ssh文件夹
+cd &#x2F;root&#x2F;.ssh
+touch authorized_keys #新建authorized_keys文件
+vim authorized_keys #修改文件内容，添加相应公钥，用:wq保存退出即可</code></pre></li>
 </ul>
 <h1 id="其他配置"><a href="#其他配置" class="headerlink" title="其他配置"></a>其他配置</h1><ol>
 <li>内网穿透请见<a target="_blank" rel="noopener" href="https://hotsaber.github.io/2023/10/10/13.%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">内网穿透</a></li>
@@ -1047,6 +1050,10 @@ systemctl status <span class="token function">ssh</span> <span class="token comm
 
 </main>
 
+
+
+<script src="/libs/prism/prism.js" defer></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/prism/1.9.0/plugins/line-numbers/prism-line-numbers.js" defer></script>
 
 
 

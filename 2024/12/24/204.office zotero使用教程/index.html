@@ -55,6 +55,9 @@
 
 <meta name="generator" content="Hexo 7.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
+<link rel="stylesheet" type="text/css" href="/libs/prism/prism.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/prism/1.9.0/plugins/line-numbers/prism-line-numbers.css">
+
 
 <body>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
@@ -572,16 +575,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/office/">
-                                <span class="chip bg-color">office</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%A0%BC%E5%BC%8F/">
-                                <span class="chip bg-color">格式</span>
-                            </a>
-                        
                             <a href="/tags/zotero/">
                                 <span class="chip bg-color">zotero</span>
+                            </a>
+                        
+                            <a href="/tags/office/">
+                                <span class="chip bg-color">office</span>
                             </a>
                         
                             <a href="/tags/chrome/">
@@ -594,6 +593,10 @@
                         
                             <a href="/tags/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/">
                                 <span class="chip bg-color">参考文献</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%A0%BC%E5%BC%8F/">
+                                <span class="chip bg-color">格式</span>
                             </a>
                         
                     </div>
@@ -645,16 +648,16 @@
 <h1 id="配置常用插件"><a href="#配置常用插件" class="headerlink" title="配置常用插件"></a>配置常用插件</h1><p>Zotero插件一搬均为开源插件，普遍公布于<a target="_blank" rel="noopener" href="https://github.com/">Github</a>。<br>进入项目后找到<code>Releases</code>版块，即可下载各版本的插件，一般插件文件以<code>.xpi</code>为后缀。<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/204.office%20zotero%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-2.png" alt="204.office zotero使用教程-2"></p>
 <p>在下载好<code>.xpi</code>插件文件后，在Zotero上打开<code>工具</code>–&gt;<code>插件</code>，打开<code>插件管理器</code>，选择<code>管理插件选项</code>–&gt;<code>Install Plugin From File</code>，选择下载好的<code>.xpi</code>文件，即可完成插件安装<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/204.office%20zotero%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-3.png" alt="204.office zotero使用教程-3"><br>在<code>编辑</code>–&gt;<code>设置</code>中，可以看到新添插件的具体选项配置，可以通过对应<code>Github项目</code>中的说明文档，进行个性化配置。</p>
 <h2 id="Jasminum"><a href="#Jasminum" class="headerlink" title="Jasminum"></a>Jasminum</h2><p><a target="_blank" rel="noopener" href="https://github.com/l0o0/jasminum">jasminum项目链接</a><br>一个简单的 Zotero 中文插件，旨在提升 Zotero 中文用户的使用体验。主要功能有：</p>
-<pre class="line-numbers language-none"><code class="language-none">1. 中文期刊附件（PDF&#x2F;CAJ）的元数据抓取，支持添加PDF&#x2F;CAJ时自动抓取元数据功能
+<pre class="language-none"><code class="language-none">1. 中文期刊附件（PDF&#x2F;CAJ）的元数据抓取，支持添加PDF&#x2F;CAJ时自动抓取元数据功能
 2. 集成 Zotero 中文社区转换器的下载与更新功能
 3. 为知网学位论文PDF添加章节书签（依赖于PDFtk）
 4. 更新中文文献引用次数，核心期刊信息
-5. 合并&#x2F;拆分姓，名，识别文献条目语言，下载知网附件，统一日期格式等<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+5. 合并&#x2F;拆分姓，名，识别文献条目语言，下载知网附件，统一日期格式等</code></pre>
 <h2 id="DOI-manager"><a href="#DOI-manager" class="headerlink" title="DOI manager"></a>DOI manager</h2><p><a target="_blank" rel="noopener" href="https://github.com/bwiernik/zotero-shortdoi">DOI manager项目链接</a><br>这个插件能自动帮助你更新文献的DOI信息，DOI是scihub自动下载的必要信息。</p>
 <h2 id="SciPDF"><a href="#SciPDF" class="headerlink" title="SciPDF"></a>SciPDF</h2><p><a target="_blank" rel="noopener" href="https://github.com/syt2/zotero-scipdf">SciPDF项目链接</a><br>这是一个用于 Zotero7 的 Sci-Hub 插件。<br>此插件利用了 Zotero 内自带的 <a target="_blank" rel="noopener" href="https://www.zotero.org/support/kb/custom_pdf_resolvers">PDF resolvers</a>方案，将 Sci-Hub 的 resolver 自动填入 <code>extensions.zotero.findPDFs.resolvers</code> 字段，以实现在zotero内从sci-hub下载pdf。</p>
 <h2 id="Linter-for-Zotero"><a href="#Linter-for-Zotero" class="headerlink" title="Linter for Zotero"></a>Linter for Zotero</h2><p><a target="_blank" rel="noopener" href="https://github.com/northword/zotero-format-metadata">Linter for Zotero项目链接</a></p>
 <p>可以规范化&#x2F;格式化条目的元数据（字段数据）。</p>
-<pre class="line-numbers language-none"><code class="language-none">1. 快速设置上下标、粗体和斜体
+<pre class="language-none"><code class="language-none">1. 快速设置上下标、粗体和斜体
 2. 重复条目检查
 当新增条目时，插件自动检查该条目是否与库中已有条目重复，若有重复，则提示用户确认。
 3. 条目类型检查
@@ -671,17 +674,17 @@ Zotero 文档建议将标题存储为“句子式大写”的格式，这将有�
 8. 自动填写条目语言
 插件根据条目的标题判断其语言，并将识别结果填入“语言字段”，这对于 CSL 完成参考文献表双语排版（如 et al 与 等 混排）非常重要。
 
-默认的，插件被限制仅识别简体中文和英文，你可以在首选项中关闭语言限制或添加其他常用语言的 ISO 639-1 代码。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+默认的，插件被限制仅识别简体中文和英文，你可以在首选项中关闭语言限制或添加其他常用语言的 ISO 639-1 代码。</code></pre>
 <h2 id="Zotero-PDF-Translate"><a href="#Zotero-PDF-Translate" class="headerlink" title="Zotero PDF Translate"></a>Zotero PDF Translate</h2><p><a target="_blank" rel="noopener" href="https://github.com/windingwind/zotero-pdf-translate">Zotero PDF Translate项目链接</a><br>翻译插件,主要功能有：</p>
-<pre class="line-numbers language-none"><code class="language-none">- 划词翻译（自动&#x2F;手动）
+<pre class="language-none"><code class="language-none">- 划词翻译（自动&#x2F;手动）
 - 标题、摘要翻译与源文本&#x2F;翻译结果显示切换
 - 批注翻译（自动&#x2F;手动）
 - 支持15+种翻译服务与4+种字典服务
-- 自定义翻译侧栏UI，支持同时使用多种翻译引擎<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+- 自定义翻译侧栏UI，支持同时使用多种翻译引擎</code></pre>
 <h2 id="Delete-item-s-with-attachment-s"><a href="#Delete-item-s-with-attachment-s" class="headerlink" title="Delete item(s) with attachment(s)"></a>Delete item(s) with attachment(s)</h2><p><a target="_blank" rel="noopener" href="https://github.com/redleafnew/delitemwithatt">Delete item(s) with attachment(s)项目链接</a><br>插件用途</p>
-<pre class="line-numbers language-none"><code class="language-none">1. 删除条目或分类的同时将链接的附件也一块删除。
+<pre class="language-none"><code class="language-none">1. 删除条目或分类的同时将链接的附件也一块删除。
 2. 根据条目标题语言将所选条目语言字段设置为&#96;en-US&#96;或&#96;zh-CN&#96;。
-3. 将附件导出。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+3. 将附件导出。</code></pre>
 <h1 id="使用Zotero插入引用"><a href="#使用Zotero插入引用" class="headerlink" title="使用Zotero插入引用"></a>使用Zotero插入引用</h1><h2 id="导入文献"><a href="#导入文献" class="headerlink" title="导入文献"></a>导入文献</h2><h3 id="connecter插件导入"><a href="#connecter插件导入" class="headerlink" title="connecter插件导入"></a><code>connecter</code>插件导入</h3><ul>
 <li>确保<code>Zotero本体软件</code>正运行</li>
 <li>使用安装了<code>Zotero connecter</code>插件的浏览器进入<code>文献搜索网站</code>，如：<a target="_blank" rel="noopener" href="https://www.cnki.net/">CNKI</a>,<a target="_blank" rel="noopener" href="https://webofscience.clarivate.cn/wos/alldb/basic-search">web of science</a>,<a target="_blank" rel="noopener" href="https://scholar.google.com/">google学术</a>，<a target="_blank" rel="noopener" href="https://xueshu.baidu.com/">百度学术</a>等。</li>
@@ -726,9 +729,9 @@ Zotero 文档建议将标题存储为“句子式大写”的格式，这将有�
 <h3 id="Zotero群组共享"><a href="#Zotero群组共享" class="headerlink" title="Zotero群组共享"></a>Zotero群组共享</h3><p>Zotero中，用户的文献一般放在我的文库（My Library）中，如果你想和别人<strong>共享文献&#x2F;协同研究</strong>，那么你可以建一个群组（Group Library）。</p>
 <ul>
 <li>通过<code>文件--&gt;新建文献库--&gt;新建群组</code>来新建一个群组<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/204.office%20zotero%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-9.png" alt="204.office zotero使用教程-9"></li>
-<li>此时会跳转到<a target="_blank" rel="noopener" href="https://www.zotero.org/groups/new/">Zotero群组创建页面</a>。<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/204.office%20zotero%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-10.png" alt="204.office zotero使用教程-10"><br>从上图可以看出群组主要有以下三种类型，它们的特点是：<pre class="line-numbers language-none"><code class="language-none">1. Public, Open Membership：公开访问，成员公开加入。（不可上传附件）
+<li>此时会跳转到<a target="_blank" rel="noopener" href="https://www.zotero.org/groups/new/">Zotero群组创建页面</a>。<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/204.office%20zotero%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-10.png" alt="204.office zotero使用教程-10"><br>从上图可以看出群组主要有以下三种类型，它们的特点是：<pre class="language-none"><code class="language-none">1. Public, Open Membership：公开访问，成员公开加入。（不可上传附件）
 2. Public, Closed Membership：公开访问，成员申请&#x2F;邀请加入。（可上传附件）
-3. Private Membership：仅群成员可访问群组，成员申请&#x2F;邀请加入。（可上传附件）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+3. Private Membership：仅群成员可访问群组，成员申请&#x2F;邀请加入。（可上传附件）</code></pre>
 也就是说，如果想上传附件（比如PDF）到群组，千万不要选择Public, Open Membership，可参考下方提示。<br>新建完毕后，重启Zotero，该群组便自动在侧边栏出现</li>
 </ul>
 <p>此时，你可以把PDF文献拖进去，或者从我的文库中拖动文献到群组，都是可以的。一切就像我的文库中的操作一样，有题录有附件。</p>
@@ -803,16 +806,12 @@ Zotero 文档建议将标题存储为“句子式大写”的格式，这将有�
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/office/">
-                                    <span class="chip bg-color">office</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%A0%BC%E5%BC%8F/">
-                                    <span class="chip bg-color">格式</span>
-                                </a>
-                            
                                 <a href="/tags/zotero/">
                                     <span class="chip bg-color">zotero</span>
+                                </a>
+                            
+                                <a href="/tags/office/">
+                                    <span class="chip bg-color">office</span>
                                 </a>
                             
                                 <a href="/tags/chrome/">
@@ -825,6 +824,10 @@ Zotero 文档建议将标题存储为“句子式大写”的格式，这将有�
                             
                                 <a href="/tags/%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE/">
                                     <span class="chip bg-color">参考文献</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%A0%BC%E5%BC%8F/">
+                                    <span class="chip bg-color">格式</span>
                                 </a>
                             
                         </div>
@@ -1099,6 +1102,10 @@ Zotero 文档建议将标题存储为“句子式大写”的格式，这将有�
 
 </main>
 
+
+
+<script src="/libs/prism/prism.js" defer></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/prism/1.9.0/plugins/line-numbers/prism-line-numbers.js" defer></script>
 
 
 
