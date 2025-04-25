@@ -10,7 +10,7 @@ tags:
 ---
 ---------
 1. 为什么使用`office 365`或高版本`office`? 详见[office共享与在线协作](https://hotsaber.github.io/2023/09/18/office共享与在线协作/)
-2. 官方详细教程可访问[网址](https://www.coolhub.top/archives/42)
+2. 官方详细教程可访问[网址](https://www.coolhub.top/archives/42)或[官方文档](https://www.officetool.plus/zh-cn/usage/command/deploy.html)
 3. **部署前需要卸载老版本，并清除注册信息与重置office设置**
 4. **如卸载失败，可以使用`工具箱`中的`移除office`功能强制移除**
 **********
@@ -30,9 +30,9 @@ tags:
 ![](https://www.coolhub.top/wp-content/uploads/2020/04/reset-Office-settings.png)
 # Office安装（部署）
 ## 指令安装
-- 按下 Ctrl + Shift + P 打开命令框,输入以下命令，部署off365企业应用版，与visio2019
+- 按下 Ctrl + Shift + P 打开命令框,输入以下命令，部署off365企业应用版，与visio2021
 ```
-deploy /addProduct O365ProPlusRetail_zh-cn_Access,Bing,Groove,Lync,OneDrive,OneNote,Outlook,Publisher,Teams /addProduct VisioStd2019Volume_zh-cn_Groove,OneDrive /channel Current /downloadFirst
+deploy /add "O365ProPlusRetail_zh-cn|VisioPro2021Volume_zh-cn" /channel Current /dlfirst
 ```
 - **手动部署请参考[网址](https://www.coolhub.top/archives/11)**
 部分设置可参考下图
@@ -50,6 +50,6 @@ ospp /insLicID MondoVolume /sethst:kms.loli.best /setprt:1688 /act
 **office 365企业版需要选择Office Mondo 2016 批量许可证**
 ![](https://www.coolhub.top/wp-content/uploads/2022/06/clear-activation.png)
 *****
-**如有更多问题可以访问[官网教程]()**
+**如有更多问题可以访问[官方教程](https://www.coolhub.top/archives/42)或[官方文档](https://www.officetool.plus/zh-cn/usage/command/deploy.html)**
 或通过软件中的帮助链接访问管网教程
 ![](https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%20%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B-1.png)
