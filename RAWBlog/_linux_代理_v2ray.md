@@ -161,9 +161,213 @@ RestartSec=5
 ---
 
 通过以上步骤，您可以在 Ubuntu 系统中完整实现该 Vmess 代理配置。若需切换其他代理节点，只需修改 `config.json` 中的服务器参数并重启服务即可
+# 4090server file样例
 
-1
+/usr/local/etc/v2ray/config.json文件
 
-6
+```json
+{
+  "log": {
+    "access": "",
+    "error": "",
+    "loglevel": "warning"
+  },
+  "inbounds": [
+    {
+      "tag": "socks",
+      "port": 10808,
+      "listen": "0.0.0.0",
+      "protocol": "socks",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "routeOnly": false
+      },
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "allowTransparent": false
+      }
+    },
+    {
+      "tag": "http",
+      "port": 10809,
+      "listen": "0.0.0.0",
+      "protocol": "http",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "routeOnly": false
+      },
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "allowTransparent": false
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "proxy",
+      "protocol": "trojan",
+      "settings": {
+        "servers": [
+          {
+            "address": "【yourdomain】",
+            "method": "chacha20",
+            "ota": false,
+            "password": "【yourname】",
+            "port": 443,
+            "level": 1
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "grpc",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false
+        },
+        "grpcSettings": {
+          "serviceName": "【yourname】",
+          "multiMode": false,
+          "idle_timeout": 60,
+          "health_check_timeout": 20,
+          "permit_without_stream": false,
+          "initial_windows_size": 0
+        }
+      },
+      "mux": {
+        "enabled": false,
+        "concurrency": -1
+      }
+    },
+    {
+      "tag": "direct",
+      "protocol": "freedom",
+      "settings": {}
+    },
+    {
+      "tag": "block",
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      }
+    }
+  ],
+  "dns": {
+    "hosts": {
+      "dns.google": "8.8.8.8",
+      "proxy.example.com": "127.0.0.1"
+    },
+    "servers": [
+      {
+        "address": "223.5.5.5",
+        "domains": [
+          "geosite:cn",
+          "geosite:geolocation-cn"
+        ],
+        "expectIPs": [
+          "geoip:cn"
+        ]
+      },
+      "1.1.1.1",
+      "8.8.8.8",
+      "https://dns.google/dns-query",
+      {
+        "address": "223.5.5.5",
+        "domains": [
+          "server.hotsaber.cn"
+        ]
+      }
+    ]
+  },
+  "routing": {
+    "domainStrategy": "AsIs",
+    "rules": [
+      {
+        "type": "field",
+        "inboundTag": [
+          "api"
+        ],
+        "outboundTag": "api"
+      },
+      {
+        "type": "field",
+        "outboundTag": "direct",
+        "domain": [
+          "domain:example-example.com",
+          "domain:example-example2.com"
+        ]
+      },
+      {
+        "type": "field",
+        "port": "443",
+        "network": "udp",
+        "outboundTag": "block"
+      },
+      {
+        "type": "field",
+        "outboundTag": "block",
+        "domain": [
+          "geosite:category-ads-all"
+        ]
+      },
+      {
+        "type": "field",
+        "outboundTag": "direct",
+        "domain": [
+          "domain:dns.alidns.com",
+          "domain:doh.pub",
+          "domain:dot.pub",
+          "domain:doh.360.cn",
+          "domain:dot.360.cn",
+          "geosite:cn",
+          "geosite:geolocation-cn"
+        ]
+      },
+      {
+        "type": "field",
+        "outboundTag": "direct",
+        "ip": [
+          "223.5.5.5/32",
+          "223.6.6.6/32",
+          "2400:3200::1/128",
+          "2400:3200:baba::1/128",
+          "119.29.29.29/32",
+          "1.12.12.12/32",
+          "120.53.53.53/32",
+          "2402:4e00::/128",
+          "2402:4e00:1::/128",
+          "180.76.76.76/32",
+          "2400:da00::6666/128",
+          "114.114.114.114/32",
+          "114.114.115.115/32",
+          "180.184.1.1/32",
+          "180.184.2.2/32",
+          "101.226.4.6/32",
+          "218.30.118.6/32",
+          "123.125.81.6/32",
+          "140.207.198.6/32",
+          "geoip:private",
+          "geoip:cn"
+        ]
+      },
+      {
+        "type": "field",
+        "port": "0-65535",
+        "outboundTag": "proxy"
+      }
+    ]
+  }
+}
 
-。
+```

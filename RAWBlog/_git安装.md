@@ -7,7 +7,7 @@ Chocolatey是Windows的包管理器，类似于Linux中的apt或yum。它允许�
 2. 运行以下命令来安装Chocolatey：
     
     ```powershell
-    powershell复制代码Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
     ```
     
 3. 安装完成后，你可以使用`choco install`命令来安装各种软件包，比如`choco install mingw`或`choco install cygwin`（如果可用的话）。
