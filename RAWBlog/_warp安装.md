@@ -112,7 +112,197 @@ wget -N https://gitlab.com/rwkgyg/CFwarp/raw/main/CFwarp.sh && bash CFwarp.sh
 
 **关闭systemctl disable** **warp-svc**
 ```
+### 官方WARP安装
 
+[https://developers.cloudflare.com/warp-client/get-started/linux](https://developers.cloudflare.com/warp-client/get-started/linux?ref=blog.johnsmith.page)  
+[https://pkg.cloudflareclient.com](https://pkg.cloudflareclient.com/?ref=blog.johnsmith.page)
+
+本文，以Debian 12作为演示，复制官方操作。
+
+- Add cloudflare gpg key
+
+```shell
+curl -fsSL https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg
+```
+
+- Add this repo to your apt repositories
+
+```shell
+echo "deb [signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/cloudflare-client.list
+```
+
+- Install
+
+```shell
+sudo apt-get update && sudo apt-get install cloudflare-warp
+```
+
+### WARP的使用（warp-cli）
+
+- 注册客户端
+
+```shell
+warp-cli registration new
+```
+
+- 设置代理模式，默认端口是40000
+
+```shell
+warp-cli mode proxy
+```
+
+==CloudFlare WARP支持的模式，有warp, doh, warp+doh, dot, warp+dot, proxy, tunnel_only。  
+如果使用默认模式（warp），那么下一步“连接WARP网络”（运行warp-cli connect命令）时，CloudFlare WARP将接管所有网络流量，从而导致ssh连接断开，完蛋啦，傻眼了吧！  
+当然，掉坑后还是能爬起来的，通过服务器厂商提供的Web控制面板，进入VNC远程连接，运行命令恢复原状，即“断开WARP网络”（运行warp-cli disconnect）。==
+
+- ~~也可以根据自己喜好，例如自定义端口为10086~~，非必须
+
+```shell
+warp-cli proxy port 10086
+```
+
+- ~~自定义端口，也可以直接改配置文件，"proxy_port": 10086~~，非必须
+
+```shell
+sudo nano /var/lib/cloudflare-warp/settings.json
+```
+
+- 连接WARP网络
+
+```shell
+warp-cli connect
+```
+
+- 测试WARP网络
+
+当看到CloudFlare的IP，或者warp=on，即代表WARP网络连接成功。
+
+```shell
+curl -x "socks://127.0.0.1:40000" https://www.cloudflare.com/cdn-cgi/trace
+或
+curl -x "socks5://127.0.0.1:40000" https://www.cloudflare.com/cdn-cgi/trace
+```
+
+- 断开WARP网络
+
+```shell
+warp-cli disconnect
+```
+
+- WARP配置文件路径
+
+/var/lib/cloudflare-warp/
+
+- 查看WARP连接状态
+
+```shell
+warp-cli status
+```
+
+- 查看更多warp-cli命令
+
+```shell
+warp-cli --help
+```
+
+- 重启WARP主程序
+
+使用top或htop命令，有时候会发现/bin/warp-svc，竟然占用了500-600MB内存！对于低配的VPS而言，要么增加swap，要么重启主程序warp-svc释放内存。
+
+```bash
+sudo systemctl restart warp-svc
+或
+sudo service warp-svc restart
+```
+### Xray配置
+
+由于是在Xray的服务端进行分流，因此本文指的是，修改Xray服务端配置。
+
+```shell
+sudo nano /usr/local/etc/xray/config.json
+```
+
+- Xray的Inbound入站，添加sniffing，因为需要根据sni探测域名。
+
+```json
+"inbounds": [
+  {
+    "port": 443,
+    "protocol": "vless",
+    "settings": { 
+      …… //根据自己的实际情况填写
+    },
+    "streamSettings": {
+      …… //根据自己的实际情况填写
+    }
+    "sniffing": {
+      "enabled": true,
+      "destOverride": [
+        "http",
+        "tls",
+        "quic"
+      ]
+    }
+  }
+]
+```
+
+- Xray的Routing路由规则中，设置域名过滤（分流Netflix和ChatGPT）。
+
+```json
+"routing": {
+  "domainStrategy": "AsIs",
+  "rules": [
+    {
+      "type": "field",
+      "domain": [
+         "geosite:netflix",
+         "geosite:openai"
+       ],
+       "outboundTag": "warp"
+    }
+  ]
+}
+```
+
+- Xray的Outbound出站，使用socks协议，将数据转发至本机40000端口。
+
+```json
+"outbounds": [
+  {
+    "tag": "direct",
+    "protocol": "freedom"
+  },
+  {
+    "tag": "warp",
+    "protocol": "socks",
+    "settings": {
+      "servers": [
+        {
+          "address": "127.0.0.1",
+          "port": 40000
+        }
+      ]
+    }
+  }
+]
+```
+
+- 重启Xray服务
+
+```shell
+sudo systemctl restart xray
+或
+sudo service xray restart
+```
+
+- 查看Xray运行状态
+
+```shell
+sudo systemctl status xray
+或
+sudo service xray status
+```
 ## 刷新/更换 CloudFlare Warp IP
 
 ```bash
