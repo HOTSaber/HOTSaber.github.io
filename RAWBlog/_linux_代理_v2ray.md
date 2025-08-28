@@ -6,14 +6,21 @@
 
 #### ​**1. 安装 V2Ray 客户端**
 
-bash
-
 ```bash
 # 安装官方脚本
 wget https://install.direct/go.sh
 sudo bash go.sh
 # 验证安装
 systemctl status v2ray
+```
+
+手动安装：
+```bash
+wget https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh
+
+chmod +x install-release.sh
+
+./install-release.sh
 ```
 
 #### ​**2. 创建配置文件**
