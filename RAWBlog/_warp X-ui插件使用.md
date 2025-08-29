@@ -164,6 +164,7 @@ config.json修改示例
           "geosite:google-play",
           "geosite:netflix",
           "geosite:youtube",
+          "geosite:meta",
           "geosite:disney"
         ],
         "marktag": "warp diversion",
