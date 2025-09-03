@@ -27,8 +27,6 @@ chmod +x install-release.sh
 
 在 `/usr/local/etc/v2ray/config.json` 中写入以下内容（根据您的参数调整）：
 
-json
-
 ```json
 {
   "inbounds": [{
@@ -101,6 +99,7 @@ json
 
 ```
 
+## 验证
 ---
 
 ### ​**二、代理服务管理**
@@ -116,10 +115,11 @@ sudo systemctl enable v2ray
 
 #### ​**2. 验证连接**
 
-bash
-
 ```bash
-curl --socks5 127.0.0.1:10808 https://www.google.com
+# 用 http 代理 
+curl -x http://127.0.0.1:10809 https://www.google.com 
+# 用 socks5 代理（推荐，支持 UDP 和 DNS 代理） 
+curl -x socks5h://127.0.0.1:10808 https://www.google.com
 # 若返回 HTML 内容则说明代理成功
 ```
 
