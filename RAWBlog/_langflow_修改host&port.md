@@ -1,4 +1,8 @@
 ```bash
+uv run langflow run --host 0.0.0.0 --port 8052
+```
+
+```bash
 python -m langflow run --host 0.0.0.0 --port 8052
 ```
 
