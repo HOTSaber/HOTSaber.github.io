@@ -35,10 +35,10 @@ tags:
 # 将One drive上的文档共享给其他用户
 - **如上一步点击的是`共享`按钮，则会自动跳转到此步**
 - **如上一步只是点击了自动`保存开关`则这一步需要额外点击一次`共享按钮`进入到以下页面**
-![[office共享文档与在线协作-9.png]]
+![office共享文档与在线协作-9](https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/office%E5%85%B1%E4%BA%AB%E6%96%87%E6%A1%A3%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-9.png)
 **在填写邮箱后一定要点下方自动弹出的完整账号栏，可一次添加多个账户**
 **send link 下一定选用指定用户模式进行分享**
-![[203.office共享文档与在线协作-1.png]]
+![203.office共享文档与在线协作-1](https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/203.office%E5%85%B1%E4%BA%AB%E6%96%87%E6%A1%A3%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-1.png)
 **send link 下一定选用指定用户模式进行分享**
 # 接受共享
 - 如自己是接收方，则只需打开`文件`-`开始`-`与我共享`查找相关文件并打开即可

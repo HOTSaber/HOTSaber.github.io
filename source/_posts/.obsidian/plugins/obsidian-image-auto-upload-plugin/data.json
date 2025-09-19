@@ -7,7 +7,7 @@
   "picgoCorePath": "",
   "workOnNetWork": false,
   "fixPath": false,
-  "applyImage": true,
+  "applyImage": false,
   "newWorkBlackDomains": "",
   "deleteSource": false,
   "uploadedImages": []
