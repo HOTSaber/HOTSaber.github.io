@@ -6,3 +6,4 @@
 # 设置AI默认以中文方式回复
 我们可以在'cursor settings'-`Rules & Memories`中的`user Rules`中添加规则`Always respond in 中文`
 ![[_cursor使用笔记-2.png]]
+# 
