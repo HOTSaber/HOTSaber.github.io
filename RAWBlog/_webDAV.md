@@ -141,6 +141,9 @@ sudo ufw allow 'Apache'
 # 步骤 8：测试WebDAV
 
 现在，你可以通过浏览器或WebDAV客户端访问WebDAV服务。访问`http://your_server_ip/webdav`，输入你创建的用户名和密码。
+```
+http://170.106.82.242:8081/webdav/
+```
 
 # 其他注意事项
 
