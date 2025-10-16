@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>512投屏教程</title>
+      <link href="/2025/10/16/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B/"/>
+      <url>/2025/10/16/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<h1 id="选择投屏模式"><a href="#选择投屏模式" class="headerlink" title="选择投屏模式"></a>选择投屏模式</h1><ul><li>使用<code>windows</code> + <code>p</code>进入投屏模式选择页面，选择<code>复制</code>模式<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-1.png" alt="303.512投屏教程-1"></li><li>点击<code>更多显示设置</code>进入投影设置页面</li></ul><h1 id="连接屏幕"><a href="#连接屏幕" class="headerlink" title="连接屏幕"></a>连接屏幕</h1><p>点击<code>系统</code>- <code>屏幕</code> - <code>缩放和布局</code> - <code>多显示器</code>下<code>连接到无线显示器</code>的<code>连接</code>选项<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-2.png" alt="303.512投屏教程-2"><br>选择<code>MiraScreen5G</code>作为显示器，等待连接即可<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-3.png" alt="303.512投屏教程-3"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程与系统配置 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 512 </tag>
+            
+            <tag> 投屏 </tag>
+            
+            <tag> 共享 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>绘图技巧</title>
       <link href="/2025/04/15/205.%E7%BB%98%E5%9B%BE%E6%8A%80%E5%B7%A7/"/>
       <url>/2025/04/15/205.%E7%BB%98%E5%9B%BE%E6%8A%80%E5%B7%A7/</url>
@@ -55,11 +84,11 @@
             
             <tag> Ubuntu </tag>
             
+            <tag> 共享 </tag>
+            
             <tag> webDAV </tag>
             
             <tag> 云服务器 </tag>
-            
-            <tag> 共享 </tag>
             
         </tags>
       
@@ -84,17 +113,17 @@
       
         <tags>
             
-            <tag> zotero </tag>
-            
             <tag> office </tag>
+            
+            <tag> 格式 </tag>
+            
+            <tag> zotero </tag>
             
             <tag> chrome </tag>
             
             <tag> 文献管理 </tag>
             
             <tag> 参考文献 </tag>
-            
-            <tag> 格式 </tag>
             
         </tags>
       
@@ -339,9 +368,9 @@
             
             <tag> office </tag>
             
-            <tag> 格式 </tag>
-            
             <tag> 样式管理 </tag>
+            
+            <tag> 格式 </tag>
             
         </tags>
       
@@ -601,7 +630,7 @@
       <link href="/2023/09/18/office%E5%85%B1%E4%BA%AB%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C/"/>
       <url>/2023/09/18/office%E5%85%B1%E4%BA%AB%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C/</url>
       
-        <content type="html"><![CDATA[<hr><ol><li><strong>为什么使用office在线协作?</strong></li></ol><ul><li>所有基础编辑操作都与在本地操作相同</li><li>不存在格式因软件改变发生变动的问题</li><li>免费</li><li>软件准备可以由<code>office tool</code>一键完成，详见<a href="https://hotsaber.github.io/2023/07/06/office%20%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/">office 365 部署教程</a></li></ul><ol start="2"><li><strong>需要支持共享的office版本，如<code>office 365</code>、<code>office 2021</code>等，一些高版本office也支持文件共享与协作</strong></li></ol><ul><li>如何判断自己的Office版本是否支持在线共享与协作？<br>可随便打开一个文档，看左上角是否有自动保存开关，有就是支持自动<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%E5%85%B1%E4%BA%AB%E6%96%87%E6%A1%A3%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-1.png" alt="office共享文档与在线协作-1"></li></ul><ol start="3"><li><strong>此外还需要微账号与one drive</strong></li></ol><ul><li>微软账号可以在右上角查看<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%E5%85%B1%E4%BA%AB%E6%96%87%E6%A1%A3%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-2.png" alt="office共享文档与在线协作-2"></li></ul><hr><h1 id="将文件保存到one-drive（保存为在线文档）"><a href="#将文件保存到one-drive（保存为在线文档）" class="headerlink" title="将文件保存到one drive（保存为在线文档）"></a>将文件保存到one drive（保存为在线文档）</h1><ol><li>在本地打开需要共享的文档，点击左上角的<code>自动保存</code>开关或右上角的<code>共享按钮</code>，如下图所示<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%E5%85%B1%E4%BA%AB%E6%96%87%E6%A1%A3%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-1.png" alt="office共享文档与在线协作-1"><br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%E5%85%B1%E4%BA%AB%E6%96%87%E6%A1%A3%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-3.png" alt="office共享文档与在线协作-3"></li><li>此时会跳出<code>one drive</code>关联界面，如果未登录请使用微软账号登录，如已登录则选择自己的账号即可<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%E5%85%B1%E4%BA%AB%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-1.png" alt="office共享与在线协作-1"><br>或<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%E5%85%B1%E4%BA%AB%E6%96%87%E6%A1%A3%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-6.png" alt="office共享文档与在线协作-6"></li></ol><h1 id="将One-drive上的文档共享给其他用户"><a href="#将One-drive上的文档共享给其他用户" class="headerlink" title="将One drive上的文档共享给其他用户"></a>将One drive上的文档共享给其他用户</h1><ul><li><strong>如上一步点击的是<code>共享</code>按钮，则会自动跳转到此步</strong></li><li><strong>如上一步只是点击了自动<code>保存开关</code>则这一步需要额外点击一次<code>共享按钮</code>进入到以下页面</strong><br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%E5%85%B1%E4%BA%AB%E6%96%87%E6%A1%A3%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-9.png" alt="office共享文档与在线协作-9"><br><strong>在填写邮箱后一定要点下方自动弹出的完整账号栏，可一次添加多个账户</strong></li></ul><h1 id="接受共享"><a href="#接受共享" class="headerlink" title="接受共享"></a>接受共享</h1><ul><li>如自己是接收方，则只需打开<code>文件</code>-<code>开始</code>-<code>与我共享</code>查找相关文件并打开即可<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%E5%85%B1%E4%BA%AB%E6%96%87%E6%A1%A3%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-11.png" alt="office共享文档与在线协作-11"><br>或通过<code>文件</code>-<code>打开</code>-<code>与我共享</code>查找相关文件并打开即可<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%E5%85%B1%E4%BA%AB%E6%96%87%E6%A1%A3%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-12.png" alt="office共享文档与在线协作-12"></li></ul><h1 id="在线协作"><a href="#在线协作" class="headerlink" title="在线协作"></a>在线协作</h1><ul><li>在打开共享文档后，首先一定要确认左上角<code>自动保存</code>是否打开，保存按钮是否有<code>共享标识</code><br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%E5%85%B1%E4%BA%AB%E6%96%87%E6%A1%A3%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-13.png" alt="office共享文档与在线协作-13"></li><li><strong>此外所有操作都与在本地操作相同，确认自己修改完成后，点击有<code>共享标识</code>的保存按钮</strong></li></ul><h1 id="进阶管理"><a href="#进阶管理" class="headerlink" title="进阶管理"></a>进阶管理</h1><h2 id="权限管理"><a href="#权限管理" class="headerlink" title="权限管理"></a>权限管理</h2><p>在线文档保存在谁的微软账户，则谁是管理员，管理员可通过<code>管理访问权限</code>管理所有共享人员的编辑权限，也可以将人员踢出共享<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%E5%85%B1%E4%BA%AB%E6%96%87%E6%A1%A3%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-14.png" alt="office共享文档与在线协作-14"></p><h2 id="版本管理"><a href="#版本管理" class="headerlink" title="版本管理"></a>版本管理</h2><ul><li>在窗口顶端文件名处可以展开下拉菜单，进入文件版本历史管理<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%E5%85%B1%E4%BA%AB%E6%96%87%E6%A1%A3%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-16.png" alt="office共享文档与在线协作-16"></li><li>成员的每次修改都会生成相应的历史文件树，管理员可以选择特定时间节点，进行版本回滚<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%E5%85%B1%E4%BA%AB%E6%96%87%E6%A1%A3%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-17.png" alt="office共享文档与在线协作-17"></li></ul><h2 id="one-drive在线空间管理"><a href="#one-drive在线空间管理" class="headerlink" title="one drive在线空间管理"></a>one drive在线空间管理</h2><ol><li>在安装one drive 且one drive服务是启动状态时，资源管理器中会直接出现one drive个人账号条目，可以如在本地管理一样管理one drive上的在线文件<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%E5%85%B1%E4%BA%AB%E6%96%87%E6%A1%A3%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-18.png" alt="office共享文档与在线协作-18"><br>Ps: 尽量保证文件状态都为绿色对勾，确保是最新状态</li><li>使用one drive后台程序跳转资源管理器进行管理，还可以看到近期同步状态<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%E5%85%B1%E4%BA%AB%E6%96%87%E6%A1%A3%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-19.png" alt="office共享文档与在线协作-19"></li><li>手机app管理</li></ol><ul><li>当长期未登录时，有时one drive会冻结账户，可以使用手机app进行解冻，app上管理方式类似。</li></ul>]]></content>
+        <content type="html"><![CDATA[<hr><ol><li><strong>为什么使用office在线协作?</strong></li></ol><ul><li>所有基础编辑操作都与在本地操作相同</li><li>不存在格式因软件改变发生变动的问题</li><li>免费</li><li>软件准备可以由<code>office tool</code>一键完成，详见<a href="https://hotsaber.github.io/2023/07/06/office%20%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/">office 365 部署教程</a></li></ul><ol start="2"><li><strong>需要支持共享的office版本，如<code>office 365</code>、<code>office 2021</code>等，一些高版本office也支持文件共享与协作</strong></li></ol><ul><li>如何判断自己的Office版本是否支持在线共享与协作？<br>可随便打开一个文档，看左上角是否有自动保存开关，有就是支持自动<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%E5%85%B1%E4%BA%AB%E6%96%87%E6%A1%A3%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-1.png" alt="office共享文档与在线协作-1"></li></ul><ol start="3"><li><strong>此外还需要微账号与one drive</strong></li></ol><ul><li>微软账号可以在右上角查看<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%E5%85%B1%E4%BA%AB%E6%96%87%E6%A1%A3%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-2.png" alt="office共享文档与在线协作-2"></li></ul><hr><h1 id="将文件保存到one-drive（保存为在线文档）"><a href="#将文件保存到one-drive（保存为在线文档）" class="headerlink" title="将文件保存到one drive（保存为在线文档）"></a>将文件保存到one drive（保存为在线文档）</h1><ol><li>在本地打开需要共享的文档，点击左上角的<code>自动保存</code>开关或右上角的<code>共享按钮</code>，如下图所示<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%E5%85%B1%E4%BA%AB%E6%96%87%E6%A1%A3%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-1.png" alt="office共享文档与在线协作-1"><br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%E5%85%B1%E4%BA%AB%E6%96%87%E6%A1%A3%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-3.png" alt="office共享文档与在线协作-3"></li><li>此时会跳出<code>one drive</code>关联界面，如果未登录请使用微软账号登录，如已登录则选择自己的账号即可<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%E5%85%B1%E4%BA%AB%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-1.png" alt="office共享与在线协作-1"><br>或<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%E5%85%B1%E4%BA%AB%E6%96%87%E6%A1%A3%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-6.png" alt="office共享文档与在线协作-6"></li></ol><h1 id="将One-drive上的文档共享给其他用户"><a href="#将One-drive上的文档共享给其他用户" class="headerlink" title="将One drive上的文档共享给其他用户"></a>将One drive上的文档共享给其他用户</h1><ul><li><strong>如上一步点击的是<code>共享</code>按钮，则会自动跳转到此步</strong></li><li><strong>如上一步只是点击了自动<code>保存开关</code>则这一步需要额外点击一次<code>共享按钮</code>进入到以下页面</strong><br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/office%E5%85%B1%E4%BA%AB%E6%96%87%E6%A1%A3%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-9.png" alt="office共享文档与在线协作-9"><br><strong>在填写邮箱后一定要点下方自动弹出的完整账号栏，可一次添加多个账户</strong><br><strong>send link 下一定选用指定用户模式进行分享</strong><br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/203.office%E5%85%B1%E4%BA%AB%E6%96%87%E6%A1%A3%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-1.png" alt="203.office共享文档与在线协作-1"><br><strong>send link 下一定选用指定用户模式进行分享</strong></li></ul><h1 id="接受共享"><a href="#接受共享" class="headerlink" title="接受共享"></a>接受共享</h1><ul><li>如自己是接收方，则只需打开<code>文件</code>-<code>开始</code>-<code>与我共享</code>查找相关文件并打开即可<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%E5%85%B1%E4%BA%AB%E6%96%87%E6%A1%A3%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-11.png" alt="office共享文档与在线协作-11"><br>或通过<code>文件</code>-<code>打开</code>-<code>与我共享</code>查找相关文件并打开即可<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%E5%85%B1%E4%BA%AB%E6%96%87%E6%A1%A3%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-12.png" alt="office共享文档与在线协作-12"></li></ul><h1 id="在线协作"><a href="#在线协作" class="headerlink" title="在线协作"></a>在线协作</h1><ul><li>在打开共享文档后，首先一定要确认左上角<code>自动保存</code>是否打开，保存按钮是否有<code>共享标识</code><br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%E5%85%B1%E4%BA%AB%E6%96%87%E6%A1%A3%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-13.png" alt="office共享文档与在线协作-13"></li><li><strong>此外所有操作都与在本地操作相同，确认自己修改完成后，点击有<code>共享标识</code>的保存按钮</strong></li></ul><h1 id="进阶管理"><a href="#进阶管理" class="headerlink" title="进阶管理"></a>进阶管理</h1><h2 id="权限管理"><a href="#权限管理" class="headerlink" title="权限管理"></a>权限管理</h2><p>在线文档保存在谁的微软账户，则谁是管理员，管理员可通过<code>管理访问权限</code>管理所有共享人员的编辑权限，也可以将人员踢出共享<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%E5%85%B1%E4%BA%AB%E6%96%87%E6%A1%A3%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-14.png" alt="office共享文档与在线协作-14"></p><h2 id="版本管理"><a href="#版本管理" class="headerlink" title="版本管理"></a>版本管理</h2><ul><li>在窗口顶端文件名处可以展开下拉菜单，进入文件版本历史管理<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%E5%85%B1%E4%BA%AB%E6%96%87%E6%A1%A3%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-16.png" alt="office共享文档与在线协作-16"></li><li>成员的每次修改都会生成相应的历史文件树，管理员可以选择特定时间节点，进行版本回滚<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%E5%85%B1%E4%BA%AB%E6%96%87%E6%A1%A3%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-17.png" alt="office共享文档与在线协作-17"></li></ul><h2 id="one-drive在线空间管理"><a href="#one-drive在线空间管理" class="headerlink" title="one drive在线空间管理"></a>one drive在线空间管理</h2><ol><li>在安装one drive 且one drive服务是启动状态时，资源管理器中会直接出现one drive个人账号条目，可以如在本地管理一样管理one drive上的在线文件<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%E5%85%B1%E4%BA%AB%E6%96%87%E6%A1%A3%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-18.png" alt="office共享文档与在线协作-18"><br>Ps: 尽量保证文件状态都为绿色对勾，确保是最新状态</li><li>使用one drive后台程序跳转资源管理器进行管理，还可以看到近期同步状态<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%E5%85%B1%E4%BA%AB%E6%96%87%E6%A1%A3%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C-19.png" alt="office共享文档与在线协作-19"></li><li>手机app管理</li></ol><ul><li>当长期未登录时，有时one drive会冻结账户，可以使用手机app进行解冻，app上管理方式类似。</li></ul>]]></content>
       
       
       <categories>
