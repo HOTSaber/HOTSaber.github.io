@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>512投屏教程</title>
+      <link href="/2025/10/16/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B/"/>
+      <url>/2025/10/16/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<h1 id="选择投屏模式"><a href="#选择投屏模式" class="headerlink" title="选择投屏模式"></a>选择投屏模式</h1><ul><li>使用<code>windows</code> + <code>p</code>进入投屏模式选择页面，选择<code>复制</code>模式<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-1.png" alt="303.512投屏教程-1"></li><li>点击<code>更多显示设置</code>进入投影设置页面</li></ul><h1 id="连接屏幕"><a href="#连接屏幕" class="headerlink" title="连接屏幕"></a>连接屏幕</h1><p>点击<code>系统</code>- <code>屏幕</code> - <code>缩放和布局</code> - <code>多显示器</code>下<code>连接到无线显示器</code>的<code>连接</code>选项<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-2.png" alt="303.512投屏教程-2"><br>选择<code>MiraScreen5G</code>作为显示器，等待连接即可<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-3.png" alt="303.512投屏教程-3"></p><h1 id="检查自己的电脑是否支持miracast（无线投屏）"><a href="#检查自己的电脑是否支持miracast（无线投屏）" class="headerlink" title="检查自己的电脑是否支持miracast（无线投屏）"></a>检查自己的电脑是否支持miracast（无线投屏）</h1><p>按下 Win+R 快捷键，输入<code>cmd</code>打开命令提示符，输入命令<code>netsh wlan show drivers</code> 并回车，查看<code>无线显示器支持</code>（<code>wireless display supported</code>）这一项，若显示 “是” 则支持 Miracast。<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-4.png" alt="303.512投屏教程-4"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程与系统配置 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 共享 </tag>
+            
+            <tag> 512 </tag>
+            
+            <tag> 投屏 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>财务系统使用指导</title>
       <link href="/2025/10/16/304.%E8%B4%A2%E5%8A%A1%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC/"/>
       <url>/2025/10/16/304.%E8%B4%A2%E5%8A%A1%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC/</url>
@@ -27,35 +56,6 @@
             <tag> 差旅 </tag>
             
             <tag> 财务 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>512投屏教程</title>
-      <link href="/2025/10/16/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B/"/>
-      <url>/2025/10/16/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B/</url>
-      
-        <content type="html"><![CDATA[<h1 id="选择投屏模式"><a href="#选择投屏模式" class="headerlink" title="选择投屏模式"></a>选择投屏模式</h1><ul><li>使用<code>windows</code> + <code>p</code>进入投屏模式选择页面，选择<code>复制</code>模式<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-1.png" alt="303.512投屏教程-1"></li><li>点击<code>更多显示设置</code>进入投影设置页面</li></ul><h1 id="连接屏幕"><a href="#连接屏幕" class="headerlink" title="连接屏幕"></a>连接屏幕</h1><p>点击<code>系统</code>- <code>屏幕</code> - <code>缩放和布局</code> - <code>多显示器</code>下<code>连接到无线显示器</code>的<code>连接</code>选项<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-2.png" alt="303.512投屏教程-2"><br>选择<code>MiraScreen5G</code>作为显示器，等待连接即可<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-3.png" alt="303.512投屏教程-3"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 编程与系统配置 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 共享 </tag>
-            
-            <tag> 512 </tag>
-            
-            <tag> 投屏 </tag>
             
         </tags>
       
@@ -960,13 +960,13 @@
       
         <tags>
             
+            <tag> markdown </tag>
+            
             <tag> 图床 </tag>
             
             <tag> PicGo </tag>
             
             <tag> Obsidian </tag>
-            
-            <tag> markdown </tag>
             
             <tag> 腾讯云 </tag>
             
