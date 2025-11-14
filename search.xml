@@ -8,7 +8,7 @@
       <link href="/2025/10/16/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B/"/>
       <url>/2025/10/16/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B/</url>
       
-        <content type="html"><![CDATA[<h1 id="选择投屏模式"><a href="#选择投屏模式" class="headerlink" title="选择投屏模式"></a>选择投屏模式</h1><ul><li>使用<code>windows</code> + <code>p</code>进入投屏模式选择页面，选择<code>复制</code>模式<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-1.png" alt="303.512投屏教程-1"></li><li>点击<code>更多显示设置</code>进入投影设置页面</li></ul><h1 id="连接屏幕"><a href="#连接屏幕" class="headerlink" title="连接屏幕"></a>连接屏幕</h1><p>点击<code>系统</code>- <code>屏幕</code> - <code>缩放和布局</code> - <code>多显示器</code>下<code>连接到无线显示器</code>的<code>连接</code>选项<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-2.png" alt="303.512投屏教程-2"><br>选择<code>MiraScreen5G</code>作为显示器，等待连接即可<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-3.png" alt="303.512投屏教程-3"></p><h1 id="检查自己的电脑是否支持miracast（无线投屏）"><a href="#检查自己的电脑是否支持miracast（无线投屏）" class="headerlink" title="检查自己的电脑是否支持miracast（无线投屏）"></a>检查自己的电脑是否支持miracast（无线投屏）</h1><p>按下 Win+R 快捷键，输入<code>cmd</code>打开命令提示符，输入命令<code>netsh wlan show drivers</code> 并回车，查看<code>无线显示器支持</code>（<code>wireless display supported</code>）这一项，若显示 “是” 则支持 Miracast。<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-4.png" alt="303.512投屏教程-4"></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="选择投屏模式"><a href="#选择投屏模式" class="headerlink" title="选择投屏模式"></a>选择投屏模式</h1><ul><li>使用<code>windows</code> + <code>p</code>进入投屏模式选择页面，选择<code>复制</code>模式<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-1.png" alt="303.512投屏教程-1"></li><li>点击<code>更多显示设置</code>进入投影设置页面</li></ul><h1 id="连接屏幕"><a href="#连接屏幕" class="headerlink" title="连接屏幕"></a>连接屏幕</h1><p>点击<code>系统</code>- <code>屏幕</code> - <code>缩放和布局</code> - <code>多显示器</code>下<code>连接到无线显示器</code>的<code>连接</code>选项<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-2.png" alt="303.512投屏教程-2"><br>选择<code>MiraScreen5G</code>作为显示器，等待连接即可<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-3.png" alt="303.512投屏教程-3"></p><h1 id="检查自己的电脑是否支持miracast（无线投屏）"><a href="#检查自己的电脑是否支持miracast（无线投屏）" class="headerlink" title="检查自己的电脑是否支持miracast（无线投屏）"></a>检查自己的电脑是否支持miracast（无线投屏）</h1><p>按下 Win+R 快捷键，输入<code>cmd</code>打开命令提示符，输入命令<code>netsh wlan show drivers</code> 并回车，查看<code>无线显示器支持</code>（<code>wireless display supported</code>）这一项，若显示 “是” 则支持 Miracast。<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-4.png" alt="303.512投屏教程-4">## 如果驱动显示No<br><strong>参考文章<a href="https://www.xiaohongshu.com/discovery/item/68677398000000002400efe5?source=webshare&xhsshare=pc_web&xsec_token=CBY51vLfQPD4rTOVSY163OR0qilk-jKbL0tG5Iw5SXBUM=&xsec_source=pc_share">电脑无线投屏（投影）用不了，解决办法！</a></strong><br>在<code>设置</code> - <code>系统</code> - <code>可选功能</code>中点击<code>查看功能</code>，找到<code>无线显示器</code>并勾选，点击下一步，并点击添加，等待添加成功即可。<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-5.png" alt="303.512投屏教程-5"><br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-6.png" alt="303.512投屏教程-6"><br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-7.png" alt="303.512投屏教程-7"></p>]]></content>
       
       
       <categories>
@@ -500,13 +500,13 @@
             
             <tag> 远程访问 </tag>
             
-            <tag> xshell </tag>
-            
-            <tag> xftp </tag>
-            
             <tag> 云 </tag>
             
             <tag> frp </tag>
+            
+            <tag> xshell </tag>
+            
+            <tag> xftp </tag>
             
         </tags>
       
@@ -539,13 +539,13 @@
             
             <tag> 远程访问 </tag>
             
-            <tag> xshell </tag>
-            
-            <tag> xftp </tag>
-            
             <tag> 云 </tag>
             
             <tag> frp </tag>
+            
+            <tag> xshell </tag>
+            
+            <tag> xftp </tag>
             
         </tags>
       
