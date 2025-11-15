@@ -44,6 +44,25 @@ bash <(wget -qO- https://raw.githubusercontent.com/yonggekkk/warp-yg/main/CFwarp
 	# 温和终止进程（推荐）
 	sudo kill -15 895
    ```
+   或使用systemctl来控制，如`ss -tulpn | grep :40000`返回：
+```shell
+tcp   LISTEN 0      128                         127.0.0.1:40000      0.0.0.0:*    users:(("warp-svc",pid=895,fd=1)) 
+```
+使用：
+```
+systemctl status warp-svc #查看warp-svc状态
+systemctl stop warp-svc #停止warp-svc
+systemctl start warp-svc #启动warp-svc
+```
+## 使用warp-plus-socks5功能
+```bash
+x-ui
+12
+2
+#使用x-ui自动配置warp-plus-socks5本地或psiphon代理
+#psiphon 是由赛风公司推出的网络规避工_具。通过VPN、SSH 和HTTP 代理技术，它可为用户提供最佳的内容访问通道。为了尽可能成功地突破审查
+```
+默认端口为40000则不用额外配置与`11`中的方案二wrap-socks代理效果是一样的，按后续配置xray或v2ray出站规则即可
 # 修改xray或v2ray配置，实现分流
 ## v2ray配置分流规则
 以配置文件路径`/etc/v2ray/config.json`为例.
