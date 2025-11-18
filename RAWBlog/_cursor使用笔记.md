@@ -9,6 +9,7 @@
 # 设置API
 ## 免费API
 ### google
+[google AI Studio](https://aistudio.google.com/)
 ![[_cursor使用笔记-3.png]]
 点击图中链接，申请google cloud的APIKey，填入API信息即可，支持`gemini`
 ### openrouter
