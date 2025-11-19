@@ -4,35 +4,6 @@
   
     
     <entry>
-      <title>512投屏教程</title>
-      <link href="/2025/10/16/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B/"/>
-      <url>/2025/10/16/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B/</url>
-      
-        <content type="html"><![CDATA[<h1 id="选择投屏模式"><a href="#选择投屏模式" class="headerlink" title="选择投屏模式"></a>选择投屏模式</h1><ul><li>使用<code>windows</code> + <code>p</code>进入投屏模式选择页面，选择<code>复制</code>模式<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-1.png" alt="303.512投屏教程-1"></li><li>点击<code>更多显示设置</code>进入投影设置页面</li></ul><h1 id="连接屏幕"><a href="#连接屏幕" class="headerlink" title="连接屏幕"></a>连接屏幕</h1><p>点击<code>系统</code>- <code>屏幕</code> - <code>缩放和布局</code> - <code>多显示器</code>下<code>连接到无线显示器</code>的<code>连接</code>选项<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-2.png" alt="303.512投屏教程-2"><br>选择<code>MiraScreen5G</code>作为显示器，等待连接即可<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-3.png" alt="303.512投屏教程-3"></p><h1 id="检查自己的电脑是否支持miracast（无线投屏）"><a href="#检查自己的电脑是否支持miracast（无线投屏）" class="headerlink" title="检查自己的电脑是否支持miracast（无线投屏）"></a>检查自己的电脑是否支持miracast（无线投屏）</h1><p>按下 Win+R 快捷键，输入<code>cmd</code>打开命令提示符，输入命令<code>netsh wlan show drivers</code> 并回车，查看<code>无线显示器支持</code>（<code>wireless display supported</code>）这一项，若显示 “是” 则支持 Miracast。<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-4.png" alt="303.512投屏教程-4"></p><h2 id="如果驱动显示No"><a href="#如果驱动显示No" class="headerlink" title="如果驱动显示No"></a>如果驱动显示No</h2><p><strong>参考文章<a href="https://www.xiaohongshu.com/discovery/item/68677398000000002400efe5?source=webshare&xhsshare=pc_web&xsec_token=CBY51vLfQPD4rTOVSY163OR0qilk-jKbL0tG5Iw5SXBUM=&xsec_source=pc_share">电脑无线投屏（投影）用不了，解决办法！</a></strong><br>在<code>设置</code> - <code>系统</code> - <code>可选功能</code>中点击<code>查看功能</code>，找到<code>无线显示器</code>并勾选，点击下一步，并点击添加，等待添加成功即可。<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-5.png" alt="303.512投屏教程-5"><br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-6.png" alt="303.512投屏教程-6"><br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-7.png" alt="303.512投屏教程-7"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 编程与系统配置 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 共享 </tag>
-            
-            <tag> 512 </tag>
-            
-            <tag> 投屏 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>财务系统使用指导</title>
       <link href="/2025/10/16/304.%E8%B4%A2%E5%8A%A1%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC/"/>
       <url>/2025/10/16/304.%E8%B4%A2%E5%8A%A1%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC/</url>
@@ -56,6 +27,35 @@
             <tag> 差旅 </tag>
             
             <tag> 财务 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>512投屏教程</title>
+      <link href="/2025/10/16/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B/"/>
+      <url>/2025/10/16/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<h1 id="选择投屏模式"><a href="#选择投屏模式" class="headerlink" title="选择投屏模式"></a>选择投屏模式</h1><ul><li>使用<code>windows</code> + <code>p</code>进入投屏模式选择页面，选择<code>复制</code>模式<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-1.png" alt="303.512投屏教程-1"></li><li>点击<code>更多显示设置</code>进入投影设置页面</li></ul><h1 id="连接屏幕"><a href="#连接屏幕" class="headerlink" title="连接屏幕"></a>连接屏幕</h1><p>点击<code>系统</code>- <code>屏幕</code> - <code>缩放和布局</code> - <code>多显示器</code>下<code>连接到无线显示器</code>的<code>连接</code>选项<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-2.png" alt="303.512投屏教程-2"><br>选择<code>MiraScreen5G</code>作为显示器，等待连接即可<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-3.png" alt="303.512投屏教程-3"></p><h1 id="检查自己的电脑是否支持miracast（无线投屏）"><a href="#检查自己的电脑是否支持miracast（无线投屏）" class="headerlink" title="检查自己的电脑是否支持miracast（无线投屏）"></a>检查自己的电脑是否支持miracast（无线投屏）</h1><p>按下 Win+R 快捷键，输入<code>cmd</code>打开命令提示符，输入命令<code>netsh wlan show drivers</code> 并回车，查看<code>无线显示器支持</code>（<code>wireless display supported</code>）这一项，若显示 “是” 则支持 Miracast。<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-4.png" alt="303.512投屏教程-4"></p><h2 id="如果驱动显示No"><a href="#如果驱动显示No" class="headerlink" title="如果驱动显示No"></a>如果驱动显示No</h2><p><strong>参考文章<a href="https://www.xiaohongshu.com/discovery/item/68677398000000002400efe5?source=webshare&xhsshare=pc_web&xsec_token=CBY51vLfQPD4rTOVSY163OR0qilk-jKbL0tG5Iw5SXBUM=&xsec_source=pc_share">电脑无线投屏（投影）用不了，解决办法！</a></strong><br>在<code>设置</code> - <code>系统</code> - <code>可选功能</code>中点击<code>查看功能</code>，找到<code>无线显示器</code>并勾选，点击下一步，并点击添加，等待添加成功即可。<br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-5.png" alt="303.512投屏教程-5"><br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-6.png" alt="303.512投屏教程-6"><br><img src="https://cdn.jsdelivr.net/gh/HOTSaber/Imagehosting@main/blogpic/303.512%E6%8A%95%E5%B1%8F%E6%95%99%E7%A8%8B-7.png" alt="303.512投屏教程-7"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程与系统配置 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 共享 </tag>
+            
+            <tag> 512 </tag>
+            
+            <tag> 投屏 </tag>
             
         </tags>
       
@@ -721,35 +721,6 @@
     
     
     <entry>
-      <title>office 365 部署教程</title>
-      <link href="/2023/07/06/office%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/"/>
-      <url>/2023/07/06/office%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/</url>
-      
-        <content type="html"><![CDATA[<hr><ol><li>为什么使用<code>office 365</code>或高版本<code>office</code>? 详见<a href="https://hotsaber.github.io/2023/09/18/office%E5%85%B1%E4%BA%AB%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C/">office共享与在线协作</a></li><li>官方详细教程可访问<a href="https://www.coolhub.top/archives/42">网址</a>或<a href="https://www.officetool.plus/zh-cn/usage/command/deploy.html">官方文档</a></li><li><strong>部署前需要卸载老版本，并清除注册信息与重置office设置</strong></li><li><strong>如卸载失败，可以使用<code>工具箱</code>中的<code>移除office</code>功能强制移除</strong></li></ol><hr><h1 id="Office-tool-plus-部署工具"><a href="#Office-tool-plus-部署工具" class="headerlink" title="Office tool plus 部署工具"></a>Office tool plus 部署工具</h1><h2 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h2><ul><li><a href="https://otp.landian.vip/zh-cn/download.html">官网下载</a>（下载包含框架版本）</li></ul><h1 id="清除旧版本Office"><a href="#清除旧版本Office" class="headerlink" title="清除旧版本Office"></a>清除旧版本Office</h1><ol><li>卸载旧版本 Office，按照标准流程操作，请勿直接强制移除。</li><li>清除旧版本激活信息，看下面的截图来学习。</li><li>清除 Office 设置，在[工具箱] -&gt; [重置 Office 为默认设置]。</li><li><strong>如卸载失败，可以使用<code>工具箱</code>中的<code>移除office</code>功能强制移除</strong></li></ol><ul><li>清除激活信息<br><img src="https://www.coolhub.top/wp-content/uploads/2023/01/clear-activation-v10.png"><br><img src="https://www.coolhub.top/wp-content/uploads/2022/06/clear-activation.png"></li><li>重置Office设置<br><img src="https://www.coolhub.top/wp-content/uploads/2023/01/reset-office-settings-v10.png"><br><img src="https://www.coolhub.top/wp-content/uploads/2020/04/reset-Office-settings.png"></li></ul><h1 id="Office安装（部署）"><a href="#Office安装（部署）" class="headerlink" title="Office安装（部署）"></a>Office安装（部署）</h1><h2 id="指令安装"><a href="#指令安装" class="headerlink" title="指令安装"></a>指令安装</h2><ul><li>按下 Ctrl + Shift + P 打开命令框,输入以下命令，部署off365企业应用版，与visio2021<pre class="language-none"><code class="language-none">deploy &#x2F;add &quot;O365ProPlusRetail_zh-cn|VisioPro2021Volume_zh-cn&quot; &#x2F;channel Current &#x2F;dlfirst</code></pre></li><li><strong>手动部署请参考<a href="https://www.coolhub.top/archives/11">网址</a></strong><br>部分设置可参考下图<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%20%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B.png"></li></ul><h1 id="激活Office"><a href="#激活Office" class="headerlink" title="激活Office"></a>激活Office</h1><h2 id="指令激活"><a href="#指令激活" class="headerlink" title="指令激活"></a>指令激活</h2><pre class="language-none"><code class="language-none">ospp &#x2F;insLicID MondoVolume &#x2F;sethst:kms.loli.best &#x2F;setprt:1688 &#x2F;act</code></pre><p><strong>上述代码可一次性激活 Office, Visio, Project，同时适用 Win 7&#x2F;8，能使用 Office 的所有功能。</strong></p><h2 id="手动激活"><a href="#手动激活" class="headerlink" title="手动激活"></a>手动激活</h2><ol><li>**安装 Office 批量许可证 (Volume)**，无论如何，这里你都要选批量许可证。</li><li>设置一个 KMS 主机地址（可以设置端口为 1688）并保存设置。</li><li>点击激活按钮，等待激活完成。<br><strong>office 365企业版需要选择Office Mondo 2016 批量许可证</strong><br><img src="https://www.coolhub.top/wp-content/uploads/2022/06/clear-activation.png"></li></ol><hr><p><strong>如有更多问题可以访问<a href="https://www.coolhub.top/archives/42">官方教程</a>或<a href="https://www.officetool.plus/zh-cn/usage/command/deploy.html">官方文档</a></strong><br>或通过软件中的帮助链接访问管网教程<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%20%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B-1.png"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 文档编辑与管理 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> office </tag>
-            
-            <tag> office 365 </tag>
-            
-            <tag> office tool </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>markdown 格式语法</title>
       <link href="/2023/07/06/9.md%E8%AF%AD%E6%B3%95/"/>
       <url>/2023/07/06/9.md%E8%AF%AD%E6%B3%95/</url>
@@ -771,6 +742,35 @@
             <tag> markdown </tag>
             
             <tag> 语法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>office 365 部署教程</title>
+      <link href="/2023/07/06/office%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/"/>
+      <url>/2023/07/06/office%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<hr><ol><li>为什么使用<code>office 365</code>或高版本<code>office</code>? 详见<a href="https://hotsaber.github.io/2023/09/18/office%E5%85%B1%E4%BA%AB%E4%B8%8E%E5%9C%A8%E7%BA%BF%E5%8D%8F%E4%BD%9C/">office共享与在线协作</a></li><li>官方详细教程可访问<a href="https://www.coolhub.top/archives/42">网址</a>或<a href="https://www.officetool.plus/zh-cn/usage/command/deploy.html">官方文档</a></li><li><strong>部署前需要卸载老版本，并清除注册信息与重置office设置</strong></li><li><strong>如卸载失败，可以使用<code>工具箱</code>中的<code>移除office</code>功能强制移除</strong></li></ol><hr><h1 id="Office-tool-plus-部署工具"><a href="#Office-tool-plus-部署工具" class="headerlink" title="Office tool plus 部署工具"></a>Office tool plus 部署工具</h1><h2 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h2><ul><li><a href="https://otp.landian.vip/zh-cn/download.html">官网下载</a>（下载包含框架版本）</li></ul><h1 id="清除旧版本Office"><a href="#清除旧版本Office" class="headerlink" title="清除旧版本Office"></a>清除旧版本Office</h1><ol><li>卸载旧版本 Office，按照标准流程操作，请勿直接强制移除。</li><li>清除旧版本激活信息，看下面的截图来学习。</li><li>清除 Office 设置，在[工具箱] -&gt; [重置 Office 为默认设置]。</li><li><strong>如卸载失败，可以使用<code>工具箱</code>中的<code>移除office</code>功能强制移除</strong></li></ol><ul><li>清除激活信息<br><img src="https://www.coolhub.top/wp-content/uploads/2023/01/clear-activation-v10.png"><br><img src="https://www.coolhub.top/wp-content/uploads/2022/06/clear-activation.png"></li><li>重置Office设置<br><img src="https://www.coolhub.top/wp-content/uploads/2023/01/reset-office-settings-v10.png"><br><img src="https://www.coolhub.top/wp-content/uploads/2020/04/reset-Office-settings.png"></li></ul><h1 id="Office安装（部署）"><a href="#Office安装（部署）" class="headerlink" title="Office安装（部署）"></a>Office安装（部署）</h1><h2 id="指令安装"><a href="#指令安装" class="headerlink" title="指令安装"></a>指令安装</h2><ul><li>按下 Ctrl + Shift + P 打开命令框,输入以下命令，部署off365企业应用版，与visio2021<pre class="language-none"><code class="language-none">deploy &#x2F;add &quot;O365ProPlusRetail_zh-cn|VisioPro2021Volume_zh-cn&quot; &#x2F;channel Current &#x2F;dlfirst</code></pre></li><li><strong>手动部署请参考<a href="https://www.coolhub.top/archives/11">网址</a></strong><br>部分设置可参考下图<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%20%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B.png"></li></ul><h1 id="激活Office"><a href="#激活Office" class="headerlink" title="激活Office"></a>激活Office</h1><h2 id="指令激活"><a href="#指令激活" class="headerlink" title="指令激活"></a>指令激活</h2><pre class="language-none"><code class="language-none">ospp &#x2F;insLicID MondoVolume &#x2F;sethst:kms.loli.best &#x2F;setprt:1688 &#x2F;act</code></pre><p><strong>上述代码可一次性激活 Office, Visio, Project，同时适用 Win 7&#x2F;8，能使用 Office 的所有功能。</strong></p><h2 id="手动激活"><a href="#手动激活" class="headerlink" title="手动激活"></a>手动激活</h2><ol><li>**安装 Office 批量许可证 (Volume)**，无论如何，这里你都要选批量许可证。</li><li>设置一个 KMS 主机地址（可以设置端口为 1688）并保存设置。</li><li>点击激活按钮，等待激活完成。<br><strong>office 365企业版需要选择Office Mondo 2016 批量许可证</strong><br><img src="https://www.coolhub.top/wp-content/uploads/2022/06/clear-activation.png"></li></ol><hr><p><strong>如有更多问题可以访问<a href="https://www.coolhub.top/archives/42">官方教程</a>或<a href="https://www.officetool.plus/zh-cn/usage/command/deploy.html">官方文档</a></strong><br>或通过软件中的帮助链接访问管网教程<br><img src="https://aucnm0202-1318327891.cos.ap-shanghai.myqcloud.com/blogpic/office%20%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B-1.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 文档编辑与管理 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> office </tag>
+            
+            <tag> office 365 </tag>
+            
+            <tag> office tool </tag>
             
         </tags>
       
