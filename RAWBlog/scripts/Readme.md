@@ -47,6 +47,7 @@ cd /d/scripts chmod +x pull_my_repos.sh # （可选）赋予执行权限 ./pull_
 
 # 开机自启动
 打开 `C:\Users\username\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\`，将`bat`文件或其快捷⽅式粘贴进去
+对于所有用户`C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup`
 # 固定在开始菜单
 打开 `C:\Users\aucnm\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\`，将`bat`文件的`快捷⽅式`粘贴进去
 
