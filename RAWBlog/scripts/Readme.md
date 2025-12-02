@@ -47,3 +47,14 @@ cd /d/scripts chmod +x pull_my_repos.sh # （可选）赋予执行权限 ./pull_
 
 # 开机自启动
 打开 `C:\Users\username\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\`，将`bat`文件或其快捷⽅式粘贴进去
+# 固定在开始菜单
+打开 `C:\Users\aucnm\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\`，将`bat`文件的`快捷⽅式`粘贴进去
+
+# push功能同理
+
+# 脚本确定后忽略脚本变动
+需要修改 .gitignore 文件，添加忽略 scripts 目录下的 bat 和 sh 文件的规则。
+```
+RAWBlog/scripts/*.bat
+RAWBlog/scripts/*.sh
+```
