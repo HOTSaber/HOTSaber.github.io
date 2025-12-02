@@ -2,8 +2,8 @@
 
 # 定义要 push 的目录列表（Windows 路径需转换为 Git Bash 可识别的格式）
 repos=(
-    "/d/MyBlog"
-    "/d/pyproject/AI_policy"
+    "/d/MyBlog/HOTSaber.github.io"
+    "/d/pycharmproject/AI_policy"
 )
 
 # 获取当前日期作为默认 commit 信息

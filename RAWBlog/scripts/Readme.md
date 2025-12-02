@@ -3,31 +3,32 @@
 ****
 当前surface相关路径为:
 ```
-D:\Program Files\Git\cmd\git-bash.exe
-D:\MyBlog\RAWBlog
+D:\Program Files\Git\cmd\git.exe
+D:\MyBlog
 D:\pyproject\AI_policy
 D:\MyBlog\RAWBlog\scripts
 ```
 
 ```
-/d/Program Files/Git/cmd/git-bash.exe
-/d/MyBlog/RAWBlog
+/d/Program Files/Git/cmd/git.exe
+/d/MyBlog
 /d/pyproject/AI_policy
 /d/MyBlog/RAWBlog/scripts
 ```
 当前5060相关路径为:
 ```
-D:\Program Files\Git\cmd\git-bash.exe
-D:\MyBlog\RAWBlog
-D:\pyproject\AI_policy
-D:\MyBlog\RAWBlog\scripts
+D:\Program Files\Git\cmd\git.exe
+D:\Program Files\Git\bin\bash.exe
+D:\MyBlog\HOTSaber.github.io
+D:\pycharmproject\AI_policy
+D:\MyBlog\HOTSaber.github.io\RAWBlog\scripts
 ```
-
+git.exe是Git命令行工具，而bash.exe是Git Bash解释器，用于执行shell脚本。这就是为什么原始脚本尝试使用git.exe执行shell脚本会失败的原因。现在修复后的批处理文件应该能够正常工作，成功调用shell脚本来更新多个Git仓库。
 ```
-/d/Program Files/Git/cmd/git-bash.exe
-/d/MyBlog/RAWBlog
-/d/pyproject/AI_policy
-/d/MyBlog/RAWBlog/scripts
+/d/Program Files/Git/cmd/git.exe
+/d/MyBlog/HOTSaber.github.io
+/d/pycharmproject/AI_policy
+/d/MyBlog/HOTSaber.github.io/RAWBlog/scripts
 ```
 # sh文件
 需要在`git bash`中运行

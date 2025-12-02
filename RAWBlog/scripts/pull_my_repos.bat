@@ -7,8 +7,8 @@ echo 开始执行 git pull 操作...
 set "GIT_PATH=D:\Program Files\Git\cmd\git.exe"
 
 :: 定义仓库路径
-set "REPO1_PATH=D:\MyBlog"
-set "REPO2_PATH=D:\pyproject\AI_policy"
+set "REPO1_PATH=D:\MyBlog\HOTSaber.github.io"
+set "REPO2_PATH=D:\pycharmproject\AI_policy"
 
 :: 检查 git 是否存在
 if not exist "%GIT_PATH%" (
