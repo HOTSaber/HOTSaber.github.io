@@ -23,12 +23,35 @@ D:\MyBlog\HOTSaber.github.io
 D:\pycharmproject\AI_policy
 D:\MyBlog\HOTSaber.github.io\RAWBlog\scripts
 ```
-git.exe是Git命令行工具，而bash.exe是Git Bash解释器，用于执行shell脚本。这就是为什么原始脚本尝试使用git.exe执行shell脚本会失败的原因。现在修复后的批处理文件应该能够正常工作，成功调用shell脚本来更新多个Git仓库。
+
 ```
 /d/Program Files/Git/cmd/git.exe
 /d/MyBlog/HOTSaber.github.io
 /d/pycharmproject/AI_policy
 /d/MyBlog/HOTSaber.github.io/RAWBlog/scripts
+```
+
+git.exe是Git命令行工具，而bash.exe是Git Bash解释器，用于执行shell脚本。这就是为什么原始脚本尝试使用git.exe执行shell脚本会失败的原因。现在修复后的批处理文件应该能够正常工作，成功调用shell脚本来更新多个Git仓库。
+**.gitignore文件对已被Git跟踪的文件不生效。我需要帮助用户从Git索引中移除这些文件，但保留本地文件。**
+从Git索引中移除指定的脚本文件 ：
+您可以单独移除每个文件：
+```
+git rm --cached RAWBlog/scripts/pull_my_repos_usesh.bat
+git rm --cached RAWBlog/scripts/push_my_repos_usesh.bat
+git rm --cached RAWBlog/scripts/pull_my_repos.sh
+git rm --cached RAWBlog/scripts/push_my_repos.sh
+```
+或者使用通配符批量移除：
+```
+git rm --cached RAWBlog/scripts/*.bat RAWBlog/scripts/*.sh
+```
+提交这个更改 ：
+```
+git commit -m "从Git索引中移除脚本文件，使用.gitignore忽略"
+```
+验证更改 ：
+```
+git status
 ```
 # sh文件
 需要在`git bash`中运行
