@@ -1,5 +1,7 @@
 @echo off
+
 chcp 65001
+
 setlocal
 
 :: 使用正确的Git Bash解释器路径
