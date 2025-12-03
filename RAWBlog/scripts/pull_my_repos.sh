@@ -2,8 +2,8 @@
 
 # 定义要 pull 的目录列表（Windows 路径需转换为 Git Bash 可识别的格式）
 repos=(
-    "/d/MyBlog/HOTSaber.github.io"
-    "/d/pycharmproject/AI_policy"
+    "/d/MyBlog"
+    "/d/pyproject/AI_policy"
 )
 
 echo "开始执行 git pull 操作..."
