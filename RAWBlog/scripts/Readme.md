@@ -6,14 +6,14 @@
 D:\Program Files\Git\cmd\git.exe
 D:\MyBlog
 D:\pyproject\AI_policy
-D:\MyBlog\RAWBlog\scripts
+D:\MyBlog\RAWBlog\scripts\surface
 ```
 
 ```
 /d/Program Files/Git/cmd/git.exe
 /d/MyBlog
 /d/pyproject/AI_policy
-/d/MyBlog/RAWBlog/scripts
+/d/MyBlog/RAWBlog/scripts/surface
 ```
 当前5060相关路径为:
 ```
@@ -21,19 +21,19 @@ D:\Program Files\Git\cmd\git.exe
 D:\Program Files\Git\bin\bash.exe
 D:\MyBlog\HOTSaber.github.io
 D:\pycharmproject\AI_policy
-D:\MyBlog\HOTSaber.github.io\RAWBlog\scripts
+D:\MyBlog\HOTSaber.github.io\RAWBlog\scripts/5060
 ```
 
 ```
 /d/Program Files/Git/cmd/git.exe
 /d/MyBlog/HOTSaber.github.io
 /d/pycharmproject/AI_policy
-/d/MyBlog/HOTSaber.github.io/RAWBlog/scripts
+/d/MyBlog/HOTSaber.github.io/RAWBlog/scripts/5060
 ```
 
 git.exe是Git命令行工具，而bash.exe是Git Bash解释器，用于执行shell脚本。这就是为什么原始脚本尝试使用git.exe执行shell脚本会失败的原因。现在修复后的批处理文件应该能够正常工作，成功调用shell脚本来更新多个Git仓库。
 **.gitignore文件对已被Git跟踪的文件不生效。我需要帮助用户从Git索引中移除这些文件，但保留本地文件。**
-从Git索引中移除指定的脚本文件 ：
+从Git索引中移除指定的脚本文件 ：**这样github远端仓库中的文件也会被删除**
 您可以单独移除每个文件：
 ```
 git rm --cached RAWBlog/scripts/pull_my_repos_usesh.bat

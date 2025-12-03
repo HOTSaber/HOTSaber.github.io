@@ -1,7 +1,7 @@
-RAWBlog/scripts/pull_my_repos_usesh.bat
-RAWBlog/scripts/push_my_repos_usesh.bat
-RAWBlog/scripts/pull_my_repos.sh
-RAWBlog/scripts/push_my_repos.sh
+#RAWBlog/scripts/pull_my_repos_usesh.bat
+#RAWBlog/scripts/push_my_repos_usesh.bat
+#RAWBlog/scripts/pull_my_repos.sh
+#RAWBlog/scripts/push_my_repos.sh
 .DS_Store
 Thumbs.db
 db.json
