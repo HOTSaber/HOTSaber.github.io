@@ -33,12 +33,13 @@ for repo in "${repos[@]}"; do
         
         if [ -d ".git" ]; then
             # 检查是否有未提交的更改
+            echo "执行 git add..."
+            git add .
+            
+            echo "执行 git commit..."
+            git commit -m "$REPO_COMMIT_MSG"
+            
             if git status --porcelain | grep -q "^" ; then
-                echo "执行 git add..."
-                git add .
-                
-                echo "执行 git commit..."
-                git commit -m "$REPO_COMMIT_MSG"
                 
                 echo "执行 git push..."
                 git push
