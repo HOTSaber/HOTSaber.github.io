@@ -28,19 +28,24 @@ for repo in "${repos[@]}"; do
         cd "$repo" || { echo "无法进入目录 $repo"; continue; }
         
         if [ -d ".git" ]; then
-            echo "执行 git add..."
-            git add .
-            
-            echo "执行 git commit..."
-            git commit -m "$REPO_COMMIT_MSG"
-            
-            echo "执行 git push..."
-            git push
-            
-            if [ $? -eq 0 ]; then
-                echo "成功: $repo 推送完成"
+            # 检查是否有未提交的更改
+            if git status --porcelain | grep -q "^" ; then
+                echo "执行 git add..."
+                git add .
+                
+                echo "执行 git commit..."
+                git commit -m "$REPO_COMMIT_MSG"
+                
+                echo "执行 git push..."
+                git push
+                
+                if [ $? -eq 0 ]; then
+                    echo "成功: $repo 推送完成"
+                else
+                    echo "错误: $repo 推送失败"
+                fi
             else
-                echo "错误: $repo 推送失败"
+                echo "无需操作: $repo 工作树干净，没有需要提交的更改"
             fi
         else
             echo "警告: $repo 不是一个 Git 仓库（缺少 .git 目录）"
