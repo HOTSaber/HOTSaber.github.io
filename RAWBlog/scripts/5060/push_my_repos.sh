@@ -29,7 +29,7 @@ for repo in "${repos[@]}"; do
         
         if [ -d ".git" ]; then
             # 检查是否有未提交的更改
-            if git status --porcelain | grep -q "^" ; then
+            if [ -n "$(git status --porcelain)" ]; then
                 echo "执行 git add..."
                 git add .
                 
