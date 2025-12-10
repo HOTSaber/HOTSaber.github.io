@@ -40,14 +40,37 @@ for repo in "${repos[@]}"; do
                 echo "执行 git commit..."
                 git commit -m "$REPO_COMMIT_MSG"
                 
-                echo "执行 git push..."
-                git push
+                # 尝试执行 git push，支持失败后重试
+                max_retries=3
+                retry_count=0
+                push_success=false
                 
-                if [ $? -eq 0 ]; then
-                    echo "成功: $repo 推送完成"
-                else
-                    echo "错误: $repo 推送失败"
-                fi
+                while [ $retry_count -lt $max_retries ] && [ $push_success = false ]; do
+                    echo "执行 git push... (尝试 $((retry_count + 1))/$max_retries)"
+                    git push
+                    
+                    if [ $? -eq 0 ]; then
+                        echo "成功: $repo 推送完成"
+                        push_success=true
+                    else
+                        echo "错误: $repo 推送失败"
+                        
+                        # 不是最后一次尝试时，询问用户是否继续重试
+                        if [ $retry_count -lt $((max_retries - 1)) ]; then
+                            echo -n "是否要重新尝试推送？(y/n): "
+                            read retry_choice
+                            
+                            # 如果用户输入不是 y 或 Y，停止重试
+                            if [ "$retry_choice" != "y" ] && [ "$retry_choice" != "Y" ]; then
+                                break
+                            fi
+                        else
+                            echo "已达到最大重试次数 ($max_retries)，停止重试"
+                        fi
+                        
+                        retry_count=$((retry_count + 1))
+                    fi
+                done
             else
                 echo "无需操作: $repo 工作树干净，没有需要提交的更改"
             fi
