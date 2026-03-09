@@ -4,6 +4,7 @@
 repos=(
     "/d/MyBlog"
     "/d/pyproject/AI_policy"
+    "/d/pyproject/AI_policy/novel"
 )
 
 echo "开始执行 git pull 操作..."

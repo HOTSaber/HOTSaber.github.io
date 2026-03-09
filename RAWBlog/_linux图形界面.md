@@ -1,5 +1,20 @@
 在 Ubuntu 系统中，你可以通过以下方法查看图形界面程序的运行状态：
 ### 1. 查看显示管理器状态
+```bash
+# 1. 查看所有 GPU 
+lspci -nn | grep -i vga 
+	# 2. 查看 NVIDIA 卡型号（如果有） 
+nvidia-smi 
+# 3. 查看 DRM 设备（显示子系统） 
+ls /dev/dri/ 
+# 4. 查看内核日志中的 GPU 初始化 
+dmesg | grep -i "nvidia\|drm\|edid"
+# 5. 并可通过以下命令确认显示器被识别：
+1xrandr --query
+# 6. 以用户 ps 的身份运行 xrandr，并指定 DISPLAY=:0 2sudo -u ps DISPLAY=:0 xrandr --query
+# 查看xorg log 
+cat /var/log/Xorg.0.log
+```
 
 Ubuntu 的图形界面依赖于显示管理器（如 GDM、LightDM 等），可以通过 `systemctl` 命令检查其运行状态：
 ```bash
@@ -67,5 +82,25 @@ sudo pkill Xorg
 ```
 
 执行后显示器通常会短暂黑屏，然后重新初始化图形界面。
+# 6. **允许 NVIDIA 在无显示器时创建虚拟屏幕**
+
+生成一个支持 **headless 模式** 的配置：
+
+```bash
+sudo nvidia-xconfig \
+    --allow-empty-initial-configuration \
+    --enable-all-gpus \
+    --use-display-device=none \
+    --virtual=1920x1080
+```
+
+这会生成 `/etc/X11/xorg.conf`
+
+#### 再重启显示管理器
+
+```bash
+sudo systemctl restart gdm   # 或你使用的 display manager
+```
+
 
 通过以上步骤，基本可以判断图形界面程序的运行状态并定位问题。如果日志中出现明确的错误信息（如驱动加载失败、权限问题等），可以针对性地进行修复。

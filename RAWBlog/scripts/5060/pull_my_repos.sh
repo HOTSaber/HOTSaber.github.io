@@ -4,6 +4,7 @@
 repos=(
     "/d/MyBlog/HOTSaber.github.io"
     "/d/pycharmproject/AI_policy"
+    "/d/pycharmproject/AI_policy/novel"
 )
 
 echo "开始执行 git pull 操作..."
