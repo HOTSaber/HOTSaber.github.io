@@ -2,7 +2,7 @@
 repos=(
     "/d/MyBlog"
     "/d/pyproject/AI_policy"
-    "/d/pyproject/AI_policy/novel"
+    "/d/pyproject/novel"
 )
 
 # 定义对应的 GitHub 仓库 URL（与本地路径一一对应）

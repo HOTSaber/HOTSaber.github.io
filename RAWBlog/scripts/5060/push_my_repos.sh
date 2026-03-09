@@ -4,7 +4,7 @@
 repos=(
     "/d/MyBlog/HOTSaber.github.io"
     "/d/pycharmproject/AI_policy"
-    "/d/pycharmproject/AI_policy/novel"
+    "/d/pycharmproject/novel"
 )
 
 # 定义对应的 GitHub 仓库 URL（与本地路径一一对应）
