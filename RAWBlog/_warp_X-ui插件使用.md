@@ -35,9 +35,9 @@ bash <(wget -qO- https://raw.githubusercontent.com/yonggekkk/warp-yg/main/CFwarp
 1. 如出现：已安装Socks5-WARP客户端，但端口处于关闭状态
    使用`ss -tulpn | grep :40000`查看端口占用情况
    如返回
-	```shell
+```shell
 	tcp   LISTEN 0      128                         127.0.0.1:40000      0.0.0.0:*    users:(("wireproxy",pid=895,fd=1)) 
-   ```
+```
    使用
    ```
    bash

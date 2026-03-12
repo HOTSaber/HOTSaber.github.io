@@ -4,7 +4,7 @@
 如：
 [openclaw的skills项目](https://github.com/openclaw/skills)
 [anthropics的skills项目](https://github.com/anthropics/skills)
- [claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills)
+[claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills)
 ## skills社区
 [clawhub](https://clawhub.ai/)
 [skillsmp](https://skillsmp.com/)
