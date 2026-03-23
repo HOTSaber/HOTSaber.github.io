@@ -39,13 +39,12 @@ bash <(wget -qO- https://raw.githubusercontent.com/yonggekkk/warp-yg/main/CFwarp
 	tcp   LISTEN 0      128                         127.0.0.1:40000      0.0.0.0:*    users:(("wireproxy",pid=895,fd=1)) 
 ```
    使用
-   ```
-   bash
+   ```bash
 	# 温和终止进程（推荐）
 	sudo kill -15 895
    ```
    或使用systemctl来控制，如`ss -tulpn | grep :40000`返回：
-```shell
+```bash
 tcp   LISTEN 0      128                         127.0.0.1:40000      0.0.0.0:*    users:(("warp-svc",pid=895,fd=1)) 
 ```
 使用：
@@ -329,11 +328,263 @@ sudo service xray restart
 
 - 查看Xray运行状态
 
-```shell
+```
 sudo systemctl status xray
 或
 sudo service xray status
 ```
 
+```json
+{
+"api": {
+    "services": [
+      "HandlerService",
+      "LoggerService",
+      "StatsService"
+    ],
+    "tag": "api"
+  },
+  "inbounds": [
+    {
+      "listen": "127.0.0.1",
+      "port": 62789,
+      "protocol": "dokodemo-door",
+      "settings": {
+        "address": "127.0.0.1"
+      },
+      "sniffing": {
+	      "enabled": true,
+	      "destOverride": [
+	        "http",
+	        "tls",
+	        "quic"
+		      ]
+		},
+      "tag": "api"
+    }
+  ],  
+ "policy": {
+    "system": {
+      "statsInboundDownlink": true,
+      "statsInboundUplink": true
+    },
+     "levels": {
+      "0": {
+        "handshake": 10,
+        "connIdle": 100,
+        "uplinkOnly": 2,
+        "downlinkOnly": 3,
+        "bufferSize": 10240  
+      }
+    }
+  },
+"outbounds": [
+{
+"protocol": "blackhole",
+"tag": "blocked"
+},
+{
+"tag": "direct",
+"protocol": "freedom",
+"settings": {
+"domainStrategy":"UseIP"
+}
+},
+{
+"tag": "vps-outbound-v4", 
+"protocol": "freedom",
+"settings": {
+"domainStrategy":"UseIPv4v6"
+}
+},
+{
+"tag": "vps-outbound-v6",
+"protocol": "freedom",
+"settings": {
+"domainStrategy":"UseIPv6v4"
+}
+},
+{
+"tag": "socks5-warp",
+"protocol": "socks",
+"settings": {
+"servers": [
+{
+"address": "127.0.0.1",
+"port": 40000 
+}
+]
+}      
+},
+{
+"tag":"socks5-warp-v4",
+"protocol":"freedom",
+"settings":{
+"domainStrategy":"UseIPv4v6"
+},
+"proxySettings":{
+"tag":"socks5-warp"
+}
+},
+{
+"tag":"socks5-warp-v6",
+"protocol":"freedom",
+"settings":{
+"domainStrategy":"UseIPv6v4"
+},
+"proxySettings":{
+"tag":"socks5-warp"
+}
+},
+{
+"tag":"xray-wg-warp",
+"protocol":"wireguard",
+"settings":{
+"secretKey":"4GRI+uhXHop6U9H5Gi4YbD+5IoBvZ/kLdTdyal/y9EE=",
+"address":[
+"172.16.0.2/32",
+"2606:4700:110:845b:dd5b:5b91:8e5a:60b9/128"
+],
+"peers":[
+{
+"publicKey":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+"allowedIPs": [
+"0.0.0.0/0",
+"::/0"
+],
+"endpoint":"162.159.192.1:2408"
+}
+],
+"reserved":[197,230,30]
+}
+},
+{
+"tag":"xray-wg-warp-v4",
+"protocol":"freedom",
+"settings":{
+"domainStrategy":"UseIPv4v6"
+},
+"proxySettings":{
+"tag":"xray-wg-warp"
+}
+},
+{
+"tag":"xray-wg-warp-v6",
+"protocol":"freedom",
+"settings":{
+"domainStrategy":"UseIPv6v4"
+},
+"proxySettings":{
+"tag":"xray-wg-warp"
+}
+}
+],
+"routing": {
+"domainStrategy": "IPIfNonMatch",
+"rules": [
+{
+        "inboundTag": [
+          "api"
+        ],
+        "outboundTag": "api",
+        "type": "field"
+      },
+    {
+          "type": "field",
+          "port": "443",
+          "network": "udp",
+          "outboundTag": "blocked"
+            },
+       {
+        "type": "field",
+        "domain": [
+          "www.gstatic.com"
+        ],
+        "outboundTag": "direct"
+      },
+      {
+        "ip": [
+          "geoip:cn"
+        ],
+        "outboundTag": "blocked",
+        "type": "field"
+      },
+      {
+        "outboundTag": "blocked",
+        "protocol": [
+          "bittorrent"
+        ],
+        "type": "field"
+      },
+{
+"type":"field",
+"outboundTag":"xray-wg-warp-v4",
+"domain":[
+"ifconfig.co","yg_kkk"
+]
+},
+{
+"type":"field",
+"outboundTag":"xray-wg-warp-v6",
+"domain":[
+"ipget.net","yg_kkk"
+]
+},
+{
+"type":"field",
+"outboundTag":"socks5-warp-v4",
+"domain":[
+"db-ip.com","yg_kkk"
+]
+},
+{
+"type":"field",
+"outboundTag":"socks5-warp-v6",
+"domain":[
+"ip.me","yg_kkk"
+]
+},
+{
+"type": "field",
+"outboundTag":"vps-outbound-v4",
+"domain": [
+"api.myip.com","yg_kkk"
+]
+},
+{
+"type": "field",
+"outboundTag":"vps-outbound-v6",
+"domain": [
+"api64.ipify.org","yg_kkk"
+]
+},
+{
+"type": "field",
+"outboundTag": "socks5-warp",
+"domain": [
+  "geosite:google-play",
+  "geosite:google-scholar",
+  "geosite:google",
+  "geosite:google-deepmind",
+  "geosite:google-gemini",
+  "geosite:google-registry",
+  "geosite:google-registry-tld",
+  "geosite:google-trust-services",
+  "geosite:googlefcm",
+  "geosite:meta",
+  "geosite:disney"
+],
+"marktag": "warp diversion"
+},
+{
+"type": "field",
+"outboundTag": "direct",
+"network": "udp,tcp"
+}
+]
+},
+"stats": {}
+}
+```
 
  
