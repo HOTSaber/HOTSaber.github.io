@@ -10,3 +10,6 @@ scholar 一般只封锁 IPv4。所以先尝试根据资料修改代理节点上�
 2404:6800:4008:c06::be scholar.google.com.tw
 2404:6800:4005:805::200e scholar.google.cn
 ```
+
+,"geosite:google-scholar"
+,"geosite:google-gemini"
