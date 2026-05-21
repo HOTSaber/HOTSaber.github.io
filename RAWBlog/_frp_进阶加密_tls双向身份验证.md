@@ -191,3 +191,46 @@ transport.tls.certFile = "server.crt"
 transport.tls.keyFile = "server.key"
 transport.tls.trustedCaFile = "ca.crt"
 ```
+# 证书续期
+
+```bash
+cd /root/frp_0.62.1_linux_amd64
+
+# 1. 生成 CA 证书（10年）
+openssl genrsa -out ca.key 2048
+openssl req -x509 -new -nodes -key ca.key -subj "/CN=frp-ca" -days 3650 -out ca.crt
+
+# 2. 生成服务端证书（包含你的公网IP + 域名，10年）
+openssl genrsa -out server.key 2048
+openssl req -new -sha256 -key server.key \
+    -subj "/C=XX/ST=DEFAULT/L=DEFAULT/O=DEFAULT/CN=server.com" \
+    -reqexts SAN \
+    -config <(cat /etc/ssl/openssl.cnf <(printf "\n[SAN]\nsubjectAltName=DNS:localhost,IP:170.106.82.242,DNS:frp.hotsaber.cn")) \
+    -out server.csr
+
+openssl x509 -req -days 3650 -sha256 \
+    -in server.csr -CA ca.crt -CAkey ca.key -CAcreateserial \
+    -extfile <(printf "subjectAltName=DNS:localhost,IP:170.106.82.242,DNS:frp.hotsaber.cn") \
+    -out server.crt
+
+# 3. 生成客户端证书
+openssl genrsa -out client.key 2048
+openssl req -new -sha256 -key client.key \
+    -subj "/C=XX/ST=DEFAULT/L=DEFAULT/O=DEFAULT/CN=client.com" \
+    -reqexts SAN \
+    -config <(cat /etc/ssl/openssl.cnf <(printf "\n[SAN]\nsubjectAltName=DNS:localhost,DNS:frp.hotsaber.cn")) \
+    -out client.csr
+
+openssl x509 -req -days 3650 -sha256 \
+    -in client.csr -CA ca.crt -CAkey ca.key -CAcreateserial \
+    -extfile <(printf "subjectAltName=DNS:localhost,DNS:frp.hotsaber.cn") \
+    -out client.crt
+```
+
+# 生成完 → 重启 frps
+
+
+```
+systemctl restart frps
+systemctl status frps
+```
