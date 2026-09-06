@@ -587,4 +587,279 @@ sudo service xray status
 }
 ```
 
+# 最新修改与配置模板
+
+出站方式有`ForceIPv4`、`ForceIPv6`、`UseIPv6v4`、`UseIPv4v6`，其中UseIPv6v4与UseIPv4v6，是分别优先使用ipv6与ipv4，不通再降级使用另一方案的意思，如果要强制指定，最好使用Force。
+"routing": {
+"domainStrategy": "AsIs",
+domainStrategy字段下有
+
+| 参数                   | 行为                        |
+| -------------------- | ------------------------- |
+| `AsIs`               | 不提前解析域名，域名路由正常工作，解析延迟到出站  |
+| `IPIfNonMatch`(全局专用) | 路由前解析域名，解析成功就变成 IP，域名路由失效 |
+| `UseIP`              | 解析域名，获取 IP，可用则使用 IP       |
+| `ForceIPv4`          | 仅解析 IPv4，无 IPv4 直接失败      |
+| `ForceIPv6`          | 仅解析 IPv6，无 IPv6 直接失败      |
+| `UseIPv6v4`          | 优先 IPv6，失败回退 IPv4         |
+| `UseIPv4v6`          | 优先 IPv4，失败回退 IPv6         |
+改为AsIs，是为了让
+"type":"field",
+"outboundTag":"socks5-warp-v6",
+"domain":[
+"ip.me","yg_kkk","geosite:google-scholar"
+
+中的domain字段生效，即先不解析域名，使用域名确定出站通道，在从确定通道出站时再解析域名。
+## 如果直接无法访问，可尝试修改VPShosts
+```
+2404:6800:4008:c06::be scholar.google.com
+2404:6800:4008:c06::be scholar.google.com.hk
+2404:6800:4008:c06::be scholar.google.com.tw
+2404:6800:4005:805::200e scholar.google.cn
+```
+## 模板
+```json
+{
+"api": {
+    "services": [
+      "HandlerService",
+      "LoggerService",
+      "StatsService"
+    ],
+    "tag": "api"
+  },
+  "inbounds": [
+    {
+      "listen": "127.0.0.1",
+      "port": 62789,
+      "protocol": "dokodemo-door",
+      "settings": {
+        "address": "127.0.0.1"
+      },
+      "sniffing": {
+	      "enabled": true,
+	      "destOverride": [
+	        "http",
+	        "tls",
+	        "quic"
+		      ]
+		},
+      "tag": "api"
+    }
+  ],  
+ "policy": {
+    "system": {
+      "statsInboundDownlink": true,
+      "statsInboundUplink": true
+    },
+     "levels": {
+      "0": {
+        "handshake": 10,
+        "connIdle": 100,
+        "uplinkOnly": 2,
+        "downlinkOnly": 3,
+        "bufferSize": 10240  
+      }
+    }
+  },
+"outbounds": [
+{
+"protocol": "blackhole",
+"tag": "blocked"
+},
+{
+"tag": "direct",
+"protocol": "freedom",
+"settings": {
+"domainStrategy":"UseIP"
+}
+},
+{
+"tag": "vps-outbound-v4", 
+"protocol": "freedom",
+"settings": {
+"domainStrategy":"ForceIPv4"
+}
+},
+{
+"tag": "vps-outbound-v6",
+"protocol": "freedom",
+"settings": {
+"domainStrategy":"UseIPv6v4"
+}
+},
+{
+"tag": "socks5-warp",
+"protocol": "socks",
+"settings": {
+"servers": [
+{
+"address": "127.0.0.1",
+"port": 40000 
+}
+]
+}      
+},
+{
+"tag":"socks5-warp-v4",
+"protocol":"freedom",
+"settings":{
+"domainStrategy":"ForceIPv4"
+},
+"proxySettings":{
+"tag":"socks5-warp"
+}
+},
+{
+"tag":"socks5-warp-v6",
+"protocol":"freedom",
+"settings":{
+"domainStrategy":"ForceIPv6"
+},
+"proxySettings":{
+"tag":"socks5-warp"
+}
+},
+{
+"tag":"xray-wg-warp",
+"protocol":"wireguard",
+"settings":{
+"secretKey":"2Ie4MNRTzzli/DmSi4PUq/OYdf3j1mpCykBZRtsuNlA=",
+"address":[
+"172.16.0.2/32",
+"2606:4700:110:8abe:892f:bd39:2719:fc1d"
+],
+"peers":[
+{
+"publicKey":"bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+"allowedIPs": [
+"0.0.0.0/0",
+"::/0"
+],
+"endpoint":"162.159.192.1:2408"
+}
+],
+"reserved":[25,58,234]
+}
+},
+{
+"tag":"xray-wg-warp-v4",
+"protocol":"freedom",
+"settings":{
+"domainStrategy":"UseIPv4v6"
+},
+"proxySettings":{
+"tag":"xray-wg-warp"
+}
+},
+{
+"tag":"xray-wg-warp-v6",
+"protocol":"freedom",
+"settings":{
+"domainStrategy":"UseIPv6v4"
+},
+"proxySettings":{
+"tag":"xray-wg-warp"
+}
+}
+],
+"routing": {
+"domainStrategy": "AsIs",
+"rules": [
+{
+        "inboundTag": [
+          "api"
+        ],
+        "outboundTag": "api",
+        "type": "field"
+      },
+    {
+          "type": "field",
+          "port": "443",
+          "network": "udp",
+          "outboundTag": "blocked"
+            },
+       {
+        "type": "field",
+        "domain": [
+          "www.gstatic.com"
+        ],
+        "outboundTag": "direct"
+      },
+      {
+        "ip": [
+          "geoip:cn"
+        ],
+        "outboundTag": "blocked",
+        "type": "field"
+      },
+      {
+        "outboundTag": "blocked",
+        "protocol": [
+          "bittorrent"
+        ],
+        "type": "field"
+      },
+{
+"type":"field",
+"outboundTag":"xray-wg-warp-v4",
+"domain":[
+"ifconfig.co","yg_kkk"
+]
+},
+{
+"type":"field",
+"outboundTag":"xray-wg-warp-v6",
+"domain":[
+"ipget.net","yg_kkk"
+]
+},
+{
+"type":"field",
+"outboundTag":"socks5-warp-v4",
+"domain":[
+"db-ip.com","yg_kkk"
+]
+},
+{
+"type":"field",
+"outboundTag":"socks5-warp-v6",
+"domain":[
+"ip.me","yg_kkk","geosite:google-scholar"
+]
+},
+{
+"type": "field",
+"outboundTag":"vps-outbound-v4",
+"domain": [
+"xxx","yg_kkk","geosite:google","geosite:google-gemini","geosite:google-deepmind","geosite:google-play","geosite:google-registry","geosite:google-registry-tld","geosite:google-trust-services"
+]
+},
+{
+"type": "field",
+"outboundTag":"vps-outbound-v6",
+"domain": [
+"api.myip.com","yg_kkk"
+]
+},
+{
+"type": "field",
+"outboundTag": "socks5-warp",
+"domain": [
+  "geosite:meta",
+  "geosite:disney"
+],
+"marktag": "warp diversion"
+},
+{
+"type": "field",
+"outboundTag": "direct",
+"network": "udp,tcp"
+}
+]
+},
+"stats": {}
+}
+```
+
  
