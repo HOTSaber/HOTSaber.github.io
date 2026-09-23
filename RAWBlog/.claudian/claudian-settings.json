@@ -28,17 +28,19 @@
       "enabled": true,
       "safeMode": "acceptEdits",
       "cliPath": "",
-      "cliPathsByHost": {},
+      "cliPathsByHost": {
+        "device-1af5b5f3c3ab8ba3e14d8c45eb5e0c65e0cadd2f1cd8c30896014bcd1573d533": "C:\\Users\\aucnm\\AppData\\Roaming\\npm\\claude"
+      },
       "loadUserSettings": true,
       "enableChrome": false,
       "enableBangBash": false,
       "customModels": "",
-      "defaultModel": "opus",
+      "defaultModel": "haiku",
       "lastModel": "haiku",
-      "modelEnvironmentType": "",
+      "modelEnvironmentType": "haiku",
       "titleModelEnvironmentType": "",
       "environmentVariables": "",
-      "environmentHash": ""
+      "environmentHash": "runtime-input:v1:29a1fc50a88a059240dd6b8b500fa54a1bcc080d22e41511b4e453be514c0a2a"
     },
     "codex": {
       "enabled": false,

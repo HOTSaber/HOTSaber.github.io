@@ -1,0 +1,24 @@
+{
+  "id": "conv-1789956848409-lnvmedcwv",
+  "providerId": "claude",
+  "title": "总结文档内容",
+  "titleGenerationStatus": "success",
+  "createdAt": 1789956848421,
+  "lastActivityAt": 1789956853787,
+  "sessionId": "b7adb394-4e3d-4058-a3c5-70f8073781a9",
+  "selectedModel": "haiku",
+  "providerState": {
+    "providerSessionId": "b7adb394-4e3d-4058-a3c5-70f8073781a9"
+  },
+  "linkedContentPath": "_0.0.0.0与127.0.0.1（本地回环地址）.md",
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 783,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 20224,
+    "contextWindow": 200000,
+    "contextTokens": 21007,
+    "percentage": 11,
+    "contextWindowIsAuthoritative": true
+  }
+}

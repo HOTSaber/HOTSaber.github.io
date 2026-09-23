@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1789956848409-lnvmedcwv",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1789956848614-mxvtkbq",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1789956848400-py0yext",
+      "timestamp": 1789956848400,
+      "rawDisplayText": "可以总结一下这个文档的内容吗？",
+      "canonicalText": "可以总结一下这个文档的内容吗？",
+      "context": {
+        "linkedContent": {
+          "path": "_0.0.0.0与127.0.0.1（本地回环地址）.md"
+        }
+      },
+      "images": [],
+      "contentDigest": "5984a913bfd528e21b787fa7384280e946929d76c71ed579e2967fdc41072096",
+      "providerUserMessageId": "ea759abf-3828-45fc-a9fa-50aee2abf45d",
+      "providerAssistantMessageId": "777a83bf-00d7-4109-b22b-71700e45de4a"
+    }
+  ]
+}
