@@ -40,7 +40,7 @@
       "modelEnvironmentType": "haiku",
       "titleModelEnvironmentType": "",
       "environmentVariables": "",
-      "environmentHash": "runtime-input:v1:29a1fc50a88a059240dd6b8b500fa54a1bcc080d22e41511b4e453be514c0a2a"
+      "environmentHash": "runtime-input:v1:e3a3492dd19704352b6e2501d1a2b99adce7d5f569db6949d679b1043fb89aa1"
     },
     "codex": {
       "enabled": false,

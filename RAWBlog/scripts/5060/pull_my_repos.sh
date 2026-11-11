@@ -11,7 +11,7 @@ repos=(
 repos_url=(
     "https://github.com/HOTSaber/HOTSaber.github.io.git"
     "https://github.com/HOTSaber/AI_policy.git"
-    "https://github.com/HOTSaber/novel.git"
+    "git@github.com:HOTSaber/novel.git"
 )
 
 echo "开始执行 git pull 操作..."
